@@ -1,0 +1,274 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-block: 150px 100px;
+  gap: 100px;
+}
+
+/* HEADER LEFT */
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerLeft img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+}
+
+.headerLeft .workTag {
+  position: relative;
+  height: 40px;
+  width: max-content;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 500px;
+  color: var(--text-primary);
+  font-weight: var(--label-weight);
+  border: 2px solid transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light) 0%,
+    var(--color-primary) 50%,
+    var(--color-primary-light) 100%
+  );
+  background-clip: padding-box;
+}
+
+.workTag::before {
+  content: "";
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  position: absolute;
+  border-radius: 500px;
+  background: var(--surface-primary);
+}
+
+.workTag > * {
+  z-index: 2;
+}
+
+.workTag .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-success);
+}
+
+.workTag .circle::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--color-success);
+  opacity: 0.8;
+  animation: 1s ease zoom-in infinite;
+}
+
+@keyframes zoom-in {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* HEADER RIGHT */
+.headerRight span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header h1 {
+  font-size: clamp(2rem, calc(3rem + 2.5vw), 85px);
+  line-height: 110%;
+  color: var(--text-primary);
+}
+
+.header h2 {
+  text-transform: uppercase;
+  font-size: clamp(45px, calc(1.5rem + 2vw), 52px);
+  font-weight: 400;
+  line-height: 110%;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 25%,
+    var(--color-primary-dark) 75%,
+    var(--color-primary) 100%
+  );
+  background-clip: text;
+  letter-spacing: -2px;
+  -webkit-text-fill-color: transparent;
+}
+
+.profession {
+  width: 100%;
+  display: flex;
+}
+
+.profession span {
+  flex-grow: 1;
+  min-width: 30px;
+  overflow: hidden;
+  height: 30px;
+  position: relative;
+}
+
+.profession span svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.profession path {
+  fill: var(--color-primary);
+}
+
+.header h3 {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.header p {
+  margin-block: 20px 30px;
+  max-width: 610px;
+}
+
+.cta {
+  display: flex;
+  gap: 20px;
+}
+
+.cta > a {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
+  height: 50px;
+  border: 2px solid var(--color-primary-light);
+  padding: 0 30px;
+  border-radius: 500px;
+  transition: var(--dynamic-fast-transition);
+}
+
+.cta > a svg path,
+.cta > a svg line {
+  stroke: var(--color-primary);
+}
+
+.cta > a:hover {
+  border-color: var(--color-primary);
+}
+
+.cta > a:active {
+  transform: scale(0.9);
+}
+
+.cta .social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social .separator {
+  width: 1px;
+  height: 30px;
+  background: var(--color-primary-light);
+  margin-inline: 10px;
+}
+
+/* BACKGROUND BLUR SHAPE */
+
+.shape {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -1;
+}
+
+.shape svg circle {
+  fill: var(--color-primary);
+}
+
+.shape svg path {
+  fill: var(--color-neutral);
+}
+
+/* MEDIA QUERIES */
+@media (width <= 1024px) {
+  .header {
+    gap: 40px;
+  }
+
+  .header .workTag {
+    display: none;
+  }
+}
+
+@media (width <= 768px) {
+  .header {
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 20px;
+  }
+
+  .shape {
+    top: -50%;
+    left: -50%;
+    transform: translateY(0);
+  }
+
+  .headerLeft {
+    align-items: start;
+  }
+
+  .header h1 {
+    font-size: clamp(2rem, 12vw, 4.5rem);
+  }
+
+  .header h2 {
+    font-size: clamp(1rem, 8vw, 2.75rem);
+  }
+
+  .header h3 {
+    font-size: 20px;
+  }
+
+  .header p {
+    margin-block: 10px 20px;
+  }
+
+  .header button {
+    margin-block: 10px 20px;
+  }
+
+  .cta {
+    flex-wrap: wrap;
+  }
+
+  .cta > a {
+    min-width: 220px;
+    justify-content: center;
+  }
+}
