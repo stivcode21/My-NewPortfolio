@@ -221,8 +221,18 @@
     gap: 40px;
   }
 
-  .header .workTag {
-    display: none;
+  .headerLeft img {
+    width: 210px;
+    height: 210px;
+  }
+
+  .profession span {
+    margin: 0 10px;
+  }
+
+  .headerLeft .workTag {
+    font-size: 12px;
+    padding: 0 10px;
   }
 }
 
@@ -233,6 +243,15 @@
     gap: 20px;
   }
 
+  .headerLeft .workTag {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .profession span {
+    margin: 0 0px;
+  }
+
   .shape {
     top: -50%;
     left: -50%;
@@ -241,6 +260,11 @@
 
   .headerLeft {
     align-items: start;
+  }
+
+  .headerLeft img {
+    width: 240px;
+    height: 240px;
   }
 
   .header h1 {

@@ -82,7 +82,7 @@ export default function Header() {
                 />
                 <div className={styles.workTag}>
                     <div className={styles.circle}></div>
-                    <span>¡Buscando nuevos desafíos! 🚀</span>
+                    <span>¡Buscando nuevos desafíos!</span>
                 </div>
             </motion.div>
             <motion.div
