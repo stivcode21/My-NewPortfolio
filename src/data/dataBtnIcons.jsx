@@ -1,7 +1,7 @@
 export const dataBtnIcons = [
     {
         title: "email",
-        label: "Enviar email",
+        label: "Email",
         url: "mailto:iannello.mas@gmail.com",
         svg: (
             <svg
@@ -19,7 +19,7 @@ export const dataBtnIcons = [
     },
     {
         title: "linkedin",
-        label: "LinkedIn",
+        label: "Linkedin",
         url: "https://www.linkedin.com/in/tomas-iannello/",
         svg: (
             <svg
