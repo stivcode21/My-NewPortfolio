@@ -6,7 +6,7 @@
   gap: 10px;
   font-weight: 700;
   color: var(--color-primary);
-  background: var(--color-primary-light);
+  background: transparent;
   border-radius: 500px;
   border: none !important;
   transition: var(--dynamic-fast-transition);
@@ -22,6 +22,11 @@
 
 .link svg {
   width: 24px;
+  transition: var(--dynamic-fast-transition);
+}
+
+.link:hover svg {
+  scale: 1.09;
 }
 
 .link svg path {
