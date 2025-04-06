@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../home/home";
+import Home from "@/home/home";
 
 export default function AppRouter({ isDarkMode, toggleDarkMode }) {
     return (

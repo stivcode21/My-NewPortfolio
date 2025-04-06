@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./socialButton.module.css";
-import { dataBtnIcons } from "../../data/dataBtnIcons";
+import { dataBtnIcons } from "@/data/dataBtnIcons";
 
 export default function SocialButton({ iconName, type = "primary" }) {
     const social = dataBtnIcons.find((item) => item.title === iconName);
