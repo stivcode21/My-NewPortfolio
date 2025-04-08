@@ -168,30 +168,27 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
                     style={{
                         animationDelay: `${0.1 * 5}s`,
                     }}>
-                    <button
-                        className={styles.navSetting}
-                        aria-label="Cambiar idioma a Inglés (Aún no disponible)">
-                        {getIcon("world")}
-                        <span>EN</span>
-                    </button>
-                    <button
-                        onClick={toggleDarkMode}
-                        className={`${styles.navSetting} ${styles.switchSetting}
-					${isDarkMode ? styles.dark : styles.light}`}
-                        aria-label={isDarkMode ? "Ver modo oscuro" : "Ver modo claro"}>
-                        <div className={styles.backdrop}>
-                            <HoverLabel label={"Idioma"} position="bottom">
-                                <button className={`${styles.icon} ${styles.sun}`}>
+                    <HoverLabel label={"Idioma"} position="bottom">
+                        <button className={styles.navSetting}>
+                            {getIcon("world")}
+                            <span>EN</span>
+                        </button>
+                    </HoverLabel>
+                    <HoverLabel label={"Idioma"} position="bottom">
+                        <button
+                            onClick={toggleDarkMode}
+                            className={`${styles.navSetting} ${styles.switchSetting}
+					${isDarkMode ? styles.dark : styles.light}`}>
+                            <div className={styles.backdrop}>
+                                <span className={`${styles.icon} ${styles.sun}`}>
                                     {getIcon("sun")}
-                                </button>
-                            </HoverLabel>
-                            <HoverLabel label={"Idioma"} position="bottom">
-                                <button className={`${styles.icon} ${styles.moon}`}>
+                                </span>
+                                <span className={`${styles.icon} ${styles.moon}`}>
                                     {getIcon("moon")}
-                                </button>
-                            </HoverLabel>
-                        </div>
-                    </button>
+                                </span>
+                            </div>
+                        </button>
+                    </HoverLabel>
                 </div>
             </div>
         </motion.nav>

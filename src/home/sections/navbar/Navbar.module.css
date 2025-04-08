@@ -5,7 +5,6 @@
   width: calc(100% - 8vw);
   max-width: calc(1440px - 8vw);
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
   padding-top: 20px;
 }
@@ -28,17 +27,18 @@
 /* NAV LEFT */
 .navLeft,
 .navSetting {
-  height: 60px;
-  background: transparent;
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--color-primary-light);
-  border-radius: 500px;
+  z-index: 10;
+  isolation: isolate;
 }
 
 .navLeft {
   display: flex;
   align-items: center;
-  padding: 0px 35px;
+  padding: 10px 35px;
+  background: var(--surface-primary-transparent);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-primary-light);
+  border-radius: 500px;
 }
 
 .logo svg path {
@@ -48,7 +48,6 @@
 
 .navLink,
 .navSetting {
-  padding: 0 15px;
   height: 100%;
   display: flex;
   outline: 2px solid transparent;
@@ -62,7 +61,7 @@
 .navLink {
   position: relative;
   font-size: 15px;
-  padding: 0 20px;
+  margin: 0px 20px 2px 20px;
 }
 
 .navLink::before {
@@ -76,15 +75,16 @@
   opacity: 0;
   transition: var(--dynamic-fast-transition) width;
 }
-
-.navLink:hover * {
-  color: var(--text-primary);
-  stroke: var(--text-primary);
-}
-
 .navLink:hover::before {
   opacity: 1;
   width: 100%;
+}
+
+.navLink:hover,
+.navSetting:hover {
+  background: transparent; /* Evita que el hover afecte el fondo */
+  border-color: var(--color-primary); /* Solo afecta el borde */
+  will-change: transform, opacity; /* Optimiza las animaciones */
 }
 
 .navLeft > button:nth-of-type(2) {
@@ -95,7 +95,7 @@
 
 .navRight {
   display: flex;
-  gap: 5px;
+  gap: 25px;
 }
 
 .navRight svg {
@@ -115,19 +115,14 @@
 }
 
 .navSetting {
-  padding: 0 20px;
   display: flex;
   align-items: center;
   gap: 10px;
   border: none;
 }
 
-.navSetting:hover {
-  border-color: transparent;
-}
-
 .switchSetting {
-  width: 80px;
+  width: 35px;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -145,7 +140,6 @@
 .switchSetting .icon {
   display: grid;
   place-items: center;
-  transition: var(--dynamic-fast-transition);
 }
 
 .switchSetting.light .backdrop {
@@ -296,7 +290,6 @@
   display: flex;
   height: 60px;
   margin-top: 20px;
-  display: none;
   gap: 10px;
   opacity: 0;
   transform: translateY(10px);
@@ -370,7 +363,7 @@
   }
 
   .navLeft {
-    padding: 0px 35px;
+    padding: 10px 35px;
   }
 
   .nav {

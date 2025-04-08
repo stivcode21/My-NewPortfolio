@@ -8,7 +8,6 @@ const Home = () => {
             className={styles.container}>
             <Navbar />
             <Header />
-            <Header />
         </div>
     )
 }

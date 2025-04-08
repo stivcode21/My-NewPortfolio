@@ -1,6 +1,6 @@
 .link {
   width: 60px;
-  height: 50px;
+  height: 40px;
   display: grid;
   place-items: center;
   gap: 10px;
@@ -10,10 +10,6 @@
   border-radius: 500px;
   border: none !important;
   transition: var(--dynamic-fast-transition);
-}
-
-.link:hover {
-  background: var(--hover-primary-light);
 }
 
 .link:active {
