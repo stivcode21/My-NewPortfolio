@@ -1,0 +1,30 @@
+.statsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background: var(--surface-primary);
+  border-radius: 10px;
+  box-shadow: var(--smooth-shadow);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: var(--title-weight);
+  color: var(--color-primary);
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 1rem;
+  font-weight: var(--label-weight);
+  color: var(--text-secondary);
+}
