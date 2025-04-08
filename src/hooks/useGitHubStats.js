@@ -5,6 +5,7 @@ export const useGitHubStats = (username, token) => {
     publicRepos: 0,
     followers: 0,
     totalCommits: 0,
+    starsReceived: 0, // Nueva métrica
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,35 +13,68 @@ export const useGitHubStats = (username, token) => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const headers = token ? { Authorization: `token ${token}` } : undefined;
+        const query = `
+          query($username: String!) {
+            user(login: $username) {
+              publicRepos: repositories(privacy: PUBLIC) {
+                totalCount
+              }
+              followers {
+                totalCount
+              }
+              repositories(first: 100, isFork: false) {
+                nodes {
+                  stargazers {
+                    totalCount
+                  }
+                  defaultBranchRef {
+                    target {
+                      ... on Commit {
+                        history(first: 0) {
+                          totalCount
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `;
 
-        const userResponse = await fetch(
-          `https://api.github.com/users/${username}`,
-          { headers }
-        );
-        const userData = await userResponse.json();
+        const variables = { username };
 
-        const reposResponse = await fetch(
-          `https://api.github.com/users/${username}/repos?per_page=10&sort=updated`,
-          { headers }
-        );
-        const repos = await reposResponse.json();
+        const response = await fetch("https://api.github.com/graphql", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ query, variables }),
+        });
 
+        const { data, errors } = await response.json();
+
+        if (errors) throw new Error(errors[0].message);
+
+        const { publicRepos, followers, repositories } = data.user;
+
+        // Calcular commits y estrellas
         let totalCommits = 0;
-        for (const repo of repos) {
-          const commitsResponse = await fetch(
-            `https://api.github.com/repos/${username}/${repo.name}/commits?per_page=1`,
-            { headers }
-          );
-          const commits = await commitsResponse.json();
-          totalCommits += commits.length;
-        }
+        let starsReceived = 0;
+        repositories.nodes.forEach((repo) => {
+          totalCommits +=
+            repo.defaultBranchRef?.target?.history?.totalCount || 0;
+          starsReceived += repo.stargazers.totalCount || 0;
+        });
 
         setStats({
-          publicRepos: userData.public_repos,
-          followers: userData.followers,
+          publicRepos: publicRepos.totalCount,
+          followers: followers.totalCount,
           totalCommits,
+          starsReceived,
         });
+
         setLoading(false);
       } catch (err) {
         setError(err.message);
