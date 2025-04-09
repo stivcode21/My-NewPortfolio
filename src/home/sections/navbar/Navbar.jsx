@@ -3,10 +3,14 @@ import { motion } from "framer-motion";
 import styles from "./Navbar.module.css";
 import { dataBtnIcons } from "../../../data/dataBtnIcons";
 import HoverLabel from "../../../components/hoverLabel/HoverLabel";
+import { useThemeStore } from "../../../store/ThemeStore";
 
 
 
-export default function Navbar({ isDarkMode, toggleDarkMode }) {
+export default function Navbar() {
+
+    const { isDarkMode, toggleDarkMode } = useThemeStore();
+
     const [listVisible, setListVisible] = useState(false);
     const [isCollapsed, setIsCollapsed] = useState(false);
     const screenWidthCollapsed = 1024;
@@ -115,7 +119,7 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
                         <span>EN</span>
                     </button>
                 </HoverLabel>
-                <HoverLabel label={"Idioma"} position="bottom">
+                <HoverLabel label={isDarkMode ? "Claro" : "Oscuro"} position="bottom">
                     <button
                         onClick={toggleDarkMode}
                         className={`${styles.navSetting} ${styles.switchSetting}
@@ -174,7 +178,7 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
                             <span>EN</span>
                         </button>
                     </HoverLabel>
-                    <HoverLabel label={"Idioma"} position="top">
+                    <HoverLabel label={isDarkMode ? "Claro" : "Oscuro"} position="top">
                         <button
                             onClick={toggleDarkMode}
                             className={`${styles.navSetting} ${styles.switchSetting}
