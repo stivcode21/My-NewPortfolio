@@ -34,18 +34,21 @@
   .statsContainer {
     justify-content: space-between;
     align-items: start;
+    padding: 10px;
+    gap: 10px;
   }
   .stat {
     flex-direction: column;
-    gap: 0px;
+    gap: 0;
   }
   .statNumber {
     font-size: 3rem;
     margin-bottom: 0px;
   }
   .statLabel {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 100%;
+    margin-left: 0;
   }
 }
 

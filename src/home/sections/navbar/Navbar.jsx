@@ -168,13 +168,13 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
                     style={{
                         animationDelay: `${0.1 * 5}s`,
                     }}>
-                    <HoverLabel label={"Idioma"} position="bottom">
+                    <HoverLabel label={"Idioma"} position="top">
                         <button className={styles.navSetting}>
                             {getIcon("world")}
                             <span>EN</span>
                         </button>
                     </HoverLabel>
-                    <HoverLabel label={"Idioma"} position="bottom">
+                    <HoverLabel label={"Idioma"} position="top">
                         <button
                             onClick={toggleDarkMode}
                             className={`${styles.navSetting} ${styles.switchSetting}
