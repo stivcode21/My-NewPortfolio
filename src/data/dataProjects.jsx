@@ -25,6 +25,7 @@ export const dataProjects = [
         id: 1,
         title: "Mostaza",
         url: "mostaza",
+        categoryId: 1,
         images: [
             <img src={Mostaza1} alt="Mockup del proyecto de Mostaza" />,
             <img src={Mostaza2} alt="Mockup del proyecto de Mostaza" />,
@@ -39,6 +40,7 @@ export const dataProjects = [
         id: 2,
         title: "Amazon",
         url: "amazon",
+        categoryId: 1,
         images: [
             <img src={Amazon1} alt="Mockup del proyecto de Amazon" />,
             <img src={Amazon2} alt="Mockup del proyecto de Amazon" />,
@@ -54,6 +56,7 @@ export const dataProjects = [
         id: 3,
         title: "SkillSwap",
         url: "skillswap",
+        categoryId: 2,
         images: [
             <img src={Ajaka1} alt="Mockup del proyecto de SkillSwap" />,
             <img src={Ajaka1} alt="Mockup del proyecto de SkillSwap" />,
@@ -68,6 +71,7 @@ export const dataProjects = [
         id: 4,
         title: "Ajaka Envases",
         url: "ajaka-envases",
+        categoryId: 2,
         images: [
             <img src={Ajaka1} alt="Mockup del proyecto de Ajaka Envases" />,
             <img src={Ajaka2} alt="Mockup del proyecto de Ajaka Envases" />,
@@ -82,6 +86,7 @@ export const dataProjects = [
         id: 5,
         title: "Consultora",
         url: "consultora-de-negocios",
+        categoryId: 2,
         images: [
             <img src={Consultora1} alt="Mockup del proyecto de Consultora" />,
             <img src={Consultora2} alt="Mockup del proyecto de Consultora" />,
