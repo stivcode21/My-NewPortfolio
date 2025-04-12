@@ -1,0 +1,295 @@
+.carousel {
+  width: 100%;
+  border-radius: 30px;
+  height: clamp(300px, 45h, 400px);
+  overflow: hidden;
+  position: relative;
+  background: var(--surface-primary);
+  z-index: 5;
+}
+
+.carousel.hero {
+  height: clamp(300px, 65vh, 450px);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--text-primary-transparent);
+  outline: 1px solid var(--text-primary-transparent);
+}
+
+@media (width <= 1024px) {
+  .carousel.hero {
+    height: clamp(350px, 40vh, 400px);
+  }
+}
+
+@media (width <= 500px) {
+  .carousel.hero {
+    height: clamp(250px, 30vh, 300px);
+  }
+}
+
+.carouselTrack {
+  height: 100%;
+  display: flex;
+  position: relative;
+  transition: transform var(--dynamic-transition);
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.carouselImage img {
+  transition: var(--dynamic-transition);
+}
+
+.cardProject:hover .carouselImage img {
+  transform: scale(1.06);
+}
+
+/* ARROW CONTROLS */
+.carouselControl {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.carouselButtonPrev,
+.carouselButtonNext {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface-image);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--strong-shadow);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  transition: var(--dynamic-fast-transition);
+}
+
+.carouselButtonPrev {
+  left: 10px;
+}
+
+.carouselButtonNext {
+  right: 10px;
+}
+
+.carouselButtonPrev:hover,
+.carouselButtonNext:hover {
+  transform: scale(1.1);
+}
+
+.carouselButtonPrev:active,
+.carouselButtonNext:active {
+  opacity: 0.3;
+  transform: scale(1.1);
+}
+
+.carouselButtonPrev path,
+.carouselButtonNext path {
+  stroke: var(--text-primary);
+  stroke-width: 1.5px;
+}
+
+/* STEPBAR */
+.stepbar {
+  position: absolute;
+  bottom: 25px;
+  list-style: none;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30px;
+  padding: 0 20px;
+  border-radius: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  backdrop-filter: blur(10px);
+  background: var(--surface-image);
+  box-shadow: var(--strong-shadow);
+}
+
+.step {
+  width: 8px;
+  height: 8px;
+  border-radius: 500px;
+  background: var(--text-primary-transparent-2);
+  transition: width 0.3s ease;
+}
+
+.step.active {
+  width: 25px;
+  background: var(--color-primary);
+}
+
+/* THUMBNAIL */
+.thumbnail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: fadeDown var(--dynamic-medium-transition) forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.thumbnail.overflow {
+  justify-content: start;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+}
+
+.thumbnail.overflow::before {
+  display: block;
+}
+
+.thumbnailItem {
+  position: relative;
+  min-width: 100px;
+  max-width: 100px;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  transition: var(--dynamic-fast-transition);
+}
+
+.thumbnailItem::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--color-primary);
+  filter: blur(25px);
+  z-index: -1;
+  transform: scale(0);
+  transition: var(--dynamic-medium-transition);
+}
+
+.thumbnail.overflow .thumbnailItem::before {
+  width: 35px;
+  height: 35px;
+  filter: blur(15px);
+}
+
+.thumbnailItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.polygon {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  transition: var(--dynamic-medium-transition);
+}
+
+.polygon path {
+  fill: var(--color-primary);
+}
+
+.thumbnail.overflow .polygon,
+.thumbnail.overflow .frameThumbnail {
+  display: none;
+}
+
+.thumbnailItem.active {
+  pointer-events: none;
+}
+
+.thumbnailItem:not(.active):hover {
+  border-color: var(--text-primary-transparent-2);
+  background: var(--text-primary-transparent);
+}
+
+.thumbnail.overflow .thumbnailItem.active {
+  border: 3px solid var(--color-primary);
+}
+
+.thumbnailItem.active::before {
+  transform: scale(1);
+}
+
+.frameThumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 80px;
+  border: 3px solid var(--color-primary);
+  border-radius: 20px;
+  transition: var(--dynamic-fast-transition);
+}
+
+/* MEDIA QUERIES */
+@media (width <=1100px) {
+  .carousel {
+    height: clamp(300px, 50vh, 400px);
+  }
+}
+
+@media (width <=1024px) {
+  .thumbnail {
+    scrollbar-width: none;
+    margin-bottom: 17px;
+  }
+}
+
+@media (width <=768px) {
+  .carouselButtonPrev,
+  .carouselButtonNext {
+    display: none;
+  }
+}
+
+@media (width <=500px) {
+  .carousel {
+    height: clamp(300px, 30vh, 300px);
+  }
+
+  .thumbnailItem {
+    position: relative;
+    min-width: 80px;
+    max-width: 80px;
+    height: 60px;
+    padding: 7px;
+    border-radius: 17px;
+  }
+
+  .polygon {
+    width: 80px;
+  }
+
+  .frameThumbnail {
+    width: 80px;
+    height: 60px;
+    border-radius: 17px;
+  }
+}
