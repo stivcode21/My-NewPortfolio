@@ -5,13 +5,13 @@ import Carousel from "../carousel/carousel";
 import Chip from "../chip/chip";
 import LazyImage from "../lazyImage/LazyImage";
 
-export default function CardProject({ project, isMinimal = false }) {
+export default function CardProject({ project }) {
 	return (
 		<Link
 			to={`/project/${project.url}`}
 			state={{ transitionName: `project-image-${project.url}` }}>
 			<article
-				className={`${styles.cardProject} ${isMinimal && styles.minimal}`}>
+				className={`${styles.cardProject} `}>
 				{/* Imagen duplicada con blur al hover */}
 				<div className={styles.blurOverlay}>
 					<LazyImage
@@ -21,35 +21,25 @@ export default function CardProject({ project, isMinimal = false }) {
 					/>
 				</div>
 				<div className={styles.content}>
-					{isMinimal ? (
-						<div className={styles.cardImage}>
-							<LazyImage
-								src={project.images[0].props.src}
-								alt={project.images[0].props.alt}
-							/>
-						</div>
-					) : (
-						<Carousel
-							carouselImages={project.images}
-							motionId={project.url}
-						/>
-					)}
+
+					<Carousel
+						carouselImages={project.images}
+						motionId={project.url}
+					/>
 
 					<div className={styles.cardFooter}>
 						<span>
 							<span>
-								<h3 className={styles.title}>{project.title}</h3>;
-								{!isMinimal && (
-									<ul>
-										{project.tags.slice(0, 2).map((tag, index) => (
-											<Chip
-												tag={tag}
-												index={index}
-												key={index}
-											/>
-										))}
-									</ul>
-								)}
+								<h3 className={styles.title}>{project.title}</h3>
+								<ul>
+									{project.tags.slice(0, 2).map((tag, index) => (
+										<Chip
+											tag={tag}
+											index={index}
+											key={index}
+										/>
+									))}
+								</ul>
 							</span>
 							<p>{project.shortDescription}</p>
 						</span>
