@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Navbar.module.css";
 import { dataBtnIcons } from "../../../data/dataBtnIcons";
-import HoverLabel from "../../../components/hoverLabel/HoverLabel";
+import HoverLabel from "@/components/hoverLabel/HoverLabel";
 import { useThemeStore } from "../../../store/ThemeStore";
 
 
@@ -91,7 +91,7 @@ export default function Navbar() {
                 </button>
                 <div className={styles.links}>
                     <button
-                        onClick={() => handleScroll("experience")}
+                        onClick={() => handleScroll("main")}
                         className={styles.navLink}>
                         <span>Inicio</span>
                     </button>

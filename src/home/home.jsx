@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import Navbar from "./sections/navbar/Navbar";
 import GitHubStats from "./sections/gitHubStats/GithubStats";
 import Projects from "./sections/projects/Projects";
+import About from "./sections/about/About";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Header />
             <GitHubStats />
             <Projects />
+            <About />
         </div>
     )
 }

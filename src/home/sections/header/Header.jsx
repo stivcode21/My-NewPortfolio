@@ -6,7 +6,7 @@ import SocialButton from "@/components/socialButton/socialButton";
 export default function Header() {
     return (
         <header
-            id="header"
+            id="main"
             className={styles.header}>
             <div className={styles.shape}>
                 <svg
