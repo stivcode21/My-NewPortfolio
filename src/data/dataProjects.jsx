@@ -1,7 +1,5 @@
-import Mostaza1 from "../assets/projects/Mostaza1.jpg";
-import Mostaza2 from "../assets/projects/Mostaza2.jpg";
-import Mostaza3 from "../assets/projects/Mostaza3.jpg";
-import Mostaza4 from "../assets/projects/Mostaza4.jpg";
+import Viflow1 from "../assets/projects/Viflow1.webp";
+import Viflow2 from "../assets/projects/Viflow2.webp";
 
 import Amazon1 from "../assets/projects/Amazon1.jpg";
 import Amazon2 from "../assets/projects/Amazon2.jpg";
@@ -23,16 +21,14 @@ import Consultora5 from "../assets/projects/Consultora5.jpg";
 export const dataProjects = [
     {
         id: 1,
-        title: "Mostaza",
-        url: "mostaza",
+        title: "ViFlow",
+        url: "ViFlow",
         categoryId: 1,
         images: [
-            <img src={Mostaza1} alt="Mockup del proyecto de Mostaza" />,
-            <img src={Mostaza2} alt="Mockup del proyecto de Mostaza" />,
-            <img src={Mostaza3} alt="Mockup del proyecto de Mostaza" />,
-            <img src={Mostaza4} alt="Mockup del proyecto de Mostaza" />,
+            <img src={Viflow1} alt="Mockup del proyecto de Mostaza" />,
+            <img src={Viflow2} alt="Mockup del proyecto de Mostaza" />,
         ],
-        tags: ["Rediseño", "App", "Research", "Comida rápida"],
+        tags: ["social", "App"],
         shortDescription:
             "Plan de investigación para aumentar la tasa de pedidos y de fidelización de nuevos usuarios.",
     },

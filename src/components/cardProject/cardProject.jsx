@@ -24,6 +24,7 @@ export default function CardProject({ project }) {
 
 					<Carousel
 						carouselImages={project.images}
+						showControls={true}
 						motionId={project.url}
 					/>
 
