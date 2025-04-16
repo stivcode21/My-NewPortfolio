@@ -1,7 +1,8 @@
 .tooltip {
   position: absolute;
-  padding-inline: 20px;
-  height: 35px;
+  padding: 0 8px;
+  width: min-content;
+  height: 25px;
   display: grid;
   place-items: center;
   background: var(--text-primary);
@@ -28,7 +29,7 @@
 .tooltip.top {
   left: 50%;
   transform: translateX(-50%);
-  bottom: calc(100% - 3px);
+  top: -35px;
 }
 
 .tooltip.show {
@@ -39,7 +40,7 @@
 .tooltip.show:not(.top) {
   transition: top var(--dynamic-fast-transition),
     opacity var(--dynamic-fast-transition);
-  top: calc(100% + 15px);
+  top: 47px;
 }
 
 /* ANCHOR SIDE */

@@ -70,7 +70,7 @@
   box-shadow: var(--strong-shadow);
   padding: 10px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 10;
   transition: var(--dynamic-fast-transition);
 }
 

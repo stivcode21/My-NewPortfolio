@@ -28,31 +28,32 @@ const HoverLabel = ({
         }
     }, [showTooltip, caption]);
 
-    return label ? (
+    return (
         <div
-            style={{ position: "relative", display: "inline-block" }}
+            style={{ position: "relative" }}
             onMouseEnter={() => setShowTooltip(true)} // Mostrar tooltip en hover
             onMouseLeave={() => setShowTooltip(false)}>
-            <div
-                ref={tooltipRef}
-                className={`${styles.tooltip} ${showTooltip ? styles.show : ""} ${styles[position]}
+            {children}
+            {label && (
+                <div
+                    ref={tooltipRef}
+                    className={`${styles.tooltip} ${showTooltip ? styles.show : ""} ${styles[position]}
                       ${size === "minimal" ? styles.minimal : ""}
                       ${caption && styles.expanded} 
                       ${isOverflowing ? styles.overflowRight : ""}`}
-                aria-hidden={!showTooltip}
-            >
-                {caption ? (
-                    <>
-                        <h3>{label}</h3>
-                        <p className={styles.caption}>{caption}</p>
-                    </>
-                ) : (
-                    label
-                )}
-            </div>
+                    aria-hidden={!showTooltip}
+                >
+                    {caption ? (
+                        <>
+                            <h3>{label}</h3>
+                            <p className={styles.caption}>{caption}</p>
+                        </>
+                    ) : (
+                        label
+                    )}
+                </div>
+            )}
         </div>
-    ) : (
-        children
     );
 };
 

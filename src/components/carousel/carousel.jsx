@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import styles from "./carousel.module.css";
 import LazyImage from "../lazyImage/LazyImage";
 import { motion, AnimatePresence } from "framer-motion";
-import HoverLabel from "../hoverLabel/HoverLabel";
+import HoverLabel from "../hoverLabel/hoverLabel";
 export default function Carousel({
 	carouselImages,
 	isHero = false,
