@@ -1,7 +1,9 @@
-import Viflow1 from "../assets/projects/Viflow1.webp";
-import Viflow2 from "../assets/projects/Viflow2.webp";
+import Viflow1 from "../assets/projects/viflow1.webp";
+import Viflow2 from "../assets/projects/viflow2.webp";
+import Viflow3 from "../assets/projects/viflow3.webp";
 
-import Amazon1 from "../assets/projects/Amazon1.jpg";
+
+import UrbanShop1 from "../assets/projects/urbanshop1.webp";
 import Amazon2 from "../assets/projects/Amazon2.jpg";
 import Amazon3 from "../assets/projects/Amazon3.jpg";
 import Amazon4 from "../assets/projects/Amazon4.jpg";
@@ -25,8 +27,9 @@ export const dataProjects = [
         url: "ViFlow",
         categoryId: 1,
         images: [
-            <img src={Viflow1} alt="Mockup del proyecto de Mostaza" />,
-            <img src={Viflow2} alt="Mockup del proyecto de Mostaza" />,
+            <img src={Viflow1} alt="Mockup del proyecto de Viflow" />,
+            <img src={Viflow2} alt="Mockup del proyecto de Viflow" />,
+            <img src={Viflow3} alt="Mockup del proyecto de Viflow" />,
         ],
         tags: ["social", "App"],
         shortDescription:
@@ -34,11 +37,11 @@ export const dataProjects = [
     },
     {
         id: 2,
-        title: "Amazon",
-        url: "amazon",
+        title: "Urban Shop",
+        url: "UrbanShop",
         categoryId: 1,
         images: [
-            <img src={Amazon1} alt="Mockup del proyecto de Amazon" />,
+            <img src={UrbanShop1} alt="Mockup del proyecto de UrbanShop" />,
             <img src={Amazon2} alt="Mockup del proyecto de Amazon" />,
             <img src={Amazon3} alt="Mockup del proyecto de Amazon" />,
             <img src={Amazon4} alt="Mockup del proyecto de Amazon" />,
