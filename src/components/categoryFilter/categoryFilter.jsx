@@ -25,10 +25,8 @@ export default function CategoryFilter({ controls, selectedCategory, setSelected
             <span className={styles.line}></span>
             <div ref={highlightRef} className={styles.highlight}></div>
             {Object.entries(controls).map(([key, value]) => (
-                <>
-                    <label
-                        key={key}
-                        className={`${styles.label} ${selectedCategory === Number(key) ? styles.active : ""}`}>
+                <div key={key}>
+                    <label className={`${styles.label} ${selectedCategory === Number(key) ? styles.active : ""}`}>
                         <input
                             type="radio"
                             name="filter"
@@ -39,7 +37,7 @@ export default function CategoryFilter({ controls, selectedCategory, setSelected
                         <span>{value.title}</span>
                     </label>
                     <span className={styles.line}></span>
-                </>
+                </div>
             ))}
         </div>
     );

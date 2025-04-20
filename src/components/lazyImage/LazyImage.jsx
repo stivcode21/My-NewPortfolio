@@ -40,7 +40,7 @@ export default function LazyImage({ src, alt, radius = 0, ...props }) {
 				className={`${styles.skeleton} ${isLoaded ? styles.hide : null}`}></div>
 			<img
 				ref={imgRef}
-				src={isVisible ? src : ""}
+				src={isVisible ? src : "img/placeholder.png"}
 				alt={alt}
 				{...props}
 				className={styles.image}
