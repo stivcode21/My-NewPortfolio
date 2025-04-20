@@ -96,15 +96,16 @@ export default function Navbar() {
                         <span>Inicio</span>
                     </button>
                     <button
-                        onClick={() => handleScroll("experience")}
-                        className={styles.navLink}>
-                        <span>Experiencia</span>
-                    </button>
-                    <button
                         onClick={() => handleScroll("projects")}
                         className={styles.navLink}>
                         <span>Proyectos</span>
                     </button>
+                    <button
+                        onClick={() => handleScroll("about")}
+                        className={styles.navLink}>
+                        <span>About</span>
+                    </button>
+
                     <button
                         onClick={() => handleScroll("education")}
                         className={styles.navLink}>
