@@ -87,7 +87,7 @@
   transition: var(--dynamic-fast-transition);
 }
 
-.toolItem.small img {
+.toolItem.small svg {
   width: 24px;
   height: 24px;
 }

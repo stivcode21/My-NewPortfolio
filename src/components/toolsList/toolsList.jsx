@@ -39,10 +39,7 @@ export default function ToolsList({
 								size="small"
 								position="left">
 								<li className={`${styles.toolItem} ${size == "small" ? styles.small : ""}`}>
-									<img
-										src={Object.values(tool.logo)}
-										alt={`Logo de ${tool.title}`}
-									/>
+									{tool.logo}
 								</li>
 							</HoverLabel>
 						</div>
