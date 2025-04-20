@@ -37,7 +37,7 @@ export default function ToolsList({
 								label={tool.title}
 								caption={tool.caption}
 								size="small"
-								position={innerWidth > 1024 ? "right" : "center"}>
+								position="left">
 								<li className={`${styles.toolItem} ${size == "small" ? styles.small : ""}`}>
 									<img
 										src={Object.values(tool.logo)}

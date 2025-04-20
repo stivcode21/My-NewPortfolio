@@ -142,6 +142,12 @@
 
   .tools ul {
     gap: 10px;
+    
+  }
+
+  .container:hover {
+    scale: 1.1;
+    transition: scale var(--dynamic-fast-transition);
   }
 
   .toolItem {
