@@ -7,7 +7,7 @@ const tools = ["figma", "gdocs", "gsheets"]
 
 const About = () => {
     return (
-        <>
+        <div className={styles.about} id="about">
             <SectionHead
                 title="Sobre mi"
                 description="Cada trabajo no solo muestra mis competencias técnicas, sino también mi enfoque creativo y mi dedicación a crear soluciones de diseño que sean usables, accesibles y estéticas."
@@ -20,7 +20,7 @@ const About = () => {
                     animateOnScroll
                 />
             </div>
-        </>
+        </div>
     )
 }
 

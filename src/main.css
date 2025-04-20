@@ -4,7 +4,7 @@
   --transition-very-low: 0.5s ease;
   --dynamic-transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   --dynamic-medium-transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  --dynamic-fast-transition: 0.10s cubic-bezier(0.215, 0.61, 0.355, 1);
+  --dynamic-fast-transition: 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 html {
