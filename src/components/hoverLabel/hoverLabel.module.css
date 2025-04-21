@@ -1,6 +1,6 @@
 .tooltip {
   position: absolute;
-  padding: 0 8px;
+  padding: 0 10px;
   width: min-content;
   height: 25px;
   display: grid;
@@ -41,7 +41,7 @@
 
 .tooltip.show:not(.top) {
   transition: top var(--dynamic-fast-transition),
-  opacity var(--dynamic-fast-transition);
+    opacity var(--dynamic-fast-transition);
   top: 50px;
 }
 
@@ -49,7 +49,6 @@
 .tooltip.left {
   left: 0px;
   transform: translateX(0%);
-
 }
 
 .tooltip.right {
@@ -118,7 +117,7 @@
 
 .tooltip h3 {
   font-size: 16px;
-  height: 30px;
+  height: 32px;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -137,8 +136,6 @@
   right: 0;
   border-radius: 15px 0 15px 15px;
 }
-
-
 
 @media (width <= 768px) {
   .tooltip.left {

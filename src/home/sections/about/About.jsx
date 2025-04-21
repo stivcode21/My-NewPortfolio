@@ -25,12 +25,7 @@ const About = () => {
         description="Cada trabajo no solo muestra mis competencias técnicas, sino también mi enfoque creativo y mi dedicación a crear soluciones de diseño que sean usables, accesibles y estéticas."
       />
       <div className={styles.tools}>
-        <ToolsList
-          tools={tools}
-          size="small"
-          divisors={false}
-          animateOnScroll
-        />
+        <ToolsList tools={tools} size="small" animateOnScroll />
       </div>
     </div>
   );

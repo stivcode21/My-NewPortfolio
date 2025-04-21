@@ -7,24 +7,11 @@
   position: relative;
 }
 
-.divisor {
-  width: 100%;
-  border: none;
-  height: 1px;
-  background: var(--text-primary-transparent-2);
-  margin-block: 20px;
-}
-
 .tools ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
-  gap: 15px;
-  margin-block: 15px 0;
-}
-
-.tools ul:has(.small) {
   gap: 10px;
 }
 
@@ -41,11 +28,12 @@
   background: var(--color-primary-light);
   border-radius: 15px;
   transition: var(--dynamic-fast-transition);
+  cursor: pointer;
 }
 
 .toolItem.small {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 12px;
 }
 
@@ -78,29 +66,19 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.toolItem img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  pointer-events: none;
+.toolItem svg {
   user-select: none;
   transition: var(--dynamic-fast-transition);
 }
 
 .toolItem.small svg {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
 }
 
-.heightDivisor {
-  width: 1px;
-  height: 30px;
-  border-radius: 5px;
-  background: var(--color-primary-light);
-}
-
-.tools:has(.small) .heightDivisor {
-  height: 24px;
+.toolItem.large svg {
+  width: 32px;
+  height: 32px;
 }
 
 @media (width > 768px) {
@@ -130,18 +108,12 @@
     bottom: -20px;
   }
 
-  .toolItem:hover img {
+  .toolItem:hover svg {
     transform: translateY(8px);
   }
 }
 
 @media (width <= 768px) {
-
-  .tools ul {
-    gap: 10px;
-    
-  }
-
   .container:hover {
     scale: 1.1;
     transition: scale var(--dynamic-fast-transition);
@@ -154,11 +126,10 @@
   .toolItem {
     width: 50px;
     height: 50px;
-    border-radius: 15px;
   }
 
-  .toolItem img {
-    width: 26px;
-    height: 26px;
+  .toolItem.small svg {
+    width: 30px;
+    height: 30px;
   }
 }
