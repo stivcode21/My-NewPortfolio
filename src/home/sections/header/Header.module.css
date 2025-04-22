@@ -48,7 +48,7 @@
   );
   background-clip: padding-box;
   will-change: transform, opacity; /* Optimiza las animaciones */
-  z-index: 2; /* Asegura que no interfiera con el fondo */
+  z-index: 2;
 }
 
 .workTag::before {
@@ -60,7 +60,7 @@
   position: absolute;
   border-radius: 500px;
   background: var(--surface-primary);
-  z-index: 1; /* Asegura que no interfiera con otros elementos */
+  z-index: 1;
 }
 
 .workTag > * {
@@ -209,7 +209,7 @@
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  z-index: -1; /* Asegura que esté detrás del header */
+  z-index: -1;
 }
 
 .shape svg circle {
