@@ -15,8 +15,7 @@ export const dataSkills = [
       "Creación de soluciones centradas en el usuario y alineadas con los objetivos del negocio.",
       "Trabajo conjunto con desarrollo y uso de design systems para mantener consistencia visual y funcional.",
       "Coordinación con equipos de investigación para llevar a cabo estudios cualitativos y cuantitativos.",
-      "Presentación de propuestas a clientes y stakeholders.",
-      "Planificación de tareas y tiempos en dinámicas ágiles junto a equipos interdisciplinarios.",
+      "Coordinación con equipos de investigación para llevar a cabo estudios cualitativos y cuantitativos.",
     ],
   },
 ];

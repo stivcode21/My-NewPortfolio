@@ -1781,7 +1781,7 @@ export const dataTools = {
         />
       </svg>
     ),
-    category: 5,
+    category: 3,
   },
 
   notion: {
@@ -1824,6 +1824,178 @@ export const dataTools = {
         </g>
       </svg>
     ),
-    category: 5,
+    category: 3,
+  },
+  python: {
+    title: "Python",
+    caption: "Lenguaje de programación versátil",
+    logo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="256"
+        height="256"
+        viewBox="0 0 256 256"
+      >
+        <g fill="none">
+          <rect width="256" height="256" fill="#242938" rx="60" />
+          <path
+            fill="url(#skillIconsPythonDark0)"
+            d="M127.279 29c-50.772 0-47.602 22.018-47.602 22.018l.057 22.81h48.451v6.85H60.489S28 76.992 28 128.221s28.357 49.414 28.357 49.414h16.924v-23.773s-.912-28.357 27.905-28.357h48.054s26.999.436 26.999-26.094V55.546S180.338 29 127.279 29m-26.716 15.339a8.71 8.71 0 0 1 8.717 8.717a8.71 8.71 0 0 1-8.717 8.716a8.71 8.71 0 0 1-8.716-8.716a8.71 8.71 0 0 1 8.716-8.717"
+          />
+          <path
+            fill="url(#skillIconsPythonDark1)"
+            d="M128.721 227.958c50.772 0 47.602-22.017 47.602-22.017l-.057-22.811h-48.451v-6.849h67.696S228 179.966 228 128.736s-28.357-49.413-28.357-49.413h-16.924v23.773s.912 28.357-27.905 28.357H106.76s-27-.437-27 26.093v43.866s-4.099 26.546 48.961 26.546m26.716-15.339a8.71 8.71 0 0 1-8.717-8.716a8.71 8.71 0 0 1 8.717-8.717a8.71 8.71 0 0 1 8.717 8.717a8.71 8.71 0 0 1-8.717 8.716"
+          />
+          <defs>
+            <linearGradient
+              id="skillIconsPythonDark0"
+              x1="47.22"
+              x2="146.333"
+              y1="46.896"
+              y2="145.02"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#387eb8" />
+              <stop offset="1" stop-color="#366994" />
+            </linearGradient>
+            <linearGradient
+              id="skillIconsPythonDark1"
+              x1="108.056"
+              x2="214.492"
+              y1="109.905"
+              y2="210.522"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#ffe052" />
+              <stop offset="1" stop-color="#ffc331" />
+            </linearGradient>
+          </defs>
+        </g>
+      </svg>
+    ),
+    category: 2,
+  },
+  supabase: {
+    title: "Supabase",
+    caption: "Base de datos y backend como servicio",
+    logo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="256"
+        height="256"
+        viewBox="0 0 256 256"
+      >
+        <g fill="none">
+          <rect width="256" height="256" fill="#f4f2ed" rx="60" />
+          <g clip-path="url(#skillIconsSupabaseLight2)">
+            <path
+              fill="url(#skillIconsSupabaseLight0)"
+              d="M144.757 223.193c-5.061 6.373-15.323 2.881-15.445-5.257l-1.783-119.029h80.035c14.496 0 22.581 16.744 13.567 28.097z"
+            />
+            <path
+              fill="url(#skillIconsSupabaseLight1)"
+              fill-opacity="0.2"
+              d="M144.757 223.193c-5.061 6.373-15.323 2.881-15.445-5.257l-1.783-119.029h80.035c14.496 0 22.581 16.744 13.567 28.097z"
+            />
+            <path
+              fill="#3ecf8e"
+              d="M112.207 31.666c5.061-6.375 15.323-2.882 15.445 5.256l.782 119.029H49.4c-14.497 0-22.582-16.744-13.567-28.097z"
+            />
+          </g>
+          <defs>
+            <linearGradient
+              id="skillIconsSupabaseLight0"
+              x1="127.529"
+              x2="198.661"
+              y1="125.299"
+              y2="155.132"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#249361" />
+              <stop offset="1" stop-color="#3ecf8e" />
+            </linearGradient>
+            <linearGradient
+              id="skillIconsSupabaseLight1"
+              x1="95.993"
+              x2="128.433"
+              y1="82.12"
+              y2="143.187"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop />
+              <stop offset="1" stop-opacity="0" />
+            </linearGradient>
+            <clipPath id="skillIconsSupabaseLight2">
+              <path fill="#fff" d="M32 28h192.92v200H32z" />
+            </clipPath>
+          </defs>
+        </g>
+      </svg>
+    ),
+    category: 2,
+  },
+  astro: {
+    title: "Astro",
+    caption: "Framework para crear sitios web rápidos",
+    logo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="256"
+        height="256"
+        viewBox="0 0 256 256"
+      >
+        <g fill="none">
+          <rect
+            width="256"
+            height="256"
+            fill="url(#skillIconsAstro0)"
+            rx="60"
+          />
+          <path
+            fill="#31274a"
+            fill-rule="evenodd"
+            d="M157.719 33.011c1.634 2.028 2.466 4.765 4.132 10.237l36.396 119.561a151.5 151.5 0 0 0-43.513-14.732l-23.697-80.08a3.086 3.086 0 0 0-4.809-1.593c-.533.4-.922.962-1.109 1.602l-23.411 80.031A151.5 151.5 0 0 0 58 162.791l36.573-119.57c1.673-5.464 2.507-8.195 4.141-10.219a13.44 13.44 0 0 1 5.449-4.032c2.414-.97 5.27-.97 10.984-.97h26.123c5.721 0 8.581 0 10.997.972a13.45 13.45 0 0 1 5.452 4.04"
+            clip-rule="evenodd"
+          />
+          <path
+            fill="#ff5d01"
+            fill-rule="evenodd"
+            d="M162.074 168.499c-6 5.131-17.976 8.629-31.77 8.629c-16.931 0-31.122-5.271-34.887-12.359c-1.346 4.063-1.648 8.712-1.648 11.683c0 0-.887 14.585 9.257 24.729a9.54 9.54 0 0 1 9.538-9.538c9.028 0 9.018 7.877 9.009 14.268v.57c0 9.7 5.928 18.015 14.359 21.519a19.55 19.55 0 0 1-1.966-8.572c0-9.251 5.432-12.696 11.744-16.698c5.022-3.185 10.602-6.724 14.448-13.824a26.06 26.06 0 0 0 3.145-12.454c0-2.773-.431-5.445-1.229-7.953"
+            clip-rule="evenodd"
+          />
+          <path
+            fill="url(#skillIconsAstro1)"
+            fill-rule="evenodd"
+            d="M162.074 168.499c-6 5.131-17.976 8.629-31.77 8.629c-16.931 0-31.122-5.271-34.887-12.359c-1.346 4.063-1.648 8.712-1.648 11.683c0 0-.887 14.585 9.257 24.729a9.54 9.54 0 0 1 9.538-9.538c9.028 0 9.018 7.877 9.009 14.268v.57c0 9.7 5.928 18.015 14.359 21.519a19.55 19.55 0 0 1-1.966-8.572c0-9.251 5.432-12.696 11.744-16.698c5.022-3.185 10.602-6.724 14.448-13.824a26.06 26.06 0 0 0 3.145-12.454c0-2.773-.431-5.445-1.229-7.953"
+            clip-rule="evenodd"
+          />
+          <defs>
+            <linearGradient
+              id="skillIconsAstro0"
+              x1="128"
+              x2="128"
+              y1="0"
+              y2="256"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset=".193" stop-color="#fcb3b2" />
+              <stop offset="1" stop-color="#c587ee" />
+            </linearGradient>
+            <linearGradient
+              id="skillIconsAstro1"
+              x1="189.089"
+              x2="153.565"
+              y1="126.765"
+              y2="201.132"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#ff1639" />
+              <stop offset="1" stop-color="#ff1639" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </g>
+      </svg>
+    ),
+    category: 2,
   },
 };
