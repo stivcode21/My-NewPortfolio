@@ -3,34 +3,35 @@ import SectionHead from "@/components/sectionHead/sectionHead";
 import ToolsList from "@/components/toolsList/toolsList";
 import styles from "./About.module.css";
 import ListSkills from "@/components/listSkills/listSkills";
-import { button } from "framer-motion/client";
 
 const tools = [
   "figma",
   "miro",
   "asana",
   "notion",
+  "trello",
+  "vsCode",
   "html",
   "css",
-  "npm",
-  "git",
-  "sqlLite",
-  "firebase",
-  "js",
-  "vercel",
-  "reactjs",
-  "nextjs",
+  "sass",
   "tailwindcss",
   "bootstrap",
-  "typescript",
+  "git",
   "github",
-  "sass",
+  "js",
+  "typescript",
+  "reactjs",
+  "nextjs",
+  "sqlLite",
+  "firebase",
   "zustand",
   "redux",
   "vite",
-  "trello",
-  "vsCode",
+  "npm",
+  "vercel",
 ];
+
+const learn = ["python", "supabase", "astro"];
 
 const About = () => {
   return (
@@ -41,16 +42,17 @@ const About = () => {
       />
       <div className={styles.container}>
         <ListSkills />
-        <div className={styles.tools}>
-          <img src="/señalando.png" alt="x" className={styles.img} />
-          <h3 className={styles.workTag1}>Habilidades</h3>
-          <ToolsList tools={tools} size="small" animateOnScroll />
-          <h3 className={styles.workTag2}>
-            Aprediendo
-            <span className={styles.btnContainer}>
-              <p className={styles.btn}>Learn</p>
-            </span>
-          </h3>
+        <div className={styles.containerTools}>
+          <div className={styles.tools}>
+            <img src="/señalando.png" alt="x" className={styles.img} />
+            <h3 className={styles.workTag1}>Habilidades</h3>
+            <ToolsList tools={tools} size="small" animateOnScroll />
+            <h3 className={styles.workTag2}>
+              Aprediendo
+              <p className={styles.tag}>Learn</p>
+            </h3>
+            <ToolsList tools={learn} size="small" animateOnScroll />
+          </div>
         </div>
       </div>
     </div>
