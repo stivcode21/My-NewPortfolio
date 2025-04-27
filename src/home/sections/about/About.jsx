@@ -49,7 +49,7 @@ const About = () => {
             <ToolsList tools={tools} size="small" animateOnScroll />
             <h3 className={styles.workTag2}>
               Aprediendo
-              <p className={styles.tag}>Learn</p>
+              <span className={styles.tag}>Learn</span>
             </h3>
             <ToolsList tools={learn} size="small" animateOnScroll />
           </div>
