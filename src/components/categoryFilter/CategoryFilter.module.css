@@ -3,7 +3,6 @@ input[type="radio"] {
   visibility: hidden;
   position: absolute;
 }
-
 .filters {
   position: relative;
   width: fit-content;
@@ -15,6 +14,12 @@ input[type="radio"] {
   border: 1px solid var(--color-primary-light);
   border-radius: 20px;
   height: 56px;
+}
+
+.otherFilters {
+  border: none;
+  gap: 4px;
+  padding-inline: 0px;
 }
 
 .filters > div:not(.highlight) {
@@ -48,14 +53,17 @@ input[type="radio"] {
   transition: var(--dynamic-fast-transition) transform;
 }
 
+.otherLabel {
+  font-size: 14px;
+}
+
 .label svg path {
   stroke: var(--text-secondary);
   pointer-events: none;
-  stroke-width: 1.7px;
 }
 
 .label.active svg path {
-  stroke: var(--color-neutral); /* Cambia el color del trazo a neutral */
+  stroke: var(--color-neutral);
   transition: var(--dynamic-fast-transition);
 }
 
@@ -103,4 +111,9 @@ input[type="radio"] {
   pointer-events: none;
   transition: transform 0.3s ease, width 0.3s ease;
   z-index: 0;
+}
+
+.highlightOther {
+  top: 7px; /* Ajuste específico para el nuevo diseño */
+  background-color: var(--color-primary); /* Cambia el color si es necesario */
 }

@@ -5,6 +5,7 @@ export default function CategoryFilter({
   controls,
   selectedCategory,
   setSelectedCategory,
+  ifExists,
 }) {
   const highlightRef = useRef(null);
 
@@ -21,18 +22,32 @@ export default function CategoryFilter({
     if (currentElement && highlightRef.current) {
       const { offsetWidth, offsetLeft } = currentElement;
 
-      highlightRef.current.style.width = `${offsetWidth}px`;
-      highlightRef.current.style.transform = `translateX(${offsetLeft}px)`;
+      // Ajusta el ancho y posición del resaltado dinámico según el estilo activo
+      if (ifExists) {
+        highlightRef.current.style.width = `${offsetWidth}px`;
+        highlightRef.current.style.transform = `translateX(${offsetLeft}px)`;
+      } else {
+        highlightRef.current.style.width = `${offsetWidth}px`;
+        highlightRef.current.style.transform = `translateX(${offsetLeft}px)`;
+      }
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, ifExists]);
 
   return (
-    <div className={styles.filters} role="radiogroup">
-      <div ref={highlightRef} className={styles.highlight}></div>
+    <div
+      className={`${styles.filters} ${ifExists ? styles.otherFilters : ""}`}
+      role="radiogroup"
+    >
+      <div
+        ref={highlightRef}
+        className={`${styles.highlight} ${
+          ifExists ? styles.highlightOther : ""
+        }`}
+      ></div>
       {Object.entries(controls).map(([key, value], index) => (
         <React.Fragment key={key}>
           <label
-            className={`${styles.label} ${
+            className={`${styles.label} ${ifExists ? styles.otherLabel : ""} ${
               selectedCategory === Number(key) ? styles.active : ""
             }`}
           >
