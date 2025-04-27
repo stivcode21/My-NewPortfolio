@@ -7,6 +7,7 @@ export default function CategoryFilter({
   setSelectedCategory,
   ifExists,
 }) {
+  // Referencia al elemento que actúa como resaltado dinámico
   const highlightRef = useRef(null);
 
   const handleCategoryChange = (id) => {
@@ -15,35 +16,38 @@ export default function CategoryFilter({
 
   // Actualiza la posición y el tamaño del resaltado dinámico
   useEffect(() => {
+    // Encuentra el elemento actual basado en la categoría seleccionada
     const currentElement = document.querySelector(
-      `input[name="filter"][value="${selectedCategory}"]`
+      `input[name="filter-${
+        ifExists ? "other" : "default"
+      }"][value="${selectedCategory}"]`
     )?.parentElement;
 
+    // Si el elemento actual y el resaltado dinámico existen, ajusta su posición y tamaño
     if (currentElement && highlightRef.current) {
       const { offsetWidth, offsetLeft } = currentElement;
 
-      // Ajusta el ancho y posición del resaltado dinámico según el estilo activo
-      if (ifExists) {
-        highlightRef.current.style.width = `${offsetWidth}px`;
-        highlightRef.current.style.transform = `translateX(${offsetLeft}px)`;
-      } else {
-        highlightRef.current.style.width = `${offsetWidth}px`;
-        highlightRef.current.style.transform = `translateX(${offsetLeft}px)`;
-      }
+      highlightRef.current.style.width = `${offsetWidth}px`;
+      highlightRef.current.style.transform = `translateX(${offsetLeft}px)`;
     }
-  }, [selectedCategory, ifExists]);
+  }, [selectedCategory, ifExists]); // Ejecuta el efecto cuando cambian `selectedCategory` o `ifExists`
 
   return (
     <div
       className={`${styles.filters} ${ifExists ? styles.otherFilters : ""}`}
       role="radiogroup"
     >
+      {/* Resaltado dinámico */}
       <div
         ref={highlightRef}
         className={`${styles.highlight} ${
           ifExists ? styles.highlightOther : ""
         }`}
-      ></div>
+      >
+        <div className={styles.glow}></div>
+      </div>
+
+      {/* Renderiza los controles */}
       {Object.entries(controls).map(([key, value], index) => (
         <React.Fragment key={key}>
           <label
@@ -53,7 +57,7 @@ export default function CategoryFilter({
           >
             <input
               type="radio"
-              name="filter"
+              name={`filter-${ifExists ? "other" : "default"}`}
               value={key}
               onChange={() => handleCategoryChange(Number(key))}
             />

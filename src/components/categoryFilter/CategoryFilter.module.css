@@ -54,7 +54,7 @@ input[type="radio"] {
 }
 
 .otherLabel {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .label svg path {
@@ -70,6 +70,17 @@ input[type="radio"] {
 .label.active {
   color: var(--color-neutral);
   font-weight: var(--active-label-weight);
+}
+
+.otherLabel.active {
+  color: var(--text-primary);
+  stroke: var(--text-primary);
+  font-weight: var(--active-label-weight);
+}
+
+.otherLabel.active svg path {
+  stroke: var(--text-primary);
+  transition: var(--dynamic-fast-transition);
 }
 
 .filters:not(.small) .label.active > svg {
@@ -115,5 +126,71 @@ input[type="radio"] {
 
 .highlightOther {
   top: 7px; /* Ajuste específico para el nuevo diseño */
-  background-color: var(--color-primary); /* Cambia el color si es necesario */
+  background-color: transparent;
+  border: 2px solid var(--color-primary-light);
+}
+
+.highlight.glow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    #fff,
+    var(--color-primary),
+    var(--surface-primary),
+    var(--color-primary),
+    var(--color-primary),
+    var(--color-primary),
+    var(--surface-primary),
+    var(--color-primary),
+    #fff
+  );
+  background-size: 800%;
+  border-radius: 8px;
+  filter: blur(10px);
+  animation: glowing 25s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@media (width <=1324px) {
+  .otherLabel {
+    padding: 0 15px;
+  }
+}
+
+@media (width <=768px) {
+  .otherLabel {
+    font-size: 12px;
+    padding: 0 15px;
+  }
+  .otherLabel svg {
+    width: 20px;
+    height: 20px;
+  }
 }

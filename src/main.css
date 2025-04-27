@@ -39,7 +39,7 @@ body.light-mode {
   --color-primary-light: #dad2ff;
   --hover-primary-light: #c1aeff;
   --color-primary-dark: #4a11a1;
-  --transparent-primary-light: #1d1f3480;
+  --transparent-primary-light: #dad2ff;
   /* OUTSTANDING */
   --surface-outstanding: #faff00;
   --surface-icon-outstanding: #d9dd04;
