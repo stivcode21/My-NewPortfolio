@@ -19,7 +19,15 @@ export default function Projects() {
     <section className={styles.projects} id="projects">
       <SectionHead
         title="Proyectos"
-        description="Cada trabajo no solo muestra mis competencias técnicas, sino también mi enfoque creativo y mi dedicación a crear soluciones de diseño que sean usables, accesibles y estéticas."
+        description={
+          <p>
+            Cada trabajo{" "}
+            <strong>no solo muestra mis competencias técnicas,</strong> sino
+            también mi enfoque{" "}
+            <strong>creativo y mi dedicación a crear soluciones</strong> de
+            diseño que sean <strong>usables, accesibles y estéticas.</strong>
+          </p>
+        }
       />
       {/* Filtro de categorías */}
       <CategoryFilter

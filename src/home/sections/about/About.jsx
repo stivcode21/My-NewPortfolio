@@ -38,7 +38,16 @@ const About = () => {
     <div className={styles.about} id="about">
       <SectionHead
         title="Sobre mi"
-        description="En esta sección sabrás un poco de mí, mis skills y algo de mi historia por si la quieres conocer. Combino diseño y código para crear soluciones funcionales y con personalidad. Cada paso en mi camino ha sido una lección de aprendizaje"
+        description={
+          <p>
+            En esta sección sabrás un poco de mí, mis skills y algo de mi
+            historia <strong>por si la quieres conocer.</strong> Combino diseño
+            y código para{" "}
+            <strong>crear soluciones funcionales y con personalidad.</strong>{" "}
+            Cada paso en mi camino{" "}
+            <strong>ha sido una lección de aprendizaje</strong>
+          </p>
+        }
       />
       <div className={styles.container}>
         <ListSkills />
