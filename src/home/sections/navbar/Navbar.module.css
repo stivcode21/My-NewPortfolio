@@ -34,7 +34,7 @@
 .navLeft {
   display: flex;
   align-items: center;
-  padding: 12px 35px;
+  padding: 12px 30px;
   background: var(--surface-primary-transparent);
   backdrop-filter: blur(12px);
   border: 1px solid var(--color-primary-light);
@@ -61,7 +61,7 @@
 .navLink {
   position: relative;
   font-size: 15px;
-  margin: 0px 20px 3px 20px;
+  margin: 0px 15px 3px 15px;
   transition: all ease-in 0.1s;
 }
 
@@ -160,7 +160,7 @@
 .menu {
   width: 30px;
   height: 100%;
-  left: 20px;
+  left: 15px;
   position: absolute;
   opacity: 0;
   pointer-events: none;
@@ -196,7 +196,7 @@
 
 .links {
   display: flex;
-  width: 420px;
+  width: 440px;
   height: 100%;
   transition: width var(--dynamic-medium-transition),
     transform var(--dynamic-medium-transition), opacity 0.1s ease-in;
@@ -360,7 +360,7 @@
   }
 
   .navLeft {
-    padding: 10px 35px;
+    padding: 10px 30px;
   }
 
   .nav {
