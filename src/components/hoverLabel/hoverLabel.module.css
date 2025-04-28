@@ -31,18 +31,19 @@
 .tooltip.top {
   left: 50%;
   transform: translateX(-50%);
-  top: -35px;
+  top: -30px;
 }
 
 .tooltip.show {
   opacity: 1;
-  transition-delay: 1s;
+  transition: top var(--dynamic-fast-transition),
+    opacity var(--dynamic-fast-transition);
 }
 
 .tooltip.show:not(.top) {
   transition: top var(--dynamic-fast-transition),
     opacity var(--dynamic-fast-transition);
-  top: 50px;
+  top: calc(100% + 5px);
 }
 
 /* ANCHOR SIDE */

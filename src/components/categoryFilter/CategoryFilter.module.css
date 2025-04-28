@@ -127,7 +127,7 @@ input[type="radio"] {
 .highlightOther {
   top: 7px; /* Ajuste específico para el nuevo diseño */
   background-color: transparent;
-  border: 2px solid var(--color-primary-light);
+  border: 1px solid var(--color-primary-light);
 }
 
 .highlight.glow {
