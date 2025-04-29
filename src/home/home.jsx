@@ -4,18 +4,19 @@ import Navbar from "./sections/navbar/Navbar";
 import GitHubStats from "./sections/gitHubStats/GithubStats";
 import Projects from "./sections/projects/Projects";
 import About from "./sections/about/About";
+import Education from "./sections/education/Education";
 
 const Home = () => {
-    return (
-        <div id="container"
-            className={styles.container}>
-            <Navbar />
-            <Header />
-            <GitHubStats />
-            <Projects />
-            <About />
-        </div>
-    )
-}
+  return (
+    <div id="container" className={styles.container}>
+      <Navbar />
+      <Header />
+      <GitHubStats />
+      <Projects />
+      <About />
+      <Education />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

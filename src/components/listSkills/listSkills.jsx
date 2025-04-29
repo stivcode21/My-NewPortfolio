@@ -44,53 +44,13 @@ const ListSkills = () => {
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-dasharray="48"
-                        stroke-dashoffset="48"
-                        d="M16 5v-1c0 -0.55 -0.45 -1 -1 -1h-9c-0.55 0 -1 0.45 -1 1v16c0 0.55 0.45 1 1 1h9c0.55 0 1 -0.45 1 -1v-1"
-                      >
-                        <animate
-                          fill="freeze"
-                          attributeName="stroke-dashoffset"
-                          dur="0.6s"
-                          values="48;0"
-                        />
-                      </path>
-                      <path
-                        stroke-dasharray="12"
-                        stroke-dashoffset="12"
-                        d="M10 12h11"
-                      >
-                        <animate
-                          fill="freeze"
-                          attributeName="stroke-dashoffset"
-                          begin="0.7s"
-                          dur="0.2s"
-                          values="12;0"
-                        />
-                      </path>
-                      <path
-                        stroke-dasharray="6"
-                        stroke-dashoffset="6"
-                        d="M21 12l-3.5 -3.5M21 12l-3.5 3.5"
-                      >
-                        <animate
-                          fill="freeze"
-                          attributeName="stroke-dashoffset"
-                          begin="0.9s"
-                          dur="0.2s"
-                          values="6;0"
-                        />
-                      </path>
-                    </g>
+                    <path d="M15 12h-5" />
+                    <path d="M15 8h-5" />
+                    <path d="M19 17V5a2 2 0 0 0-2-2H4" />
+                    <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" />
                   </svg>
                 </button>
               </HoverLabel>

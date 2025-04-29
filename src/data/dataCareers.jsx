@@ -65,62 +65,11 @@ export const dataCareers2 = {
         width="24"
         height="24"
         viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
       >
-        <path fill="currentColor" d="M10 16h4v0h-4z">
-          <animate
-            fill="freeze"
-            attributeName="d"
-            begin="0.6s"
-            dur="0.2s"
-            values="M10 16h4v0h-4z;M10 16h4v6h-4z"
-          />
-        </path>
-        <g
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        >
-          <path
-            stroke-dasharray="72"
-            stroke-dashoffset="72"
-            d="M12 17h-10v-14h20v14Z"
-          >
-            <animate
-              fill="freeze"
-              attributeName="stroke-dashoffset"
-              dur="0.6s"
-              values="72;0"
-            />
-          </path>
-          <path
-            stroke-dasharray="4"
-            stroke-dashoffset="4"
-            d="M12 21h3M12 21h-3"
-          >
-            <animate
-              fill="freeze"
-              attributeName="stroke-dashoffset"
-              begin="0.8s"
-              dur="0.2s"
-              values="4;0"
-            />
-          </path>
-          <path
-            stroke-dasharray="4"
-            stroke-dashoffset="4"
-            d="M6 7h2M6 7v2M18 13h-2M18 13v-2"
-          >
-            <animate
-              fill="freeze"
-              attributeName="stroke-dashoffset"
-              begin="1.1s"
-              dur="0.2s"
-              values="4;0"
-            />
-          </path>
-        </g>
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
       </svg>
     ),
   },
@@ -132,59 +81,13 @@ export const dataCareers2 = {
         width="24"
         height="24"
         viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
       >
-        <mask id="lineMdBeerAltTwotoneLoop0">
-          <g>
-            <g>
-              <path
-                fill="none"
-                stroke="#fff"
-                stroke-width="2"
-                d="M18 23c-2 0 -3 2 -5 2c-2 0 -3 -2 -5 -2c-2 0 -3 2 -5 2c-2 0 -3 -2 -5 -2c-2 0 -3 2 -5 2"
-              />
-              <path
-                fill="#fff"
-                fill-opacity="0.3"
-                d="M18 23c-2 0 -3 2 -5 2c-2 0 -3 -2 -5 -2c-2 0 -3 2 -5 2c-2 0 -3 -2 -5 -2c-2 0 -3 2 -5 2v15h25Z"
-              />
-              <animateMotion
-                calcMode="linear"
-                dur="3s"
-                path="M0 0h10"
-                repeatCount="indefinite"
-              />
-            </g>
-            <animateMotion
-              fill="freeze"
-              begin="0.7s"
-              calcMode="linear"
-              dur="0.3s"
-              path="M0 0v-16"
-            />
-          </g>
-        </mask>
-        <path
-          fill="none"
-          stroke="currentColor"
-          stroke-dasharray="64"
-          stroke-dashoffset="64"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M18 3l-2 18h-9l-2 -18Z"
-        >
-          <animate
-            fill="freeze"
-            attributeName="stroke-dashoffset"
-            dur="0.6s"
-            values="64;0"
-          />
-        </path>
-        <path
-          fill="currentColor"
-          d="M18 3l-2 18h-9l-2 -18Z"
-          mask="url(#lineMdBeerAltTwotoneLoop0)"
-        />
+        <path d="M10 2v2" />
+        <path d="M14 2v4" />
+        <path d="M17 2a1 1 0 0 1 1 1v9H6V3a1 1 0 0 1 1-1z" />
+        <path d="M6 12a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2h2a1 1 0 0 1 1 1v2.9a2 2 0 1 0 4 0V17a1 1 0 0 1 1-1h2a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1" />
       </svg>
     ),
   },
@@ -197,88 +100,18 @@ export const dataCareers2 = {
         width="24"
         height="24"
         viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
       >
-        <path
-          fill="currentColor"
-          fill-opacity="0"
-          d="M17 14v4c0 1.66 -1.34 3 -3 3h-6c-1.66 0 -3 -1.34 -3 -3v-4Z"
-        >
-          <animate
-            fill="freeze"
-            attributeName="fill-opacity"
-            begin="0.8s"
-            dur="0.5s"
-            values="0;1"
-          />
-        </path>
-        <g
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        >
-          <path
-            stroke-dasharray="48"
-            stroke-dashoffset="48"
-            d="M17 9v9c0 1.66 -1.34 3 -3 3h-6c-1.66 0 -3 -1.34 -3 -3v-9Z"
-          >
-            <animate
-              fill="freeze"
-              attributeName="stroke-dashoffset"
-              dur="0.6s"
-              values="48;0"
-            />
-          </path>
-          <path
-            stroke-dasharray="14"
-            stroke-dashoffset="14"
-            d="M17 9h3c0.55 0 1 0.45 1 1v3c0 0.55 -0.45 1 -1 1h-3"
-          >
-            <animate
-              fill="freeze"
-              attributeName="stroke-dashoffset"
-              begin="0.6s"
-              dur="0.2s"
-              values="14;0"
-            />
-          </path>
-          <mask id="lineMdCoffeeHalfEmptyFilledLoop0">
-            <path
-              stroke="#fff"
-              d="M8 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M12 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M16 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4"
-            >
-              <animateMotion
-                calcMode="linear"
-                dur="3s"
-                path="M0 0v-8"
-                repeatCount="indefinite"
-              />
-            </path>
-          </mask>
-          <rect
-            width="24"
-            height="0"
-            y="7"
-            fill="currentColor"
-            mask="url(#lineMdCoffeeHalfEmptyFilledLoop0)"
-          >
-            <animate
-              fill="freeze"
-              attributeName="y"
-              begin="0.8s"
-              dur="0.6s"
-              values="7;2"
-            />
-            <animate
-              fill="freeze"
-              attributeName="height"
-              begin="0.8s"
-              dur="0.6s"
-              values="0;5"
-            />
-          </rect>
-        </g>
+        <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+        <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+        <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+        <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
+        <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+        <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+        <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
+        <path d="M6 18a4 4 0 0 1-1.967-.516" />
+        <path d="M19.967 17.484A4 4 0 0 1 18 18" />
       </svg>
     ),
   },
