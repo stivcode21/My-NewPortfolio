@@ -66,17 +66,17 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.toolItem svg {
+.toolItem img {
   user-select: none;
   transition: var(--dynamic-fast-transition);
 }
 
-.toolItem.small svg {
+.toolItem.small img {
   width: 26px;
   height: 26px;
 }
 
-.toolItem.large svg {
+.toolItem.large img {
   width: 32px;
   height: 32px;
 }
@@ -108,7 +108,7 @@
     bottom: -20px;
   }
 
-  .toolItem:hover svg {
+  .toolItem:hover img {
     transform: translateY(8px);
   }
 }
@@ -128,7 +128,7 @@
     height: 45px;
   }
 
-  .toolItem.small svg {
+  .toolItem.small img {
     width: 26px;
     height: 26px;
   }

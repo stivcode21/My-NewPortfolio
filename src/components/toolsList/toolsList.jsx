@@ -38,7 +38,7 @@ export default function ToolsList({
                     size === "small" ? styles.small : styles.large
                   }`}
                 >
-                  {tool.logo}
+                  <img src={tool.logo} role="icon" alt={`svgSkill-${index}`} />
                 </li>
               </HoverLabel>
             </div>
