@@ -117,7 +117,7 @@
   display: none;
 }
 
-.tooltip h3 {
+.tooltip .label {
   font-size: 16px;
   height: 32px;
   display: flex;
@@ -128,8 +128,9 @@
   border-bottom: 2px solid var(--hover-primary-light);
 }
 
-.tooltip > p {
+.tooltip > .caption {
   font-size: 14px;
+  font-weight: 400;
   color: var(--text-secondary);
 }
 

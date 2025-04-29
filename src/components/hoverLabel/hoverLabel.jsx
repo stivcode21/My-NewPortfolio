@@ -2,59 +2,62 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./hoverLabel.module.css";
 
 const HoverLabel = ({
-    children,
-    label,
-    caption,
-    position = "top",
-    size = "normal",
+  children,
+  label,
+  caption,
+  position = "top",
+  size = "normal",
 }) => {
-    const [showTooltip, setShowTooltip] = useState(false);
-    const [isOverflowing, setIsOverflowing] = useState(false);
-    const tooltipRef = useRef(null);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const tooltipRef = useRef(null);
 
-    useEffect(() => {
-        if (showTooltip && caption && tooltipRef.current) {
-            const rect = tooltipRef.current.getBoundingClientRect();
-            const container = tooltipRef.current.parentElement;
+  useEffect(() => {
+    if (showTooltip && caption && tooltipRef.current) {
+      const rect = tooltipRef.current.getBoundingClientRect();
+      const container = tooltipRef.current.parentElement;
 
-            if (container) {
-                const containerRect = container.getBoundingClientRect();
-                setIsOverflowing(rect.right > containerRect.right);
-            } else {
-                setIsOverflowing(false);
-            }
-        } else {
-            setIsOverflowing(false);
-        }
-    }, [showTooltip, caption]);
+      if (container) {
+        const containerRect = container.getBoundingClientRect();
+        setIsOverflowing(rect.right > containerRect.right);
+      } else {
+        setIsOverflowing(false);
+      }
+    } else {
+      setIsOverflowing(false);
+    }
+  }, [showTooltip, caption]);
 
-    return (
-        <div
-            style={{ position: "relative" }}
-            onMouseEnter={() => setShowTooltip(true)} // Mostrar tooltip en hover
-            onMouseLeave={() => setShowTooltip(false)}>
-            {children}
-            {label && (
-                <div
-                    ref={tooltipRef}
-                    className={`${styles.tooltip} ${showTooltip ? styles.show : ""} ${styles[position]}
+  return (
+    <span
+      style={{ position: "relative" }}
+      onMouseEnter={() => setShowTooltip(true)} // Mostrar tooltip en hover
+      onMouseLeave={() => setShowTooltip(false)}
+    >
+      {children}
+      {label && (
+        <span
+          ref={tooltipRef}
+          className={`${styles.tooltip} ${showTooltip ? styles.show : ""} ${
+            styles[position]
+          }
                       ${size === "minimal" ? styles.minimal : ""}
                       ${caption && styles.expanded} 
                       ${isOverflowing ? styles.overflowRight : ""}`}
-                    aria-hidden={!showTooltip}
-                >
-                    {caption ? (
-                        <>
-                            <h3>{label}</h3>
-                            <p className={styles.caption}>{caption}</p>
-                        </>
-                    ) : (
-                        label
-                    )}
-                </div>
-            )}
-        </div>
-    );
+          aria-hidden={!showTooltip}
+        >
+          {caption ? (
+            <>
+              <span className={styles.label}>{label}</span>
+              <span className={styles.caption}>{caption}</span>
+            </>
+          ) : (
+            label
+          )}
+        </span>
+      )}
+    </span>
+  );
 };
 
 export default HoverLabel;
