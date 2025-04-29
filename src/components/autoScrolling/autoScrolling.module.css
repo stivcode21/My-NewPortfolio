@@ -1,0 +1,74 @@
+.appContainer {
+  color: #000000;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.marquee {
+  display: flex;
+  width: 1200px;
+  overflow: hidden;
+  user-select: none;
+
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+@keyframes scrollX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marqueeGroup {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  animation: scrollX 30s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused !important;
+}
+
+.reverse {
+  animation-direction: reverse;
+  animation-delay: -3s;
+}
+
+.imageGroup {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.image {
+  object-fit: contain;
+  width: 200px;
+  height: 150px;
+  border-radius: 4px;
+}
