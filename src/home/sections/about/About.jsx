@@ -36,19 +36,15 @@ const learn = ["python", "supabase", "astro"];
 const About = () => {
   return (
     <div className={styles.about} id="about">
-      <SectionHead
-        title="Sobre mi"
-        description={
-          <p>
-            En esta sección sabrás un poco de mí, mis skills y algo de mi
-            historia <strong>por si la quieres conocer.</strong> Combino diseño
-            y código para{" "}
-            <strong>crear soluciones funcionales y con personalidad.</strong>{" "}
-            Cada paso en mi camino{" "}
-            <strong>ha sido una lección de aprendizaje</strong>
-          </p>
-        }
-      />
+      <SectionHead title="Sobre mi">
+        <span>
+          En esta sección sabrás un poco de mí, mis skills y algo de mi historia{" "}
+          <strong>por si la quieres conocer.</strong> Combino diseño y código
+          para <strong>crear soluciones funcionales y con personalidad.</strong>{" "}
+          Cada paso en mi camino{" "}
+          <strong>ha sido una lección de aprendizaje</strong>
+        </span>
+      </SectionHead>
       <div className={styles.container}>
         <ListSkills />
         <div className={styles.containerTools}>
