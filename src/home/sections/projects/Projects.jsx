@@ -17,7 +17,7 @@ export default function Projects() {
 
   return (
     <section className={styles.projects} id="projects">
-      <SectionHead title="Proyectos">
+      <SectionHead title="Proyectos" ifExist={true}>
         <span>
           Cada trabajo{" "}
           <strong>no solo muestra mis competencias técnicas,</strong> sino
