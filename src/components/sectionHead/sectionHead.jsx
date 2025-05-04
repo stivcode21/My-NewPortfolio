@@ -1,3 +1,4 @@
+import ShinyText from "../shinyText/shinyText";
 import styles from "./sectionHead.module.css";
 
 export default function SectionHead({
@@ -58,7 +59,7 @@ export default function SectionHead({
         </svg>
       </div>
       <span className={styles.headerRight}>
-        <h3 className={styles.h3}>{title}</h3>
+        <ShinyText text={title} />
         <p className={styles.description}>{children}</p>
       </span>
     </header>

@@ -1,0 +1,31 @@
+.shinyText {
+  color: var(
+    --text-alternative
+  ); /* Adjust this color to change intensity/style */
+  background: linear-gradient(
+    120deg,
+    var(--color-neutral) 40%,
+    var(--text-primary) 50%,
+    var(--color-neutral) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shinyText.disabled {
+  animation: none;
+}
