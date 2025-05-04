@@ -5,6 +5,8 @@ import GitHubStats from "./sections/gitHubStats/GithubStats";
 import Projects from "./sections/projects/Projects";
 import About from "./sections/about/About";
 import Education from "./sections/education/Education";
+import Footer from "./sections/footer/footer";
+import Contact from "./sections/contact/Contact";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <Projects />
       <About />
       <Education />
+      <Contact />
+      <Footer />
     </div>
   );
 };

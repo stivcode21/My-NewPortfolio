@@ -33,11 +33,10 @@
   margin-inline: 10px;
 }
 
-
 /* MEDIA QUERIES */
 @media (width <= 850px) {
   .footerLeft span {
-    max-width: 190px;
+    max-width: 300px;
     text-align: left;
   }
 }

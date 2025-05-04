@@ -1,5 +1,5 @@
-import SocialButton from "../../../components/socialButton/socialButton";
-import { handleShare } from "../../../hooks/share";
+import SocialButton from "@/components/socialButton/socialButton";
+import { handleShare } from "@/hooks/share";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -10,18 +10,19 @@ export default function Footer() {
           iconName="share"
           type="secondary"
           handleClick={handleShare}
+          position="top"
         />
         <span>
-          Diseñado y desarrollado por <strong>Tomás Iannello</strong>.
+          © 2025 Desarrollado por <strong>StivCode</strong>. Todos los derechos
+          reservados.{" "}
         </span>
       </div>
       <div className={styles.footerLinks}>
-        <SocialButton iconName="email" type="secondary" />
-        <SocialButton iconName="linkedin" type="secondary" />
+        <SocialButton iconName="email" type="secondary" position="top" />
+        <SocialButton iconName="linkedin" type="secondary" position="top" />
         <span className={styles.separator}></span>
-        <SocialButton iconName="behance" type="secondary" />
-        <SocialButton iconName="dribbble" type="secondary" />
-        <SocialButton iconName="github" type="secondary" />
+        <SocialButton iconName="discord" type="secondary" position="top" />
+        <SocialButton iconName="github" type="secondary" position="top" />
       </div>
     </footer>
   );
