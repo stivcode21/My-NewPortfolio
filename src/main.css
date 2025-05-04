@@ -26,7 +26,7 @@ body.light-mode {
   --text-primary-transparent-2: rgba(29, 29, 29, 0.2);
   --text-primary-transparent-3: #0e176d4f;
   --text-secondary: #464646;
-  --text-alternative: #fff;
+  --text-alternative: #000000b2;
   --text-muted: #737373;
   --title-weight: 700;
   --label-weight: 600;
@@ -75,7 +75,7 @@ body.dark-mode {
   --text-primary-transparent-2: rgba(255, 255, 255, 0.1);
   --text-primary-transparent-3: rgba(255, 255, 255, 0.2);
   --text-secondary: #9c9caf;
-  --text-alternative: #5611bf;
+  --text-alternative: #d5d2d2a4;
   --text-muted: #56586d;
   /* COLOR */
   --color-neutral: #111329;
