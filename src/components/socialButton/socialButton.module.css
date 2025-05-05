@@ -31,13 +31,17 @@
 
 .link.secondary {
   width: 50px;
+  height: 50px;
   border-radius: 15px;
   background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link.secondary svg {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
 }
 
 .link.secondary path {
@@ -53,14 +57,14 @@
   fill: var(--color-primary);
 }
 
-button.link path {
+.button.link path {
   fill: none !important;
 }
 
-button.link path {
+.button.link path {
   stroke: var(--text-muted);
 }
 
-button.link:hover path {
+.button.link:hover path {
   stroke: var(--color-primary);
 }
