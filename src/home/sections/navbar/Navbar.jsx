@@ -24,6 +24,7 @@ export default function Navbar() {
     }
   };
 
+  //escucha el evento scroll y resize para actualizar el estado de colapsado
   useEffect(() => {
     updateCollapsedState();
 
@@ -36,6 +37,7 @@ export default function Navbar() {
     };
   }, []);
 
+  //funcion para hacer scroll suave a la sección correspondiente
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
