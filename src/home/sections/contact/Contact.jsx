@@ -5,6 +5,7 @@ import SectionHead from "@/components/sectionHead/sectionHead";
 import SocialButton from "@/components/socialButton/socialButton";
 import TextField from "@/components/textField/textField";
 import { formatDateToSubmit } from "@/hooks/formatDate";
+import ButtonBorder from "@/components/buttonBorder/buttonBorder";
 
 export default function Contact() {
   const myEmail = "contacto@stivcode.com";
@@ -133,14 +134,18 @@ export default function Contact() {
               isValid={errors.message}
               errorMessage="Compartime tu propuesta antes de enviar"
             />
-            <button
-              onClick={(e) => handleSubmit(e)}
-              type="submit"
-              className={styles.button}
-            >
-              <span className={styles.text}>Enviar</span>
-              <div className={styles.glow}></div>
-            </button>
+            <div className={styles.btnContainer}>
+              <ButtonBorder
+                as="button"
+                speed="5s"
+                color="var(--text-primary)"
+                onClick={(e) => handleSubmit(e)}
+                type="submit"
+                className={styles.btn}
+              >
+                Enviar
+              </ButtonBorder>
+            </div>
           </form>
         </div>
       </div>
