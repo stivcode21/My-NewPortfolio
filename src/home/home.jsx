@@ -7,19 +7,22 @@ import About from "./sections/about/About";
 import Education from "./sections/education/Education";
 import Footer from "./sections/footer/footer";
 import Contact from "./sections/contact/Contact";
+import { NotificationProvider } from "../components/notificationProvider/notificationProvider";
 
 const Home = () => {
   return (
-    <div id="container" className={styles.container}>
-      <Navbar />
-      <Header />
-      <GitHubStats />
-      <Projects />
-      <About />
-      <Education />
-      <Contact />
-      <Footer />
-    </div>
+    <NotificationProvider>
+      <div id="container" className={styles.container}>
+        <Navbar />
+        <Header />
+        <GitHubStats />
+        <Projects />
+        <About />
+        <Education />
+        <Contact />
+        <Footer />
+      </div>
+    </NotificationProvider>
   );
 };
 
