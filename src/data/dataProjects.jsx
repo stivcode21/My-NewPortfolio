@@ -7,6 +7,7 @@ import UrbanShop2 from "../assets/projects/URBANSHOP-2.webp";
 import UrbanShop3 from "../assets/projects/URBANSHOP-3.webp";
 
 import FrameOnix1 from "../assets/projects/FRAMEONIX-1.webp";
+import FrameOnix2 from "../assets/projects/FRAMEONIX-2.webp";
 
 import Consultora1 from "../assets/projects/Consultora1.jpg";
 import Consultora2 from "../assets/projects/Consultora2.jpg";
@@ -48,7 +49,10 @@ export const dataProjects = [
     title: "FrameOnix",
     url: "FrameOnix",
     categoryId: 1,
-    images: [<img src={FrameOnix1} alt="Mockup del proyecto de FrameOnix" />],
+    images: [
+      <img src={FrameOnix1} alt="Mockup del proyecto de FrameOnix" />,
+      <img src={FrameOnix2} alt="Mockup del proyecto de FrameOnix" />,
+    ],
     tags: ["Web", "Library"],
     shortDescription:
       "Busca revolucionar la forma en que aprendemos y compartimos experiencias de aprendizaje.",
