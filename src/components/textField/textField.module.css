@@ -30,6 +30,12 @@
   transition: var(--dynamic-fast-transition);
 }
 
+.success input,
+.success textarea {
+  border: 1px solid #093816;
+  position: relative;
+}
+
 .field textarea {
   resize: none;
   padding: 20px;
@@ -93,6 +99,10 @@
   background: transparent;
   backdrop-filter: blur(2px);
   pointer-events: none;
+}
+
+.field .send {
+  color: var(--color-success);
 }
 
 /* ERROR STATE */
