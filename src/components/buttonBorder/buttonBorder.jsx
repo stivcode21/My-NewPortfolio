@@ -4,6 +4,7 @@ const ButtonBorder = ({
   className = "",
   color = "white",
   speed = "6s",
+  small = false,
   children,
   disabled,
   ...rest
@@ -28,7 +29,9 @@ const ButtonBorder = ({
           animationDuration: speed,
         }}
       ></div>
-      <div className={styles.innerContent}>{children}</div>
+      <div className={`${styles.innerContent} ${small && styles.innerSmall}`}>
+        {children}
+      </div>
     </button>
   );
 };

@@ -44,7 +44,14 @@
   text-align: center;
   padding: 10px 40px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
+}
+
+.innerSmall {
+  padding: 10px 15px;
 }
 
 @keyframes star-movement-bottom {
