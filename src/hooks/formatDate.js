@@ -11,7 +11,7 @@ export function formatDate(dateString) {
   return formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
 }
 
-// Devuelve fechas formateadas para EmailJS
+// Devuelve fechas formateadas
 export function formatDateToSubmit() {
   const now = new Date();
 
@@ -28,7 +28,7 @@ export function formatDateToSubmit() {
     minute: "2-digit",
   });
 
-  const localTime = [formattedDate, formattedHour];
+  const localTime = [formattedDate];
 
   return localTime;
 }
