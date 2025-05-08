@@ -2,14 +2,17 @@ import { useState } from "react";
 import styles from "./Contact.module.css";
 import emailjs from "emailjs-com";
 import SectionHead from "@/components/sectionHead/sectionHead";
-import SocialButton from "@/components/socialButton/socialButton";
 import TextField from "@/components/textField/textField";
 import { formatDateToSubmit } from "@/hooks/formatDate";
 import ButtonBorder from "@/components/buttonBorder/buttonBorder";
 import { useNotification } from "@/components/notificationProvider/notificationProvider";
+import { comments } from "../../../data/dataComments";
+import CommentCard from "../../../components/commentCard/commentCard";
+import { NotebookPen } from "lucide-react";
 
 export default function Contact() {
   const notify = useNotification();
+  const localTime = formatDateToSubmit();
 
   // Estado para los datos del formulario
   const [contactData, setContactData] = useState({
@@ -67,7 +70,6 @@ export default function Contact() {
       }
 
       setIsLoading(true); // Mostrar loader
-      const localTime = formatDateToSubmit();
 
       const formData = {
         name: contactData.fullname,
@@ -114,16 +116,34 @@ export default function Contact() {
         </span>
       </SectionHead>
       <div className={styles.contact}>
+        {/* Content left */}
         <div className={styles.contactLeft}>
-          <h3 className={styles.subtitle}>Hablemos por redes</h3>
-          <span>
-            <div className={styles.social}>
-              <SocialButton iconName="discord" />
-              <SocialButton iconName="dribbble" />
-              <SocialButton iconName="github" />
-            </div>
-          </span>
+          <div className={styles.head}>
+            <h3 className={styles.subtitle}>Libro de visitas</h3>
+            <ButtonBorder
+              speed="5s"
+              color="var(--text-primary)"
+              type="submit"
+              small={true}
+              className={styles.btn}
+            >
+              <NotebookPen size={20} />
+            </ButtonBorder>
+          </div>
+          <div className={styles.guestbook}>
+            {comments.map((comment) => (
+              <CommentCard
+                avatar={comment.avatar}
+                username={comment.username}
+                comment={comment.comment}
+                date={localTime}
+                pinned={comment.pinned}
+                link={comment.link}
+              />
+            ))}
+          </div>
         </div>
+        {/* Content right */}
         <div className={styles.contactRight}>
           <h3 className={styles.subtitle}>
             {isDisabled ? "¡Gracias por tu mensaje!" : "Dejame un mensaje"}
