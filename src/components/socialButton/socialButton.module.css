@@ -65,6 +65,11 @@
   stroke: var(--text-muted);
 }
 
-.button.link:hover path {
+.button.link circle {
+  stroke: var(--text-muted);
+}
+
+.button.link:hover path,
+.button.link:hover circle {
   stroke: var(--color-primary);
 }

@@ -1,3 +1,5 @@
+import { Waypoints } from "lucide-react";
+
 export const dataBtnIcons = [
   {
     title: "email",
@@ -123,23 +125,7 @@ export const dataBtnIcons = [
     title: "share",
     url: "",
     label: "Compartir",
-    svg: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-      >
-        <path
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
-          d="M8.25 2.75h-5.5v10.5h10.5v-5.5m0-5l-5.5 5.5m3-6.5h3.5v3.5"
-        />
-      </svg>
-    ),
+    svg: <Waypoints />,
   },
   {
     title: "logo",
