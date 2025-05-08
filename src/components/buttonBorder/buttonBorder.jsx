@@ -1,15 +1,19 @@
 import styles from "./ButtonBorder.module.css";
 
 const ButtonBorder = ({
-  as: Component = "button",
   className = "",
   color = "white",
   speed = "6s",
   children,
+  disabled,
   ...rest
 }) => {
   return (
-    <Component className={`${styles.borderContainer} ${className}`} {...rest}>
+    <button
+      disabled={disabled}
+      className={`${styles.borderContainer} ${className}`}
+      {...rest}
+    >
       <div
         className={styles.borderGradientBottom}
         style={{
@@ -25,7 +29,7 @@ const ButtonBorder = ({
         }}
       ></div>
       <div className={styles.innerContent}>{children}</div>
-    </Component>
+    </button>
   );
 };
 
