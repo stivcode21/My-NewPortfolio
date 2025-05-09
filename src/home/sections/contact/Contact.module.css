@@ -20,46 +20,6 @@
   gap: 15px;
 }
 
-.guestbook {
-  width: 100%;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  gap: 20px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-}
-
-.guestbook::-webkit-scrollbar {
-  display: none;
-}
-
-.head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contactLeft > span {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contactLeft .social {
-  display: flex;
-  align-items: center;
-}
-
-.contactLeft .social .separator {
-  width: 1px;
-  height: 30px;
-  background: var(--color-primary-light);
-  margin-inline: 10px;
-}
-
 /* CONTACT FORM */
 .contactRight {
   display: flex;
@@ -84,17 +44,6 @@
 .subtitle {
   font-size: 28px;
   font-weight: 700;
-}
-
-.btnContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn:hover {
-  scale: 1.05;
-  transition: scale var(--dynamic-fast-transition);
 }
 
 /* MEDIA QUERIES */

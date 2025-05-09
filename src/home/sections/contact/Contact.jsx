@@ -6,9 +6,10 @@ import TextField from "@/components/textField/textField";
 import { formatDateToSubmit } from "@/hooks/formatDate";
 import ButtonBorder from "@/components/buttonBorder/buttonBorder";
 import { useNotification } from "@/components/notificationProvider/notificationProvider";
-import { comments } from "../../../data/dataComments";
-import CommentCard from "../../../components/commentCard/commentCard";
-import { NotebookPen } from "lucide-react";
+import CommentList from "@/components/commentList/commentList";
+import Modal from "../../../components/modal/modal";
+import CommentForm from "../../../components/commentForm/commentForm";
+import useModalFormStore from "../../../store/ModalFormStore";
 
 export default function Contact() {
   const notify = useNotification();
@@ -28,9 +29,10 @@ export default function Contact() {
     message: false,
   });
 
-  // Estado para el loader y la deshabilitación del formulario
+  // Estado para el loader, modal y la deshabilitación del formulario
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const { modalState, setModalState } = useModalFormStore();
 
   // Estado para controlar el límite de correos enviados
   const [sentEmails, setSentEmails] = useState(0);
@@ -81,10 +83,10 @@ export default function Contact() {
       // Enviar email
       emailjs
         .send(
-          "service_hmsslq4", // Service ID
+          import.meta.env.VITE_EMAILJS_ID, // Service ID
           "template_fisorjj", // Template ID
           formData,
-          "DK3FhCdOa7Hjq0gba" // Public Key
+          import.meta.env.VITE_EMAILJS_PUCLIC_KEY // Public Key
         )
         .then(() => {
           notify("Success", "Mensaje enviado correctamente");
@@ -118,30 +120,7 @@ export default function Contact() {
       <div className={styles.contact}>
         {/* Content left */}
         <div className={styles.contactLeft}>
-          <div className={styles.head}>
-            <h3 className={styles.subtitle}>Libro de visitas</h3>
-            <ButtonBorder
-              speed="5s"
-              color="var(--text-primary)"
-              type="submit"
-              small={true}
-              className={styles.btn}
-            >
-              <NotebookPen size={20} />
-            </ButtonBorder>
-          </div>
-          <div className={styles.guestbook}>
-            {comments.map((comment) => (
-              <CommentCard
-                avatar={comment.avatar}
-                username={comment.username}
-                comment={comment.comment}
-                date={localTime}
-                pinned={comment.pinned}
-                link={comment.link}
-              />
-            ))}
-          </div>
+          <CommentList />
         </div>
         {/* Content right */}
         <div className={styles.contactRight}>
@@ -189,8 +168,6 @@ export default function Contact() {
                 ""
               ) : (
                 <ButtonBorder
-                  speed="5s"
-                  color="var(--text-primary)"
                   onClick={(e) => handleSubmit(e)}
                   type="submit"
                   className={styles.btn}
@@ -225,6 +202,9 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <Modal isOpen={modalState} onClose={() => setModalState(false)}>
+        <CommentForm />
+      </Modal>
     </section>
   );
 }
