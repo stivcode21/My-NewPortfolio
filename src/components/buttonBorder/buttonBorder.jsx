@@ -2,8 +2,8 @@ import styles from "./ButtonBorder.module.css";
 
 const ButtonBorder = ({
   className = "",
-  color = "white",
-  speed = "6s",
+  color = "var(--text-primary)",
+  speed = "5s",
   small = false,
   children,
   disabled,

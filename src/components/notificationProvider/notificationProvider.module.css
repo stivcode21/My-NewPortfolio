@@ -31,7 +31,7 @@
   height: 3px;
   content: "";
   box-shadow: 0 0 10px var(--color);
-  animation: timeOut 5s linear forwards;
+  animation: timeOut 7s linear forwards;
 }
 
 .toast.Success {
@@ -61,7 +61,7 @@
   );
 }
 
-.toast.nfo {
+.toast.Info {
   --color: #3498db;
   background-image: linear-gradient(
     to right,

@@ -22,7 +22,7 @@ export const NotificationProvider = ({ children }) => {
 
     setTimeout(() => {
       setNotifications((prev) => prev.filter((object) => object.id !== id));
-    }, 5000);
+    }, 7000);
   };
 
   return (

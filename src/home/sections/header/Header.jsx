@@ -118,7 +118,11 @@ export default function Header() {
             ease: [0.215, 0.61, 0.355, 1],
           }}
         >
-          <a href="" rel="noreferrer" target="_blank">
+          <a
+            href="https://drive.google.com/file/d/1h5hCyrD4zuS4NdeWJKyIi51TP0m3LVQZ/view?usp=drive_link"
+            rel="noreferrer"
+            target="_blank"
+          >
             <svg
               width="16"
               height="22"
