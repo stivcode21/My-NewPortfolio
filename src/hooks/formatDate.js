@@ -28,7 +28,7 @@ export function formatDateToSubmit() {
     minute: "2-digit",
   });
 
-  const localTime = [formattedDate];
+  const localTime = formattedDate;
 
   return localTime;
 }
