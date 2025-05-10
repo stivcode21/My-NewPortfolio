@@ -46,6 +46,11 @@
   font-weight: 700;
 }
 
+.btnContainer {
+  width: fit-content;
+  margin: 0 auto;
+}
+
 /* MEDIA QUERIES */
 @media (width <= 1024px) {
   .contact {

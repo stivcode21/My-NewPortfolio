@@ -1,5 +1,5 @@
 import Header from "./sections/header/Header";
-import styles from "./Home.module.css";
+import styles from "./home.module.css";
 import Navbar from "./sections/navbar/Navbar";
 import GitHubStats from "./sections/gitHubStats/GithubStats";
 import Projects from "./sections/projects/Projects";
