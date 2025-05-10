@@ -1,4 +1,4 @@
-import styles from "./ButtonBorder.module.css";
+import styles from "./buttonBorder.module.css";
 
 const ButtonBorder = ({
   className = "",
