@@ -1,11 +1,11 @@
-import AutoScrolling from "@/components/autoScrolling/AutoScrolling";
-import SectionHead from "@/components/sectionHead/SectionHead";
+import AutoScroll from "@/components/autoScroll/AutoScroll";
+import BlockHeader from "@/components/blockHeader/BlockHeader";
 import styles from "./Education.module.css";
 
 const Education = () => {
   return (
     <div id="education" className={styles.container}>
-      <SectionHead title="Educación" hidden={true}>
+      <BlockHeader title="Educación" hidden={true}>
         <span>
           Aquí muestro algunos de mis <strong>certificados y logros</strong>{" "}
           obtenidos con esfuerzo y dedicación. Me he{" "}
@@ -16,8 +16,8 @@ const Education = () => {
           </strong>{" "}
           etc.
         </span>
-      </SectionHead>
-      <AutoScrolling />
+      </BlockHeader>
+      <AutoScroll />
     </div>
   );
 };

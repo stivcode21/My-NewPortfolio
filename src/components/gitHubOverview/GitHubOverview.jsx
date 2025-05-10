@@ -1,6 +1,6 @@
 import { useGitHubStats } from "@/hooks/useGitHubStats";
-import GitHubStatsCounter from "@/components/gitHubStatsCounter/GitHubStatsCounter";
 import styles from "./GitHubOverview.module.css";
+import GitHubCounters from "../gitHubCounters/GitHubCounters";
 
 const GitHubOverview = () => {
   const token = import.meta.env.VITE_ACCESS_TOKEN;
@@ -16,7 +16,7 @@ const GitHubOverview = () => {
 
   return (
     <section>
-      <GitHubStatsCounter stats={stats} />
+      <GitHubCounters stats={stats} />
     </section>
   );
 };

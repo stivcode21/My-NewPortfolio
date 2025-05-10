@@ -2,7 +2,7 @@ import styles from "./Navbar.module.css";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { dataBtnIcons } from "@/data/dataBtnIcons";
-import HoverLabel from "@/components/hoverLabel/HoverLabel";
+import HoverTag from "@/components/hoverTag/HoverTag";
 import { useThemeStore } from "@/store/ThemeStore";
 
 export default function Navbar() {
@@ -126,13 +126,13 @@ export default function Navbar() {
         </div>
       </div>
       <div className={styles.navRight}>
-        <HoverLabel label={"Idioma"} position="bottom">
+        <HoverTag label={"Idioma"} position="bottom">
           <button className={styles.navSetting}>
             {getIcon("world")}
             <span>EN</span>
           </button>
-        </HoverLabel>
-        <HoverLabel label={isDarkMode ? "Claro" : "Oscuro"} position="bottom">
+        </HoverTag>
+        <HoverTag label={isDarkMode ? "Claro" : "Oscuro"} position="bottom">
           <button
             onClick={toggleDarkMode}
             className={`${styles.navSetting} ${styles.switchSetting}
@@ -147,7 +147,7 @@ export default function Navbar() {
               </span>
             </div>
           </button>
-        </HoverLabel>
+        </HoverTag>
       </div>
       <div className={styles.navList}>
         <button
@@ -201,13 +201,13 @@ export default function Navbar() {
             animationDelay: `${0.1 * 5}s`,
           }}
         >
-          <HoverLabel label={"Idioma"} position="top">
+          <HoverTag label={"Idioma"} position="top">
             <button className={styles.navSetting}>
               {getIcon("world")}
               <span>EN</span>
             </button>
-          </HoverLabel>
-          <HoverLabel label={isDarkMode ? "Claro" : "Oscuro"} position="top">
+          </HoverTag>
+          <HoverTag label={isDarkMode ? "Claro" : "Oscuro"} position="top">
             <button
               onClick={toggleDarkMode}
               className={`${styles.navSetting} ${styles.switchSetting}
@@ -222,7 +222,7 @@ export default function Navbar() {
                 </span>
               </div>
             </button>
-          </HoverLabel>
+          </HoverTag>
         </div>
       </div>
     </motion.nav>

@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
 import headerImage from "@/assets/FotoPerfil.png";
-import SocialButton from "@/components/socialButton/SocialButton";
+import NetworkButton from "@/components/networkButton/NetworkButton";
 
 export default function Header() {
   return (
@@ -150,11 +150,11 @@ export default function Header() {
             <span>Descargar CV</span>
           </a>
           <div className={styles.social}>
-            <SocialButton iconName="email" />
-            <SocialButton iconName="linkedin" />
+            <NetworkButton iconName="email" />
+            <NetworkButton iconName="linkedin" />
             <span className={styles.separator}></span>
-            <SocialButton iconName="github" />
-            <SocialButton iconName="discord" />
+            <NetworkButton iconName="github" />
+            <NetworkButton iconName="discord" />
           </div>
         </motion.div>
       </motion.div>

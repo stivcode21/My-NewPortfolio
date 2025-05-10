@@ -4,12 +4,12 @@ import emailjs from "emailjs-com";
 import { formatDateToSubmit } from "@/hooks/formatDate";
 import useModalFormStore from "@/store/ModalFormStore";
 import { useNotification } from "@/components/notificationProvider/NotificationProvider";
-import SectionHead from "@/components/sectionHead/SectionHead";
-import TextField from "@/components/textField/TextField";
+import BlockHeader from "@/components/blockHeader/BlockHeader";
+import InputBox from "@/components/inputBox/InputBox";
 import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBorderButton";
-import CommentList from "@/components/commentList/CommentList";
-import Modal from "@/components/modal/Modal";
-import CommentForm from "@/components/commentForm/CommentForm";
+import Comments from "@/components/comments/Comments";
+import ModalOverlay from "@/components/modalOverlay/ModalOverlay";
+import FormComment from "@/components/formComment/FormComment";
 
 export default function Contact() {
   const notify = useNotification();
@@ -108,7 +108,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className={styles.contactContainer}>
-      <SectionHead title="Contáctame" ifExist={true}>
+      <BlockHeader title="Contáctame" ifExist={true}>
         <span>
           Estoy disponible para colaborar en proyectos que requieran{" "}
           <strong>
@@ -116,11 +116,11 @@ export default function Contact() {
           </strong>
           . ¡No dudes en ponerte en contacto conmigo!
         </span>
-      </SectionHead>
+      </BlockHeader>
       <div className={styles.contact}>
         {/* Content left */}
         <div className={styles.contactLeft}>
-          <CommentList />
+          <Comments />
         </div>
         {/* Content right */}
         <div className={styles.contactRight}>
@@ -129,7 +129,7 @@ export default function Contact() {
           </h3>
           <form className={styles.form}>
             <span>
-              <TextField
+              <InputBox
                 type="text"
                 name="fullname"
                 placeholder="¿Cómo te llamás?"
@@ -140,7 +140,7 @@ export default function Contact() {
                 errorMessage="Completá con tu nombre"
                 disabled={isDisabled}
               />
-              <TextField
+              <InputBox
                 type="email"
                 name="email"
                 placeholder="Email de contacto"
@@ -152,7 +152,7 @@ export default function Contact() {
                 disabled={isDisabled}
               />
             </span>
-            <TextField
+            <InputBox
               type="textarea"
               name="message"
               placeholder="¿Cómo podemos colaborar?"
@@ -202,9 +202,9 @@ export default function Contact() {
           </form>
         </div>
       </div>
-      <Modal isOpen={modalState} onClose={() => setModalState(false)}>
-        <CommentForm />
-      </Modal>
+      <ModalOverlay isOpen={modalState} onClose={() => setModalState(false)}>
+        <FormComment />
+      </ModalOverlay>
     </section>
   );
 }

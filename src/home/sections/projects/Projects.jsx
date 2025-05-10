@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Projects.module.css";
-import CardProject from "@/components/cardProject/CardProject";
-import CategoryFilter from "@/components/categoryFilter/CategoryFilter";
+import ProjectCard from "@/components/projectCard/ProjectCard";
+import FilterCategory from "@/components/filterCategory/FilterCategory";
+import BlockHeader from "@/components/blockHeader/BlockHeader";
 import { dataProjects } from "@/data/dataProjects";
 import { dataCareers1 } from "@/data/dataCareers";
-import SectionHead from "@/components/sectionHead/SectionHead";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState(1); // Categoría por defecto: UX/UI
@@ -17,7 +17,7 @@ export default function Projects() {
 
   return (
     <section className={styles.projects} id="projects">
-      <SectionHead title="Proyectos" ifExist={true}>
+      <BlockHeader title="Proyectos" ifExist={true}>
         <span>
           Cada trabajo{" "}
           <strong>no solo muestra mis competencias técnicas,</strong> sino
@@ -25,9 +25,9 @@ export default function Projects() {
           <strong>creativo y mi dedicación a crear soluciones</strong> de diseño
           que sean <strong>usables, accesibles y estéticas.</strong>
         </span>
-      </SectionHead>
+      </BlockHeader>
       {/* Filtro de categorías */}
-      <CategoryFilter
+      <FilterCategory
         controls={dataCareers1}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
@@ -47,7 +47,7 @@ export default function Projects() {
               className={styles.motionCard}
               layout
             >
-              <CardProject project={project} />
+              <ProjectCard project={project} />
             </motion.div>
           ))}
         </AnimatePresence>
