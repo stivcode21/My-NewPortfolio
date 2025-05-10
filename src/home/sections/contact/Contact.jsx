@@ -3,7 +3,7 @@ import styles from "./Contact.module.css";
 import emailjs from "emailjs-com";
 import { formatDateToSubmit } from "@/hooks/formatDate";
 import useModalFormStore from "@/store/ModalFormStore";
-import { useNotification } from "@/components/notificationProvider/NotificationProvider";
+import { useNotification } from "@/components/notificationProvider/notificationProvider";
 import BlockHeader from "@/components/blockHeader/BlockHeader";
 import InputBox from "@/components/inputBox/InputBox";
 import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBorderButton";

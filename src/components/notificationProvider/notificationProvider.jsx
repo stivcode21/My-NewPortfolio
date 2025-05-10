@@ -1,5 +1,5 @@
 import { useState, createContext, useContext } from "react";
-import styles from "./NotificationProvider.module.css";
+import styles from "./notificationProvider.module.css";
 import { CheckCircle, AlertCircle, AlertTriangle, Info, X } from "lucide-react";
 
 //creo contexto

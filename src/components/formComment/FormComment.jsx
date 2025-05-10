@@ -4,7 +4,7 @@ import { supabase } from "@/services/supabase";
 import { formatDateToSubmit } from "@/hooks/formatDate";
 import AnimatedBorderButton from "../animatedBorderButton/AnimatedBorderButton";
 import InputBox from "../inputBox/InputBox";
-import { useNotification } from "../notificationProvider/NotificationProvider";
+import { useNotification } from "../notificationProvider/notificationProvider";
 import useModalFormStore from "@/store/ModalFormStore";
 
 const FormComment = () => {

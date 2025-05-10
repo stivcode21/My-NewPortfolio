@@ -7,7 +7,7 @@ import About from "./sections/about/About";
 import Education from "./sections/education/Education";
 import MyFooter from "./sections/myFooter/MyFooter";
 import Contact from "./sections/contact/Contact";
-import { NotificationProvider } from "@/components/notificationProvider/NotificationProvider";
+import { NotificationProvider } from "@/components/notificationProvider/notificationProvider";
 
 const HomeView = () => {
   return (
