@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "./toolsList.module.css";
+import styles from "./ToolsList.module.css";
 import { dataTools } from "@/data/dataTools";
 import { motion } from "framer-motion";
-import HoverLabel from "../hoverLabel/hoverLabel";
+import HoverLabel from "../hoverLabel/HoverLabel";
 
 export default function ToolsList({
   tools,

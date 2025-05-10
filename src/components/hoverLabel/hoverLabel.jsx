@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import styles from "./hoverLabel.module.css";
+import { useState, useEffect, useRef } from "react";
+import styles from "./HoverLabel.module.css";
 
 const HoverLabel = ({
   children,

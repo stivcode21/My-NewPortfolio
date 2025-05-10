@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import styles from "./gitHubStatsCounter.module.css";
+import { useEffect, useState } from "react";
+import styles from "./GitHubStatsCounter.module.css";
 
 const GitHubStatsCounter = ({ stats }) => {
   const [counts, setCounts] = useState({

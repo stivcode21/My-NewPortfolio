@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
 import headerImage from "@/assets/FotoPerfil.png";
-import SocialButton from "@/components/socialButton/socialButton";
+import SocialButton from "@/components/socialButton/SocialButton";
 
 export default function Header() {
   return (

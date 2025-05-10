@@ -1,6 +1,6 @@
-import styles from "./buttonBorder.module.css";
+import styles from "./AnimatedBorderButton.module.css";
 
-const ButtonBorder = ({
+const AnimatedBorderButton = ({
   className = "",
   color = "var(--text-primary)",
   speed = "5s",
@@ -36,4 +36,4 @@ const ButtonBorder = ({
   );
 };
 
-export default ButtonBorder;
+export default AnimatedBorderButton;

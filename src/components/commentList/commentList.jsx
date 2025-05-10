@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import styles from "./commentList.module.css";
-import CommentCard from "../commentCard/commentCard";
+import { useEffect, useState } from "react";
+import styles from "./CommentList.module.css";
 import { supabase } from "@/services/supabase";
-import { NotebookPen } from "lucide-react";
 import useModalFormStore from "@/store/ModalFormStore";
-import ButtonBorder from "../buttonBorder/buttonBorder";
+import { NotebookPen } from "lucide-react";
+import PostComment from "../postComment/PostComment";
+import AnimatedBorderButton from "../animatedBorderButton/AnimatedBorderButton";
 
 const CommentList = () => {
   const [comments, setComments] = useState([]);
@@ -35,21 +35,21 @@ const CommentList = () => {
         {btnModalState ? (
           ""
         ) : (
-          <ButtonBorder
+          <AnimatedBorderButton
             type="submit"
             onClick={() => setModalState(true)}
             small={true}
             className={styles.btn}
           >
             <NotebookPen size={20} />
-          </ButtonBorder>
+          </AnimatedBorderButton>
         )}
       </div>
       <div className={styles.guestbook}>
         {[...comments]
           .sort((a, b) => a.id - b.id)
           .map((comment) => (
-            <CommentCard
+            <PostComment
               key={comment.id}
               avatar={comment.image}
               username={comment.name}

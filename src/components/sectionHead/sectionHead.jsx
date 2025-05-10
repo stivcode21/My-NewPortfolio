@@ -1,5 +1,5 @@
-import ShinyText from "../shinyText/shinyText";
-import styles from "./sectionHead.module.css";
+import GlowingText from "../glowingText/GlowingText";
+import styles from "./SectionHead.module.css";
 
 export default function SectionHead({
   children,
@@ -59,7 +59,7 @@ export default function SectionHead({
         </svg>
       </div>
       <span className={styles.headerRight}>
-        <ShinyText text={title} />
+        <GlowingText text={title} />
         <p className={styles.description}>{children}</p>
       </span>
     </header>

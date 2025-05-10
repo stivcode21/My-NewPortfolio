@@ -1,7 +1,6 @@
-import React from "react";
-import styles from "./socialButton.module.css";
+import styles from "./SocialButton.module.css";
 import { dataBtnIcons } from "@/data/dataBtnIcons";
-import HoverLabel from "../hoverLabel/hoverLabel";
+import HoverLabel from "../hoverLabel/HoverLabel";
 import { handleScroll } from "@/hooks/handleScroll";
 
 export default function SocialButton({

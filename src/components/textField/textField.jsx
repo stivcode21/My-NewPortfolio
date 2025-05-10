@@ -1,4 +1,4 @@
-import styles from "./textField.module.css";
+import styles from "./TextField.module.css";
 
 export default function TextField({
   type = "text",

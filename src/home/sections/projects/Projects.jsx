@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Projects.module.css";
-import CardProject from "@/components/cardProject/cardProject";
-import CategoryFilter from "@/components/categoryFilter/categoryFilter";
+import CardProject from "@/components/cardProject/CardProject";
+import CategoryFilter from "@/components/categoryFilter/CategoryFilter";
 import { dataProjects } from "@/data/dataProjects";
 import { dataCareers1 } from "@/data/dataCareers";
-import SectionHead from "@/components/sectionHead/sectionHead";
+import SectionHead from "@/components/sectionHead/SectionHead";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState(1); // Categoría por defecto: UX/UI

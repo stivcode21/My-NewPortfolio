@@ -1,15 +1,15 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
 import emailjs from "emailjs-com";
-import SectionHead from "@/components/sectionHead/sectionHead";
-import TextField from "@/components/textField/textField";
 import { formatDateToSubmit } from "@/hooks/formatDate";
-import ButtonBorder from "@/components/buttonBorder/buttonBorder";
-import { useNotification } from "@/components/notificationProvider/notificationProvider";
-import CommentList from "@/components/commentList/commentList";
-import Modal from "../../../components/modal/modal";
-import CommentForm from "../../../components/commentForm/commentForm";
-import useModalFormStore from "../../../store/ModalFormStore";
+import useModalFormStore from "@/store/ModalFormStore";
+import { useNotification } from "@/components/notificationProvider/NotificationProvider";
+import SectionHead from "@/components/sectionHead/SectionHead";
+import TextField from "@/components/textField/TextField";
+import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBorderButton";
+import CommentList from "@/components/commentList/CommentList";
+import Modal from "@/components/modal/Modal";
+import CommentForm from "@/components/commentForm/CommentForm";
 
 export default function Contact() {
   const notify = useNotification();
@@ -167,7 +167,7 @@ export default function Contact() {
               {isDisabled ? (
                 ""
               ) : (
-                <ButtonBorder
+                <AnimatedBorderButton
                   onClick={(e) => handleSubmit(e)}
                   type="submit"
                   className={styles.btn}
@@ -196,7 +196,7 @@ export default function Contact() {
                   ) : (
                     "Enviar"
                   )}
-                </ButtonBorder>
+                </AnimatedBorderButton>
               )}
             </div>
           </form>

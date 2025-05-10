@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styles from "./commentForm.module.css";
+import { useState } from "react";
+import styles from "./CommentForm.module.css";
 import { supabase } from "@/services/supabase";
 import { formatDateToSubmit } from "@/hooks/formatDate";
-import ButtonBorder from "@/components/buttonBorder/buttonBorder";
-import TextField from "@/components/textField/textField";
-import { useNotification } from "../notificationProvider/notificationProvider";
-import useModalFormStore from "../../store/ModalFormStore";
+import AnimatedBorderButton from "../animatedBorderButton/AnimatedBorderButton";
+import TextField from "@/components/textField/TextField";
+import { useNotification } from "../notificationProvider/NotificationProvider";
+import useModalFormStore from "@/store/ModalFormStore";
 
 const CommentForm = () => {
   const localTime = formatDateToSubmit();
@@ -139,7 +139,7 @@ const CommentForm = () => {
 
         {/* Boton de envio */}
 
-        <ButtonBorder
+        <AnimatedBorderButton
           type="submit"
           disabled={isDisabled}
           className={styles.btn}
@@ -167,7 +167,7 @@ const CommentForm = () => {
           ) : (
             "Enviar"
           )}
-        </ButtonBorder>
+        </AnimatedBorderButton>
       </form>
     </>
   );

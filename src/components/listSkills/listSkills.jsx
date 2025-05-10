@@ -1,9 +1,9 @@
+import styles from "./ListSkills.module.css";
 import { motion } from "framer-motion";
-import styles from "./listSkills.module.css";
+import { useState } from "react";
 import { dataSkills } from "@/data/dataSkills";
-import CategoryFilter from "@/components/categoryFilter/categoryFilter";
-import React, { useState } from "react";
 import { dataCareers2 } from "@/data/dataCareers";
+import CategoryFilter from "@/components/categoryFilter/CategoryFilter";
 import HoverLabel from "@/components/hoverLabel/HoverLabel";
 
 const ListSkills = () => {

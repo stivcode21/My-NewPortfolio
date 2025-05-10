@@ -1,6 +1,6 @@
-import styles from "./shinyText.module.css";
+import styles from "./GlowingText.module.css";
 
-const ShinyText = ({ text, disabled = false, speed = 4, className = "" }) => {
+const GlowingText = ({ text, disabled = false, speed = 4, className = "" }) => {
   const animationDuration = `${speed}s`;
 
   return (
@@ -15,4 +15,4 @@ const ShinyText = ({ text, disabled = false, speed = 4, className = "" }) => {
   );
 };
 
-export default ShinyText;
+export default GlowingText;

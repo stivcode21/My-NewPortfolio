@@ -1,6 +1,5 @@
-import React from "react";
-import AutoScrolling from "@/components/autoScrolling/autoScrolling";
-import SectionHead from "@/components/sectionHead/sectionHead";
+import AutoScrolling from "@/components/autoScrolling/AutoScrolling";
+import SectionHead from "@/components/sectionHead/SectionHead";
 import styles from "./Education.module.css";
 
 const Education = () => {

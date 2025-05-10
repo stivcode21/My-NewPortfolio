@@ -1,5 +1,5 @@
-import styles from "./autoScrolling.module.css";
-import { row1, row2 } from "../../data/dataEducation";
+import styles from "./AutoScrolling.module.css";
+import { row1, row2 } from "@/data/dataEducation";
 import { useNavigate } from "react-router-dom";
 
 function AutoScrolling() {

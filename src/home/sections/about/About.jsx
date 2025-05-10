@@ -1,8 +1,7 @@
-import React from "react";
-import SectionHead from "@/components/sectionHead/sectionHead";
-import ToolsList from "@/components/toolsList/toolsList";
 import styles from "./About.module.css";
-import ListSkills from "@/components/listSkills/listSkills";
+import SectionHead from "@/components/sectionHead/SectionHead";
+import ToolsList from "@/components/toolsList/ToolsList";
+import ListSkills from "@/components/listSkills/ListSkills";
 
 const tools = [
   "figma",

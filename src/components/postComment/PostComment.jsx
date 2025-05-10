@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "./commentCard.module.css";
+import styles from "./PostComment.module.css";
 import { LinkIcon, Pin } from "lucide-react";
 
-const CommentCard = ({
+const PostComment = ({
   avatar,
   username,
   comment,
@@ -48,4 +47,4 @@ const CommentCard = ({
   );
 };
 
-export default CommentCard;
+export default PostComment;

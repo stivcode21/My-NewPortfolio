@@ -1,13 +1,13 @@
-import Header from "./sections/header/Header";
-import styles from "./home.module.css";
+import styles from "./Home.module.css";
 import Navbar from "./sections/navbar/Navbar";
-import GitHubStats from "./sections/gitHubStats/GithubStats";
+import Header from "./sections/header/Header";
+import GitHubOverview from "@/components/gitHubOverview/GitHubOverview";
 import Projects from "./sections/projects/Projects";
 import About from "./sections/about/About";
 import Education from "./sections/education/Education";
-import Footer from "./sections/footer/footer";
+import Footer from "./sections/footer/Footer";
 import Contact from "./sections/contact/Contact";
-import { NotificationProvider } from "../components/notificationProvider/notificationProvider";
+import { NotificationProvider } from "@/components/notificationProvider/NotificationProvider";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       <div id="container" className={styles.container}>
         <Navbar />
         <Header />
-        <GitHubStats />
+        <GitHubOverview />
         <Projects />
         <About />
         <Education />

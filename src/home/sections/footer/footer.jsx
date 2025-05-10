@@ -1,6 +1,6 @@
-import SocialButton from "@/components/socialButton/socialButton";
+import SocialButton from "@/components/socialButton/SocialButton";
 import { handleShare } from "@/hooks/share";
-import styles from "./footer.module.css";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (

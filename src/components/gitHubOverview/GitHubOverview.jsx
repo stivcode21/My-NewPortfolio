@@ -1,8 +1,8 @@
 import { useGitHubStats } from "@/hooks/useGitHubStats";
 import GitHubStatsCounter from "@/components/gitHubStatsCounter/GitHubStatsCounter";
-import styles from "./GithubStats.module.css";
+import styles from "./GitHubOverview.module.css";
 
-const GitHubStats = () => {
+const GitHubOverview = () => {
   const token = import.meta.env.VITE_ACCESS_TOKEN;
   const { stats, loading, error } = useGitHubStats("stivcode21", token);
 
@@ -21,4 +21,4 @@ const GitHubStats = () => {
   );
 };
 
-export default GitHubStats;
+export default GitHubOverview;

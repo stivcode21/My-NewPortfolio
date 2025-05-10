@@ -1,9 +1,9 @@
+import styles from "./Navbar.module.css";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import styles from "./Navbar.module.css";
-import { dataBtnIcons } from "../../../data/dataBtnIcons";
+import { dataBtnIcons } from "@/data/dataBtnIcons";
 import HoverLabel from "@/components/hoverLabel/HoverLabel";
-import { useThemeStore } from "../../../store/ThemeStore";
+import { useThemeStore } from "@/store/ThemeStore";
 
 export default function Navbar() {
   const { isDarkMode, toggleDarkMode } = useThemeStore();

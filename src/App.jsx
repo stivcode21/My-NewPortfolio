@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AppRouter from "./routing/AppRouter";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useThemeStore } from "./store/ThemeStore";
