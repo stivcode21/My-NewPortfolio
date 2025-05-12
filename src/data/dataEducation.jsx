@@ -4,6 +4,8 @@ import cienciasVideojuegos from "@/assets/education/ciencias-videojuegos.webp";
 import diseñoVideojuegos from "@/assets/education/diseño-videojuegos.webp";
 import fundamentosVideojuegos from "@/assets/education/fundamentos-videojuegos.webp";
 import dsrVideojuegosN1 from "@/assets/education/videojuegos-N1.webp";
+import devFrontend from "@/assets/education/devFrontend.webp";
+import webDesing from "@/assets/education/webDesing.webp";
 
 export const row1 = [
   {
@@ -34,23 +36,23 @@ export const row1 = [
 
 export const row2 = [
   {
-    id: "tailwind",
-    path: "https://www.stivcode.com/_next/image?url=%2Fimagenes%2Fcertificado-freecodecamp.png&w=640&q=75",
+    id: "webDesing-iudemy",
+    path: webDesing,
   },
   {
-    id: "bootstrap",
-    path: "https://www.stivcode.com/_next/image?url=%2Fimagenes%2Fcertificado-freecodecamp.png&w=640&q=75",
+    id: "devFrontend-freecodecamp",
+    path: devFrontend,
   },
   {
-    id: "sql",
-    path: "https://www.stivcode.com/_next/image?url=%2Fimagenes%2Fcertificado-freecodecamp.png&w=640&q=75",
+    id: "webDesing",
+    path: webDesing,
   },
   {
-    id: "firebase",
-    path: "https://www.stivcode.com/_next/image?url=%2Fimagenes%2Fcertificado-freecodecamp.png&w=640&q=75",
+    id: "devFrontend",
+    path: devFrontend,
   },
   {
-    id: "github",
-    path: "https://www.stivcode.com/_next/image?url=%2Fimagenes%2Fcertificado-freecodecamp.png&w=640&q=75",
+    id: "fundamentos-videojuegos",
+    path: fundamentosVideojuegos,
   },
 ];
