@@ -26,14 +26,43 @@ export const dataProjects = [
       <img src={Viflow2} alt="Mockup del proyecto de Viflow" />,
       <img src={Viflow3} alt="Mockup del proyecto de Viflow" />,
     ],
-    tags: ["social", "App"],
+    tags: ["Social", "App", "Typescript", "Responsive", "Threads"],
+    tools: [
+      "reactjs",
+      "typescript",
+      "tailwindcss",
+      "zustand",
+      "vite",
+      "vercel",
+      "reactRouter",
+    ],
+    description:
+      "ViFlow es una red social desarrollada con TypeScript que permite a los usuarios registrarse, crear perfiles, publicar contenido, interactuar con posts y comentar. Con un diseño completamente responsive y manejo avanzado de rutas, ofrece una experiencia con características únicas.",
     shortDescription:
-      "Plan de investigación para aumentar la tasa de pedidos y de fidelización de nuevos usuarios.",
+      "Red social interactiva con registro de usuarios, publicaciones y comentarios.",
+    links: [
+      {
+        type: "website",
+        url: "/",
+      },
+      {
+        type: "uxreport",
+        url: "/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/stivcode21/ViFlow-Social-Network.git",
+      },
+    ],
+    details: [
+      "El proyecto surgió para resolver la necesidad de una red social minimalista pero funcional, con el objetivo de crear una plataforma donde usuarios puedan compartir contenido, interactuar y formar comunidades, implementando características clave como registro, perfiles, posts y comentarios con TypeScript para garantizar escalabilidad y mantenibilidad.",
+      "Utilicé React con TypeScript para el desarrollo frontend, implementando react-router para la navegación. Para la UI, prioricé un diseño responsive con Tailwind, integrando Zustand para estados globales, interacciones en tiempo real",
+      "El resultado fue una aplicación funcional que demostró mi capacidad para resolver problemas complejos en entornos sociales. Entre los aprendizajes clave destacan: la importancia de la tipificación en proyectos grandes (TypeScript), estrategias para manejar estados globales en aplicaciones sociales, y cómo diseñar interfaces intuitivas para flujos de interacción complejos.",
+    ],
   },
   {
     id: 2,
     title: "UrbanShop",
-    categories: [1, 2],
     url: "UrbanShop",
     categoryId: 1,
     images: [
@@ -42,7 +71,7 @@ export const dataProjects = [
       <img src={UrbanShop3} alt="Mockup del proyecto de UrbanShop" />,
     ],
     tags: ["E-commerce", "Redux", "Responsive", "Carrito"],
-    tools: ["figma", "reactjs", "redux", "css", "vercel", "github"],
+    tools: ["reactjs", "redux", "tailwindcss", "vercel", "vite"],
     description:
       "Urban Shop es una tienda en línea diseñada para la venta de zapatos y gorras, con una interfaz atractiva y dinámica. Desarrollé un e-commerce completo con funcionalidades principales como carrito de compras persistente y sliders interactivos, brindando una experiencia de usuario fluida e intuitiva.",
     shortDescription:
@@ -50,17 +79,17 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "https://emmanuelmansilla.vercel.app/",
+        url: "https://urban-shop-delta.vercel.app/",
       },
       {
         type: "code",
-        url: "https://github.com/iannellotomas/consultora-negocios",
+        url: "https://github.com/stivcode21/Urban-Shop",
       },
     ],
     details: [
-      "Implementé un sistema completo de carrito con Redux Toolkit (mi primera experiencia con esta tecnología) que incluye: agregar/eliminar productos, ajustar cantidades, vaciar carrito y cálculos automáticos del total, resolviendo el desafío de persistencia con localStorage.",
-      "Desarrollé una interfaz dinámica con sliders interactivos usando SplideJS para exhibición de productos y un diseño responsive que funciona perfectamente en todos los dispositivos.",
-      "El proyecto demostró mi capacidad para aprender nuevas tecnologías (Redux Toolkit) rápidamente y resolver problemas complejos como la persistencia de datos entre recargas, resultando en un e-commerce completamente funcional y escalable.",
+      "El proyecto buscaba crear un e-commerce funcional para UrbanShop que resolviera los desafíos típicos de una tienda online: gestión del carrito de compras, exhibición atractiva de productos y persistencia de datos entre sesiones, con el objetivo de ofrecer una experiencia de usuario fluida y profesional.",
+      "Implementé una arquitectura robusta con React y Redux Toolkit para manejar el estado global del carrito, integrando localStorage para persistencia de datos. Para la interfaz, utilicé TailwindCSS junto con SplideJS para crear sliders interactivos, desarrollando un diseño completamente responsive con Vite como build tool para optimizar el rendimiento.",
+      "El resultado fue una tienda online 100% funcional con carrito persistente y tiempo de carga optimizado. Entre los aprendizajes clave destacan: dominio de Redux Toolkit para gestión de estado, técnicas avanzadas de persistencia con localStorage, y cómo implementar sliders profesionales con SplideJS en aplicaciones React.",
     ],
   },
   {
@@ -73,7 +102,7 @@ export const dataProjects = [
       <img src={FrameOnix2} alt="Mockup del proyecto de FrameOnix" />,
     ],
     tags: ["Web", "Library", "Documentation", "Responsive"],
-    tools: ["npm", "css", "github", "vercel"],
+    tools: ["npm", "tailwindcss", "reactjs", "vite", "vercel", "i18next"],
     description:
       "Frameonix es la plataforma web diseñada para documentar mi librería de componentes, proporcionando una introducción detallada, guía de instalación y uso, información sobre cómo contribuir y documentación específica de cada componente disponible. Esta web cuenta con una interfaz dinámica, navegación mediante rutas, y un diseño intuitivo para garantizar una excelente experiencia de usuario.",
     shortDescription:
@@ -81,21 +110,17 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "https://emmanuelmansilla.vercel.app/",
-      },
-      {
-        type: "uxreport",
-        url: "https://docs.google.com/presentation/d/18wdIVddg95Awx5Jm_bFdjx8mZMASn4xAdP7IiM2SRH0/edit?usp=sharing",
+        url: "https://frameonix.stivcode.com/",
       },
       {
         type: "code",
-        url: "https://github.com/iannellotomas/consultora-negocios",
+        url: "https://github.com/stivcode21/FrameOnix-Web",
       },
     ],
     details: [
-      "El objetivo principal fue facilitar el aprendizaje y uso de Frameonix, asegurando que los desarrolladores tengan un punto de partida claro y comprendan cómo utilizar cada componente de la librería de manera eficiente.",
-      "Implementé funciones clave como manejo de rutas con react-router-dom, cambio de idioma mediante i18next, diseño responsive, detección de sección en pantalla usando IntersectionObserver, y un componente de terminal interactiva para copiar código fácilmente.",
-      "El resultado fue una documentación completa con excelente UX, coherencia visual mediante una paleta de colores unificada, y todas las funcionalidades necesarias para que los desarrolladores puedan entender y usar efectivamente la librería.",
+      "El proyecto nació para resolver el desafío de documentar eficientemente la librería FrameOnix, con el objetivo claro de crear una plataforma que permitiera a otros desarrolladores entender rápidamente su funcionamiento, instalación y uso, reduciendo la curva de aprendizaje y fomentando la adopción de la librería.",
+      "Desarrollé una solución completa con React y Vite para optimizar el rendimiento, implementando react-router-dom para la navegación entre secciones y i18next para soporte multiidioma. Utilicé IntersectionObserver para la detección de secciones activas y creé componentes interactivos como una terminal simulada, todo ello con TailwindCSS para garantizar un diseño responsive y coherente.",
+      "La documentación resultante demostró ser intuitiva y efectiva, mejorando significativamente la experiencia de los desarrolladores al usar la librería. Entre los aprendizajes clave destacan: manejo avanzado de rutas en React, implementación de internacionalización con i18next, y técnicas para crear documentación interactiva que mejora la adopción de herramientas técnicas.",
     ],
   },
 
@@ -120,15 +145,15 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "https://emmanuelmansilla.vercel.app/",
+        url: "/",
       },
       {
         type: "uxreport",
-        url: "https://docs.google.com/presentation/d/18wdIVddg95Awx5Jm_bFdjx8mZMASn4xAdP7IiM2SRH0/edit?usp=sharing",
+        url: "/",
       },
       {
         type: "code",
-        url: "https://github.com/iannellotomas/consultora-negocios",
+        url: "/",
       },
     ],
     details: [
