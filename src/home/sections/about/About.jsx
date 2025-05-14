@@ -1,7 +1,8 @@
 import styles from "./About.module.css";
 import BlockHeader from "@/components/blockHeader/BlockHeader";
-import ToolGrid from "@/components/toolGrid/ToolGrid";
 import MySkills from "@/components/mySkills/MySkills";
+import { motion } from "framer-motion";
+import IconTool from "@/components/iconTool/IconTool";
 
 const tools = [
   "figma",
@@ -33,6 +34,7 @@ const tools = [
 const learn = ["python", "supabase", "astro"];
 
 const About = () => {
+  const animateOnScroll = true;
   return (
     <div className={styles.about} id="about">
       <BlockHeader title="Sobre mi">
@@ -50,12 +52,40 @@ const About = () => {
           <div className={styles.tools}>
             <img src="/señalando.png" alt="x" className={styles.img} />
             <h3 className={styles.workTag1}>Habilidades</h3>
-            <ToolGrid tools={tools} size="small" animateOnScroll />
+            <div className={styles.box}>
+              <motion.ul
+                {...(animateOnScroll && {
+                  initial: { opacity: 0, y: 50 },
+                  whileInView: { opacity: 1, y: 0 },
+                  transition: {
+                    duration: 0.25,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                  viewport: { once: true, amount: 0.3 },
+                })}
+              >
+                <IconTool tools={tools} size="small" />
+              </motion.ul>
+            </div>
             <h3 className={styles.workTag2}>
               Aprediendo
               <span className={styles.tag}>Learn</span>
             </h3>
-            <ToolGrid tools={learn} size="small" animateOnScroll />
+            <div className={styles.box}>
+              <motion.ul
+                {...(animateOnScroll && {
+                  initial: { opacity: 0, y: 50 },
+                  whileInView: { opacity: 1, y: 0 },
+                  transition: {
+                    duration: 0.25,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                  viewport: { once: true, amount: 0.3 },
+                })}
+              >
+                <IconTool tools={learn} size="small" />
+              </motion.ul>
+            </div>
           </div>
         </div>
       </div>

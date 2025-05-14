@@ -63,7 +63,7 @@ body.light-mode {
 body.dark-mode {
   /* SURFACE */
   --surface-primary: #0a0b15;
-  --surface-primary-transparent: #0a0b15bf;
+  --surface-primary-transparent: #0a0b15ee;
   --surface-primary-transparent-2: hsla(235, 35%, 6%, 0.8);
   --surface-image: var(--surface-primary-transparent);
   --hover-background: #ffffff0d;

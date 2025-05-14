@@ -45,6 +45,23 @@
   opacity: 0.2;
 }
 
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.box ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.box ul > div {
+  border-radius: 15px;
+}
+
 .tag {
   cursor: pointer;
   background: var(--surface-primary);
