@@ -29,8 +29,8 @@ a {
 
 .title {
   color: var(--text-primary);
-  font-size: 30px;
-  font-weight: var(--title-weight);
+  font-size: 26px;
+  font-weight: 800;
 }
 
 /* Estilos para la imagen duplicada con blur */
