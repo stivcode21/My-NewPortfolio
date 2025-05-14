@@ -8,7 +8,7 @@ import Tag from "@/components/tag/Tag";
 import Slider from "@/components/slider/Slider";
 import HoverTag from "@/components/hoverTag/HoverTag";
 import ExpandableList from "@/components/expandableList/ExpandableList";
-import ProjectOptions from "@/components/ProjectOptions/ProjectOptions";
+import ProjectOptions from "@/components/projectOptions/ProjectOptions";
 import ButtonBack from "@/components/buttonBack/ButtonBack";
 import IconTool from "@/components/iconTool/IconTool";
 import { Waypoints } from "lucide-react";
