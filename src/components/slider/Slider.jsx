@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import styles from "./Slider.module.css";
 import LazyImage from "../lazyImage/LazyImage";
 import HoverTag from "../hoverTag/HoverTag";
+import { ArrowBigUpDash } from "lucide-react";
 
 const Slider = ({
   carouselImages,
@@ -260,18 +261,7 @@ const Slider = ({
             </button>
           ))}
           <span ref={polygonRef} className={styles.polygon}>
-            <svg
-              width="19"
-              height="12"
-              viewBox="0 0 19 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.90175 1.32876C8.82809 0.558617 10.1719 0.558619 11.0982 1.32876L17.7123 6.82761C19.5114 8.32336 18.4538 11.25 16.1141 11.25H2.88592C0.546242 11.25 -0.511443 8.32336 1.28767 6.8276L7.90175 1.32876Z"
-                fill="#7D8AFF"
-              />
-            </svg>
+            <ArrowBigUpDash />
           </span>
           <span
             ref={frameThumbnailRef}
