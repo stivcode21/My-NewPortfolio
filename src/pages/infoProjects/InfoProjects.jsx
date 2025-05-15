@@ -125,7 +125,7 @@ const InfoProjects = () => {
             <div>
               <h1 title={project.title}>{project.title}</h1>
               <div className={`${styles.cta} ${isScrolled && styles.fixed}`}>
-                <HoverTag label="Compartir" position="bottom">
+                <HoverTag label="Compartir" position="mix">
                   <button
                     className={styles.primaryButton}
                     onClick={handleShare}
@@ -137,7 +137,7 @@ const InfoProjects = () => {
                   <HoverTag
                     label={"Más opciones"}
                     isDisabled={isOptionsOpen}
-                    position="bottom"
+                    position="mix"
                   >
                     <button
                       onClick={toggleOptions}
