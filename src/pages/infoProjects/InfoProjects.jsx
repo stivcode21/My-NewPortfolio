@@ -79,7 +79,7 @@ const InfoProjects = () => {
       >
         <div className={styles.coverNav}></div>
         <ButtonBack type="transparent" />
-        <HoverTag text="Ir arriba">
+        <HoverTag label="Ir arriba" position="bottom">
           <button
             onClick={() => scrollTo({ top: 0, behavior: "smooth" })}
             className={styles.info}

@@ -12,7 +12,7 @@ const ButtonBack = ({ type }) => {
   };
 
   return (
-    <HoverTag text="Volver atrás" anchorSide="left">
+    <HoverTag label="Volver atrás" position="bottom">
       <button
         onClick={handleBack}
         className={`${styles.backButton} ${
