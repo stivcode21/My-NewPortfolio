@@ -15,35 +15,43 @@
   opacity: 0;
   pointer-events: none;
   user-select: none;
+  box-shadow: 0 1px 5px var(--color-neutral);
 }
 
 .tooltip svg {
   position: absolute;
   top: -7px;
 }
-
-.tooltip:not(.top) {
+.tooltip.bottom {
   left: 50%;
   transform: translateX(-50%);
-  top: -75px;
+  bottom: auto;
+  top: calc(100% + 5px); /* Posiciona 5px debajo del elemento padre */
 }
 
 .tooltip.top {
   left: 50%;
   transform: translateX(-50%);
-  top: -30px;
+  top: auto;
+  bottom: calc(100% + 5px); /* Posiciona 5px arriba del elemento padre */
 }
+
+.tooltip.mix {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: auto;
+  top: calc(100% + 5px); /* Por defecto se comporta como bottom */
+}
+
+/* .tooltip.show {
+  opacity: 1;
+  transition: opacity var(--dynamic-fast-transition);
+} */
 
 .tooltip.show {
   opacity: 1;
   transition: top var(--dynamic-fast-transition),
     opacity var(--dynamic-fast-transition);
-}
-
-.tooltip.show:not(.top) {
-  transition: top var(--dynamic-fast-transition),
-    opacity var(--dynamic-fast-transition);
-  top: calc(100% + 5px);
 }
 
 /* ANCHOR SIDE */
@@ -143,5 +151,9 @@
 @media (width <= 768px) {
   .tooltip.left {
     display: none;
+  }
+  .tooltip.mix {
+    top: auto;
+    bottom: calc(100% + 5px);
   }
 }
