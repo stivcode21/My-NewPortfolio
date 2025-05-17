@@ -5,19 +5,19 @@ import { useNavigate } from "react-router-dom";
 const AutoScroll = () => {
   const navigate = useNavigate();
 
-  const handleClick = (id) => {
-    navigate(`/education/${id}`);
+  const handleClick = (url) => {
+    navigate(`/education/${url}`);
   };
 
   const renderRow = (row) => (
     <>
-      {row.map(({ path, id }, i) => (
+      {row.map(({ img, url }, i) => (
         <div key={i} className={styles.slide}>
           <img
             className={styles.image}
-            src={path}
+            src={img}
             alt={`certification-${i}`}
-            onClick={() => handleClick(id)}
+            onClick={() => handleClick(url)}
           />
         </div>
       ))}
