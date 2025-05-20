@@ -8,7 +8,7 @@ import MyFooter from "@/home/sections/myFooter/MyFooter";
 import LazyImage from "@/components/lazyImage/LazyImage";
 import ButtonBack from "@/components/buttonBack/ButtonBack";
 import HoverTag from "@/components/hoverTag/HoverTag";
-import ButtonPrimary from "@/components/buttonPrimary/ButtonPrimary";
+import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBorderButton";
 
 const InfoEducation = () => {
   const { id } = useParams();
@@ -38,11 +38,7 @@ const InfoEducation = () => {
           </div>
         </span>
         <div className={styles.cta}>
-          <ButtonPrimary
-            type="link"
-            text="Descargar certificado"
-            iconName="download"
-          />
+          <AnimatedBorderButton type="link">Descargar</AnimatedBorderButton>
         </div>
       </header>
       <main className={styles.main}>
