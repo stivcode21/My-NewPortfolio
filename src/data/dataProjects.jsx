@@ -9,6 +9,10 @@ import UrbanShop3 from "../assets/projects/URBANSHOP-3.webp";
 import FrameOnix1 from "../assets/projects/FRAMEONIX-1.webp";
 import FrameOnix2 from "../assets/projects/FRAMEONIX-2.webp";
 
+import Cineverse1 from "../assets/projects/CINEVERSE-1.webp";
+import Cineverse2 from "../assets/projects/CINEVERSE-2.webp";
+import Cineverse3 from "../assets/projects/CINEVERSE-3.webp";
+
 import Consultora1 from "../assets/projects/Consultora1.jpg";
 import Consultora2 from "../assets/projects/Consultora2.jpg";
 import Consultora3 from "../assets/projects/Consultora3.jpg";
@@ -92,6 +96,7 @@ export const dataProjects = [
       "El resultado fue una tienda online 100% funcional con carrito persistente y tiempo de carga optimizado. Entre los aprendizajes clave destacan: dominio de Redux Toolkit para gestión de estado, técnicas avanzadas de persistencia con localStorage, y cómo implementar sliders profesionales con SplideJS en aplicaciones React.",
     ],
   },
+
   {
     id: 3,
     title: "FrameOnix",
@@ -160,6 +165,39 @@ export const dataProjects = [
       "La app de Mostaza presentó una **caída en pedidos**, señalando una pérdida de usuarios debido a una experiencia deficiente, falta de incentivos y competencia con otras apps. El objetivo fue **analizar comportamientos, motivaciones y puntos de dolor** para optimizar la experiencia, **fidelizar clientes y fortalecer su posición en el mercado**.",
       "Apliqué el enfoque del doble diamante, explorando en la primera fase los comportamientos y necesidades de los usuarios a través de **investigación cualitativa**. En la segunda fase, describí los puntos de dolor y oportunidades clave **mediante el análisis de datos**. Luego, creé soluciones enfocadas en prototipos interactivos, y finalmente, **evalué estas propuestas con pruebas de usabilidad**, asegurando una experiencia optimizada y alineada con las expectativas del usuario.",
       "Gracias al estratégico plan de investigación, logré mejorar la usabilidad  en un 83%, **simplificando la arquitectura y la navegación** para adaptarla a las necesidades reales de los usuarios. Esto se tradujo en una reducción significativa del **tiempo al hacer un pedido** y un **aumento de la confianza** en la app. Además, descubrí la importancia de **personalizar la experiencia del usuario a través de incentivos**, lo que resultó en una mayor fidelización.",
+    ],
+  },
+
+  {
+    id: 5,
+    title: "Cineverse",
+    url: "cineverse",
+    categoryId: 1,
+    images: [
+      <img src={Cineverse1} alt="Mockup del proyecto de Cineverse" />,
+      <img src={Cineverse2} alt="Mockup del proyecto de Cineverse" />,
+      <img src={Cineverse3} alt="Mockup del proyecto de Cineverse" />,
+    ],
+    tags: ["React", "TMDB", "Dynamic Filters", "Responsive"],
+    tools: ["reactjs", "tmdb", "tailwindcss", "vercel", "vite"],
+    description:
+      "Cineverse es una plataforma interactiva de películas que consume la API de TMDB para mostrar información actualizada. Desarrollé un diseño dinámico con una pancarta principal que cambia aleatoriamente y filtros por categoría, implementando un sistema eficiente de gestión de estados para una experiencia de usuario fluida y atractiva.",
+    shortDescription:
+      "Plataforma de películas interactiva con contenido dinámico obtenido de la API de TMDB y filtros por categoría.",
+    links: [
+      {
+        type: "website",
+        url: "https://cineverse-app.vercel.app/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/tu-usuario/cineverse",
+      },
+    ],
+    details: [
+      "El proyecto buscaba crear una plataforma de películas que mostrara contenido siempre actualizado mediante el consumo de la API de TMDB, con un diseño interactivo que incluyera una pancarta principal dinámica y filtros por categoría para mejorar la experiencia de descubrimiento de películas.",
+      "Implementé un sistema de peticiones a la API de TMDB usando React, desarrollando una interfaz con banner aleatorio que cambia con cada recarga o al seleccionar categorías. Utilicé gestión de estados avanzada para manejar los datos obtenidos y crear filtros dinámicos, optimizando el rendimiento con técnicas de lazy loading para las imágenes.",
+      "El resultado fue una plataforma 100% funcional que muestra películas actualizadas diariamente, con una interfaz atractiva y fluida. Entre los aprendizajes clave destacan: consumo de APIs externas, implementación de filtros dinámicos, manejo avanzado de estados en React y técnicas para crear interfaces interactivas que mejoran la experiencia de usuario.",
     ],
   },
 ];
