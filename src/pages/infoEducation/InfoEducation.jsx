@@ -43,28 +43,24 @@ const InfoEducation = () => {
       </header>
       <main className={styles.main}>
         <section className={styles.certificate}>
-          <span>
-            <LazyImage
-              src={education.img}
-              alt={`Certificado de ${education.title}`}
-              style={{ width: "100%", height: "auto" }}
-              radius={20}
-            />
-          </span>
+          <LazyImage
+            src={education.img}
+            alt={`Certificado de ${education.title}`}
+            style={{ width: "100%", height: "auto" }}
+            radius={20}
+          />
         </section>
         <section className={styles.detail}>
           <div className={styles.about}>
-            <span>
-              <div className={styles.col}></div>
-              <div className={styles.col}>
-                <HoverTag label="Habilidades" />
-                <div className={styles.tags}>
-                  {education.skills.map((skill, index) => (
-                    <Tag tag={skill} index={index} key={index} />
-                  ))}
-                </div>
+            <div className={styles.col}></div>
+            <div className={styles.col}>
+              <HoverTag label="Habilidades" />
+              <div className={styles.tags}>
+                {education.skills.map((skill, index) => (
+                  <Tag tag={skill} index={index} key={index} />
+                ))}
               </div>
-            </span>
+            </div>
             <div className={styles.col}>
               <p>{education.description}</p>
             </div>
