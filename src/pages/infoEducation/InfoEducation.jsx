@@ -7,7 +7,6 @@ import Tag from "@/components/tag/Tag";
 import MyFooter from "@/home/sections/myFooter/MyFooter";
 import LazyImage from "@/components/lazyImage/LazyImage";
 import ButtonBack from "@/components/buttonBack/ButtonBack";
-import HoverTag from "@/components/hoverTag/HoverTag";
 import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBorderButton";
 
 const InfoEducation = () => {
@@ -52,18 +51,14 @@ const InfoEducation = () => {
         </section>
         <section className={styles.detail}>
           <div className={styles.about}>
-            <div className={styles.col}></div>
             <div className={styles.col}>
-              <HoverTag label="Habilidades" />
               <div className={styles.tags}>
                 {education.skills.map((skill, index) => (
                   <Tag tag={skill} index={index} key={index} />
                 ))}
               </div>
             </div>
-            <div className={styles.col}>
-              <p>{education.description}</p>
-            </div>
+            <p className={styles.description}>{education.description}</p>
           </div>
         </section>
       </main>
