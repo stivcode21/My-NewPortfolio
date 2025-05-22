@@ -47,7 +47,7 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "/",
+        url: "https://vi-flow-social-network.vercel.app/",
       },
       {
         type: "uxreport",
@@ -187,11 +187,11 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "https://cineverse-app.vercel.app/",
+        url: "https://cineverce.web.app/",
       },
       {
         type: "code",
-        url: "https://github.com/tu-usuario/cineverse",
+        url: "https://github.com/stivcode21/Money-Tracking",
       },
     ],
     details: [
