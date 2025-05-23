@@ -9,15 +9,18 @@ import UrbanShop3 from "../assets/projects/URBANSHOP-3.webp";
 import FrameOnix1 from "../assets/projects/FRAMEONIX-1.webp";
 import FrameOnix2 from "../assets/projects/FRAMEONIX-2.webp";
 
-import Cineverse1 from "../assets/projects/CINEVERSE-1.webp";
-import Cineverse2 from "../assets/projects/CINEVERSE-2.webp";
-import Cineverse3 from "../assets/projects/CINEVERSE-3.webp";
-
 import Consultora1 from "../assets/projects/Consultora1.jpg";
 import Consultora2 from "../assets/projects/Consultora2.jpg";
 import Consultora3 from "../assets/projects/Consultora3.jpg";
 import Consultora4 from "../assets/projects/Consultora4.jpg";
 import Consultora5 from "../assets/projects/Consultora5.jpg";
+
+import Cineverse1 from "../assets/projects/CINEVERSE-1.webp";
+import Cineverse2 from "../assets/projects/CINEVERSE-2.webp";
+import Cineverse3 from "../assets/projects/CINEVERSE-3.webp";
+
+import WhatsAppClone1 from "../assets/projects/WHATSAPP-1.webp";
+import WhatsAppClone2 from "../assets/projects/WHATSAPP-2.webp";
 
 export const dataProjects = [
   {
@@ -198,6 +201,37 @@ export const dataProjects = [
       "El proyecto buscaba crear una plataforma de películas que mostrara contenido siempre actualizado mediante el consumo de la API de TMDB, con un diseño interactivo que incluyera una pancarta principal dinámica y filtros por categoría para mejorar la experiencia de descubrimiento de películas.",
       "Implementé un sistema de peticiones a la API de TMDB usando React, desarrollando una interfaz con banner aleatorio que cambia con cada recarga o al seleccionar categorías. Utilicé gestión de estados avanzada para manejar los datos obtenidos y crear filtros dinámicos, optimizando el rendimiento con técnicas de lazy loading para las imágenes.",
       "El resultado fue una plataforma 100% funcional que muestra películas actualizadas diariamente, con una interfaz atractiva y fluida. Entre los aprendizajes clave destacan: consumo de APIs externas, implementación de filtros dinámicos, manejo avanzado de estados en React y técnicas para crear interfaces interactivas que mejoran la experiencia de usuario.",
+    ],
+  },
+  {
+    id: 6,
+    title: "WhatsApp Clone",
+    url: "whatsapp-clone",
+    categoryId: 1,
+    images: [
+      <img src={WhatsAppClone1} alt="Mockup del proyecto WhatsApp Clone" />,
+      <img src={WhatsAppClone2} alt="Mockup del proyecto WhatsApp Clone" />,
+    ],
+    tags: ["Web", "Clone", "Chat", "Responsive", "Teamwork"],
+    tools: ["reactjs", "material-ui", "tailwindcss", "vite", "react-router"],
+    description:
+      "WhatsApp Clone es una web frontend desarrollada en conjunto con 6 compañeros, donde replicamos y personalizamos varias secciones de la web oficial de WhatsApp. El objetivo principal fue adquirir experiencia en trabajo en equipo y expandir mis conocimientos utilizando frameworks, ya que era la primera vez que trabajaba con ellos. Implementamos funcionalidades clave y personalizamos la experiencia de usuario.",
+    shortDescription:
+      "Réplica de WhatsApp Web desarrollada en equipo con React y Material UI.",
+    links: [
+      {
+        type: "website",
+        url: "https://wpp-clone-98b2e.web.app/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/stivcode21/Whatsapp_Web-Frontend.git",
+      },
+    ],
+    details: [
+      "El proyecto nació como un ejercicio de aprendizaje colaborativo para replicar la funcionalidad de WhatsApp Web, con el objetivo de adquirir experiencia en trabajo en equipo y familiarizarnos con frameworks modernos como React, Material UI y Tailwind CSS.",
+      "Desarrollamos una solución completa que incluye autenticación, perfil de usuario, chat funcional con envío de mensajes y emojis, estados de usuarios y edición de perfil. Implementamos Material UI para los componentes de interfaz y Tailwind CSS para la personalización del tema de colores, junto con react-router para la navegación entre secciones.",
+      "El proyecto resultó en una aplicación funcional que demostró nuestra capacidad para trabajar en equipo y aprender nuevas tecnologías rápidamente. Entre los aprendizajes clave destacan: manejo de rutas en React, consumo de librerías de componentes (Material UI), implementación de temas con Tailwind CSS, y valiosas habilidades de colaboración usando metodología Scrum.",
     ],
   },
 ];
