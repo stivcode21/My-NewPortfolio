@@ -21,6 +21,7 @@ import Cineverse3 from "../assets/projects/CINEVERSE-3.webp";
 
 import WhatsAppClone1 from "../assets/projects/WHATSAPP-1.webp";
 import WhatsAppClone2 from "../assets/projects/WHATSAPP-2.webp";
+import WhatsAppClone3 from "../assets/projects/WHATSAPP-3.webp";
 
 export const dataProjects = [
   {
@@ -211,6 +212,7 @@ export const dataProjects = [
     images: [
       <img src={WhatsAppClone1} alt="Mockup del proyecto WhatsApp Clone" />,
       <img src={WhatsAppClone2} alt="Mockup del proyecto WhatsApp Clone" />,
+      <img src={WhatsAppClone3} alt="Mockup del proyecto WhatsApp Clone" />,
     ],
     tags: ["Web", "Clone", "Chat", "Responsive", "Teamwork"],
     tools: ["reactjs", "material-ui", "tailwindcss", "vite", "react-router"],
