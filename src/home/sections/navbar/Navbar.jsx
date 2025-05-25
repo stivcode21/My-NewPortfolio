@@ -4,12 +4,15 @@ import { motion } from "framer-motion";
 import { dataBtnIcons } from "@/data/dataBtnIcons";
 import HoverTag from "@/components/hoverTag/HoverTag";
 import { useThemeStore } from "@/store/ThemeStore";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const { isDarkMode, toggleDarkMode } = useThemeStore();
+  const { t, i18n } = useTranslation("global");
 
   const [listVisible, setListVisible] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [language, setLanguage] = useState("en");
   const screenWidthCollapsed = 1024;
 
   const updateCollapsedState = () => {
@@ -22,6 +25,11 @@ export default function Navbar() {
     if (window.innerWidth > screenWidthCollapsed) {
       setIsCollapsed(!isHover && window.scrollY > 0);
     }
+  };
+
+  const handleLanguageChange = (lang) => {
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
   };
 
   //escucha el evento scroll y resize para actualizar el estado de colapsado
@@ -96,40 +104,45 @@ export default function Navbar() {
             onClick={() => handleScroll("main")}
             className={styles.navLink}
           >
-            <span>Inicio</span>
+            <span>{t("navbar.main")}</span>
           </button>
           <button
             onClick={() => handleScroll("projects")}
             className={styles.navLink}
           >
-            <span>Proyectos</span>
+            <span>{t("navbar.projects")}</span>
           </button>
           <button
             onClick={() => handleScroll("about")}
             className={styles.navLink}
           >
-            <span>Sobre</span>
+            <span>{t("navbar.about")}</span>
           </button>
 
           <button
             onClick={() => handleScroll("education")}
             className={styles.navLink}
           >
-            <span>Educación</span>
+            <span>{t("navbar.education")}</span>
           </button>
           <button
             onClick={() => handleScroll("contact")}
             className={styles.navLink}
           >
-            <span>Contacto</span>
+            <span>{t("navbar.contact")}</span>
           </button>
         </div>
       </div>
       <div className={styles.navRight}>
         <HoverTag label={"Idioma"} position="bottom">
-          <button className={styles.navSetting}>
+          <button
+            className={styles.navSetting}
+            onClick={() =>
+              handleLanguageChange(language === "en" ? "es" : "en")
+            }
+          >
             {getIcon("world")}
-            <span>EN</span>
+            <span>{language === "en" ? "ES" : "EN"}</span>
           </button>
         </HoverTag>
         <HoverTag label={isDarkMode ? "Claro" : "Oscuro"} position="bottom">
@@ -157,7 +170,7 @@ export default function Navbar() {
             animationDelay: `${0.1}s`,
           }}
         >
-          <span>Inicio</span>
+          <span>{t("navbar.main")}</span>
         </button>
         <button
           onClick={() => handleScroll("projects")}
@@ -166,7 +179,7 @@ export default function Navbar() {
             animationDelay: `${0.1 * 2}s`,
           }}
         >
-          <span>Proyectos</span>
+          <span>{t("navbar.projects")}</span>
         </button>
         <button
           className={styles.navLink}
@@ -175,7 +188,7 @@ export default function Navbar() {
           }}
           onClick={() => handleScroll("about")}
         >
-          <span>Sobre</span>
+          <span>{t("navbar.about")}</span>
         </button>
         <button
           className={styles.navLink}
@@ -184,7 +197,7 @@ export default function Navbar() {
           }}
           onClick={() => handleScroll("education")}
         >
-          <span>Educación</span>
+          <span>{t("navbar.education")}</span>
         </button>
         <button
           className={styles.navLink}
@@ -193,7 +206,7 @@ export default function Navbar() {
           }}
           onClick={() => handleScroll("contact")}
         >
-          <span>Contacto</span>
+          <span>{t("navbar.contact")}</span>
         </button>
         <div
           className={styles.settingList}
