@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import styles from "./GitHubCounters.module.css";
+import { useTranslation } from "react-i18next";
 
 const GitHubCounters = ({ stats }) => {
+  const { t } = useTranslation("global");
+
   const [counts, setCounts] = useState({
     publicRepos: 0,
     followers: 0,
@@ -33,19 +36,19 @@ const GitHubCounters = ({ stats }) => {
     <div className={styles.statsContainer}>
       <div className={styles.stat}>
         <p className={styles.statNumber}>{counts.publicRepos}</p>
-        <p className={styles.statLabel}>Repositorios Publicos</p>
+        <p className={styles.statLabel}>{t("github.repositories")}</p>
       </div>
       <div className={styles.stat}>
         <p className={styles.statNumber}>{counts.starsReceived}</p>
-        <p className={styles.statLabel}>Estrellas Recibidas</p>
+        <p className={styles.statLabel}>{t("github.stars")}</p>
       </div>
       <div className={styles.stat}>
         <p className={styles.statNumber}>{counts.followers}</p>
-        <p className={styles.statLabel}>Seguidores</p>
+        <p className={styles.statLabel}>{t("github.followers")}</p>
       </div>
       <div className={styles.stat}>
         <p className={styles.statNumber}>{counts.totalCommits}</p>
-        <p className={styles.statLabel}>Commits Totales</p>
+        <p className={styles.statLabel}>{t("github.commits")}</p>
       </div>
     </div>
   );

@@ -2,8 +2,12 @@ import styles from "./Header.module.css";
 import { motion } from "framer-motion";
 import headerImage from "@/assets/FotoPerfil.png";
 import NetworkButton from "@/components/networkButton/NetworkButton";
+import { useTranslation } from "react-i18next";
+import { Download } from "lucide-react";
 
 export default function Header() {
+  const { t } = useTranslation("header");
+
   return (
     <header id="main" className={styles.header}>
       <div className={styles.shape}>
@@ -64,7 +68,7 @@ export default function Header() {
         <img src={headerImage} alt="Foto de perfil de stiven" loading="eager" />
         <div className={styles.workTag}>
           <div className={styles.circle}></div>
-          <span>¡Buscando nuevos desafíos!</span>
+          <span>{t("main.state")}</span>
         </div>
       </motion.div>
       <motion.div
@@ -77,7 +81,7 @@ export default function Header() {
           ease: [0.215, 0.61, 0.355, 1],
         }}
       >
-        <h3>¡Hola! ¿Cómo estás? Soy</h3>
+        <h3>{t("main.title")}</h3>
         <h1>Stiven Tapasco</h1>
         <span className={styles.profession}>
           <h2>Frontend Designer</h2>
@@ -97,16 +101,11 @@ export default function Header() {
           </span>
         </span>
         <p>
-          Me apasiona transformar{" "}
-          <strong>
-            {" "}
-            ideas creativas en experiencias digitales envolventes
-          </strong>
-          , enfocándome en mejorar la usabilidad y la accesibilidad mientras
-          diseño interfaces impactantes. Estoy{" "}
-          <strong>buscando progresar en mi carrera profesional</strong>,
-          contribuyendo a equipos innovadores mientras sigo aprendiendo y
-          adaptándome a las nuevas tecnologías.
+          {t("main.text-1")}
+          <strong>{t("main.strong-1")}</strong>
+          {t("main.text-2")}
+          <strong>{t("main.strong-2")}</strong>
+          {t("main.text-3")}
         </p>
         <motion.div
           className={styles.cta}
@@ -123,31 +122,8 @@ export default function Header() {
             rel="noreferrer"
             target="_blank"
           >
-            <svg
-              width="16"
-              height="22"
-              viewBox="0 0 16 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.14856 1.79492V17.7949M8.14856 17.7949L14.1486 11.7949M8.14856 17.7949L2.14856 11.7949"
-                stroke="#4557FB"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <line
-                x1="1.63552"
-                y1="20.9865"
-                x2="14.6343"
-                y2="20.8087"
-                stroke="#4557FB"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-            <span>Descargar CV</span>
+            <Download />
+            <span>{t("main.download")}</span>
           </a>
           <div className={styles.social}>
             <NetworkButton iconName="email" />

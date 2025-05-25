@@ -15,23 +15,30 @@ import global_es from "@/translate/es/global.json";
 import global_en from "@/translate/en/global.json";
 import header_es from "@/translate/es/header.json";
 import header_en from "@/translate/en/header.json";
-
-i18next.init({
-  interpolation: { escapeValue: false },
-  lng: "es",
-  resources: {
-    en: {
-      global: global_en,
-      header: header_en,
-    },
-    es: {
-      global: global_es,
-      header: header_es,
-    },
-  },
-});
+import projects_es from "@/translate/es/projects.json";
+import projects_en from "@/translate/en/projects.json";
+import { useLanguageStore } from "@/store/languageStore";
 
 const HomeView = () => {
+  const { isLanguageES } = useLanguageStore();
+
+  i18next.init({
+    interpolation: { escapeValue: false },
+    lng: isLanguageES ? "es" : "en",
+    resources: {
+      en: {
+        global: global_en,
+        header: header_en,
+        projects: projects_en,
+      },
+      es: {
+        global: global_es,
+        header: header_es,
+        projects: projects_es,
+      },
+    },
+  });
+
   return (
     <I18nextProvider i18n={i18next}>
       <NotificationProvider>
