@@ -1,0 +1,9 @@
+{
+    "navbar": {
+        "main": "Inicio",
+        "projects": "Proyectos",
+        "about": "Acerca",
+        "education": "Educacion",
+        "contact": "Contacto"
+    }
+}
