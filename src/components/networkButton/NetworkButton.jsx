@@ -23,14 +23,14 @@ const NetworkButton = ({
           {social.svg}
         </button>
       ) : iconName === "email" ? (
-        <button
+        <a
           onClick={() => handleScroll("contact")}
           className={`${styles.link} ${
             type === "secondary" ? styles.secondary : ""
           }`}
         >
           {social.svg}
-        </button>
+        </a>
       ) : (
         <a
           className={`${styles.link} ${
