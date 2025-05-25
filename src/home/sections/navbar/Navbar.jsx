@@ -5,14 +5,15 @@ import { dataBtnIcons } from "@/data/dataBtnIcons";
 import HoverTag from "@/components/hoverTag/HoverTag";
 import { useThemeStore } from "@/store/ThemeStore";
 import { useTranslation } from "react-i18next";
+import { useLanguageStore } from "@/store/languageStore";
 
 export default function Navbar() {
   const { isDarkMode, toggleDarkMode } = useThemeStore();
+  const { isLanguageES, toggleIsLanguageES } = useLanguageStore();
   const { t, i18n } = useTranslation("global");
 
   const [listVisible, setListVisible] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [language, setLanguage] = useState("en");
   const screenWidthCollapsed = 1024;
 
   const updateCollapsedState = () => {
@@ -27,9 +28,9 @@ export default function Navbar() {
     }
   };
 
-  const handleLanguageChange = (lang) => {
-    i18n.changeLanguage(lang);
-    setLanguage(lang);
+  const handleLanguageChange = () => {
+    toggleIsLanguageES();
+    i18n.changeLanguage(isLanguageES ? "es" : "en");
   };
 
   //escucha el evento scroll y resize para actualizar el estado de colapsado
@@ -134,18 +135,19 @@ export default function Navbar() {
         </div>
       </div>
       <div className={styles.navRight}>
-        <HoverTag label={"Idioma"} position="bottom">
+        <HoverTag label={t("navbar.label-language")} position="bottom">
           <button
             className={styles.navSetting}
-            onClick={() =>
-              handleLanguageChange(language === "en" ? "es" : "en")
-            }
+            onClick={() => handleLanguageChange()}
           >
             {getIcon("world")}
-            <span>{language === "en" ? "ES" : "EN"}</span>
+            <span>{isLanguageES ? "EN" : "ES"}</span>
           </button>
         </HoverTag>
-        <HoverTag label={isDarkMode ? "Claro" : "Oscuro"} position="bottom">
+        <HoverTag
+          label={isDarkMode ? t("navbar.label-light") : t("navbar.label-dark")}
+          position="bottom"
+        >
           <button
             onClick={toggleDarkMode}
             className={`${styles.navSetting} ${styles.switchSetting}
@@ -214,13 +216,21 @@ export default function Navbar() {
             animationDelay: `${0.1 * 5}s`,
           }}
         >
-          <HoverTag label={"Idioma"} position="top">
-            <button className={styles.navSetting}>
+          <HoverTag label={t("navbar.label-language")} position="top">
+            <button
+              className={styles.navSetting}
+              onClick={() => handleLanguageChange()}
+            >
               {getIcon("world")}
-              <span>EN</span>
+              <span>{isLanguageES ? "EN" : "ES"}</span>
             </button>
           </HoverTag>
-          <HoverTag label={isDarkMode ? "Claro" : "Oscuro"} position="top">
+          <HoverTag
+            label={
+              isDarkMode ? t("navbar.label-light") : t("navbar.label-dark")
+            }
+            position="top"
+          >
             <button
               onClick={toggleDarkMode}
               className={`${styles.navSetting} ${styles.switchSetting}
