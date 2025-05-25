@@ -6,8 +6,10 @@ import FilterCategory from "@/components/filterCategory/FilterCategory";
 import BlockHeader from "@/components/blockHeader/BlockHeader";
 import { dataProjects } from "@/data/dataProjects";
 import { dataCareers1 } from "@/data/dataCareers";
+import { useTranslation } from "react-i18next";
 
 export default function Projects() {
+  const { t } = useTranslation("projects");
   const [selectedCategory, setSelectedCategory] = useState(1); // Categoría por defecto: UX/UI
 
   // Filtrar proyectos según la categoría seleccionada
@@ -17,13 +19,14 @@ export default function Projects() {
 
   return (
     <section className={styles.projects} id="projects">
-      <BlockHeader title="Proyectos" ifExist={true}>
+      <BlockHeader title={t("head.title")} ifExist={true}>
         <span>
-          Cada trabajo{" "}
-          <strong>no solo muestra mis competencias técnicas,</strong> sino
-          también mi enfoque{" "}
-          <strong>creativo y mi dedicación a crear soluciones</strong> de diseño
-          que sean <strong>usables, accesibles y estéticas.</strong>
+          {t("head.text-1")}
+          <strong>{t("head.strong-1")}</strong>
+          {t("head.text-2")}
+          <strong>{t("head.strong-2")}</strong>
+          {t("head.text-3")}
+          <strong>{t("head.strong-3")}</strong>
         </span>
       </BlockHeader>
       {/* Filtro de categorías */}
