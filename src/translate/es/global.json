@@ -4,6 +4,15 @@
         "projects": "Proyectos",
         "about": "Acerca",
         "education": "Educacion",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "label-language": "Idioma",
+        "label-light": "Claro",
+        "label-dark": "Oscuro"
+    },
+    "github": {
+        "repositories": "Repositorios Publicos",
+        "stars": "Estrellas Recibidas",
+        "followers": "Seguidores",
+        "commits": "Commits Totales"
     }
 }
