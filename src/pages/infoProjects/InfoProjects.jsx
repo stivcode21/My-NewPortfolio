@@ -12,9 +12,11 @@ import ProjectOptions from "@/components/projectOptions/ProjectOptions";
 import ButtonBack from "@/components/buttonBack/ButtonBack";
 import IconTool from "@/components/iconTool/IconTool";
 import { Waypoints } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const InfoProjects = () => {
   const { url } = useParams();
+  const { t } = useTranslation("projects");
   const project = dataProjects.find((item) => item.url === url);
   const menuRef = useRef(null);
 
@@ -125,7 +127,7 @@ const InfoProjects = () => {
             <div>
               <h1 title={project.title}>{project.title}</h1>
               <div className={`${styles.cta} ${isScrolled && styles.fixed}`}>
-                <HoverTag label="Compartir" position="mix">
+                <HoverTag label={t("head.option-share")} position="mix">
                   <button
                     className={styles.primaryButton}
                     onClick={handleShare}
@@ -135,7 +137,7 @@ const InfoProjects = () => {
                 </HoverTag>
                 <div ref={menuRef}>
                   <HoverTag
-                    label={"Más opciones"}
+                    label={t("head.option-moreOptions")}
                     isDisabled={isOptionsOpen}
                     position="mix"
                   >
@@ -189,8 +191,16 @@ const InfoProjects = () => {
               <Tag tag={skill} index={index} key={index} />
             ))}
           </ul>
-          <p>{project.description}</p>
-          {project.details && <ExpandableList descriptions={project.details} />}
+          <p>{t(project.description)}</p>
+          {project.details && (
+            <ExpandableList
+              descriptions={[
+                t(project.details[0]),
+                t(project.details[1]),
+                t(project.details[2]),
+              ]}
+            />
+          )}
           {project.tools && (
             <div className={styles.tools}>
               <IconTool tools={project.tools} />

@@ -19,7 +19,7 @@ export const dataCareers1 = {
     ),
   },
   2: {
-    title: "Gráfico",
+    title: "Desing",
     svg: (
       <svg
         width="18"
