@@ -1,11 +1,55 @@
 {
     "head": {
-        "title": "Projects",
-        "text-1": "Each project ",
-        "strong-1": "not only demonstrates my technical skills, ",
-        "text-2": "but also my ",
-        "strong-2": "creative approach and dedication to crafting ",
-        "text-3": "design solutions that are ",
-        "strong-3": "usable, accessible, and aesthetically pleasing."
+      "title": "Projects",
+      "option-moreOptions": "More options",
+      "option-share": "Share",
+      "text-1": "Each work ",
+      "strong-1": "not only shows my technical skills, ",
+      "text-2": "but also my ",
+      "strong-2": "creative approach and dedication to creating design solutions ",
+      "text-3": "that are ",
+      "strong-3": "usable, accessible and aesthetic."
+    },
+    "viflow": {
+      "description": "ViFlow is a social network developed with TypeScript that allows users to register, create profiles, post content, interact with posts and comment. With a fully responsive design and advanced route handling, it offers an experience with unique features.",
+      "shortDescription": "Interactive social network with user registration, posts and comments.",
+      "objective": "The project emerged to address the need for a minimalist yet functional social network, aiming to create a platform where users can share content, interact and form communities, implementing key features like registration, profiles, posts and comments with TypeScript to ensure scalability and maintainability.",
+      "development": "I used React with TypeScript for frontend development, implementing react-router for navigation. For the UI, I prioritized a responsive design with Tailwind, integrating Zustand for global states and real-time interactions.",
+      "conclusion": "The result was a functional application that demonstrated my ability to solve complex problems in social environments. Key learnings include: the importance of typing in large projects (TypeScript), strategies for managing global states in social applications, and how to design intuitive interfaces for complex interaction flows."
+    },
+    "urbanShop": {
+      "description": "Urban Shop is an online store designed for selling shoes and caps, with an attractive and dynamic interface. I developed a complete e-commerce with main functionalities like persistent shopping cart and interactive sliders, providing a smooth and intuitive user experience.",
+      "shortDescription": "Functional shoes and caps e-commerce with persistent cart and dynamic design.",
+      "objective": "The project aimed to create a functional e-commerce for UrbanShop that would solve typical online store challenges: shopping cart management, attractive product display and data persistence between sessions, with the goal of offering a smooth and professional user experience.",
+      "development": "I implemented a robust architecture with React and Redux Toolkit to manage the global cart state, integrating localStorage for data persistence. For the interface, I used TailwindCSS along with SplideJS to create interactive sliders, developing a fully responsive design with Vite as build tool to optimize performance.",
+      "conclusion": "The result was a 100% functional online store with persistent cart and optimized loading time. Key learnings include: mastering Redux Toolkit for state management, advanced persistence techniques with localStorage, and how to implement professional sliders with SplideJS in React applications."
+    },
+    "frameonix": {
+      "description": "Frameonix is the web platform designed to document my component library, providing a detailed introduction, installation and usage guide, information on how to contribute and specific documentation for each available component. This website features a dynamic interface, route-based navigation, and an intuitive design to ensure an excellent user experience.",
+      "shortDescription": "Complete and interactive documentation for my Frameonix component library.",
+      "objective": "The project was born to solve the challenge of efficiently documenting the FrameOnix library, with the clear goal of creating a platform that would allow other developers to quickly understand its operation, installation and use, reducing the learning curve and promoting library adoption.",
+      "development": "I developed a complete solution with React and Vite to optimize performance, implementing react-router-dom for section navigation and i18next for multilingual support. I used IntersectionObserver for active section detection and created interactive components like a simulated terminal, all with TailwindCSS to ensure a responsive and consistent design.",
+      "conclusion": "The resulting documentation proved to be intuitive and effective, significantly improving developers' experience when using the library. Key learnings include: advanced route handling in React, i18next internationalization implementation, and techniques for creating interactive documentation that improves tool adoption."
+    },
+    "consultora": {
+      "description": "I participated in a freelance project for the business consultancy, working closely with a design and development team for the consultancy's website. My role included creating an intuitive interface and optimizing the web experience and performance, reflecting the vision and professionalism, and highlighting the quality and commitment of the team.",
+      "shortDescription": "Attractive and functional landing page that highlights the online presence of a business consultancy.",
+      "objective": "The Mostaza app showed a drop in orders, indicating user loss due to poor experience, lack of incentives and competition with other apps. The goal was to analyze behaviors, motivations and pain points to optimize the experience, retain customers and strengthen its market position.",
+      "development": "I applied the double diamond approach, exploring in the first phase user behaviors and needs through qualitative research. In the second phase, I described pain points and key opportunities through data analysis. Then, I created solutions focused on interactive prototypes, and finally, evaluated these proposals with usability tests, ensuring an optimized experience aligned with user expectations.",
+      "conclusion": "Thanks to the strategic research plan, I improved usability by 83%, simplifying the architecture and navigation to adapt to real user needs. This resulted in a significant reduction in order time and increased confidence in the app. Additionally, I discovered the importance of personalizing the user experience through incentives, which resulted in greater customer retention."
+    },
+    "cineverse": {
+      "description": "Cineverse is an interactive movie platform that consumes the TMDB API to display updated information. I developed a dynamic design with a randomly changing main banner and category filters, implementing an efficient state management system for a smooth and engaging user experience.",
+      "shortDescription": "Interactive movie platform with dynamic content from the TMDB API and category filters.",
+      "objective": "The project aimed to create a movie platform that would always show updated content by consuming the TMDB API, with an interactive design including a dynamic main banner and category filters to improve the movie discovery experience.",
+      "development": "I implemented a request system to the TMDB API using React, developing an interface with a random banner that changes with each reload or when selecting categories. I used advanced state management to handle the obtained data and create dynamic filters, optimizing performance with lazy loading techniques for images.",
+      "conclusion": "The result was a 100% functional platform that shows daily updated movies, with an attractive and fluid interface. Key learnings include: consumption of external APIs, implementation of dynamic filters, advanced state management in React and techniques for creating interactive interfaces that enhance user experience."
+    },
+    "whatsappClone": {
+      "description": "WhatsApp Clone is a frontend web developed together with 6 colleagues, where we replicated and customized various sections of the official WhatsApp web. The main goal was to gain teamwork experience and expand my knowledge using frameworks, as it was my first time working with them. We implemented key functionalities and customized the user experience.",
+      "shortDescription": "WhatsApp Web replica developed in team with React and Material UI.",
+      "objective": "The project was born as a collaborative learning exercise to replicate WhatsApp Web functionality, with the goal of gaining teamwork experience and familiarizing ourselves with modern frameworks like React, Material UI and Tailwind CSS.",
+      "development": "We developed a complete solution including authentication, user profile, functional chat with message and emoji sending, user statuses and profile editing. We implemented Material UI for interface components and Tailwind CSS for color theme customization, along with react-router for section navigation.",
+      "conclusion": "The project resulted in a functional application that demonstrated our ability to work as a team and learn new technologies quickly. Key learnings include: route handling in React, consumption of component libraries (Material UI), theme implementation with Tailwind CSS, and valuable collaboration skills using Scrum methodology."
     }
-}
+  }

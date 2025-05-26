@@ -7,12 +7,29 @@
         "contact": "Contacto",
         "label-language": "Idioma",
         "label-light": "Claro",
-        "label-dark": "Oscuro"
+        "label-dark": "Oscuro",
+         "btn-back": "Volver atras"
+    },
+    "projects": {
+        "btn1-card": "Anterior",
+        "btn2-card": "Siguiente",
+        "option-learn": "Leer mas",
+        "option-hide": "Ocultar",
+        "option-seeUX": "Ver reporte UX",
+        "option-seeweb": "Ver sitio web",
+        "option-viewRepo": "Ver repositorio",
+        "objective": "Objetivo",
+        "development": "Proceso de desarrollo",
+        "conclusion": "Conclusión"
     },
     "github": {
         "repositories": "Repositorios Publicos",
         "stars": "Estrellas Recibidas",
         "followers": "Seguidores",
         "commits": "Commits Totales"
+    },
+    "footer": {
+        "text-copyright": "Desarrollado por ",
+        "text-end": "Todos los derechos reservados."
     }
 }
