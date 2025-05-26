@@ -1,8 +1,10 @@
 import NetworkButton from "@/components/networkButton/NetworkButton";
 import { handleShare } from "@/hooks/share";
 import styles from "./MyFooter.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function MyFooter() {
+  const { t } = useTranslation("global");
   return (
     <footer className={styles.footer}>
       <div className={styles.footerLeft}>
@@ -13,8 +15,9 @@ export default function MyFooter() {
           position="top"
         />
         <span>
-          © 2025 Desarrollado por <strong>StivCode</strong>. Todos los derechos
-          reservados.{" "}
+          © 2025 {t("footer.text-copyright")}
+          <strong>StivCode. </strong>
+          {t("footer.text-end")}
         </span>
       </div>
       <div className={styles.footerLinks}>

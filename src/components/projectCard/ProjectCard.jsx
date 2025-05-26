@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import LazyImage from "../lazyImage/LazyImage";
 import Slider from "../slider/Slider";
 import Tag from "../tag/Tag";
+import { useTranslation } from "react-i18next";
 
 const ProjectCard = ({ project }) => {
+  const { t } = useTranslation("projects");
+
   return (
     <Link
       to={`/project/${project.url}`}
@@ -36,7 +39,7 @@ const ProjectCard = ({ project }) => {
                   ))}
                 </ul>
               </span>
-              <p>{project.shortDescription}</p>
+              <p>{t(project.shortDescription)}</p>
             </span>
           </div>
         </div>

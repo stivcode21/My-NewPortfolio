@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./ButtonBack.module.css";
 import HoverTag from "../hoverTag/HoverTag";
+import { useTranslation } from "react-i18next";
 
 const ButtonBack = ({ type }) => {
+  const { t } = useTranslation("global");
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -12,7 +14,7 @@ const ButtonBack = ({ type }) => {
   };
 
   return (
-    <HoverTag label="Volver atrás" position="bottom">
+    <HoverTag label={t("navbar.btn-back")} position="bottom">
       <button
         onClick={handleBack}
         className={`${styles.backButton} ${

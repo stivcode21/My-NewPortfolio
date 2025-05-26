@@ -2,25 +2,28 @@ import { useState } from "react";
 import styles from "./ExpandableList.module.css";
 import HoverTag from "../hoverTag/HoverTag";
 import { Hourglass, ShieldCheck, Trophy } from "lucide-react";
-
-const Accordion = [
-  [
-    {
-      title: "Objetivo",
-      icon: <Trophy />,
-    },
-    {
-      title: "Proceso de desarrollo",
-      icon: <Hourglass />,
-    },
-    {
-      title: "Conclusion",
-      icon: <ShieldCheck />,
-    },
-  ],
-];
+import { useTranslation } from "react-i18next";
 
 const ExpandableList = ({ descriptions }) => {
+  const { t } = useTranslation("global");
+
+  const Accordion = [
+    [
+      {
+        title: t("projects.objective"),
+        icon: <Trophy />,
+      },
+      {
+        title: t("projects.development"),
+        icon: <Hourglass />,
+      },
+      {
+        title: t("projects.conclusion"),
+        icon: <ShieldCheck />,
+      },
+    ],
+  ];
+
   const currentCategory = Accordion[0];
   const [openItem, setOpenItem] = useState(null);
 
@@ -46,7 +49,13 @@ const ExpandableList = ({ descriptions }) => {
               <span className={styles.icon}>{currentCategory[index].icon}</span>
               <h3>{currentCategory[index].title}</h3>
             </span>
-            <HoverTag label={openItem == index ? "Ocultar" : "Leer más"}>
+            <HoverTag
+              label={
+                openItem == index
+                  ? t("projects.option-hide")
+                  : t("projects.option-learn")
+              }
+            >
               <span className={styles.arrow}>
                 <svg
                   width="24"

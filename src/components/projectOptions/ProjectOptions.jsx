@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import styles from "./ProjectOptions.module.css";
 
 const ProjectOptions = ({ links, isOptionsOpen }) => {
+  const { t } = useTranslation("global");
+
   const linkDetails = {
     uxreport: {
-      text: "Ver reporte UX",
+      text: "projects.option-seeUX",
       icon: (
         <svg
           width="24"
@@ -32,7 +35,7 @@ const ProjectOptions = ({ links, isOptionsOpen }) => {
       ),
     },
     website: {
-      text: "Ver sitio web",
+      text: "projects.option-seeweb",
       icon: (
         <svg
           width="24"
@@ -59,7 +62,7 @@ const ProjectOptions = ({ links, isOptionsOpen }) => {
       ),
     },
     code: {
-      text: "Ver repositorio",
+      text: "projects.option-viewRepo",
       icon: (
         <svg
           width="24"
@@ -107,7 +110,7 @@ const ProjectOptions = ({ links, isOptionsOpen }) => {
               style={{ animationDelay: `${(index + 1) * 0.1}s` }}
             >
               {linkInfo.icon}
-              <span>{linkInfo.text}</span>
+              <span>{t(linkInfo.text)}</span>
             </a>
           );
         })}

@@ -5,6 +5,7 @@ import styles from "./Slider.module.css";
 import LazyImage from "../lazyImage/LazyImage";
 import HoverTag from "../hoverTag/HoverTag";
 import { ArrowBigUpDash } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Slider = ({
   carouselImages,
@@ -14,6 +15,7 @@ const Slider = ({
   showThumbnail = false,
   motionId,
 }) => {
+  const { t } = useTranslation("global");
   const { url } = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const carouselRef = useRef(null);
@@ -155,7 +157,7 @@ const Slider = ({
             <>
               {showControls && (
                 <div className={styles.carouselControl}>
-                  <HoverTag position="top" label={"Anterior"}>
+                  <HoverTag position="top" label={t("projects.btn1-card")}>
                     <button
                       className={styles.carouselButtonPrev}
                       onClick={(e) => {
@@ -186,7 +188,7 @@ const Slider = ({
                       </svg>
                     </button>
                   </HoverTag>
-                  <HoverTag position="top" label={"Siguiente"}>
+                  <HoverTag position="top" label={t("projects.btn2-card")}>
                     <button
                       className={styles.carouselButtonNext}
                       onClick={(e) => {
