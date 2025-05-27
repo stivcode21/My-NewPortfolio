@@ -5,7 +5,7 @@ import InfoEducation from "@/pages/infoEducation/InfoEducation";
 import { useEffect } from "react";
 import { useLanguageStore } from "@/store/languageStore";
 import { I18nextProvider } from "react-i18next";
-import i18n from "../translate/i18n";
+import i18n from "@/translate/i18n";
 
 export default function AppRouter() {
   const { isLanguageES } = useLanguageStore();
