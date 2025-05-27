@@ -3,6 +3,7 @@ import BlockHeader from "@/components/blockHeader/BlockHeader";
 import MySkills from "@/components/mySkills/MySkills";
 import { motion } from "framer-motion";
 import IconTool from "@/components/iconTool/IconTool";
+import { useTranslation } from "react-i18next";
 
 const tools = [
   "figma",
@@ -34,16 +35,19 @@ const tools = [
 const learn = ["python", "supabase", "astro"];
 
 const About = () => {
+  const { t } = useTranslation("about");
   const animateOnScroll = true;
+
   return (
     <div className={styles.about} id="about">
-      <BlockHeader title="Sobre mi">
+      <BlockHeader title={t("head.title")}>
         <span>
-          En esta sección sabrás un poco de mí, mis skills y algo de mi historia{" "}
-          <strong>por si la quieres conocer.</strong> Combino diseño y código
-          para <strong>crear soluciones funcionales y con personalidad.</strong>{" "}
-          Cada paso en mi camino{" "}
-          <strong>ha sido una lección de aprendizaje</strong>
+          {t("head.text-1")}
+          <strong>{t("head.strong-1")}</strong>
+          {t("head.text-2")}
+          <strong>{t("head.strong-2")}</strong>
+          {t("head.text-3")}
+          <strong>{t("head.strong-3")}</strong>
         </span>
       </BlockHeader>
       <div className={styles.container}>
@@ -51,7 +55,7 @@ const About = () => {
         <div className={styles.containerTools}>
           <div className={styles.tools}>
             <img src="/señalando.png" alt="x" className={styles.img} />
-            <h3 className={styles.workTag1}>Habilidades</h3>
+            <h3 className={styles.workTag1}>{t("aboutMe.skills")}</h3>
             <div className={styles.box}>
               <motion.ul
                 {...(animateOnScroll && {
@@ -68,8 +72,8 @@ const About = () => {
               </motion.ul>
             </div>
             <h3 className={styles.workTag2}>
-              Aprediendo
-              <span className={styles.tag}>Learn</span>
+              {t("aboutMe.learning")}
+              <div className={styles.circle}></div>
             </h3>
             <div className={styles.box}>
               <motion.ul

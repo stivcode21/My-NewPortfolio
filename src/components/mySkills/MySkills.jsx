@@ -5,12 +5,14 @@ import { dataSkills } from "@/data/dataSkills";
 import { dataCareers2 } from "@/data/dataCareers";
 import FilterCategory from "../filterCategory/FilterCategory";
 import HoverTag from "@/components/hoverTag/HoverTag";
+import { useTranslation } from "react-i18next";
 
 const MySkills = () => {
   const [selectedCategory, setSelectedCategory] = useState(1); // Categoría por defecto: UX/UI
+  const { t } = useTranslation("about");
 
-  const filteredProjects = dataSkills.filter(
-    (project) => project.id === selectedCategory
+  const filteredSkills = dataSkills.filter(
+    (skill) => skill.id === selectedCategory
   );
 
   return (
@@ -27,16 +29,14 @@ const MySkills = () => {
           className={styles.itemTitle}
         >
           <p>
-            Mi experiencia abarca una variedad de{" "}
-            <strong>habilidades técnicas y de diseño.</strong> He trabajado en{" "}
-            {""}
-            <strong>
-              proyectos que van desde el desarrollo front-end
-            </strong>{" "}
-            hasta la creación de interfaces de usuario intuitivas y atractivas.{" "}
-            <strong>Aquí hay un resumen de mis habilidades</strong>
+            {t("aboutMe.text-1")}
+            <strong>{t("aboutMe.strong-1")}</strong>
+            {t("aboutMe.text-2")}
+            <strong>{t("aboutMe.strong-2")}</strong>
+            {t("aboutMe.text-3")}
+            <strong>{t("aboutMe.strong-3")}</strong>
             <strong className={styles.buttonContainer}>
-              <HoverTag label="Leer mas" position="bottom">
+              <HoverTag label={t("aboutMe.option-readMore")} position="bottom">
                 <button className={styles.button}>
                   ...{" "}
                   <svg
@@ -75,9 +75,9 @@ const MySkills = () => {
             ifExists={true}
           />
         </motion.div>
-        {filteredProjects.map((item) => (
+        {filteredSkills.map((item) => (
           <div key={item.id} className={styles.containerSkills}>
-            <h2 className={styles.subtitle}>{item.subtitle}</h2>
+            <h2 className={styles.subtitle}>{t(item.subtitle)}</h2>
 
             <ul className={styles.responsabilities}>
               {item.skills.map((skill, index) => (
@@ -91,7 +91,7 @@ const MySkills = () => {
                   }}
                   viewport={{ once: true, amount: 0.1 }}
                 >
-                  {skill}
+                  {t(skill)}
                 </motion.li>
               ))}
             </ul>

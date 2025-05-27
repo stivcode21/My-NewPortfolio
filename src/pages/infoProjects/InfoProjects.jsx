@@ -81,7 +81,7 @@ const InfoProjects = () => {
       >
         <div className={styles.coverNav}></div>
         <ButtonBack type="transparent" />
-        <HoverTag label="Ir arriba" position="bottom">
+        <HoverTag label={t("head.option-goUp")} position="bottom">
           <button
             onClick={() => scrollTo({ top: 0, behavior: "smooth" })}
             className={styles.info}
