@@ -1,0 +1,51 @@
+{
+    "head": {
+        "title": "Sobre mi",
+        "text-1": "En esta sección sabrás un poco de mí, mis skills y algo de mi historia ",
+        "strong-1": "por si la quieres conocer! ",
+        "text-2": "Combino diseño y código para ",
+        "strong-2": "crear soluciones funcionales y con personalidad. ",
+        "text-3": "Cada paso en mi camino ",
+        "strong-3": "ha sido una lección de aprendizaje"
+    },
+    "aboutMe": {
+        "option-readMore": "Leer mas",
+        "skills": "Habilidades",
+        "learning": "En Aprendizaje",
+        "text-1": "Mi experiencia abarca una variedad de ",
+        "strong-1": "habilidades técnicas y de diseño. ",
+        "text-2": "He trabajado en  proyectos ",
+        "strong-2": "que van desde el desarrollo front-end ",
+        "text-3": "hasta la creación de interfaces de usuario intuitivas y atractivas. ",
+        "strong-3": "Aquí hay un resumen de mis habilidades "
+    },
+    "skills": {
+        "technical": {
+            "subtitle": "Habilidades técnicas enfocadas en la construcción de interfaces web.",
+            "li-1": "Diseño y gestión simultánea de productos digitales a medida para diversas empresas.",
+            "li-2": "Participación activa en todo el proceso de diseño, desde la investigación hasta la validación de prototipos con usuarios.",
+            "li-3": "Creación de soluciones centradas en el usuario y alineadas con los objetivos del negocio.",
+            "li-4": "Trabajo conjunto con desarrollo y uso de design systems para mantener consistencia visual y funcional.",
+            "li-5": "Coordinación con equipos de investigación para llevar a cabo estudios cualitativos y cuantitativos.",
+            "li-6": "Colaboración interfuncional para diseñar y ejecutar investigaciones cualitativas y cuantitativas orientadas a la toma de decisiones."
+        },
+        "design": {
+            "subtitle": "Habilidades de diseño y experiencia de usuario.",
+            "li-1": "Diseño de experiencias digitales centradas en las necesidades del usuario.",
+            "li-2": "Aplicación de principios de diseño visual y jerarquía para mejorar la usabilidad.",
+            "li-3": "Creación de prototipos interactivos para validar ideas y conceptos.",
+            "li-4": "Uso de herramientas como Figma y Adobe XD para diseñar interfaces intuitivas.",
+            "li-5": "Colaboración con equipos de desarrollo para garantizar la implementación precisa del diseño.",
+            "li-6": "Realización de tests de usabilidad para iterar y mejorar las soluciones propuestas."
+        },
+        "soft": {
+            "subtitle": "Habilidades blandas y actitud profesional",
+            "li-1": "Capacidad para trabajar en equipo y fomentar un ambiente colaborativo.",
+            "li-2": "Habilidades de comunicación efectiva para transmitir ideas y recibir feedback.",
+            "li-3": "Adaptabilidad ante cambios y desafíos en entornos dinámicos.",
+            "li-4": "Gestión eficiente del tiempo y priorización de tareas para cumplir objetivos.",
+            "li-5": "Actitud proactiva hacia la resolución de problemas y toma de decisiones.",
+            "li-6": "Compromiso con el aprendizaje continuo y mejora profesional."
+        }
+    }
+}

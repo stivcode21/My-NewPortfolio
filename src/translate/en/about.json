@@ -1,0 +1,51 @@
+{
+    "head": {
+        "title": "About Me",
+        "text-1": "In this section you'll learn a bit about me, my skills and some of my story ",
+        "strong-1": "in case you want to know it! ",
+        "text-2": "I combine design and code to ",
+        "strong-2": "create functional solutions with personality. ",
+        "text-3": "Every step in my journey ",
+        "strong-3": "has been a learning lesson."
+    },
+    "aboutMe": {
+        "option-readMore": "Read more",
+        "skills": "Skills",
+        "learning": "In Learning",
+        "text-1": "My experience spans a variety of ",
+        "strong-1": "technical and design skills. ",
+        "text-2": "I've worked on projects ",
+        "strong-2": "ranging from front-end development ",
+        "text-3": "to creating intuitive and attractive user interfaces. ",
+        "strong-3": "Here's a summary of my skills"
+    },
+    "skills": {
+        "technical": {
+            "subtitle": "Technical skills focused on building web interfaces.",
+            "li-1": "Design and simultaneous management of custom digital products for various companies.",
+            "li-2": "Active participation in the entire design process, from research to prototype validation with users.",
+            "li-3": "Creation of user-centered solutions aligned with business objectives.",
+            "li-4": "Joint work with development teams and use of design systems to maintain visual and functional consistency.",
+            "li-5": "Coordination with research teams to conduct qualitative and quantitative studies.",
+            "li-6": "Cross-functional collaboration to design and execute qualitative and quantitative research for decision making."
+        },
+        "design": {
+            "subtitle": "Design and user experience skills.",
+            "li-1": "Design of digital experiences focused on user needs.",
+            "li-2": "Application of visual design principles and hierarchy to improve usability.",
+            "li-3": "Creation of interactive prototypes to validate ideas and concepts.",
+            "li-4": "Use of tools like Figma and Adobe XD to design intuitive interfaces.",
+            "li-5": "Collaboration with development teams to ensure accurate design implementation.",
+            "li-6": "Conducting usability tests to iterate and improve proposed solutions."
+        },
+        "soft": {
+            "subtitle": "Soft skills and professional attitude",
+            "li-1": "Ability to work in teams and foster a collaborative environment.",
+            "li-2": "Effective communication skills to convey ideas and receive feedback.",
+            "li-3": "Adaptability to changes and challenges in dynamic environments.",
+            "li-4": "Efficient time management and task prioritization to meet objectives.",
+            "li-5": "Proactive attitude towards problem solving and decision making.",
+            "li-6": "Commitment to continuous learning and professional improvement."
+        }
+    }
+}
