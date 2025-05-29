@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./HoverTag.module.css";
+import { useTranslation } from "react-i18next";
 
 const HoverTag = ({
   children,
@@ -11,6 +12,7 @@ const HoverTag = ({
   const [showTooltip, setShowTooltip] = useState(false);
   const [isOverflowing, setIsOverflowing] = useState(false);
   const tooltipRef = useRef(null);
+  const { t } = useTranslation("about");
 
   useEffect(() => {
     if (showTooltip && caption && tooltipRef.current) {
@@ -49,7 +51,7 @@ const HoverTag = ({
           {caption ? (
             <>
               <span className={styles.label}>{label}</span>
-              <span className={styles.caption}>{caption}</span>
+              <span className={styles.caption}>{t(caption)}</span>
             </>
           ) : (
             label

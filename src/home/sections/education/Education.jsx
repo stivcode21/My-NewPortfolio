@@ -1,20 +1,21 @@
 import AutoScroll from "@/components/autoScroll/AutoScroll";
 import BlockHeader from "@/components/blockHeader/BlockHeader";
 import styles from "./Education.module.css";
+import { useTranslation } from "react-i18next";
 
 const Education = () => {
+  const { t } = useTranslation("education");
+
   return (
     <div id="education" className={styles.container}>
-      <BlockHeader title="Educación" hidden={true}>
+      <BlockHeader title={t("head.title")} hidden={true}>
         <span>
-          Aquí muestro algunos de mis <strong>certificados y logros</strong>{" "}
-          obtenidos con esfuerzo y dedicación. Me he{" "}
-          <strong>formado de manera autodidacta</strong> a través de plataformas
-          reconocidas. Cada curso ha sido clave para{" "}
-          <strong>
-            desarrollar habilidades en frontend, diseño y organización
-          </strong>{" "}
-          etc.
+          {t("head.text-1")}
+          <strong>{t("head.strong-1")}</strong>
+          {t("head.text-2")}
+          <strong>{t("head.strong-2")}</strong>
+          {t("head.text-3")}
+          <strong>{t("head.strong-3")}</strong>
         </span>
       </BlockHeader>
       <AutoScroll />

@@ -8,10 +8,12 @@ import MyFooter from "@/home/sections/myFooter/MyFooter";
 import LazyImage from "@/components/lazyImage/LazyImage";
 import ButtonBack from "@/components/buttonBack/ButtonBack";
 import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBorderButton";
+import { useTranslation } from "react-i18next";
 
 const InfoEducation = () => {
   const { id } = useParams();
   const education = AllCertifications.find((item) => item.url === id);
+  const { t } = useTranslation("education");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,7 +35,7 @@ const InfoEducation = () => {
         <span>
           <ButtonBack />
           <div className={styles.title}>
-            <h1>{education.title}</h1>
+            <h1>{t(education.title)}</h1>
           </div>
         </span>
         <div className={styles.cta}>
@@ -58,7 +60,7 @@ const InfoEducation = () => {
                 ))}
               </div>
             </div>
-            <p className={styles.description}>{education.description}</p>
+            <p className={styles.description}>{t(education.description)}</p>
           </div>
         </section>
       </main>
