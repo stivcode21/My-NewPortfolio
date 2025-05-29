@@ -10,6 +10,10 @@ import projects_es from "@/translate/es/projects.json";
 import projects_en from "@/translate/en/projects.json";
 import about_en from "@/translate/en/about.json";
 import about_es from "@/translate/es/about.json";
+import education_en from "@/translate/en/education.json";
+import education_es from "@/translate/es/education.json";
+import contact_en from "@/translate/en/contact.json";
+import contact_es from "@/translate/es/contact.json";
 
 i18n
   .use(initReactI18next) // ¡Esto es crucial!
@@ -23,12 +27,16 @@ i18n
         header: header_en,
         projects: projects_en,
         about: about_en,
+        education: education_en,
+        contact: contact_en,
       },
       es: {
         global: global_es,
         header: header_es,
         projects: projects_es,
         about: about_es,
+        education: education_es,
+        contact: contact_es,
       },
     },
   });

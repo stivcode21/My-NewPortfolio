@@ -1,0 +1,55 @@
+{
+    "head": {
+        "title": "Education",
+        "text-1": "Here I show some of my ",
+        "strong-1": "certificates and achievements ",
+        "text-2": "earned with effort and dedication. I have ",
+        "strong-2": "trained myself through self-learning ",
+        "text-3": "on recognized platforms. Each course has been key to ",
+        "strong-3": "developing skills in frontend, design, and organization etc. "
+    },
+    "certification-1": {
+        "title": "Graphic Design",
+        "description": "I'm currently in the first year of the degree program, learning the fundamentals of **visual communication, editorial design, typography, and technology applied to design**. It will allow me to explore the theoretical and practical foundations needed to approach **graphic design projects with a comprehensive and strategic vision**, aimed at enhancing user experience and interface in digital products."
+      },
+    "certification-2": {
+      "title": "Soft Skills for Tech Professionals",
+      "description": "Certification in essential soft skills for the technological work environment. I learned techniques for **assertive communication, collaboration in multidisciplinary teams, and efficient project management**, key tools to complement my technical skills in software development and design."
+    },
+    "certification-3": {
+      "title": "Game Systems Design Level 1",
+      "description": "Fundamentals of game systems design, where I learned to create **balanced and engaging game mechanics**, design progression systems, and develop functional prototypes. This course laid the groundwork for understanding how systems interact to create memorable gameplay experiences."
+    },
+    "certification-4": {
+      "title": "Game Sciences",
+      "description": "Exploration of the theoretical and scientific aspects behind game design. I delved into **player motivation theories, non-linear narrative structures, and emotional design principles**, enabling me to create more immersive and meaningful experiences."
+    },
+    "certification-5": {
+      "title": "Advanced Game Design",
+      "description": "Advanced course covering professional aspects of game design. I learned methodologies for **creating levels with effective pacing, implementing player feedback systems, and conducting iterative playtests**, significantly improving the quality of my designs."
+    },
+    "certification-6": {
+      "title": "Fundamentals of Game Development",
+      "description": "Practical introduction to game development using Unity. I acquired basic knowledge of **C# programming, physics implementation, asset management, and troubleshooting common issues**, establishing the technical foundation for my design projects."
+    },
+    "certification-7": {
+      "title": "Modern Web Design",
+      "description": "Contemporary web design certification covering **UI/UX principles, responsive design, and creating coherent design systems**. I learned to create intuitive and attractive interfaces, optimizing both aesthetics and usability."
+    },
+    "certification-8": {
+      "title": "Professional Frontend Development",
+      "description": "Intensive frontend development program where I mastered **semantic HTML, modern CSS (Flexbox, Grid), advanced JavaScript, and React**. I learned to create interactive web applications, consume APIs, and follow good development practices."
+    },
+    "certification-9": {
+      "title": "Web Design Principles",
+      "description": "Fundamental course that introduced me to the basic principles of web design. I learned about **selecting effective color palettes, typographic combinations, balanced layouts, and visual flow**, essential skills for creating attractive and functional websites."
+    },
+    "certification-10": {
+      "title": "Frontend Programming Fundamentals",
+      "description": "My first web development certification, where I learned the **basic concepts of HTML, CSS, and JavaScript**. This course gave me the tools to start building static web interfaces and understand the interaction between design and functionality."
+    },
+    "certification-11": {
+      "title": "Applied Game Theory",
+      "description": "Theoretical-practical course on the conceptual foundations of game design. I explored **different genres, game structures, and analysis methodologies**, developing my ability to critique and improve existing designs and create original concepts."
+    }
+}

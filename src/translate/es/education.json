@@ -1,0 +1,55 @@
+{
+    "head": {
+        "title": "Educacion",
+        "text-1": "Aquí muestro algunos de mis ",
+        "strong-1": "certificados y logros ",
+        "text-2": "obtenidos con esfuerzo y dedicación. Me he ",
+        "strong-2": "formado de manera autodidacta ",
+        "text-3": "a través de plataformas reconocidas. Cada curso ha sido clave para ",
+        "strong-3": "desarrollar habilidades en frontend, diseño y organización etc."
+    },
+    "certification-1": {
+        "title": "Habilidades Blandas EAFIT",
+        "description": "Estoy cursando el primer año de la carrera, donde aprendo las bases en **comunicación visual, diseño editorial, tipografía y tecnología aplicada al diseño**. Me permitirá explorar los fundamentos teóricos y prácticos necesarios para abordar proyectos de **diseño gráfico con una visión integral y estratégica**, orientada a potenciar la experiencia del usuario y la interfaz en productos digitales."
+    },
+    "certification-2": {
+        "title": "Habilidades Blandas para Profesionales Tech",
+        "description": "Certificación en habilidades blandas esenciales para el entorno laboral tecnológico. Aprendí técnicas de **comunicación asertiva, colaboración en equipos multidisciplinarios y gestión eficiente de proyectos**, herramientas clave para complementar mis habilidades técnicas en el desarrollo de software y diseño."
+    },
+    "certification-3": {
+        "title": "Diseño de Sistemas para Videojuegos Nivel 1",
+        "description": "Fundamentos del diseño de sistemas para videojuegos, donde aprendí a crear **mecánicas de juego equilibradas y engaging**, diseñar sistemas de progresión y desarrollar prototipos funcionales. Este curso sentó las bases para entender cómo los sistemas interactúan para crear experiencias jugables memorables."
+    },
+    "certification-4": {
+        "title": "Ciencias de los Videojuegos",
+        "description": "Exploración de los aspectos teóricos y científicos detrás del diseño de videojuegos. Profundicé en **teorías de motivación del jugador, estructuras narrativas no lineales y principios de diseño emocional**, lo que me permite crear experiencias más inmersivas y significativas."
+    },
+    "certification-5": {
+        "title": "Diseño de Videojuegos Avanzado",
+        "description": "Curso avanzado que cubre aspectos profesionales del diseño de videojuegos. Aprendí metodologías para **crear niveles con pacing efectivo, implementar sistemas de feedback al jugador y realizar tests de juego iterativos**, mejorando significativamente la calidad de mis diseños."
+    },
+    "certification-6": {
+        "title": "Fundamentos del Desarrollo de Videojuegos",
+        "description": "Introducción práctica al desarrollo de videojuegos usando Unity. Adquirí conocimientos básicos de **programación en C#, implementación de físicas, manejo de assets y solución de problemas comunes**, sentando las bases técnicas para mis proyectos de diseño."
+    },
+    "certification-7": {
+        "title": "Diseño Web Moderno",
+        "description": "Certificación en diseño web contemporáneo que cubre **principios de UI/UX, diseño responsive y creación de sistemas de diseño coherentes**. Aprendí a crear interfaces intuitivas y atractivas, optimizando tanto la estética como la usabilidad."
+    },
+    "certification-8": {
+        "title": "Desarrollo Frontend Profesional",
+        "description": "Programa intensivo de desarrollo frontend donde dominé **HTML semántico, CSS moderno (Flexbox, Grid), JavaScript avanzado y React**. Aprendí a crear aplicaciones web interactivas, consumir APIs y seguir buenas prácticas de desarrollo."
+    },
+    "certification-9": {
+        "title": "Principios de Diseño Web",
+        "description": "Curso fundamental que me introdujo a los principios básicos del diseño web. Aprendí sobre **selección de paletas de color efectivas, combinación tipográfica, layouts balanceados y flujo visual**, habilidades esenciales para crear sitios web atractivos y funcionales."
+    },
+    "certification-10": {
+        "title": "Fundamentos de Programación Frontend",
+        "description": "Mi primera certificación en desarrollo web, donde aprendí los **conceptos básicos de HTML, CSS y JavaScript**. Este curso me dio las herramientas para comenzar a construir interfaces web estáticas y comprender la interacción entre diseño y funcionalidad."
+    },
+    "certification-11": {
+        "title": "Teoría de Videojuegos Aplicada",
+        "description": "Curso teórico-práctico sobre los fundamentos conceptuales del diseño de videojuegos. Exploré **diferentes géneros, estructuras de juego y metodologías de análisis**, desarrollando mi capacidad para criticar y mejorar diseños existentes y crear conceptos originales."
+    }
+}
