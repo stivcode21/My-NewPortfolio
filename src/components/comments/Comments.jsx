@@ -5,10 +5,12 @@ import useModalFormStore from "@/store/ModalFormStore";
 import { NotebookPen } from "lucide-react";
 import PostComment from "../postComment/PostComment";
 import AnimatedBorderButton from "../animatedBorderButton/AnimatedBorderButton";
+import { useTranslation } from "react-i18next";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
   const { btnModalState, setModalState } = useModalFormStore();
+  const { t } = useTranslation("contact");
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -31,12 +33,11 @@ const Comments = () => {
   return (
     <>
       <div className={styles.head}>
-        <h3 className={styles.subtitle}>Libro de visitas</h3>
+        <h3 className={styles.subtitle}>{t("guestbook.title")}</h3>
         {btnModalState ? (
           ""
         ) : (
           <AnimatedBorderButton
-            type="submit"
             onClick={() => setModalState(true)}
             small={true}
             className={styles.btn}

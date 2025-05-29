@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import styles from "./PostComment.module.css";
 import { LinkIcon, Pin } from "lucide-react";
 
@@ -9,12 +10,13 @@ const PostComment = ({
   pinned = false,
   link,
 }) => {
+  const { t } = useTranslation("contact");
   return (
     <div className={styles.guestbook}>
       {pinned && (
         <div className={styles.pin}>
           <Pin size={14} />
-          <span>Pinned Cheep</span>
+          <span>{t("guestbook.pinned")}</span>
         </div>
       )}
       <div className={styles.content}>

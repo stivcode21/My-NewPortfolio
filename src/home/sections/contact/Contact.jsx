@@ -10,10 +10,12 @@ import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBord
 import Comments from "@/components/comments/Comments";
 import ModalOverlay from "@/components/modalOverlay/ModalOverlay";
 import FormComment from "@/components/formComment/FormComment";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const notify = useNotification();
   const localTime = formatDateToSubmit();
+  const { t } = useTranslation("contact");
 
   // Estado para los datos del formulario
   const [contactData, setContactData] = useState({
@@ -108,13 +110,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className={styles.contactContainer}>
-      <BlockHeader title="Contáctame" ifExist={true}>
+      <BlockHeader title={t("head.title")} ifExist={true}>
         <span>
-          Estoy disponible para colaborar en proyectos que requieran{" "}
-          <strong>
-            creatividad y habilidades en diseño y desarrollo frontend
-          </strong>
-          . ¡No dudes en ponerte en contacto conmigo!
+          {t("head.text-1")}
+          <strong>{t("head.strong-1")}</strong>
+          {t("head.text-2")}
         </span>
       </BlockHeader>
       <div className={styles.contact}>
@@ -125,42 +125,42 @@ export default function Contact() {
         {/* Content right */}
         <div className={styles.contactRight}>
           <h3 className={styles.subtitle}>
-            {isDisabled ? "¡Gracias por tu mensaje!" : "Dejame un mensaje"}
+            {isDisabled ? t("contact.title-state2") : t("contact.title-state1")}
           </h3>
           <form className={styles.form}>
             <span>
               <InputBox
                 type="text"
                 name="fullname"
-                placeholder="¿Cómo te llamás?"
+                placeholder={t("contact.name-placeholder")}
                 maxLength={30}
                 onChange={handleChange}
                 value={contactData.fullname}
                 isValid={errors.fullname}
-                errorMessage="Completá con tu nombre"
+                errorMessage={t("contact.name-error")}
                 disabled={isDisabled}
               />
               <InputBox
                 type="email"
                 name="email"
-                placeholder="Email de contacto"
+                placeholder={t("contact.email-placeholder")}
                 maxLength={50}
                 onChange={handleChange}
                 value={contactData.email}
                 isValid={errors.email}
-                errorMessage="Dejame un email válido"
+                errorMessage={t("contact.email-error")}
                 disabled={isDisabled}
               />
             </span>
             <InputBox
               type="textarea"
               name="message"
-              placeholder="¿Cómo podemos colaborar?"
+              placeholder={t("contact.textarea-placeholder")}
               maxLength={2000}
               onChange={handleChange}
               value={contactData.message}
               isValid={errors.message}
-              errorMessage="Compartime tu propuesta antes de enviar"
+              errorMessage={t("contact.textarea-error")}
               disabled={isDisabled}
             />
             <div className={styles.btnContainer}>
@@ -194,7 +194,7 @@ export default function Contact() {
                       </path>
                     </svg>
                   ) : (
-                    "Enviar"
+                    t("contact.btn-send")
                   )}
                 </AnimatedBorderButton>
               )}

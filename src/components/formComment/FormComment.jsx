@@ -6,10 +6,12 @@ import AnimatedBorderButton from "../animatedBorderButton/AnimatedBorderButton";
 import InputBox from "../inputBox/InputBox";
 import { useNotification } from "../notificationProvider/notificationProvider";
 import useModalFormStore from "@/store/ModalFormStore";
+import { useTranslation } from "react-i18next";
 
 const FormComment = () => {
   const localTime = formatDateToSubmit();
   const notify = useNotification();
+  const { t } = useTranslation("contact");
 
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -88,17 +90,17 @@ const FormComment = () => {
   return (
     <>
       <p className={styles.header}>
-        Me encantaría leer lo que piensas. Este{" "}
-        <strong>guestbook está abierto</strong> para que dejes tus mensajes,
-        ideas o cualquier palabra de apoyo. ¡
-        <strong>Tu participación hace esto más especial!</strong>
+        {t("guestbook.text-1")}
+        <strong>{t("guestbook.strong-1")}</strong>
+        {t("guestbook.text-2")}
+        <strong>{t("guestbook.strong-2")}</strong>
       </p>
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <InputBox
           type="text"
           name="name"
-          placeholder="¿Como te llamas?"
+          placeholder={t("guestbook.name-placeholder")}
           maxLength={30}
           onChange={handleChange}
           isValid={errors.name}
@@ -109,7 +111,7 @@ const FormComment = () => {
         <InputBox
           type="url"
           name="image"
-          placeholder="URL de imagen de perfil"
+          placeholder={t("guestbook.img-placeholder")}
           onChange={handleChange}
           isValid={errors.image}
           disabled={isDisabled}
@@ -119,7 +121,7 @@ const FormComment = () => {
         <InputBox
           type="url"
           name="url"
-          placeholder="URL de tu sitio web"
+          placeholder={t("guestbook.urlWebsite-placeholder")}
           onChange={handleChange}
           isValid={errors.url}
           disabled={isDisabled}
@@ -129,7 +131,7 @@ const FormComment = () => {
         <InputBox
           type="textarea"
           name="comment"
-          placeholder="Escribe tu comentario"
+          placeholder={t("guestbook.comment-placeholder")}
           maxLength={3000}
           onChange={handleChange}
           isValid={errors.comment}
@@ -165,7 +167,7 @@ const FormComment = () => {
               </path>
             </svg>
           ) : (
-            "Enviar"
+            t("guestbook.btn-send")
           )}
         </AnimatedBorderButton>
       </form>
