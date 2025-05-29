@@ -47,5 +47,36 @@
             "li-5": "Proactive attitude towards problem solving and decision making.",
             "li-6": "Commitment to continuous learning and professional improvement."
         }
+    },
+    "toolsCaption": {
+            "figma": "Design, prototypes and workshops",
+            "html": "Markup language",
+            "css": "Style language",
+            "nextjs": "React framework",
+            "miro": "Collaboration and teamwork",
+            "trello": "Project and task management",
+            "vsCode": "Code editor",
+            "npm": "Package manager",
+            "git": "Version control",
+            "vite": "JavaScript compiler",
+            "sqlite": "Lightweight database",
+            "js": "Interactive web development",
+            "tailwind": "CSS framework, fast and lightweight",
+            "i18next": "Simple and powerful multilingual management",
+            "reactjs": "Dynamic and scalable websites",
+            "vercel": "Web application deployment",
+            "bootstrap": "CSS framework, pre-designed and responsive",
+            "redux": "State management for React applications",
+            "reactRouter": "Route management for React applications",
+            "zustand": "Global state management",
+            "sass": "Preprocessed and modular CSS",
+            "firebase": "Hosting with integrated backend",
+            "typescript": "Typed JavaScript",
+            "github": "Version control and collaboration",
+            "asana": "Task organization and deadlines",
+            "notion": "Project management and documentation",
+            "python": "Versatile programming language",
+            "supabase": "Database and backend as a service",
+            "astro": "Framework for building fast websites"
     }
 }
