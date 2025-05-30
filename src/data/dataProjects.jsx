@@ -17,6 +17,8 @@ import WhatsAppClone1 from "../assets/projects/WHATSAPP-1.webp";
 import WhatsAppClone2 from "../assets/projects/WHATSAPP-2.webp";
 import WhatsAppClone3 from "../assets/projects/WHATSAPP-3.webp";
 
+import MoneyTracking1 from "../assets/projects/MONEY-TRACKING-1.webp";
+
 export const dataProjects = [
   {
     id: 1,
@@ -175,6 +177,36 @@ export const dataProjects = [
       "whatsappClone.objective",
       "whatsappClone.development",
       "whatsappClone.conclusion",
+    ],
+  },
+  {
+    id: 6,
+    title: "Money Tracking",
+    url: "money-tracking",
+    categoryId: 1,
+    images: [
+      <img src={MoneyTracking1} alt="Mockup del proyecto money tracking" />,
+    ],
+    tags: ["Web", "Finanzas", "Productividad", "Responsive", "Dashboard"],
+    tools: ["reactjs", "material-ui", "chartjs", "firebase", "react-hook-form"],
+    description: "moneyTracking.description",
+    shortDescription:
+      "Aplicación web para seguimiento de gastos personales con análisis visual",
+    links: [
+      {
+        type: "website",
+        url: "https://moneytracking-app.web.app/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/tuusuario/money-tracking-app.git",
+      },
+    ],
+    details: [
+      "moneyTracking.objective",
+      "moneyTracking.features",
+      "moneyTracking.technologies",
+      "moneyTracking.conclusion",
     ],
   },
 ];
