@@ -18,6 +18,8 @@ import WhatsAppClone2 from "../assets/projects/WHATSAPP-2.webp";
 import WhatsAppClone3 from "../assets/projects/WHATSAPP-3.webp";
 
 import MoneyTracking1 from "../assets/projects/MONEY-TRACKING-1.webp";
+import MoneyTracking2 from "../assets/projects/MONEY-TRACKING-2.webp";
+import MoneyTracking3 from "../assets/projects/MONEY-TRACKING-3.webp";
 
 export const dataProjects = [
   {
@@ -186,6 +188,8 @@ export const dataProjects = [
     categoryId: 1,
     images: [
       <img src={MoneyTracking1} alt="Mockup del proyecto money tracking" />,
+      <img src={MoneyTracking2} alt="Mockup del proyecto money tracking" />,
+      <img src={MoneyTracking3} alt="Mockup del proyecto money tracking" />,
     ],
     tags: ["Web", "Finanzas", "Productividad", "Responsive", "Dashboard"],
     tools: ["reactjs", "material-ui", "chartjs", "firebase", "react-hook-form"],
