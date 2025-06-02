@@ -8,6 +8,7 @@ import UrbanShop3 from "../assets/projects/URBANSHOP-3.webp";
 
 import FrameOnix1 from "../assets/projects/FRAMEONIX-1.webp";
 import FrameOnix2 from "../assets/projects/FRAMEONIX-2.webp";
+import FrameOnix3 from "../assets/projects/FRAMEONIX-3.webp";
 
 import Cineverse1 from "../assets/projects/CINEVERSE-1.webp";
 import Cineverse2 from "../assets/projects/CINEVERSE-2.webp";
@@ -99,6 +100,7 @@ export const dataProjects = [
     images: [
       <img src={FrameOnix1} alt="Mockup del proyecto de FrameOnix" />,
       <img src={FrameOnix2} alt="Mockup del proyecto de FrameOnix" />,
+      <img src={FrameOnix3} alt="Mockup del proyecto de FrameOnix" />,
     ],
     tags: ["Web", "Library", "Documentation", "Responsive"],
     tools: ["npm", "tailwindcss", "reactjs", "vite", "vercel", "i18next"],
