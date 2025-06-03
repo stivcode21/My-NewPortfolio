@@ -22,6 +22,10 @@ import MoneyTracking1 from "../assets/projects/MONEY-TRACKING-1.webp";
 import MoneyTracking2 from "../assets/projects/MONEY-TRACKING-2.webp";
 import MoneyTracking3 from "../assets/projects/MONEY-TRACKING-3.webp";
 
+import DesingForm1 from "../assets/projects/DESING-FORM-1.webp";
+import DesingForm2 from "../assets/projects/DESING-FORM-2.webp";
+import DesingForm3 from "../assets/projects/DESING-FORM-3.webp";
+
 export const dataProjects = [
   {
     id: 1,
@@ -48,7 +52,7 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "https://vi-flow-social-network.vercel.app/",
+        url: "https://viflow.vercel.app/",
       },
       {
         type: "uxreport",
@@ -65,7 +69,7 @@ export const dataProjects = [
     id: 2,
     title: "UrbanShop",
     url: "UrbanShop",
-    categoryId: 2,
+    categoryId: 1,
     images: [
       <img src={UrbanShop1} alt="Mockup del proyecto de UrbanShop" />,
       <img src={UrbanShop2} alt="Mockup del proyecto de UrbanShop" />,
@@ -205,7 +209,39 @@ export const dataProjects = [
       },
       {
         type: "code",
-        url: "https://github.com/tuusuario/money-tracking-app.git",
+        url: "https://github.com/stivcode21/Money-Tracking",
+      },
+    ],
+    details: [
+      "moneyTracking.objective",
+      "moneyTracking.features",
+      "moneyTracking.technologies",
+      "moneyTracking.conclusion",
+    ],
+  },
+  {
+    id: 7,
+    title: "Form Desing",
+    url: "form-desing",
+    categoryId: 2,
+    images: [
+      <img src={DesingForm1} alt="Mockup del proyecto form-Desing" />,
+      <img src={DesingForm2} alt="Mockup del proyecto form-Desing" />,
+      <img src={DesingForm3} alt="Mockup del proyecto form-Desing" />,
+    ],
+    tags: ["Web", "Finanzas", "Productividad", "Responsive", "Dashboard"],
+    tools: ["reactjs", "material-ui", "chartjs", "firebase", "react-hook-form"],
+    description: "moneyTracking.description",
+    shortDescription:
+      "Aplicación web para seguimiento de gastos personales con análisis visual",
+    links: [
+      {
+        type: "website",
+        url: "form-register-coral.vercel.app",
+      },
+      {
+        type: "code",
+        url: "https://github.com/stivcode21/User-Register",
       },
     ],
     details: [
