@@ -22,9 +22,9 @@ import MoneyTracking1 from "../assets/projects/MONEY-TRACKING-1.webp";
 import MoneyTracking2 from "../assets/projects/MONEY-TRACKING-2.webp";
 import MoneyTracking3 from "../assets/projects/MONEY-TRACKING-3.webp";
 
-import DesingForm1 from "../assets/projects/DESING-FORM-1.webp";
-import DesingForm2 from "../assets/projects/DESING-FORM-2.webp";
-import DesingForm3 from "../assets/projects/DESING-FORM-3.webp";
+import DesignForm1 from "../assets/projects/DESING-FORM-1.webp";
+import DesignForm2 from "../assets/projects/DESING-FORM-2.webp";
+import DesignForm3 from "../assets/projects/DESING-FORM-3.webp";
 
 export const dataProjects = [
   {
@@ -200,8 +200,7 @@ export const dataProjects = [
     tags: ["Web", "Finanzas", "Productividad", "Responsive", "Dashboard"],
     tools: ["reactjs", "material-ui", "chartjs", "firebase", "react-hook-form"],
     description: "moneyTracking.description",
-    shortDescription:
-      "Aplicación web para seguimiento de gastos personales con análisis visual",
+    shortDescription: "moneyTracking.shortDescription",
     links: [
       {
         type: "website",
@@ -214,30 +213,28 @@ export const dataProjects = [
     ],
     details: [
       "moneyTracking.objective",
-      "moneyTracking.features",
-      "moneyTracking.technologies",
+      "moneyTracking.development",
       "moneyTracking.conclusion",
     ],
   },
   {
     id: 7,
-    title: "Form Desing",
-    url: "form-desing",
+    title: "Form Design",
+    url: "form-design",
     categoryId: 2,
     images: [
-      <img src={DesingForm1} alt="Mockup del proyecto form-Desing" />,
-      <img src={DesingForm2} alt="Mockup del proyecto form-Desing" />,
-      <img src={DesingForm3} alt="Mockup del proyecto form-Desing" />,
+      <img src={DesignForm1} alt="Mockup del proyecto form Design" />,
+      <img src={DesignForm2} alt="Mockup del proyecto form Design" />,
+      <img src={DesignForm3} alt="Mockup del proyecto form Design" />,
     ],
-    tags: ["Web", "Finanzas", "Productividad", "Responsive", "Dashboard"],
-    tools: ["reactjs", "material-ui", "chartjs", "firebase", "react-hook-form"],
-    description: "moneyTracking.description",
-    shortDescription:
-      "Aplicación web para seguimiento de gastos personales con análisis visual",
+    tags: ["Web", "Formularios", "Interactivo", "Validación", "UX"],
+    tools: ["js", "css", "html", "dom-manipulation"],
+    description: "formDesign.description",
+    shortDescription: "formDesign.shortDescription",
     links: [
       {
         type: "website",
-        url: "form-register-coral.vercel.app",
+        url: "https://form-register-coral.vercel.app/",
       },
       {
         type: "code",
@@ -245,10 +242,9 @@ export const dataProjects = [
       },
     ],
     details: [
-      "moneyTracking.objective",
-      "moneyTracking.features",
-      "moneyTracking.technologies",
-      "moneyTracking.conclusion",
+      "formDesign.objective",
+      "formDesign.development",
+      "formDesign.conclusion",
     ],
   },
 ];
