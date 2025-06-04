@@ -52,5 +52,19 @@
       "objective": "El proyecto nació como un ejercicio de aprendizaje colaborativo para replicar la funcionalidad de WhatsApp Web, con el objetivo de adquirir experiencia en trabajo en equipo y familiarizarnos con frameworks modernos como React, Material UI y Tailwind CSS.",
       "development": "Desarrollamos una solución completa que incluye autenticación, perfil de usuario, chat funcional con envío de mensajes y emojis, estados de usuarios y edición de perfil. Implementamos Material UI para los componentes de interfaz y Tailwind CSS para la personalización del tema de colores, junto con react-router para la navegación entre secciones.",
       "conclusion": "El proyecto resultó en una aplicación funcional que demostró nuestra capacidad para trabajar en equipo y aprender nuevas tecnologías rápidamente. Entre los aprendizajes clave destacan: manejo de rutas en React, consumo de librerías de componentes (Material UI), implementación de temas con Tailwind CSS, y valiosas habilidades de colaboración usando metodología Scrum."
+    },
+    "moneyTracking": {
+      "description": "Money Tracking es una aplicación web para gestionar ingresos y egresos, con un balance actualizado y gráficos dinámicos usando ECharts. Desarrollado en JavaScript puro, permite registrar transacciones, calcular totales automáticamente y visualizar porcentajes en una gráfica interactiva.",
+      "shortDescription": "Gestor de ingresos/egresos con gráficos dinámicos en JavaScript puro.",
+      "objective": "El proyecto nació para crear un sistema de control financiero con visualización gráfica, con el objetivo de dominar la manipulación del DOM, cálculos dinámicos en JavaScript y el uso de librerías externas como ECharts.",
+      "development": "Implementé un input para agregar transacciones, cálculos automáticos del balance, eliminación de registros con actualización en tiempo real, y una gráfica interactiva (ECharts) que refleja los cambios. Todo con JavaScript modular y sin frameworks.",
+      "conclusion": "El proyecto reforzó mis habilidades en manipulación del DOM y cálculos dinámicos. Aprendí a integrar librerías externas (ECharts), trabajar con clases en JavaScript para organización del código, y resolver desafíos como la actualización automática de la gráfica al eliminar registros."
+    },
+    "formDesign": {
+      "description": "Form Design es un formulario de registro interactivo desarrollado con JavaScript puro (Vanilla JS) y CSS. Permite a los usuarios completar sus datos paso a paso con validaciones dinámicas y una barra de progreso visual, asegurando una experiencia fluida y sin errores.",
+      "shortDescription": "Formulario interactivo con validaciones dinámicas y progreso visual.",
+      "objective": "El proyecto nació para dominar la manipulación del DOM y las validaciones de formularios sin usar frameworks. El objetivo principal fue crear una solución reutilizable que garantice una UX intuitiva en sistemas de registro.",
+      "development": "Implementé validaciones en tiempo real (correo, teléfono, contraseña), una barra de navegación que muestra el progreso, botones para avanzar/retroceder sin recargar la página, y funcionalidad para mostrar/ocultar contraseñas. Todo con JavaScript y CSS puro.",
+      "conclusion": "El proyecto reforzó mis habilidades en manipulación del DOM y validaciones personalizadas. Aprendí a crear interfaces dinámicas sin depender de librerías externas y a resolver desafíos como la navegación entre pasos sin recargas."
     }
   }

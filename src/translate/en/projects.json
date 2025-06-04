@@ -52,5 +52,19 @@
       "objective": "The project was born as a collaborative learning exercise to replicate WhatsApp Web functionality, with the goal of gaining teamwork experience and familiarizing ourselves with modern frameworks like React, Material UI and Tailwind CSS.",
       "development": "We developed a complete solution including authentication, user profile, functional chat with message and emoji sending, user statuses and profile editing. We implemented Material UI for interface components and Tailwind CSS for color theme customization, along with react-router for section navigation.",
       "conclusion": "The project resulted in a functional application that demonstrated our ability to work as a team and learn new technologies quickly. Key learnings include: route handling in React, consumption of component libraries (Material UI), theme implementation with Tailwind CSS, and valuable collaboration skills using Scrum methodology."
+    },
+    "moneyTracking": {
+      "description": "Money Tracking is a web app to manage income/expenses, featuring real-time balance updates and dynamic charts using ECharts. Built with Vanilla JS, it allows recording transactions, auto-calculating totals, and displaying percentages in an interactive chart.",
+      "shortDescription": "Income/expense tracker with dynamic charts in Vanilla JS.",
+      "objective": "The project was created to build a financial control system with graphical visualization, aiming to master DOM manipulation, dynamic calculations in JavaScript, and the use of external libraries like ECharts.",
+      "development": "I developed a transaction input, automatic balance calculations, record deletion with real-time updates, and an interactive chart (ECharts) that reflects changes. All with modular JavaScript and no frameworks.",
+      "conclusion": "The project strengthened my DOM manipulation and dynamic calculation skills. Key learnings included integrating external libraries (ECharts), using JavaScript classes for code organization, and solving challenges like auto-updating the chart when deleting entries."
+    },
+    "formDesign": {
+      "description": "Form Design is an interactive registration form built with Vanilla JS and CSS. It lets users complete their data step-by-step with dynamic validations and a visual progress bar, ensuring a smooth and error-free experience.",
+      "shortDescription": "Interactive form with dynamic validations and visual progress tracking.",
+      "objective": "The project was created to master DOM manipulation and form validations without frameworks. The main goal was to build a reusable solution for intuitive UX in registration systems.",
+      "development": "I implemented real-time validations (email, phone, password), a progress navigation bar, buttons to move forward/backward without page reloads, and toggleable password fields. All using pure JavaScript and CSS.",
+      "conclusion": "The project strengthened my DOM manipulation and custom validation skills. I learned to create dynamic interfaces without external libraries and solved challenges like multi-step navigation without reloads."
     }
   }
