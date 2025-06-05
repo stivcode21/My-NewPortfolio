@@ -66,5 +66,19 @@
       "objective": "El proyecto nació para dominar la manipulación del DOM y las validaciones de formularios sin usar frameworks. El objetivo principal fue crear una solución reutilizable que garantice una UX intuitiva en sistemas de registro.",
       "development": "Implementé validaciones en tiempo real (correo, teléfono, contraseña), una barra de navegación que muestra el progreso, botones para avanzar/retroceder sin recargar la página, y funcionalidad para mostrar/ocultar contraseñas. Todo con JavaScript y CSS puro.",
       "conclusion": "El proyecto reforzó mis habilidades en manipulación del DOM y validaciones personalizadas. Aprendí a crear interfaces dinámicas sin depender de librerías externas y a resolver desafíos como la navegación entre pasos sin recargas."
+    },
+    "stivSound": {
+      "description": "StivSound es un reproductor de música online que permite escuchar canciones predefinidas con diseño responsive. Desarrollado en JavaScript puro, integra funciones esenciales como reproducción, pausa, barrido de canciones y consumo de archivos de audio desde Firebase Storage.",
+      "shortDescription": "Reproductor de música online con JavaScript puro y Firebase Storage.",
+      "objective": "El proyecto nació para aprender a manipular y controlar archivos de audio en una aplicación web usando JavaScript, mejorar la manipulación del DOM y reforzar el uso de clases para estructurar el código de manera más organizada.",
+      "development": "Implementé un sistema de reproducción de canciones (play/pause, siguiente/anterior), contadores de duración en tiempo real, barajado aleatorio de la lista y eliminación de canciones. Todo esto consumiendo archivos desde Firebase Storage y utilizando la API de Audio de JavaScript.",
+      "conclusion": "El proyecto consolidó mis habilidades en manipulación del DOM y manejo de audio en la web. Aprendí a trabajar con clases en JavaScript para código modular, integrar Firebase Storage para almacenamiento de archivos y resolver desafíos como la sincronización de contadores de reproducción."
+    },
+    "youtubeDesign": {
+      "description": "YouTube Design es un clon de la interfaz de inicio de YouTube, desarrollado con HTML y CSS puro. Incluye un menú lateral interactivo (sidebar) que se abre/cierra con JavaScript y un diseño responsive que se adapta a diferentes pantallas.",
+      "shortDescription": "Clon de la UI de YouTube con HTML/CSS y sidebar funcional.",
+      "objective": "El proyecto nació para reforzar mis habilidades en CSS Grid y manipulación básica del DOM con JavaScript. El objetivo principal fue replicar el diseño de YouTube de manera fiel mientras implementaba una funcionalidad interactiva para el sidebar.",
+      "development": "Repliqué la estructura de la UI usando CSS Grid para el layout principal y añadí un botón que abre/cierra el sidebar con JavaScript. El diseño es completamente responsive, adaptándose a móviles, tablets y desktop.",
+      "conclusion": "El proyecto me ayudó a dominar CSS Grid y a dar mis primeros pasos en JavaScript para manipulación del DOM. Aprendí a manejar eventos básicos (clicks) y a estructurar código HTML/CSS para clones de interfaces complejas."
     }
   }

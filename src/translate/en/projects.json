@@ -66,5 +66,19 @@
       "objective": "The project was created to master DOM manipulation and form validations without frameworks. The main goal was to build a reusable solution for intuitive UX in registration systems.",
       "development": "I implemented real-time validations (email, phone, password), a progress navigation bar, buttons to move forward/backward without page reloads, and toggleable password fields. All using pure JavaScript and CSS.",
       "conclusion": "The project strengthened my DOM manipulation and custom validation skills. I learned to create dynamic interfaces without external libraries and solved challenges like multi-step navigation without reloads."
+    },
+    "stivSound": {
+      "description": "StivSound is an online music player that lets users listen to predefined songs with a responsive design. Built with pure JavaScript, it features essential playback controls (play/pause, skip tracks) and fetches audio files from Firebase Storage.",
+      "shortDescription": "Online music player with Vanilla JS and Firebase Storage.",
+      "objective": "The project was created to learn how to handle and control audio files in a web app using JavaScript, improve DOM manipulation, and leverage classes for better code structure.",
+      "development": "I developed song playback (play/pause, next/previous), real-time duration counters, playlist shuffling, and song removal. This involved fetching files from Firebase Storage and using the JavaScript Audio API.",
+      "conclusion": "The project strengthened my DOM manipulation and web audio skills. Key learnings included using JavaScript classes for modular code, integrating Firebase Storage for file hosting, and solving challenges like playback counter synchronization."
+    },
+    "youtubeDesign": {
+      "description": "YouTube Design is a clone of YouTube's homepage UI, built with pure HTML and CSS. It features an interactive sidebar (toggleable with JavaScript) and a responsive design that adapts to different screen sizes.",
+      "shortDescription": "YouTube UI clone with HTML/CSS and functional sidebar.",
+      "objective": "The project aimed to strengthen my CSS Grid skills and basic DOM manipulation with JavaScript. The main goal was to replicate YouTube's design accurately while adding interactive sidebar functionality.",
+      "development": "I recreated the UI layout using CSS Grid and implemented a button to toggle the sidebar with JavaScript. The design is fully responsive, working on mobile, tablet, and desktop.",
+      "conclusion": "This project helped me master CSS Grid and take my first steps in DOM manipulation with JavaScript. Key learnings included handling click events and structuring HTML/CSS for complex UI clones."
     }
   }
