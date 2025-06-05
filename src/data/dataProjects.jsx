@@ -289,4 +289,33 @@ export const dataProjects = [
       "stivSound.conclusion",
     ],
   },
+  {
+    id: 9,
+    title: "YouTube Design",
+    url: "youtube-design",
+    categoryId: 2,
+    images: [
+      <img src={DesignYoutube1} alt="Mockup del proyecto YouTube Design" />,
+      <img src={DesignYoutube2} alt="Mockup del proyecto YouTube Design" />,
+    ],
+    tags: ["Web", "UI Clone", "Responsive", "CSS Grid", "DOM"],
+    tools: ["html", "css", "js", "css-grid"],
+    description: "youtubeDesign.description",
+    shortDescription: "youtubeDesign.shortDescription",
+    links: [
+      {
+        type: "website",
+        url: "https://desing-f0476.web.app/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/stivcode21/Youtube-Desing.git",
+      },
+    ],
+    details: [
+      "youtubeDesign.objective",
+      "youtubeDesign.development",
+      "youtubeDesign.conclusion",
+    ],
+  },
 ];
