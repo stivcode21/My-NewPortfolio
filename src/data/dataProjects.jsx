@@ -26,6 +26,13 @@ import DesignForm1 from "../assets/projects/DESING-FORM-1.webp";
 import DesignForm2 from "../assets/projects/DESING-FORM-2.webp";
 import DesignForm3 from "../assets/projects/DESING-FORM-3.webp";
 
+import StivSound1 from "../assets/projects/STIVSOUND-1.webp";
+import StivSound2 from "../assets/projects/STIVSOUND-2.webp";
+import StivSound3 from "../assets/projects/STIVSOUND-3.webp";
+
+import DesignYoutube1 from "../assets/projects/DESIGN-YOUTUBE-1.webp";
+import DesignYoutube2 from "../assets/projects/DESIGN-YOUTUBE-2.webp";
+
 export const dataProjects = [
   {
     id: 1,
@@ -65,6 +72,7 @@ export const dataProjects = [
     ],
     details: ["viflow.objective", "viflow.development", "viflow.conclusion"],
   },
+
   {
     id: 2,
     title: "UrbanShop",
@@ -148,7 +156,7 @@ export const dataProjects = [
       },
       {
         type: "code",
-        url: "https://github.com/stivcode21/Money-Tracking",
+        url: "https://github.com/stivcode21/Cineverce.git",
       },
     ],
     details: [
@@ -157,15 +165,16 @@ export const dataProjects = [
       "cineverse.conclusion",
     ],
   },
+
   {
     id: 5,
     title: "WhatsApp Clone",
     url: "whatsapp-clone",
-    categoryId: 1,
+    categoryId: 2,
     images: [
+      <img src={WhatsAppClone3} alt="Mockup del proyecto WhatsApp Clone" />,
       <img src={WhatsAppClone1} alt="Mockup del proyecto WhatsApp Clone" />,
       <img src={WhatsAppClone2} alt="Mockup del proyecto WhatsApp Clone" />,
-      <img src={WhatsAppClone3} alt="Mockup del proyecto WhatsApp Clone" />,
     ],
     tags: ["Web", "Clone", "Chat", "Responsive", "Teamwork"],
     tools: ["reactjs", "material-ui", "tailwindcss", "vite", "react-router"],
@@ -187,6 +196,7 @@ export const dataProjects = [
       "whatsappClone.conclusion",
     ],
   },
+
   {
     id: 6,
     title: "Money Tracking",
@@ -217,6 +227,7 @@ export const dataProjects = [
       "moneyTracking.conclusion",
     ],
   },
+
   {
     id: 7,
     title: "Form Design",
@@ -245,6 +256,37 @@ export const dataProjects = [
       "formDesign.objective",
       "formDesign.development",
       "formDesign.conclusion",
+    ],
+  },
+
+  {
+    id: 8,
+    title: "StivSound",
+    url: "stivsound",
+    categoryId: 1,
+    images: [
+      <img src={StivSound2} alt="Mockup del proyecto StivSound" />,
+      <img src={StivSound1} alt="Mockup del proyecto StivSound" />,
+      <img src={StivSound3} alt="Mockup del proyecto StivSound" />,
+    ],
+    tags: ["Web", "Música", "Reproductor", "Responsive", "Firebase"], // Actualizadas
+    tools: ["js", "firebase", "css", "html", "audio-api"],
+    description: "stivSound.description",
+    shortDescription: "stivSound.shortDescription",
+    links: [
+      {
+        type: "website",
+        url: "https://stiv-sound.vercel.app/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/stivcode21/MusicPlayer-StivSound",
+      },
+    ],
+    details: [
+      "stivSound.objective",
+      "stivSound.development",
+      "stivSound.conclusion",
     ],
   },
 ];
