@@ -80,5 +80,12 @@
       "objective": "El proyecto nació para reforzar mis habilidades en CSS Grid y manipulación básica del DOM con JavaScript. El objetivo principal fue replicar el diseño de YouTube de manera fiel mientras implementaba una funcionalidad interactiva para el sidebar.",
       "development": "Repliqué la estructura de la UI usando CSS Grid para el layout principal y añadí un botón que abre/cierra el sidebar con JavaScript. El diseño es completamente responsive, adaptándose a móviles, tablets y desktop.",
       "conclusion": "El proyecto me ayudó a dominar CSS Grid y a dar mis primeros pasos en JavaScript para manipulación del DOM. Aprendí a manejar eventos básicos (clicks) y a estructurar código HTML/CSS para clones de interfaces complejas."
+    },
+    "facebookDesign": {
+      "description": "Facebook Design es un clon de la página de inicio de sesión clásica de Facebook, desarrollado con HTML y CSS. El proyecto incluye un diseño responsive basado en Flexbox y media queries, replicando fielmente la interfaz original.",
+      "shortDescription": "Clon del login clásico de Facebook con HTML/CSS y Flexbox.",
+      "objective": "El proyecto nació como mi primer ejercicio práctico después de un curso de HTML/CSS, con el objetivo de dominar el modelo de cajas, Flexbox y el diseño responsive. Documenté cada paso del proceso durante 8 días para reforzar mi aprendizaje.",
+      "development": "Repliqué la interfaz de login usando Flexbox para la estructura principal y media queries para la adaptabilidad a móviles. Organicé el código en archivos separados (HTML/CSS) aplicando buenas prácticas de organización de clases.",
+      "conclusion": "Este proyecto me ayudó a sentar las bases de diseño web responsive. Aprendí a usar Flexbox eficientemente, aplicar media queries y comprender la importancia de documentar el proceso de desarrollo para identificar errores."
     }
   }

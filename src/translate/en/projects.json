@@ -80,5 +80,12 @@
       "objective": "The project aimed to strengthen my CSS Grid skills and basic DOM manipulation with JavaScript. The main goal was to replicate YouTube's design accurately while adding interactive sidebar functionality.",
       "development": "I recreated the UI layout using CSS Grid and implemented a button to toggle the sidebar with JavaScript. The design is fully responsive, working on mobile, tablet, and desktop.",
       "conclusion": "This project helped me master CSS Grid and take my first steps in DOM manipulation with JavaScript. Key learnings included handling click events and structuring HTML/CSS for complex UI clones."
+    },
+    "facebookDesign": {
+      "description": "Facebook Design is a clone of Facebook's classic login page, built with HTML and CSS. It features a responsive layout using Flexbox and media queries, accurately replicating the original UI.",
+      "shortDescription": "Clone of Facebook's classic login page with HTML/CSS and Flexbox.",
+      "objective": "This project was my first hands-on exercise after an HTML/CSS course, aiming to master the box model, Flexbox, and responsive design. I documented each step over 8 days to solidify my learning.",
+      "development": "I recreated the login interface using Flexbox for the main layout and media queries for mobile adaptability. The code was split into separate files (HTML/CSS) following class organization best practices.",
+      "conclusion": "This project laid the foundation for my responsive web design skills. Key learnings included Flexbox usage, media queries implementation, and the value of development process documentation."
     }
   }
