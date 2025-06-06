@@ -33,6 +33,9 @@ import StivSound3 from "../assets/projects/STIVSOUND-3.webp";
 import DesignYoutube1 from "../assets/projects/DESIGN-YOUTUBE-1.webp";
 import DesignYoutube2 from "../assets/projects/DESIGN-YOUTUBE-2.webp";
 
+import DesignFacebook1 from "../assets/projects/DESIGN-FACEBOOK-1.webp";
+import DesignFacebook2 from "../assets/projects/DESIGN-FACEBOOK-2.webp";
+
 export const dataProjects = [
   {
     id: 1,
@@ -316,6 +319,36 @@ export const dataProjects = [
       "youtubeDesign.objective",
       "youtubeDesign.development",
       "youtubeDesign.conclusion",
+    ],
+  },
+
+  {
+    id: 10,
+    title: "Facebook Design",
+    url: "facebook-design",
+    categoryId: 2,
+    images: [
+      <img src={DesignFacebook1} alt="Mockup del proyecto Facebook Design" />,
+      <img src={DesignFacebook2} alt="Mockup del proyecto Facebook Design" />,
+    ],
+    tags: ["Web", "UI Clone", "Responsive", "Flexbox", "Login"],
+    tools: ["html", "css", "flexbox", "media-queries"],
+    description: "facebookDesign.description",
+    shortDescription: "facebookDesign.shortDescription",
+    links: [
+      {
+        type: "website",
+        url: "https://fk-desing.web.app/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/stivcode21/Desing-Login-Facebook",
+      },
+    ],
+    details: [
+      "facebookDesign.objective",
+      "facebookDesign.development",
+      "facebookDesign.conclusion",
     ],
   },
 ];
