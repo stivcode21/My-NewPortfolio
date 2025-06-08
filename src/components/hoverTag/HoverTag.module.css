@@ -2,12 +2,12 @@
   position: absolute;
   padding: 0 10px;
   width: min-content;
-  height: 25px;
+  height: 30px;
   display: grid;
   place-items: center;
   background: var(--text-primary);
   color: var(--surface-primary);
-  border-radius: 12px;
+  border-radius: 8px;
   font-size: 12px;
   font-weight: var(--inverse-weight);
   white-space: nowrap;
