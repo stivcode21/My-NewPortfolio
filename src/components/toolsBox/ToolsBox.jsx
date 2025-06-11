@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "./myTools.module.css";
+import styles from "./ToolsBox.module.css";
 import IconTool from "@/components/iconTool/IconTool";
 import { useTranslation } from "react-i18next";
 
@@ -32,7 +32,7 @@ const tools = [
 
 const learn = ["python", "supabase", "astro"];
 
-const myTools = () => {
+const ToolsBox = () => {
   const { t } = useTranslation("about");
   const animateOnScroll = true;
 
@@ -80,4 +80,4 @@ const myTools = () => {
   );
 };
 
-export default myTools;
+export default ToolsBox;

@@ -1,7 +1,7 @@
 import styles from "./About.module.css";
 import BlockHeader from "@/components/blockHeader/BlockHeader";
 import MySkills from "@/components/mySkills/MySkills";
-import MyTools from "@/components/myTools/MyTools";
+import ToolsBox from "@/components/toolsBox/ToolsBox";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
@@ -21,7 +21,7 @@ const About = () => {
       </BlockHeader>
       <div className={styles.container}>
         <MySkills />
-        <MyTools />
+        <ToolsBox />
       </div>
     </div>
   );
