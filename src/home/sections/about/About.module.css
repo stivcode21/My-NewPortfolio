@@ -1,3 +1,4 @@
+/* === Estilos Generales para About === */
 .about {
   display: flex;
   flex-direction: column;
@@ -11,137 +12,18 @@
   width: 100%;
   height: 650px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   margin-top: 15px;
 }
 
-.containerTools {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  margin-right: 200px;
-}
-
-.tools {
-  position: relative;
-  border: 1px solid var(--color-primary-light);
-  padding: 30px;
-  border-radius: 30px 0 0 30px;
-}
-
-.tools .img {
-  position: absolute;
-  top: -150px;
-  right: -204px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  transform: rotate(1.5deg);
-  height: fit-content;
-  opacity: 0.2;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-}
-
-.box ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  align-items: center;
-  gap: 10px;
-}
-
-.box ul > div {
-  border-radius: 15px;
-}
-
-.subtitle {
-  display: flex;
-  align-items: center;
-}
-
-.workTag1 {
-  font-size: 18px;
-  font-weight: 800;
-  padding-bottom: 8px;
-  text-transform: uppercase;
-}
-
-.workTag2 {
-  margin: 14px 0 8px 0;
-  font-size: 18px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-transform: uppercase;
-}
-
-.circle {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-left: 2px;
-  background: var(--color-success);
-}
-
-.circle::before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  width: 8px;
-  height: 8px;
-  background: var(--color-success);
-  opacity: 0.8;
-  animation: 1s ease zoom-in infinite;
-}
-
-@keyframes zoom-in {
-  to {
-    transform: scale(3);
-    opacity: 0;
-  }
-}
-
-@media (width <= 1324px) {
-  .tools {
-    padding: 15px;
-    margin-right: -30px;
-  }
-  .tools .img {
-    top: -80px;
-    right: -150px;
-    width: 300px;
-    height: 450px;
-  }
-}
-
-@media (width <=1124px) {
+/* === Media Queries generales === */
+@media (width <= 1124px) {
   .container {
     flex-direction: column-reverse;
     align-items: center;
     height: fit-content;
     gap: 30px;
-  }
-  .containerTools {
-    justify-content: center;
-    margin: 0 90px 0 0;
-  }
-  .tools {
-    padding: 30px;
-  }
-  .tools .img {
-    top: -80px;
-    right: -160px;
-    width: 320px;
-    height: 500px;
   }
 }
 
@@ -149,23 +31,8 @@
   .container {
     gap: 40px;
   }
-  .containerTools {
-    margin: 0 120px 0 0;
-  }
+
   .about {
     align-items: center;
-  }
-}
-
-@media (width <= 500px) {
-  .containerTools {
-    justify-content: start;
-    margin: 20px 0 0 0;
-  }
-  .tools .img {
-    top: -50px;
-    right: -150px;
-    width: 300px;
-    height: 400px;
   }
 }
