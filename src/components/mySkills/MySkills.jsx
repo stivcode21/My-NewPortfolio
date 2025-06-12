@@ -6,10 +6,13 @@ import { dataCareers2 } from "@/data/dataCareers";
 import FilterCategory from "../filterCategory/FilterCategory";
 import HoverTag from "@/components/hoverTag/HoverTag";
 import { useTranslation } from "react-i18next";
+import useAboutModalStore from "@/store/ModalAboutStore";
+import ModalOverlay from "@/components/modalOverlay/ModalOverlay";
 
 const MySkills = () => {
   const [selectedCategory, setSelectedCategory] = useState(1); // Categoría por defecto: UX/UI
   const { t } = useTranslation("about");
+  const { aboutModalState, setAboutModalState } = useAboutModalStore();
 
   const filteredSkills = dataSkills.filter(
     (skill) => skill.id === selectedCategory
@@ -37,7 +40,10 @@ const MySkills = () => {
             <strong>{t("aboutMe.strong-3")}</strong>
             <strong className={styles.buttonContainer}>
               <HoverTag label={t("aboutMe.option-readMore")} position="bottom">
-                <button className={styles.button}>
+                <button
+                  className={styles.button}
+                  onClick={() => setAboutModalState(true)}
+                >
                   ...{" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -97,6 +103,12 @@ const MySkills = () => {
             </ul>
           </div>
         ))}
+        <ModalOverlay
+          isOpen={aboutModalState}
+          onClose={() => setAboutModalState(false)}
+        >
+          <p>hola</p>
+        </ModalOverlay>
       </div>
     </>
   );
