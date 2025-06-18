@@ -1,5 +1,5 @@
 import AutoScroll from "@/components/atoms/autoScroll/AutoScroll";
-import BlockHeader from "@/components/blockHeader/BlockHeader";
+import BlockHeader from "@/components/molecules/blockHeader/BlockHeader";
 import styles from "./Education.module.css";
 import { useTranslation } from "react-i18next";
 
