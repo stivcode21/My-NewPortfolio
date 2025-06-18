@@ -1,8 +1,8 @@
 import styles from "./ProjectCard.module.css";
 import { Link } from "react-router-dom";
-import LazyImage from "../lazyImage/LazyImage";
-import Slider from "../slider/Slider";
-import Tag from "../tag/Tag";
+import LazyImage from "../../lazyImage/LazyImage";
+import Slider from "../../slider/Slider";
+import Tag from "../../tag/Tag";
 import { useTranslation } from "react-i18next";
 
 const ProjectCard = ({ project }) => {

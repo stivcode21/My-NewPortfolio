@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Projects.module.css";
-import ProjectCard from "@/components/projectCard/ProjectCard";
+import ProjectCard from "@/components/organisms/projectCard/ProjectCard";
 import FilterCategory from "@/components/filterCategory/FilterCategory";
 import BlockHeader from "@/components/molecules/blockHeader/BlockHeader";
 import { dataProjects } from "@/data/dataProjects";
