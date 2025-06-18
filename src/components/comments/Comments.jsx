@@ -3,7 +3,7 @@ import styles from "./Comments.module.css";
 import { supabase } from "@/services/supabase";
 import useModalFormStore from "@/store/ModalFormStore";
 import { NotebookPen } from "lucide-react";
-import PostComment from "../postComment/PostComment";
+import PostComment from "../atoms/postComment/PostComment";
 import AnimatedBorderButton from "../atoms/animatedBorderButton/AnimatedBorderButton";
 import { useTranslation } from "react-i18next";
 
