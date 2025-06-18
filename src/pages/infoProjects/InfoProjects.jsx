@@ -5,7 +5,7 @@ import { dataProjects } from "@/data/dataProjects";
 import { handleShare } from "@/hooks/share";
 import MyFooter from "@/home/sections/myFooter/MyFooter";
 import Tag from "@/components/tag/Tag";
-import Slider from "@/components/slider/Slider";
+import Slider from "@/components/templates/slider/Slider";
 import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import ExpandableList from "@/components/expandableList/ExpandableList";
 import ProjectOptions from "@/components/projectOptions/ProjectOptions";
