@@ -4,7 +4,7 @@ import { supabase } from "@/services/supabase";
 import { formatDateToSubmit } from "@/hooks/formatDate";
 import AnimatedBorderButton from "../atoms/animatedBorderButton/AnimatedBorderButton";
 import InputBox from "../inputBox/InputBox";
-import { useNotification } from "../notificationProvider/notificationProvider";
+import { useNotification } from "../templates/notificationProvider/notificationProvider";
 import useModalFormStore from "@/store/ModalFormStore";
 import { useTranslation } from "react-i18next";
 
