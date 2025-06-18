@@ -1,4 +1,4 @@
-import GlowingText from "../glowingText/GlowingText";
+import GlowingText from "../atoms/glowingText/GlowingText";
 import styles from "./BlockHeader.module.css";
 
 const BlockHeader = ({ children, title, ifExist = false, hidden = false }) => {
