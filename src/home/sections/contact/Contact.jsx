@@ -8,7 +8,7 @@ import BlockHeader from "@/components/molecules/blockHeader/BlockHeader";
 import InputBox from "@/components/inputBox/InputBox";
 import AnimatedBorderButton from "@/components/atoms/animatedBorderButton/AnimatedBorderButton";
 import Comments from "@/components/comments/Comments";
-import ModalOverlay from "@/components/modalOverlay/ModalOverlay";
+import ModalOverlay from "@/components/templates/modalOverlay/ModalOverlay";
 import FormComment from "@/components/formComment/FormComment";
 import { useTranslation } from "react-i18next";
 

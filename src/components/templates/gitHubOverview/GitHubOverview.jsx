@@ -1,6 +1,6 @@
 import { useGitHubStats } from "@/hooks/useGitHubStats";
 import styles from "./GitHubOverview.module.css";
-import GitHubCounters from "../gitHubCounters/GitHubCounters";
+import GitHubCounters from "../../gitHubCounters/GitHubCounters";
 
 const GitHubOverview = () => {
   const token = import.meta.env.VITE_ACCESS_TOKEN;
