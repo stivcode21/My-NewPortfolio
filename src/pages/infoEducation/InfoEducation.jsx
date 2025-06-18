@@ -5,7 +5,7 @@ import { AllCertifications } from "@/data/dataEducation";
 import { motion } from "framer-motion";
 import Tag from "@/components/atoms/tag/Tag";
 import MyFooter from "@/home/sections/myFooter/MyFooter";
-import LazyImage from "@/components/lazyImage/LazyImage";
+import LazyImage from "@/components/atoms/lazyImage/LazyImage";
 import ButtonBack from "@/components/molecules/buttonBack/ButtonBack";
 import AnimatedBorderButton from "@/components/atoms/animatedBorderButton/AnimatedBorderButton";
 import { useTranslation } from "react-i18next";
