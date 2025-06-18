@@ -3,7 +3,7 @@ import styles from "./InfoEducation.module.css";
 import { useParams } from "react-router-dom";
 import { AllCertifications } from "@/data/dataEducation";
 import { motion } from "framer-motion";
-import Tag from "@/components/tag/Tag";
+import Tag from "@/components/atoms/tag/Tag";
 import MyFooter from "@/home/sections/myFooter/MyFooter";
 import LazyImage from "@/components/lazyImage/LazyImage";
 import ButtonBack from "@/components/molecules/buttonBack/ButtonBack";
