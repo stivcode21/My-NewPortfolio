@@ -1,5 +1,5 @@
 import styles from "./HomeView.module.css";
-import Navbar from "./sections/navbar/Navbar";
+import Navbar from "../components/organisms/navbar/Navbar";
 import Header from "./sections/header/Header";
 import Projects from "./sections/projects/Projects";
 import About from "./sections/about/About";
