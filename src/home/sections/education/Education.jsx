@@ -1,4 +1,4 @@
-import AutoScroll from "@/components/autoScroll/AutoScroll";
+import AutoScroll from "@/components/atoms/autoScroll/AutoScroll";
 import BlockHeader from "@/components/blockHeader/BlockHeader";
 import styles from "./Education.module.css";
 import { useTranslation } from "react-i18next";
