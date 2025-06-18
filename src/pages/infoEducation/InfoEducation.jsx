@@ -7,7 +7,7 @@ import Tag from "@/components/tag/Tag";
 import MyFooter from "@/home/sections/myFooter/MyFooter";
 import LazyImage from "@/components/lazyImage/LazyImage";
 import ButtonBack from "@/components/buttonBack/ButtonBack";
-import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBorderButton";
+import AnimatedBorderButton from "@/components/atoms/animatedBorderButton/AnimatedBorderButton";
 import { useTranslation } from "react-i18next";
 
 const InfoEducation = () => {

@@ -6,7 +6,7 @@ import useModalFormStore from "@/store/ModalFormStore";
 import { useNotification } from "@/components/notificationProvider/notificationProvider";
 import BlockHeader from "@/components/blockHeader/BlockHeader";
 import InputBox from "@/components/inputBox/InputBox";
-import AnimatedBorderButton from "@/components/animatedBorderButton/AnimatedBorderButton";
+import AnimatedBorderButton from "@/components/atoms/animatedBorderButton/AnimatedBorderButton";
 import Comments from "@/components/comments/Comments";
 import ModalOverlay from "@/components/modalOverlay/ModalOverlay";
 import FormComment from "@/components/formComment/FormComment";

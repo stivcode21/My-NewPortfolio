@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./FormComment.module.css";
 import { supabase } from "@/services/supabase";
 import { formatDateToSubmit } from "@/hooks/formatDate";
-import AnimatedBorderButton from "../animatedBorderButton/AnimatedBorderButton";
+import AnimatedBorderButton from "../atoms/animatedBorderButton/AnimatedBorderButton";
 import InputBox from "../inputBox/InputBox";
 import { useNotification } from "../notificationProvider/notificationProvider";
 import useModalFormStore from "@/store/ModalFormStore";

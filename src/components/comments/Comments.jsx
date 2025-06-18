@@ -4,7 +4,7 @@ import { supabase } from "@/services/supabase";
 import useModalFormStore from "@/store/ModalFormStore";
 import { NotebookPen } from "lucide-react";
 import PostComment from "../postComment/PostComment";
-import AnimatedBorderButton from "../animatedBorderButton/AnimatedBorderButton";
+import AnimatedBorderButton from "../atoms/animatedBorderButton/AnimatedBorderButton";
 import { useTranslation } from "react-i18next";
 
 const Comments = () => {
