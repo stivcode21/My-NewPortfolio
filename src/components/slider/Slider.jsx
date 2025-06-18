@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useParams } from "react-router-dom";
 import styles from "./Slider.module.css";
 import LazyImage from "../lazyImage/LazyImage";
-import HoverTag from "../hoverTag/HoverTag";
+import HoverTag from "../atoms/hoverTag/HoverTag";
 import { ArrowBigUpDash } from "lucide-react";
 import { useTranslation } from "react-i18next";
 

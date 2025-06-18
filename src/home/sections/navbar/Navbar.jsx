@@ -2,7 +2,7 @@ import styles from "./Navbar.module.css";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { dataBtnIcons } from "@/data/dataBtnIcons";
-import HoverTag from "@/components/hoverTag/HoverTag";
+import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { useThemeStore } from "@/store/ThemeStore";
 import { useTranslation } from "react-i18next";
 import { useLanguageStore } from "@/store/languageStore";

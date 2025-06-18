@@ -1,6 +1,6 @@
 import styles from "./IconTool.module.css";
 import { dataTools } from "@/data/dataTools";
-import HoverTag from "../hoverTag/HoverTag";
+import HoverTag from "../atoms/hoverTag/HoverTag";
 
 const IconTool = ({ tools, size = "large" }) => {
   return (

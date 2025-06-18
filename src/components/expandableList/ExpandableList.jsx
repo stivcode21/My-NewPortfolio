@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./ExpandableList.module.css";
-import HoverTag from "../hoverTag/HoverTag";
+import HoverTag from "../atoms/hoverTag/HoverTag";
 import { Hourglass, ShieldCheck, Trophy } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
