@@ -1,6 +1,6 @@
 import styles from "./About.module.css";
 import BlockHeader from "@/components/molecules/blockHeader/BlockHeader";
-import MySkills from "@/components/mySkills/MySkills";
+import MySkills from "@/components/organisms/mySkills/MySkills";
 import ToolsBox from "@/components/organisms/toolsBox/ToolsBox";
 import { useTranslation } from "react-i18next";
 

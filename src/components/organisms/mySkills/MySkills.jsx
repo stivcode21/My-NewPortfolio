@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { dataSkills } from "@/data/dataSkills";
 import { dataCareers2 } from "@/data/dataCareers";
-import FilterCategory from "../filterCategory/FilterCategory";
+import FilterCategory from "../../filterCategory/FilterCategory";
 import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { useTranslation } from "react-i18next";
 import useAboutModalStore from "@/store/ModalAboutStore";
