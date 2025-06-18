@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
 import headerImage from "@/assets/FotoPerfil.png";
-import NetworkButton from "@/components/networkButton/NetworkButton";
+import NetworkButton from "@/components/molecules/networkButton/NetworkButton";
 import { useTranslation } from "react-i18next";
 import { Download } from "lucide-react";
 

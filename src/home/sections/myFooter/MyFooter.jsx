@@ -1,4 +1,4 @@
-import NetworkButton from "@/components/networkButton/NetworkButton";
+import NetworkButton from "@/components/molecules/networkButton/NetworkButton";
 import { handleShare } from "@/hooks/share";
 import styles from "./MyFooter.module.css";
 import { useTranslation } from "react-i18next";
