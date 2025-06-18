@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./ToolsBox.module.css";
-import IconTool from "@/components/iconTool/IconTool";
+import IconTool from "@/components/molecules/iconTool/IconTool";
 import { useTranslation } from "react-i18next";
 
 const tools = [

@@ -10,7 +10,7 @@ import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import ExpandableList from "@/components/expandableList/ExpandableList";
 import ProjectOptions from "@/components/projectOptions/ProjectOptions";
 import ButtonBack from "@/components/molecules/buttonBack/ButtonBack";
-import IconTool from "@/components/iconTool/IconTool";
+import IconTool from "@/components/molecules/iconTool/IconTool";
 import { Waypoints } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
