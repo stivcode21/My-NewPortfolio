@@ -9,7 +9,7 @@ import InputBox from "@/components/templates/inputBox/InputBox";
 import AnimatedBorderButton from "@/components/atoms/animatedBorderButton/AnimatedBorderButton";
 import Comments from "@/components/organisms/comments/Comments";
 import ModalOverlay from "@/components/templates/modalOverlay/ModalOverlay";
-import FormComment from "@/components/formComment/FormComment";
+import FormComment from "@/components/organisms/formComment/FormComment";
 import { useTranslation } from "react-i18next";
 
 export default function Contact() {

@@ -2,9 +2,9 @@ import { useState } from "react";
 import styles from "./FormComment.module.css";
 import { supabase } from "@/services/supabase";
 import { formatDateToSubmit } from "@/hooks/formatDate";
-import AnimatedBorderButton from "../atoms/animatedBorderButton/AnimatedBorderButton";
-import InputBox from "../templates/inputBox/InputBox";
-import { useNotification } from "../templates/notificationProvider/notificationProvider";
+import AnimatedBorderButton from "../../atoms/animatedBorderButton/AnimatedBorderButton";
+import InputBox from "../../templates/inputBox/InputBox";
+import { useNotification } from "../../templates/notificationProvider/notificationProvider";
 import useModalFormStore from "@/store/ModalFormStore";
 import { useTranslation } from "react-i18next";
 
