@@ -5,7 +5,7 @@ import { formatDateToSubmit } from "@/hooks/formatDate";
 import useModalFormStore from "@/store/ModalFormStore";
 import { useNotification } from "@/components/templates/notificationProvider/notificationProvider";
 import BlockHeader from "@/components/molecules/blockHeader/BlockHeader";
-import InputBox from "@/components/inputBox/InputBox";
+import InputBox from "@/components/templates/inputBox/InputBox";
 import AnimatedBorderButton from "@/components/atoms/animatedBorderButton/AnimatedBorderButton";
 import Comments from "@/components/organisms/comments/Comments";
 import ModalOverlay from "@/components/templates/modalOverlay/ModalOverlay";
