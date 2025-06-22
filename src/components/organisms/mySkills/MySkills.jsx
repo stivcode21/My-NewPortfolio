@@ -8,6 +8,7 @@ import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { useTranslation } from "react-i18next";
 import useAboutModalStore from "@/store/ModalAboutStore";
 import ModalOverlay from "@/components/templates/modalOverlay/ModalOverlay";
+import MyStory from "@/components/molecules/myStory/MyStory";
 
 const MySkills = () => {
   const [selectedCategory, setSelectedCategory] = useState(1); // Categoría por defecto: UX/UI
@@ -107,7 +108,7 @@ const MySkills = () => {
           isOpen={aboutModalState}
           onClose={() => setAboutModalState(false)}
         >
-          <p>hola</p>
+          <MyStory />
         </ModalOverlay>
       </div>
     </>
