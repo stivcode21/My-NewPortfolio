@@ -217,7 +217,7 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "https://moneytracking-app.web.app/",
+        url: "https://money-tracking-two.vercel.app/",
       },
       {
         type: "code",
