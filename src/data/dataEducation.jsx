@@ -153,7 +153,7 @@ export const AllCertifications = [
     title: "certification-8.title",
     url: "devFrontend-freecodecamp",
     img: devFrontend,
-    skills: ["HTML5", "CSS3", "JavaScript ES6+", "React", "REST APIs"],
+    skills: ["HTML5", "CSS3", "JavaScript", "React", "REST API"],
     description: "certification-8.description",
   },
   {
