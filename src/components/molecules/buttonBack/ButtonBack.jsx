@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./ButtonBack.module.css";
-import HoverTag from "../../atoms/hoverTag/HoverTag";
+import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { useTranslation } from "react-i18next";
 
 const ButtonBack = ({ type }) => {
