@@ -1,6 +1,6 @@
 import styles from "./NetworkButton.module.css";
 import { dataBtnIcons } from "@/data/dataBtnIcons";
-import HoverTag from "@/src/components/atoms/hoverTag/HoverTag";
+import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { handleScroll } from "@/hooks/handleScroll";
 
 const NetworkButton = ({
