@@ -39,7 +39,8 @@ const ToolsBox = () => {
   return (
     <div className={styles.containerTools}>
       <div className={styles.tools}>
-        <img src="/señalando.png" alt="x" className={styles.img} />
+        {/* imagen a futuro */}
+        {/* <img src="/señalando.png" alt="x" className={styles.img} /> */}
         <h3 className={styles.workTag1}>{t("aboutMe.skills")}</h3>
         <div className={styles.box}>
           <motion.ul
