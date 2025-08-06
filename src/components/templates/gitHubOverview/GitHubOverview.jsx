@@ -9,7 +9,7 @@ const GitHubOverview = () => {
   if (loading)
     return (
       <div className={styles.containerLoader}>
-        <span className={styles.loader}></span>
+        <div className={styles.loader}></div>
       </div>
     );
   if (error) return <p>Error: {error}</p>;
