@@ -87,8 +87,9 @@
 
 .image:hover {
   transform: translateZ(10px);
-  border: solid 2px var(--text-primary);
-  box-shadow: 0 0 12px var(--text-primary);
+  border: 2px solid var(--color-primary-light);
+  box-shadow: -4px 5px 3px var(--color-primary-light);
+  transition: var(--dynamic-fast-transition);
 }
 
 @keyframes scroll {

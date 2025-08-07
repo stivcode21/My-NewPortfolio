@@ -62,7 +62,7 @@ const FilterCategory = ({
               onChange={() => handleCategoryChange(Number(key))}
             />
             {value.svg && value.svg}
-            <span>{value.title}</span>
+            <span className={styles.title}>{value.title}</span>
           </label>
 
           {/* Añade un separador entre botones, excepto el último */}

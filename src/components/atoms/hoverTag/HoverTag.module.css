@@ -61,7 +61,7 @@
 }
 
 .tooltip.right {
-  right: 0;
+  left: 0;
 }
 
 .tooltip.left svg {
@@ -137,16 +137,26 @@
   border-bottom: 2px solid var(--hover-primary-light);
 }
 
+.tooltip.right .label {
+  justify-content: start;
+}
+
 .tooltip > .caption {
   font-size: 14px;
   font-weight: 400;
   color: var(--text-secondary);
 }
 
-.tooltip.overflowRight {
+.tooltip.overflowRight.left {
   left: auto;
   right: 0;
   border-radius: 15px 0px 15px 15px;
+}
+
+.tooltip.overflowRight.right {
+  right: auto;
+  left: 0;
+  border-radius: 0px 15px 15px 15px;
 }
 
 @media (width <= 768px) {

@@ -203,7 +203,7 @@ const InfoProjects = () => {
           )}
           {project.tools && (
             <div className={styles.tools}>
-              <IconTool tools={project.tools} />
+              <IconTool tools={project.tools} position="right" />
             </div>
           )}
         </div>

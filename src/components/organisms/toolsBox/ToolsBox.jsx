@@ -54,7 +54,7 @@ const ToolsBox = () => {
               viewport: { once: true, amount: 0.3 },
             })}
           >
-            <IconTool tools={tools} size="small" />
+            <IconTool tools={tools} size="small" position="left" />
           </motion.ul>
         </div>
         <h3 className={styles.workTag2}>
@@ -73,7 +73,7 @@ const ToolsBox = () => {
               viewport: { once: true, amount: 0.3 },
             })}
           >
-            <IconTool tools={learn} size="small" />
+            <IconTool tools={learn} size="small" position="left" />
           </motion.ul>
         </div>
       </div>

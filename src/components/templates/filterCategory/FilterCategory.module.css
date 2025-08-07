@@ -57,6 +57,11 @@ input[type="radio"] {
   font-size: 12px;
 }
 
+.label svg {
+  width: 24px;
+  height: 24px;
+}
+
 .label svg path {
   stroke: var(--text-secondary);
   pointer-events: none;
@@ -192,5 +197,11 @@ input[type="radio"] {
   .otherLabel svg {
     width: 20px;
     height: 20px;
+  }
+  .title {
+    font-size: 12px;
+  }
+  .label {
+    padding: 0 10px;
   }
 }

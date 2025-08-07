@@ -2,7 +2,7 @@ import styles from "./IconTool.module.css";
 import { dataTools } from "@/data/dataTools";
 import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 
-const IconTool = ({ tools, size = "large" }) => {
+const IconTool = ({ tools, size = "large", position }) => {
   return (
     <>
       {tools.map((toolName, index) => {
@@ -14,7 +14,7 @@ const IconTool = ({ tools, size = "large" }) => {
               label={tool.title}
               caption={tool.caption}
               size="small"
-              position="left"
+              position={position}
             >
               <li
                 className={`${styles.toolItem} ${
