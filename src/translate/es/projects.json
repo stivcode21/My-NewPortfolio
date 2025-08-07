@@ -11,6 +11,13 @@
       "text-3": "de diseño que sean ",
       "strong-3": "usables, accesibles y estéticas."
     },
+    "parkify": {
+      "description": "Parkify es una aplicación web responsive para la gestión de parqueaderos. Comenzó como un diseño en Figma y evolucionó hacia una aplicación fullstack funcional gracias al uso de Supabase, sin requerir un backend personalizado. Ofrece autenticación, control de acceso, operaciones CRUD para vehículos, historial, y más.",
+      "shortDescription": "App web para gestionar parqueaderos con autenticación y control total de usuarios.",
+      "objective": "El objetivo de Parkify fue crear una solución digital completa que permitiera gestionar parqueaderos de forma intuitiva y segura, todo desde el navegador. La intención era desarrollar una plataforma que integrara registro de vehículos, historial, gestión de casilleros, control de usuarios y validaciones, aprendiendo tecnologías modernas en el proceso.",
+      "development": "Inicialmente comencé usando Astro para su desarrollo, pero migré a React debido a la necesidad de una interfaz dinámica. Para el backend utilicé Supabase, que me permitió implementar autenticación con magic link, gestión de sesiones, consultas seguras a la base de datos y reglas SQL. Utilicé React Router para proteger rutas según el estado del usuario (autenticado, nuevo perfil, etc.). Agregué notificaciones toast para informar al usuario de los resultados de sus acciones y creé un sistema completo de gestión de parqueaderos con operaciones como ingreso, salida, historial y casilleros.",
+     "conclusion": "Parkify fue mi primer acercamiento a una app fullstack funcional. Me permitió aprender bases de datos, autenticación moderna, y control de rutas en React. A pesar de estar aún en fase beta, es totalmente operativa y planeo seguir mejorándola. Me siento satisfecho por el aprendizaje obtenido y por haber transformado un simple diseño en una aplicación real, útil y escalable."
+    },
     "viflow": {
       "description": "ViFlow es una red social desarrollada con TypeScript que permite a los usuarios registrarse, crear perfiles, publicar contenido, interactuar con posts y comentar. Con un diseño completamente responsive y manejo avanzado de rutas, ofrece una experiencia con características únicas.",
       "shortDescription": "Red social interactiva con registro de usuarios, publicaciones y comentarios.",

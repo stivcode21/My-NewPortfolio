@@ -11,6 +11,13 @@
       "text-3": "that are ",
       "strong-3": "usable, accessible and aesthetic."
     },
+    "parkify": {
+      "description": "Parkify is a responsive web application for parking lot management. It started as a Figma design and evolved into a fullstack functional app using Supabase, without the need for a custom backend. It features user authentication, access control, CRUD operations for vehicles, history tracking, lockers management, and more.",
+      "shortDescription": "Web app for managing parking lots with authentication and complete user control.",
+      "objective": "The goal of Parkify was to build a complete digital solution that allows intuitive and secure management of parking lots directly from the browser. The aim was to develop a platform that includes vehicle registration, activity history, locker management, user control, and proper validation while learning modern technologies throughout the process.",
+      "development": "I initially started the project using Astro, but migrated to React due to the need for a more dynamic interface. For the backend, I used Supabase, which enabled me to implement authentication via magic link, session management, secure database queries, and SQL-based row-level security policies. I used React Router to protect routes based on the user's state (authenticated, new profile creation, etc.). I also implemented toast notifications to inform users about the outcome of their actions and built a complete parking management system with features like vehicle check-in, check-out, history logs, and locker tracking.",
+      "conclusion": "Parkify was my first experience creating a fully functional fullstack app. It helped me learn about databases, modern authentication methods, and route control in React. Although it is still in beta, it is fully operational, and I plan to continue improving it. I'm proud of the learning process and of having turned a simple design into a real, useful, and scalable application."
+    },
     "viflow": {
       "description": "ViFlow is a social network developed with TypeScript that allows users to register, create profiles, post content, interact with posts and comment. With a fully responsive design and advanced route handling, it offers an experience with unique features.",
       "shortDescription": "Interactive social network with user registration, posts and comments.",
