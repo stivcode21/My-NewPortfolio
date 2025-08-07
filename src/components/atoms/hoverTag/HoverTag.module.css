@@ -105,7 +105,7 @@
 .tooltip.expanded {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: end;
   justify-items: center;
   align-items: start;
   border-radius: 0 15px 15px 15px;
@@ -118,7 +118,7 @@
 
 .tooltip.expanded.show {
   top: calc(100% + 10px);
-  left: 0;
+  right: 0;
 }
 
 .tooltip.expanded svg {
@@ -130,6 +130,7 @@
   height: 32px;
   display: flex;
   align-items: center;
+  justify-content: end;
   text-transform: uppercase;
   font-weight: var(--title-weight);
   width: 100%;
@@ -145,7 +146,7 @@
 .tooltip.overflowRight {
   left: auto;
   right: 0;
-  border-radius: 0 15px 15px 15px;
+  border-radius: 15px 0px 15px 15px;
 }
 
 @media (width <= 768px) {
