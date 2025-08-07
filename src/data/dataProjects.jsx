@@ -30,6 +30,10 @@ import StivSound1 from "../assets/projects/STIVSOUND-1.webp";
 import StivSound2 from "../assets/projects/STIVSOUND-2.webp";
 import StivSound3 from "../assets/projects/STIVSOUND-3.webp";
 
+import Parkify1 from "../assets/projects/PARKIFY-1.webp";
+import Parkify2 from "../assets/projects/PARKIFY-2.webp";
+import Parkify3 from "../assets/projects/PARKIFY-3.webp";
+
 import DesignYoutube1 from "../assets/projects/DESIGN-YOUTUBE-1.webp";
 import DesignYoutube2 from "../assets/projects/DESIGN-YOUTUBE-2.webp";
 
@@ -39,6 +43,41 @@ import DesignFacebook2 from "../assets/projects/DESIGN-FACEBOOK-2.webp";
 export const dataProjects = [
   {
     id: 1,
+    title: "Parkify",
+    url: "parkify",
+    categoryId: 1,
+    images: [
+      <img src={Parkify1} alt="Mockup del proyecto de Parkify" />,
+      <img src={Parkify2} alt="Mockup del proyecto de Parkify" />,
+      <img src={Parkify3} alt="Mockup del proyecto de Parkify" />,
+    ],
+    tags: ["MAIN-PROJECT", "FullStack", "React", "Responsive"],
+    tools: [
+      "reactjs",
+      "supabase",
+      "css",
+      "zustand",
+      "vite",
+      "vercel",
+      "reactRouter",
+    ],
+    description: "parkify.description",
+    shortDescription: "parkify.shortDescription",
+    links: [
+      {
+        type: "website",
+        url: "https://parkify-eight.vercel.app/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/stivcode21/Parkify-React",
+      },
+    ],
+    details: ["parkify.objective", "parkify.development", "parkify.conclusion"],
+  },
+
+  {
+    id: 2,
     title: "ViFlow",
     url: "ViFlow",
     categoryId: 1,
@@ -47,7 +86,7 @@ export const dataProjects = [
       <img src={Viflow2} alt="Mockup del proyecto de Viflow" />,
       <img src={Viflow3} alt="Mockup del proyecto de Viflow" />,
     ],
-    tags: ["Social", "App", "Typescript", "Responsive", "Threads"],
+    tags: ["Social", "App", "Typescript", "Responsive"],
     tools: [
       "reactjs",
       "typescript",
@@ -77,7 +116,7 @@ export const dataProjects = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "UrbanShop",
     url: "UrbanShop",
     categoryId: 1,
@@ -108,7 +147,7 @@ export const dataProjects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "FrameOnix",
     url: "frameonix",
     categoryId: 1,
@@ -139,7 +178,7 @@ export const dataProjects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Cineverse",
     url: "cineverse",
     categoryId: 1,
@@ -170,7 +209,7 @@ export const dataProjects = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "WhatsApp Clone",
     url: "whatsapp-clone",
     categoryId: 2,
@@ -201,10 +240,10 @@ export const dataProjects = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Money Tracking",
     url: "money-tracking",
-    categoryId: 1,
+    categoryId: 2,
     images: [
       <img src={MoneyTracking1} alt="Mockup del proyecto money tracking" />,
       <img src={MoneyTracking2} alt="Mockup del proyecto money tracking" />,
@@ -232,7 +271,7 @@ export const dataProjects = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Form Design",
     url: "form-design",
     categoryId: 2,
@@ -263,7 +302,7 @@ export const dataProjects = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: "StivSound",
     url: "stivsound",
     categoryId: 1,
@@ -293,10 +332,10 @@ export const dataProjects = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "YouTube Design",
     url: "youtube-design",
-    categoryId: 2,
+    categoryId: 3,
     images: [
       <img src={DesignYoutube1} alt="Mockup del proyecto YouTube Design" />,
       <img src={DesignYoutube2} alt="Mockup del proyecto YouTube Design" />,
@@ -323,10 +362,10 @@ export const dataProjects = [
   },
 
   {
-    id: 10,
+    id: 11,
     title: "Facebook Design",
     url: "facebook-design",
-    categoryId: 2,
+    categoryId: 3,
     images: [
       <img src={DesignFacebook1} alt="Mockup del proyecto Facebook Design" />,
       <img src={DesignFacebook2} alt="Mockup del proyecto Facebook Design" />,
