@@ -20,7 +20,9 @@ const PostComment = ({
         </div>
       )}
       <div className={styles.content}>
-        <img src={avatar} alt={username} className={styles.avatar} />
+        <div>
+          <img src={avatar} alt={username} className={styles.avatar} />
+        </div>
         <div>
           <div className={styles.header}>
             <a
