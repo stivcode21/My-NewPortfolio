@@ -183,9 +183,9 @@ export const dataProjects = [
     url: "cineverse",
     categoryId: 1,
     images: [
+      <img src={Cineverse3} alt="Mockup del proyecto de Cineverse" />,
       <img src={Cineverse1} alt="Mockup del proyecto de Cineverse" />,
       <img src={Cineverse2} alt="Mockup del proyecto de Cineverse" />,
-      <img src={Cineverse3} alt="Mockup del proyecto de Cineverse" />,
     ],
     tags: ["React", "TMDB", "Dynamic Filters", "Responsive"],
     tools: ["reactjs", "tmdb", "tailwindcss", "vercel", "vite"],
