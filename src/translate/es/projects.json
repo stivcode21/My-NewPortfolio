@@ -9,7 +9,9 @@
     "text-2": "sino también mi enfoque ",
     "strong-2": "creativo y mi dedicación a crear soluciones ",
     "text-3": "de diseño que sean ",
-    "strong-3": "usables, accesibles y estéticas."
+    "strong-3": "usables, accesibles y estéticas.",
+    "btn1": "Anterior",
+    "btn2": "Siguiente"
   },
   "parkify": {
     "description": "Parkify es una aplicación web responsive para la gestión de parqueaderos. Comenzó como un diseño en Figma y evolucionó hacia una aplicación fullstack funcional gracias al uso de Supabase, sin requerir un backend personalizado. Ofrece autenticación, control de acceso, operaciones CRUD para vehículos, historial, y más.",
@@ -73,6 +75,13 @@
     "objective": "El proyecto nació para aprender a manipular y controlar archivos de audio en una aplicación web usando JavaScript, mejorar la manipulación del DOM y reforzar el uso de clases para estructurar el código de manera más organizada.",
     "development": "Implementé un sistema de reproducción de canciones (play/pause, siguiente/anterior), contadores de duración en tiempo real, barajado aleatorio de la lista y eliminación de canciones. Todo esto consumiendo archivos desde Firebase Storage y utilizando la API de Audio de JavaScript.",
     "conclusion": "El proyecto consolidó mis habilidades en manipulación del DOM y manejo de audio en la web. Aprendí a trabajar con clases en JavaScript para código modular, integrar Firebase Storage para almacenamiento de archivos y resolver desafíos como la sincronización de contadores de reproducción."
+  },
+  "oldPortfolio": {
+    "description": "Old Portfolio fue mi primer portafolio personal alojado en mi propio dominio, desarrollado con Next.js como mi primer acercamiento al renderizado del lado del servidor (SSR). Contaba con secciones como inicio, sobre mí, proyectos y contacto. Implementé funcionalidades como modo oscuro/claro con Tailwind, traducciones manuales usando i18next, modales para mostrar información detallada de cada proyecto y un formulario de contacto conectado a la API de Resend para enviar correos directamente a mi bandeja de entrada.",
+    "shortDescription": "Mi primer portafolio en Next.js con SSR, traducciones y formulario de contacto funcional.",
+    "objective": "El objetivo fue aprender a trabajar con Next.js y sus funcionalidades nativas (Image, Link, enrutamiento), practicar SSR y mejorar la presentación de mi trabajo. También quise implementar un sistema de traducciones con i18next, manejar temas con Tailwind y desarrollar un formulario para enviar correos usando Resend, incluyendo la configuración de credenciales y variables de entorno para un dominio personalizado.",
+    "development": "Estructuré el portafolio con Next.js utilizando renderizado del lado del servidor para optimizar el SEO y el rendimiento de carga. Implementé el modo oscuro con Tailwind, traducciones manuales con i18next y enrutamiento personalizado. Cada proyecto incluía un modal con información detallada, y utilicé un archivo JS local como fuente de datos para listar los proyectos. El formulario de contacto usaba Resend para enviar correos, gestionando variables de entorno y configurando correctamente las credenciales para mi dominio. También añadí filtros para organizar proyectos y aseguré que el sitio fuera totalmente responsive.",
+    "conclusion": "Este proyecto marcó mi primera experiencia con Next.js y tecnologías como Tailwind e i18next. Aprendí sobre SSR, configuración de APIs de correo, variables de entorno y manejo de datos locales. A pesar de sus limitaciones de diseño comparado con mi portafolio actual, sigue siendo una pieza funcional y un hito importante en mi aprendizaje, ya que me permitió adquirir habilidades fundamentales para proyectos más complejos."
   },
   "youtubeDesign": {
     "description": "YouTube Design es un clon de la interfaz de inicio de YouTube, desarrollado con HTML y CSS puro. Incluye un menú lateral interactivo (sidebar) que se abre/cierra con JavaScript y un diseño responsive que se adapta a diferentes pantallas.",

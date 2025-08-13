@@ -9,7 +9,9 @@
     "text-2": "but also my ",
     "strong-2": "creative approach and dedication to creating design solutions ",
     "text-3": "that are ",
-    "strong-3": "usable, accessible and aesthetic."
+    "strong-3": "usable, accessible and aesthetic.",
+    "btn1": "Former",
+    "btn2": "Following"
   },
   "parkify": {
     "description": "Parkify is a responsive web application for parking lot management. It started as a Figma design and evolved into a fullstack functional app using Supabase, without the need for a custom backend. It features user authentication, access control, CRUD operations for vehicles, history tracking, lockers management, and more.",
@@ -73,6 +75,13 @@
     "objective": "The project was created to learn how to handle and control audio files in a web app using JavaScript, improve DOM manipulation, and leverage classes for better code structure.",
     "development": "I developed song playback (play/pause, next/previous), real-time duration counters, playlist shuffling, and song removal. This involved fetching files from Firebase Storage and using the JavaScript Audio API.",
     "conclusion": "The project strengthened my DOM manipulation and web audio skills. Key learnings included using JavaScript classes for modular code, integrating Firebase Storage for file hosting, and solving challenges like playback counter synchronization."
+  },
+  "oldPortfolio": {
+    "description": "Old Portfolio was my first personal portfolio hosted on my own domain, developed with Next.js as my first approach to server-side rendering (SSR). It featured sections such as home, about me, projects, and contact. I implemented features like dark/light mode with Tailwind, manual translations using i18next, modals to display detailed information for each project, and a contact form connected to the Resend API to send emails directly to my inbox.",
+    "shortDescription": "My first Next.js portfolio with SSR, translations, and a functional contact form.",
+    "objective": "The goal was to learn how to work with Next.js and its native functionalities (Image, Link, routing), practice SSR, and improve the presentation of my work. I also wanted to implement a translation system with i18next, handle themes with Tailwind, and develop a form that sends emails using Resend, including setting up credentials and environment variables for a custom domain.",
+    "development": "I structured the portfolio with Next.js using server-side rendering to optimize SEO and loading performance. I implemented dark mode with Tailwind, manual translations with i18next, and custom routing. Each project had a modal with detailed information, and I used a local JS file as a data source to list projects. The contact form used Resend to send emails, managing environment variables and properly configuring credentials for my domain. I also added filters to organize projects and ensured the site was fully responsive.",
+    "conclusion": "This project marked my first experience with Next.js and technologies like Tailwind and i18next. I learned about SSR, email API configuration, environment variables, and handling local data. Despite its design limitations compared to my current portfolio, it remains a functional piece and an important milestone in my learning journey, as it allowed me to acquire fundamental skills for more complex projects."
   },
   "youtubeDesign": {
     "description": "YouTube Design is a clone of YouTube's homepage UI, built with pure HTML and CSS. It features an interactive sidebar (toggleable with JavaScript) and a responsive design that adapts to different screen sizes.",
