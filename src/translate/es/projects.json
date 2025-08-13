@@ -1,98 +1,91 @@
 {
-    "head": {
-      "title": "Proyectos",
-      "option-moreOptions": "Mas opciones",
-      "option-share": "Compartir",
-      "option-goUp": "Ir arriba",
-      "text-1": "Cada trabajo ",
-      "strong-1": "no solo muestra mis competencias técnicas, ",
-      "text-2": "sino también mi enfoque ",
-      "strong-2": "creativo y mi dedicación a crear soluciones ",
-      "text-3": "de diseño que sean ",
-      "strong-3": "usables, accesibles y estéticas."
-    },
-    "parkify": {
-      "description": "Parkify es una aplicación web responsive para la gestión de parqueaderos. Comenzó como un diseño en Figma y evolucionó hacia una aplicación fullstack funcional gracias al uso de Supabase, sin requerir un backend personalizado. Ofrece autenticación, control de acceso, operaciones CRUD para vehículos, historial, y más.",
-      "shortDescription": "App web para gestionar parqueaderos con autenticación y control total de usuarios.",
-      "objective": "El objetivo de Parkify fue crear una solución digital completa que permitiera gestionar parqueaderos de forma intuitiva y segura, todo desde el navegador. La intención era desarrollar una plataforma que integrara registro de vehículos, historial, gestión de casilleros, control de usuarios y validaciones, aprendiendo tecnologías modernas en el proceso.",
-      "development": "Inicialmente comencé usando Astro para su desarrollo, pero migré a React debido a la necesidad de una interfaz dinámica. Para el backend utilicé Supabase, que me permitió implementar autenticación con magic link, gestión de sesiones, consultas seguras a la base de datos y reglas SQL. Utilicé React Router para proteger rutas según el estado del usuario (autenticado, nuevo perfil, etc.). Agregué notificaciones toast para informar al usuario de los resultados de sus acciones y creé un sistema completo de gestión de parqueaderos con operaciones como ingreso, salida, historial y casilleros.",
-     "conclusion": "Parkify fue mi primer acercamiento a una app fullstack funcional. Me permitió aprender bases de datos, autenticación moderna, y control de rutas en React. A pesar de estar aún en fase beta, es totalmente operativa y planeo seguir mejorándola. Me siento satisfecho por el aprendizaje obtenido y por haber transformado un simple diseño en una aplicación real, útil y escalable."
-    },
-    "viflow": {
-      "description": "ViFlow es una red social desarrollada con TypeScript que permite a los usuarios registrarse, crear perfiles, publicar contenido, interactuar con posts y comentar. Con un diseño completamente responsive y manejo avanzado de rutas, ofrece una experiencia con características únicas.",
-      "shortDescription": "Red social interactiva con registro de usuarios, publicaciones y comentarios.",
-      "objective": "El proyecto surgió para resolver la necesidad de una red social minimalista pero funcional, con el objetivo de crear una plataforma donde usuarios puedan compartir contenido, interactuar y formar comunidades, implementando características clave como registro, perfiles, posts y comentarios con TypeScript para garantizar escalabilidad y mantenibilidad.",
-      "development": "Utilicé React con TypeScript para el desarrollo frontend, implementando react-router para la navegación. Para la UI, prioricé un diseño responsive con Tailwind, integrando Zustand para estados globales, interacciones en tiempo real",
-      "conclusion": "El resultado fue una aplicación funcional que demostró mi capacidad para resolver problemas complejos en entornos sociales. Entre los aprendizajes clave destacan: la importancia de la tipificación en proyectos grandes (TypeScript), estrategias para manejar estados globales en aplicaciones sociales, y cómo diseñar interfaces intuitivas para flujos de interacción complejos."
-    },
-    "urbanShop": {
-      "description": "Urban Shop es una tienda en línea diseñada para la venta de zapatos y gorras, con una interfaz atractiva y dinámica. Desarrollé un e-commerce completo con funcionalidades principales como carrito de compras persistente y sliders interactivos, brindando una experiencia de usuario fluida e intuitiva.",
-      "shortDescription": "E-commerce funcional de zapatos y gorras con carrito persistente y diseño dinámico.",
-      "objective": "El proyecto buscaba crear un e-commerce funcional para UrbanShop que resolviera los desafíos típicos de una tienda online: gestión del carrito de compras, exhibición atractiva de productos y persistencia de datos entre sesiones, con el objetivo de ofrecer una experiencia de usuario fluida y profesional.",
-      "development": "Implementé una arquitectura robusta con React y Redux Toolkit para manejar el estado global del carrito, integrando localStorage para persistencia de datos. Para la interfaz, utilicé TailwindCSS junto con SplideJS para crear sliders interactivos, desarrollando un diseño completamente responsive con Vite como build tool para optimizar el rendimiento.",
-      "conclusion": "El resultado fue una tienda online 100% funcional con carrito persistente y tiempo de carga optimizado. Entre los aprendizajes clave destacan: dominio de Redux Toolkit para gestión de estado, técnicas avanzadas de persistencia con localStorage, y cómo implementar sliders profesionales con SplideJS en aplicaciones React."
-    },
-    "frameonix": {
-      "description": "Frameonix es la plataforma web diseñada para documentar mi librería de componentes, proporcionando una introducción detallada, guía de instalación y uso, información sobre cómo contribuir y documentación específica de cada componente disponible. Esta web cuenta con una interfaz dinámica, navegación mediante rutas, y un diseño intuitivo para garantizar una excelente experiencia de usuario.",
-      "shortDescription": "Documentación completa e interactiva para mi librería de componentes Frameonix.",
-      "objective": "El proyecto nació para resolver el desafío de documentar eficientemente la librería FrameOnix, con el objetivo claro de crear una plataforma que permitiera a otros desarrolladores entender rápidamente su funcionamiento, instalación y uso, reduciendo la curva de aprendizaje y fomentando la adopción de la librería.",
-      "development": "Desarrollé una solución completa con React y Vite para optimizar el rendimiento, implementando react-router-dom para la navegación entre secciones y i18next para soporte multiidioma. Utilicé IntersectionObserver para la detección de secciones activas y creé componentes interactivos como una terminal simulada, todo ello con TailwindCSS para garantizar un diseño responsive y coherente.",
-      "conclusion": "La documentación resultante demostró ser intuitiva y efectiva, mejorando significativamente la experiencia de los desarrolladores al usar la librería. Entre los aprendizajes clave destacan: manejo avanzado de rutas en React, implementación de internacionalización con i18next, y técnicas para crear documentación interactiva que mejora la adopción de herramientas técnicas."
-    },
-    "consultora": {
-      "description": "Participé en un proyecto freelance para la consultora de negocios, colaborando estrechamente con un equipo de diseño y desarrollo para la página web de la consultora. Mi rol incluyó la creación de una interfaz intuitiva y la optimización de la experiencia y performance de la web, reflejando la visión y profesionalismo, y logrando destacar la calidad y el compromiso del equipo.",
-      "shortDescription": "Landing atractiva y funcional que destaca la presencia en línea de una consultora de negocios.",
-      "objective": "La app de Mostaza presentó una caída en pedidos, señalando una pérdida de usuarios debido a una experiencia deficiente, falta de incentivos y competencia con otras apps. El objetivo fue analizar comportamientos, motivaciones y puntos de dolor para optimizar la experiencia, fidelizar clientes y fortalecer su posición en el mercado.",
-      "development": "Apliqué el enfoque del doble diamante, explorando en la primera fase los comportamientos y necesidades de los usuarios a través de investigación cualitativa. En la segunda fase, describí los puntos de dolor y oportunidades clave mediante el análisis de datos. Luego, creé soluciones enfocadas en prototipos interactivos, y finalmente, evalué estas propuestas con pruebas de usabilidad, asegurando una experiencia optimizada y alineada con las expectativas del usuario.",
-      "conclusion": "Gracias al estratégico plan de investigación, logré mejorar la usabilidad en un 83%, simplificando la arquitectura y la navegación para adaptarla a las necesidades reales de los usuarios. Esto se tradujo en una reducción significativa del tiempo al hacer un pedido y un aumento de la confianza en la app. Además, descubrí la importancia de personalizar la experiencia del usuario a través de incentivos, lo que resultó en una mayor fidelización."
-    },
-    "cineverse": {
-      "description": "Cineverse es una plataforma interactiva de películas que consume la API de TMDB para mostrar información actualizada. Desarrollé un diseño dinámico con una pancarta principal que cambia aleatoriamente y filtros por categoría, implementando un sistema eficiente de gestión de estados para una experiencia de usuario fluida y atractiva.",
-      "shortDescription": "Plataforma de películas interactiva con contenido dinámico obtenido de la API de TMDB y filtros por categoría.",
-      "objective": "El proyecto buscaba crear una plataforma de películas que mostrara contenido siempre actualizado mediante el consumo de la API de TMDB, con un diseño interactivo que incluyera una pancarta principal dinámica y filtros por categoría para mejorar la experiencia de descubrimiento de películas.",
-      "development": "Implementé un sistema de peticiones a la API de TMDB usando React, desarrollando una interfaz con banner aleatorio que cambia con cada recarga o al seleccionar categorías. Utilicé gestión de estados avanzada para manejar los datos obtenidos y crear filtros dinámicos, optimizando el rendimiento con técnicas de lazy loading para las imágenes.",
-      "conclusion": "El resultado fue una plataforma 100% funcional que muestra películas actualizadas diariamente, con una interfaz atractiva y fluida. Entre los aprendizajes clave destacan: consumo de APIs externas, implementación de filtros dinámicos, manejo avanzado de estados en React y técnicas para crear interfaces interactivas que mejoran la experiencia de usuario."
-    },
-    "whatsappClone": {
-      "description": "WhatsApp Clone es una web frontend desarrollada en conjunto con 6 compañeros, donde replicamos y personalizamos varias secciones de la web oficial de WhatsApp. El objetivo principal fue adquirir experiencia en trabajo en equipo y expandir mis conocimientos utilizando frameworks, ya que era la primera vez que trabajaba con ellos. Implementamos funcionalidades clave y personalizamos la experiencia de usuario.",
-      "shortDescription": "Réplica de WhatsApp Web desarrollada en equipo con React y Material UI.",
-      "objective": "El proyecto nació como un ejercicio de aprendizaje colaborativo para replicar la funcionalidad de WhatsApp Web, con el objetivo de adquirir experiencia en trabajo en equipo y familiarizarnos con frameworks modernos como React, Material UI y Tailwind CSS.",
-      "development": "Desarrollamos una solución completa que incluye autenticación, perfil de usuario, chat funcional con envío de mensajes y emojis, estados de usuarios y edición de perfil. Implementamos Material UI para los componentes de interfaz y Tailwind CSS para la personalización del tema de colores, junto con react-router para la navegación entre secciones.",
-      "conclusion": "El proyecto resultó en una aplicación funcional que demostró nuestra capacidad para trabajar en equipo y aprender nuevas tecnologías rápidamente. Entre los aprendizajes clave destacan: manejo de rutas en React, consumo de librerías de componentes (Material UI), implementación de temas con Tailwind CSS, y valiosas habilidades de colaboración usando metodología Scrum."
-    },
-    "moneyTracking": {
-      "description": "Money Tracking es una aplicación web para gestionar ingresos y egresos, con un balance actualizado y gráficos dinámicos usando ECharts. Desarrollado en JavaScript puro, permite registrar transacciones, calcular totales automáticamente y visualizar porcentajes en una gráfica interactiva.",
-      "shortDescription": "Gestor de ingresos/egresos con gráficos dinámicos en JavaScript puro.",
-      "objective": "El proyecto nació para crear un sistema de control financiero con visualización gráfica, con el objetivo de dominar la manipulación del DOM, cálculos dinámicos en JavaScript y el uso de librerías externas como ECharts.",
-      "development": "Implementé un input para agregar transacciones, cálculos automáticos del balance, eliminación de registros con actualización en tiempo real, y una gráfica interactiva (ECharts) que refleja los cambios. Todo con JavaScript modular y sin frameworks.",
-      "conclusion": "El proyecto reforzó mis habilidades en manipulación del DOM y cálculos dinámicos. Aprendí a integrar librerías externas (ECharts), trabajar con clases en JavaScript para organización del código, y resolver desafíos como la actualización automática de la gráfica al eliminar registros."
-    },
-    "formDesign": {
-      "description": "Form Design es un formulario de registro interactivo desarrollado con JavaScript puro (Vanilla JS) y CSS. Permite a los usuarios completar sus datos paso a paso con validaciones dinámicas y una barra de progreso visual, asegurando una experiencia fluida y sin errores.",
-      "shortDescription": "Formulario interactivo con validaciones dinámicas y progreso visual.",
-      "objective": "El proyecto nació para dominar la manipulación del DOM y las validaciones de formularios sin usar frameworks. El objetivo principal fue crear una solución reutilizable que garantice una UX intuitiva en sistemas de registro.",
-      "development": "Implementé validaciones en tiempo real (correo, teléfono, contraseña), una barra de navegación que muestra el progreso, botones para avanzar/retroceder sin recargar la página, y funcionalidad para mostrar/ocultar contraseñas. Todo con JavaScript y CSS puro.",
-      "conclusion": "El proyecto reforzó mis habilidades en manipulación del DOM y validaciones personalizadas. Aprendí a crear interfaces dinámicas sin depender de librerías externas y a resolver desafíos como la navegación entre pasos sin recargas."
-    },
-    "stivSound": {
-      "description": "StivSound es un reproductor de música online que permite escuchar canciones predefinidas con diseño responsive. Desarrollado en JavaScript puro, integra funciones esenciales como reproducción, pausa, barrido de canciones y consumo de archivos de audio desde Firebase Storage.",
-      "shortDescription": "Reproductor de música online con JavaScript puro y Firebase Storage.",
-      "objective": "El proyecto nació para aprender a manipular y controlar archivos de audio en una aplicación web usando JavaScript, mejorar la manipulación del DOM y reforzar el uso de clases para estructurar el código de manera más organizada.",
-      "development": "Implementé un sistema de reproducción de canciones (play/pause, siguiente/anterior), contadores de duración en tiempo real, barajado aleatorio de la lista y eliminación de canciones. Todo esto consumiendo archivos desde Firebase Storage y utilizando la API de Audio de JavaScript.",
-      "conclusion": "El proyecto consolidó mis habilidades en manipulación del DOM y manejo de audio en la web. Aprendí a trabajar con clases en JavaScript para código modular, integrar Firebase Storage para almacenamiento de archivos y resolver desafíos como la sincronización de contadores de reproducción."
-    },
-    "youtubeDesign": {
-      "description": "YouTube Design es un clon de la interfaz de inicio de YouTube, desarrollado con HTML y CSS puro. Incluye un menú lateral interactivo (sidebar) que se abre/cierra con JavaScript y un diseño responsive que se adapta a diferentes pantallas.",
-      "shortDescription": "Clon de la UI de YouTube con HTML/CSS y sidebar funcional.",
-      "objective": "El proyecto nació para reforzar mis habilidades en CSS Grid y manipulación básica del DOM con JavaScript. El objetivo principal fue replicar el diseño de YouTube de manera fiel mientras implementaba una funcionalidad interactiva para el sidebar.",
-      "development": "Repliqué la estructura de la UI usando CSS Grid para el layout principal y añadí un botón que abre/cierra el sidebar con JavaScript. El diseño es completamente responsive, adaptándose a móviles, tablets y desktop.",
-      "conclusion": "El proyecto me ayudó a dominar CSS Grid y a dar mis primeros pasos en JavaScript para manipulación del DOM. Aprendí a manejar eventos básicos (clicks) y a estructurar código HTML/CSS para clones de interfaces complejas."
-    },
-    "facebookDesign": {
-      "description": "Facebook Design es un clon de la página de inicio de sesión clásica de Facebook, desarrollado con HTML y CSS. El proyecto incluye un diseño responsive basado en Flexbox y media queries, replicando fielmente la interfaz original.",
-      "shortDescription": "Clon del login clásico de Facebook con HTML/CSS y Flexbox.",
-      "objective": "El proyecto nació como mi primer ejercicio práctico después de un curso de HTML/CSS, con el objetivo de dominar el modelo de cajas, Flexbox y el diseño responsive. Documenté cada paso del proceso durante 8 días para reforzar mi aprendizaje.",
-      "development": "Repliqué la interfaz de login usando Flexbox para la estructura principal y media queries para la adaptabilidad a móviles. Organicé el código en archivos separados (HTML/CSS) aplicando buenas prácticas de organización de clases.",
-      "conclusion": "Este proyecto me ayudó a sentar las bases de diseño web responsive. Aprendí a usar Flexbox eficientemente, aplicar media queries y comprender la importancia de documentar el proceso de desarrollo para identificar errores."
-    }
+  "head": {
+    "title": "Proyectos",
+    "option-moreOptions": "Mas opciones",
+    "option-share": "Compartir",
+    "option-goUp": "Ir arriba",
+    "text-1": "Cada trabajo ",
+    "strong-1": "no solo muestra mis competencias técnicas, ",
+    "text-2": "sino también mi enfoque ",
+    "strong-2": "creativo y mi dedicación a crear soluciones ",
+    "text-3": "de diseño que sean ",
+    "strong-3": "usables, accesibles y estéticas."
+  },
+  "parkify": {
+    "description": "Parkify es una aplicación web responsive para la gestión de parqueaderos. Comenzó como un diseño en Figma y evolucionó hacia una aplicación fullstack funcional gracias al uso de Supabase, sin requerir un backend personalizado. Ofrece autenticación, control de acceso, operaciones CRUD para vehículos, historial, y más.",
+    "shortDescription": "App web para gestionar parqueaderos con autenticación y control total de usuarios.",
+    "objective": "El objetivo de Parkify fue crear una solución digital completa que permitiera gestionar parqueaderos de forma intuitiva y segura, todo desde el navegador. La intención era desarrollar una plataforma que integrara registro de vehículos, historial, gestión de casilleros, control de usuarios y validaciones, aprendiendo tecnologías modernas en el proceso.",
+    "development": "Inicialmente comencé usando Astro para su desarrollo, pero migré a React debido a la necesidad de una interfaz dinámica. Para el backend utilicé Supabase, que me permitió implementar autenticación con magic link, gestión de sesiones, consultas seguras a la base de datos y reglas SQL. Utilicé React Router para proteger rutas según el estado del usuario (autenticado, nuevo perfil, etc.). Agregué notificaciones toast para informar al usuario de los resultados de sus acciones y creé un sistema completo de gestión de parqueaderos con operaciones como ingreso, salida, historial y casilleros.",
+    "conclusion": "Parkify fue mi primer acercamiento a una app fullstack funcional. Me permitió aprender bases de datos, autenticación moderna, y control de rutas en React. A pesar de estar aún en fase beta, es totalmente operativa y planeo seguir mejorándola. Me siento satisfecho por el aprendizaje obtenido y por haber transformado un simple diseño en una aplicación real, útil y escalable."
+  },
+  "viflow": {
+    "description": "ViFlow es una red social desarrollada con TypeScript que permite a los usuarios registrarse, crear perfiles, publicar contenido, interactuar con posts y comentar. Con un diseño completamente responsive y manejo avanzado de rutas, ofrece una experiencia con características únicas.",
+    "shortDescription": "Red social interactiva con registro de usuarios, publicaciones y comentarios.",
+    "objective": "El proyecto surgió para resolver la necesidad de una red social minimalista pero funcional, con el objetivo de crear una plataforma donde usuarios puedan compartir contenido, interactuar y formar comunidades, implementando características clave como registro, perfiles, posts y comentarios con TypeScript para garantizar escalabilidad y mantenibilidad.",
+    "development": "Utilicé React con TypeScript para el desarrollo frontend, implementando react-router para la navegación. Para la UI, prioricé un diseño responsive con Tailwind, integrando Zustand para estados globales, interacciones en tiempo real",
+    "conclusion": "El resultado fue una aplicación funcional que demostró mi capacidad para resolver problemas complejos en entornos sociales. Entre los aprendizajes clave destacan: la importancia de la tipificación en proyectos grandes (TypeScript), estrategias para manejar estados globales en aplicaciones sociales, y cómo diseñar interfaces intuitivas para flujos de interacción complejos."
+  },
+  "urbanShop": {
+    "description": "Urban Shop es una tienda en línea diseñada para la venta de zapatos y gorras, con una interfaz atractiva y dinámica. Desarrollé un e-commerce completo con funcionalidades principales como carrito de compras persistente y sliders interactivos, brindando una experiencia de usuario fluida e intuitiva.",
+    "shortDescription": "E-commerce funcional de zapatos y gorras con carrito persistente y diseño dinámico.",
+    "objective": "El proyecto buscaba crear un e-commerce funcional para UrbanShop que resolviera los desafíos típicos de una tienda online: gestión del carrito de compras, exhibición atractiva de productos y persistencia de datos entre sesiones, con el objetivo de ofrecer una experiencia de usuario fluida y profesional.",
+    "development": "Implementé una arquitectura robusta con React y Redux Toolkit para manejar el estado global del carrito, integrando localStorage para persistencia de datos. Para la interfaz, utilicé TailwindCSS junto con SplideJS para crear sliders interactivos, desarrollando un diseño completamente responsive con Vite como build tool para optimizar el rendimiento.",
+    "conclusion": "El resultado fue una tienda online 100% funcional con carrito persistente y tiempo de carga optimizado. Entre los aprendizajes clave destacan: dominio de Redux Toolkit para gestión de estado, técnicas avanzadas de persistencia con localStorage, y cómo implementar sliders profesionales con SplideJS en aplicaciones React."
+  },
+  "frameonix": {
+    "description": "Frameonix es la plataforma web diseñada para documentar mi librería de componentes, proporcionando una introducción detallada, guía de instalación y uso, información sobre cómo contribuir y documentación específica de cada componente disponible. Esta web cuenta con una interfaz dinámica, navegación mediante rutas, y un diseño intuitivo para garantizar una excelente experiencia de usuario.",
+    "shortDescription": "Documentación completa e interactiva para mi librería de componentes Frameonix.",
+    "objective": "El proyecto nació para resolver el desafío de documentar eficientemente la librería FrameOnix, con el objetivo claro de crear una plataforma que permitiera a otros desarrolladores entender rápidamente su funcionamiento, instalación y uso, reduciendo la curva de aprendizaje y fomentando la adopción de la librería.",
+    "development": "Desarrollé una solución completa con React y Vite para optimizar el rendimiento, implementando react-router-dom para la navegación entre secciones y i18next para soporte multiidioma. Utilicé IntersectionObserver para la detección de secciones activas y creé componentes interactivos como una terminal simulada, todo ello con TailwindCSS para garantizar un diseño responsive y coherente.",
+    "conclusion": "La documentación resultante demostró ser intuitiva y efectiva, mejorando significativamente la experiencia de los desarrolladores al usar la librería. Entre los aprendizajes clave destacan: manejo avanzado de rutas en React, implementación de internacionalización con i18next, y técnicas para crear documentación interactiva que mejora la adopción de herramientas técnicas."
+  },
+  "cineverse": {
+    "description": "Cineverse es una plataforma interactiva de películas que consume la API de TMDB para mostrar información actualizada. Desarrollé un diseño dinámico con una pancarta principal que cambia aleatoriamente y filtros por categoría, implementando un sistema eficiente de gestión de estados para una experiencia de usuario fluida y atractiva.",
+    "shortDescription": "Plataforma de películas interactiva con contenido dinámico obtenido de la API de TMDB y filtros por categoría.",
+    "objective": "El proyecto buscaba crear una plataforma de películas que mostrara contenido siempre actualizado mediante el consumo de la API de TMDB, con un diseño interactivo que incluyera una pancarta principal dinámica y filtros por categoría para mejorar la experiencia de descubrimiento de películas.",
+    "development": "Implementé un sistema de peticiones a la API de TMDB usando React, desarrollando una interfaz con banner aleatorio que cambia con cada recarga o al seleccionar categorías. Utilicé gestión de estados avanzada para manejar los datos obtenidos y crear filtros dinámicos, optimizando el rendimiento con técnicas de lazy loading para las imágenes.",
+    "conclusion": "El resultado fue una plataforma 100% funcional que muestra películas actualizadas diariamente, con una interfaz atractiva y fluida. Entre los aprendizajes clave destacan: consumo de APIs externas, implementación de filtros dinámicos, manejo avanzado de estados en React y técnicas para crear interfaces interactivas que mejoran la experiencia de usuario."
+  },
+  "whatsappClone": {
+    "description": "WhatsApp Clone es una web frontend desarrollada en conjunto con 6 compañeros, donde replicamos y personalizamos varias secciones de la web oficial de WhatsApp. El objetivo principal fue adquirir experiencia en trabajo en equipo y expandir mis conocimientos utilizando frameworks, ya que era la primera vez que trabajaba con ellos. Implementamos funcionalidades clave y personalizamos la experiencia de usuario.",
+    "shortDescription": "Réplica de WhatsApp Web desarrollada en equipo con React y Material UI.",
+    "objective": "El proyecto nació como un ejercicio de aprendizaje colaborativo para replicar la funcionalidad de WhatsApp Web, con el objetivo de adquirir experiencia en trabajo en equipo y familiarizarnos con frameworks modernos como React, Material UI y Tailwind CSS.",
+    "development": "Desarrollamos una solución completa que incluye autenticación, perfil de usuario, chat funcional con envío de mensajes y emojis, estados de usuarios y edición de perfil. Implementamos Material UI para los componentes de interfaz y Tailwind CSS para la personalización del tema de colores, junto con react-router para la navegación entre secciones.",
+    "conclusion": "El proyecto resultó en una aplicación funcional que demostró nuestra capacidad para trabajar en equipo y aprender nuevas tecnologías rápidamente. Entre los aprendizajes clave destacan: manejo de rutas en React, consumo de librerías de componentes (Material UI), implementación de temas con Tailwind CSS, y valiosas habilidades de colaboración usando metodología Scrum."
+  },
+  "moneyTracking": {
+    "description": "Money Tracking es una aplicación web para gestionar ingresos y egresos, con un balance actualizado y gráficos dinámicos usando ECharts. Desarrollado en JavaScript puro, permite registrar transacciones, calcular totales automáticamente y visualizar porcentajes en una gráfica interactiva.",
+    "shortDescription": "Gestor de ingresos/egresos con gráficos dinámicos en JavaScript puro.",
+    "objective": "El proyecto nació para crear un sistema de control financiero con visualización gráfica, con el objetivo de dominar la manipulación del DOM, cálculos dinámicos en JavaScript y el uso de librerías externas como ECharts.",
+    "development": "Implementé un input para agregar transacciones, cálculos automáticos del balance, eliminación de registros con actualización en tiempo real, y una gráfica interactiva (ECharts) que refleja los cambios. Todo con JavaScript modular y sin frameworks.",
+    "conclusion": "El proyecto reforzó mis habilidades en manipulación del DOM y cálculos dinámicos. Aprendí a integrar librerías externas (ECharts), trabajar con clases en JavaScript para organización del código, y resolver desafíos como la actualización automática de la gráfica al eliminar registros."
+  },
+  "formDesign": {
+    "description": "Form Design es un formulario de registro interactivo desarrollado con JavaScript puro (Vanilla JS) y CSS. Permite a los usuarios completar sus datos paso a paso con validaciones dinámicas y una barra de progreso visual, asegurando una experiencia fluida y sin errores.",
+    "shortDescription": "Formulario interactivo con validaciones dinámicas y progreso visual.",
+    "objective": "El proyecto nació para dominar la manipulación del DOM y las validaciones de formularios sin usar frameworks. El objetivo principal fue crear una solución reutilizable que garantice una UX intuitiva en sistemas de registro.",
+    "development": "Implementé validaciones en tiempo real (correo, teléfono, contraseña), una barra de navegación que muestra el progreso, botones para avanzar/retroceder sin recargar la página, y funcionalidad para mostrar/ocultar contraseñas. Todo con JavaScript y CSS puro.",
+    "conclusion": "El proyecto reforzó mis habilidades en manipulación del DOM y validaciones personalizadas. Aprendí a crear interfaces dinámicas sin depender de librerías externas y a resolver desafíos como la navegación entre pasos sin recargas."
+  },
+  "stivSound": {
+    "description": "StivSound es un reproductor de música online que permite escuchar canciones predefinidas con diseño responsive. Desarrollado en JavaScript puro, integra funciones esenciales como reproducción, pausa, barrido de canciones y consumo de archivos de audio desde Firebase Storage.",
+    "shortDescription": "Reproductor de música online con JavaScript puro y Firebase Storage.",
+    "objective": "El proyecto nació para aprender a manipular y controlar archivos de audio en una aplicación web usando JavaScript, mejorar la manipulación del DOM y reforzar el uso de clases para estructurar el código de manera más organizada.",
+    "development": "Implementé un sistema de reproducción de canciones (play/pause, siguiente/anterior), contadores de duración en tiempo real, barajado aleatorio de la lista y eliminación de canciones. Todo esto consumiendo archivos desde Firebase Storage y utilizando la API de Audio de JavaScript.",
+    "conclusion": "El proyecto consolidó mis habilidades en manipulación del DOM y manejo de audio en la web. Aprendí a trabajar con clases en JavaScript para código modular, integrar Firebase Storage para almacenamiento de archivos y resolver desafíos como la sincronización de contadores de reproducción."
+  },
+  "youtubeDesign": {
+    "description": "YouTube Design es un clon de la interfaz de inicio de YouTube, desarrollado con HTML y CSS puro. Incluye un menú lateral interactivo (sidebar) que se abre/cierra con JavaScript y un diseño responsive que se adapta a diferentes pantallas.",
+    "shortDescription": "Clon de la UI de YouTube con HTML/CSS y sidebar funcional.",
+    "objective": "El proyecto nació para reforzar mis habilidades en CSS Grid y manipulación básica del DOM con JavaScript. El objetivo principal fue replicar el diseño de YouTube de manera fiel mientras implementaba una funcionalidad interactiva para el sidebar.",
+    "development": "Repliqué la estructura de la UI usando CSS Grid para el layout principal y añadí un botón que abre/cierra el sidebar con JavaScript. El diseño es completamente responsive, adaptándose a móviles, tablets y desktop.",
+    "conclusion": "El proyecto me ayudó a dominar CSS Grid y a dar mis primeros pasos en JavaScript para manipulación del DOM. Aprendí a manejar eventos básicos (clicks) y a estructurar código HTML/CSS para clones de interfaces complejas."
+  },
+  "facebookDesign": {
+    "description": "Facebook Design es un clon de la página de inicio de sesión clásica de Facebook, desarrollado con HTML y CSS. El proyecto incluye un diseño responsive basado en Flexbox y media queries, replicando fielmente la interfaz original.",
+    "shortDescription": "Clon del login clásico de Facebook con HTML/CSS y Flexbox.",
+    "objective": "El proyecto nació como mi primer ejercicio práctico después de un curso de HTML/CSS, con el objetivo de dominar el modelo de cajas, Flexbox y el diseño responsive. Documenté cada paso del proceso durante 8 días para reforzar mi aprendizaje.",
+    "development": "Repliqué la interfaz de login usando Flexbox para la estructura principal y media queries para la adaptabilidad a móviles. Organicé el código en archivos separados (HTML/CSS) aplicando buenas prácticas de organización de clases.",
+    "conclusion": "Este proyecto me ayudó a sentar las bases de diseño web responsive. Aprendí a usar Flexbox eficientemente, aplicar media queries y comprender la importancia de documentar el proceso de desarrollo para identificar errores."
   }
+}
