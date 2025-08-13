@@ -9,6 +9,7 @@
   gap: 30px;
   padding: 10px;
   border-radius: 20px;
+  justify-content: center;
 }
 
 .motionCard {
@@ -20,6 +21,52 @@
   width: 100%;
   height: 100%;
   display: flex;
+}
+
+.containerButtons {
+  margin-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding: 0 20px;
+  font-weight: var(--label-weight);
+  color: var(--text-secondary);
+  border: 1px solid var(--color-primary-light);
+  border-radius: 10px;
+  transition: var(--dynamic-fast-transition);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0.8);
+  width: 100%;
+  height: 45px;
+  background: var(--text-primary-transparent);
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  border: 1px solid var(--text-primary-transparent);
+  transition: var(--dynamic-fast-transition) transform;
+}
+
+button svg {
+  color: var(--text-primary);
+}
+
+.btn:hover::before {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+  color: var(--color-primary);
 }
 
 @media (width <= 1124px) {
