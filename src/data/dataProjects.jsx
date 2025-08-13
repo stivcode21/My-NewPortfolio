@@ -34,6 +34,10 @@ import Parkify1 from "../assets/projects/PARKIFY-1.webp";
 import Parkify2 from "../assets/projects/PARKIFY-2.webp";
 import Parkify3 from "../assets/projects/PARKIFY-3.webp";
 
+import OldPortfolio1 from "../assets/projects/OLD-PORTFOLIO-1.webp";
+import OldPortfolio2 from "../assets/projects/OLD-PORTFOLIO-2.webp";
+import OldPortfolio3 from "../assets/projects/OLD-PORTFOLIO-3.webp";
+
 import DesignYoutube1 from "../assets/projects/DESIGN-YOUTUBE-1.webp";
 import DesignYoutube2 from "../assets/projects/DESIGN-YOUTUBE-2.webp";
 
@@ -210,32 +214,32 @@ export const dataProjects = [
 
   {
     id: 6,
-    title: "WhatsApp Clone",
-    url: "whatsapp-clone",
-    categoryId: 2,
+    title: "Old Portfolio",
+    url: "old-portfolio",
+    categoryId: 1,
     images: [
-      <img src={WhatsAppClone3} alt="Mockup del proyecto WhatsApp Clone" />,
-      <img src={WhatsAppClone1} alt="Mockup del proyecto WhatsApp Clone" />,
-      <img src={WhatsAppClone2} alt="Mockup del proyecto WhatsApp Clone" />,
+      <img src={OldPortfolio1} alt="Mockup del proyecto Old Portfolio" />,
+      <img src={OldPortfolio2} alt="Mockup del proyecto Old Portfolio" />,
+      <img src={OldPortfolio3} alt="Mockup del proyecto Old Portfolio" />,
     ],
-    tags: ["Web", "Clone", "Chat", "Responsive", "Teamwork"],
-    tools: ["reactjs", "material-ui", "tailwindcss", "vite", "react-router"],
-    description: "whatsappClone.description",
-    shortDescription: "whatsappClone.shortDescription",
+    tags: ["Web", "Portfolio", "SSR", "Responsive", "Translations", "Filters"],
+    tools: ["nextjs", "tailwindcss", "i18next", "resend", "js", "email-api"],
+    description: "oldPortfolio.description",
+    shortDescription: "oldPortfolio.shortDescription",
     links: [
       {
         type: "website",
-        url: "https://wpp-clone-98b2e.web.app/",
+        url: "https://portfolio-tau-one-75.vercel.app/es",
       },
       {
         type: "code",
-        url: "https://github.com/stivcode21/Whatsapp_Web-Frontend.git",
+        url: "https://github.com/stivcode21/Portfolio-old.git",
       },
     ],
     details: [
-      "whatsappClone.objective",
-      "whatsappClone.development",
-      "whatsappClone.conclusion",
+      "oldPortfolio.objective",
+      "oldPortfolio.development",
+      "oldPortfolio.conclusion",
     ],
   },
 
@@ -243,7 +247,7 @@ export const dataProjects = [
     id: 7,
     title: "Money Tracking",
     url: "money-tracking",
-    categoryId: 2,
+    categoryId: 1,
     images: [
       <img src={MoneyTracking1} alt="Mockup del proyecto money tracking" />,
       <img src={MoneyTracking2} alt="Mockup del proyecto money tracking" />,
@@ -274,7 +278,7 @@ export const dataProjects = [
     id: 8,
     title: "Form Design",
     url: "form-design",
-    categoryId: 2,
+    categoryId: 1,
     images: [
       <img src={DesignForm1} alt="Mockup del proyecto form Design" />,
       <img src={DesignForm2} alt="Mockup del proyecto form Design" />,
@@ -331,11 +335,43 @@ export const dataProjects = [
       "stivSound.conclusion",
     ],
   },
+
   {
     id: 10,
+    title: "WhatsApp Clone",
+    url: "whatsapp-clone",
+    categoryId: 1,
+    images: [
+      <img src={WhatsAppClone3} alt="Mockup del proyecto WhatsApp Clone" />,
+      <img src={WhatsAppClone1} alt="Mockup del proyecto WhatsApp Clone" />,
+      <img src={WhatsAppClone2} alt="Mockup del proyecto WhatsApp Clone" />,
+    ],
+    tags: ["Web", "Clone", "Chat", "Responsive", "Teamwork"],
+    tools: ["reactjs", "material-ui", "tailwindcss", "vite", "react-router"],
+    description: "whatsappClone.description",
+    shortDescription: "whatsappClone.shortDescription",
+    links: [
+      {
+        type: "website",
+        url: "https://wpp-clone-98b2e.web.app/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/stivcode21/Whatsapp_Web-Frontend.git",
+      },
+    ],
+    details: [
+      "whatsappClone.objective",
+      "whatsappClone.development",
+      "whatsappClone.conclusion",
+    ],
+  },
+
+  {
+    id: 11,
     title: "YouTube Design",
     url: "youtube-design",
-    categoryId: 3,
+    categoryId: 2,
     images: [
       <img src={DesignYoutube1} alt="Mockup del proyecto YouTube Design" />,
       <img src={DesignYoutube2} alt="Mockup del proyecto YouTube Design" />,
@@ -362,10 +398,10 @@ export const dataProjects = [
   },
 
   {
-    id: 11,
+    id: 12,
     title: "Facebook Design",
     url: "facebook-design",
-    categoryId: 3,
+    categoryId: 2,
     images: [
       <img src={DesignFacebook1} alt="Mockup del proyecto Facebook Design" />,
       <img src={DesignFacebook2} alt="Mockup del proyecto Facebook Design" />,
