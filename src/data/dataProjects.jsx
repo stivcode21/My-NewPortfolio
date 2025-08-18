@@ -198,7 +198,7 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "https://cineverce.web.app/",
+        url: "https://cineverse-xi-eight.vercel.app/",
       },
       {
         type: "code",
