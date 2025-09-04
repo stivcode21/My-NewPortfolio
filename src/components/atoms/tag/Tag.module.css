@@ -17,8 +17,8 @@
 }
 
 .main {
-  color: #fbff00;
-  border: solid 2px #fbff00;
+  color: #fbff004f;
+  border: solid 2px #fbff004f;
   animation: glow 3s ease-in-out infinite;
   transition: all 0.1s ease;
 }
@@ -36,7 +36,7 @@
     text-shadow: 0 0 0px #fbff00, 0 0 2px #fbff00;
   }
   50% {
-    text-shadow: 0 0 4px #fbff00, 0 0 5px #fbff00;
+    text-shadow: 0 0 2px #fbff00, 0 0 3px #fbff00;
   }
   100% {
     text-shadow: 0 0 0px #fbff00, 0 0 2px #fbff00;
