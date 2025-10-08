@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styles from "./Comments.module.css";
 import { supabase } from "@/services/supabase";
 import useModalFormStore from "@/store/ModalFormStore";
-import { NotebookPen } from "lucide-react";
 import PostComment from "@/components/templates/postComment/PostComment";
 import AnimatedBorderButton from "@/components/atoms/animatedBorderButton/AnimatedBorderButton";
 import { useTranslation } from "react-i18next";
@@ -42,7 +41,7 @@ const Comments = () => {
             small={true}
             className={styles.btn}
           >
-            <NotebookPen size={20} />
+            {t("contact.btn-modal")}
           </AnimatedBorderButton>
         )}
       </div>
