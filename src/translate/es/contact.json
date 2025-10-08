@@ -1,32 +1,33 @@
 {
-    "head": {
-        "title": "Contactame",
-        "text-1": "Estoy disponible para colaborar en proyectos que requieran ",
-        "strong-1": "creatividad y habilidades en diseño y desarrollo frontend",
-        "text-2": ". ¡No dudes en ponerte en contacto conmigo!"
-    },
-    "contact": {
-        "title-state1": "Dejame un mensaje",
-        "title-state2": "¡Gracias por tu mensaje!",
-        "name-placeholder": "¿Cómo te llamás?",
-        "name-error": "Completá con tu nombre",
-        "email-placeholder": "Email",
-        "email-error": "Dejame un email válido",
-        "textarea-placeholder": "¿Cómo podemos colaborar?",
-        "textarea-error": "Compartime tu propuesta antes de enviar",
-        "btn-send": "Enviar"
-    },
-    "guestbook":{
-        "title": "Libro de visitas",
-        "text-1": "Me encantaría leer lo que piensas. Este ",
-        "strong-1": "guestbook está abierto ",
-        "text-2": "para que dejes tus mensajes, ideas o cualquier palabra de apoyo. ",
-        "strong-2": "¡Tu participación hace esto más especial!",
-        "pinned": "Fijado",
-        "name-placeholder": "¿Cómo te llamás?",
-        "img-placeholder": "URL de tu imagen de perfil",
-        "urlWebsite-placeholder": "URL de tu sitio web/red social",
-        "comment-placeholder": "Dejame tu comentario",
-        "btn-send": "Enviar"
-    }
+  "head": {
+    "title": "Contactame",
+    "text-1": "Estoy disponible para colaborar en proyectos que requieran ",
+    "strong-1": "creatividad y habilidades en diseño y desarrollo frontend",
+    "text-2": ". ¡No dudes en ponerte en contacto conmigo!"
+  },
+  "contact": {
+    "title-state1": "Dejame un mensaje",
+    "title-state2": "¡Gracias por tu mensaje!",
+    "btn-modal": "Comenta",
+    "name-placeholder": "¿Cómo te llamás?",
+    "name-error": "Completá con tu nombre",
+    "email-placeholder": "Email",
+    "email-error": "Dejame un email válido",
+    "textarea-placeholder": "¿Cómo podemos colaborar?",
+    "textarea-error": "Compartime tu propuesta antes de enviar",
+    "btn-send": "Enviar"
+  },
+  "guestbook": {
+    "title": "Libro de visitas",
+    "text-1": "Me encantaría leer lo que piensas. Este ",
+    "strong-1": "guestbook está abierto ",
+    "text-2": "para que dejes tus mensajes, ideas o cualquier palabra de apoyo. ",
+    "strong-2": "¡Tu participación hace esto más especial!",
+    "pinned": "Fijado",
+    "name-placeholder": "¿Cómo te llamás?",
+    "img-placeholder": "URL de tu imagen de perfil",
+    "urlWebsite-placeholder": "URL de tu sitio web/red social",
+    "comment-placeholder": "Dejame tu comentario",
+    "btn-send": "Enviar"
+  }
 }

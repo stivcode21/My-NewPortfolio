@@ -1,32 +1,33 @@
 {
-    "head": {
-        "title": "Contact Me",
-        "text-1": "I'm available to collaborate on projects that require ",
-        "strong-1": "creativity and skills in design and frontend development",
-        "text-2": ". Don't hesitate to get in touch with me!"
-    },
-    "contact": {
-        "title-state1": "Leave me a message",
-        "title-state2": "Thank you for your message!",
-        "name-placeholder": "What's your name?",
-        "name-error": "Please enter your name",
-        "email-placeholder": "Email",
-        "email-error": "Please provide a valid email",
-        "textarea-placeholder": "How can we collaborate?",
-        "textarea-error": "Please share your proposal before sending",
-        "btn-send": "Send"
-    },
-    "guestbook": {
-        "title": "Guestbook",
-        "text-1": "I'd love to hear what you think. This ",
-        "strong-1": "guestbook is open ",
-        "text-2": "for you to leave messages, ideas, or any words of encouragement. ",
-        "strong-2": "Your participation makes this more special!",
-        "pinned": "Pinned",
-        "name-placeholder": "What's your name?",
-        "img-placeholder": "Your profile image URL",
-        "urlWebsite-placeholder": "Your website/social media URL",
-        "comment-placeholder": "Leave me your comment",
-        "btn-send": "Send"
-      }
+  "head": {
+    "title": "Contact Me",
+    "text-1": "I'm available to collaborate on projects that require ",
+    "strong-1": "creativity and skills in design and frontend development",
+    "text-2": ". Don't hesitate to get in touch with me!"
+  },
+  "contact": {
+    "title-state1": "Leave me a message",
+    "title-state2": "Thank you for your message!",
+    "btn-modal": "Comment",
+    "name-placeholder": "What's your name?",
+    "name-error": "Please enter your name",
+    "email-placeholder": "Email",
+    "email-error": "Please provide a valid email",
+    "textarea-placeholder": "How can we collaborate?",
+    "textarea-error": "Please share your proposal before sending",
+    "btn-send": "Send"
+  },
+  "guestbook": {
+    "title": "Guestbook",
+    "text-1": "I'd love to hear what you think. This ",
+    "strong-1": "guestbook is open ",
+    "text-2": "for you to leave messages, ideas, or any words of encouragement. ",
+    "strong-2": "Your participation makes this more special!",
+    "pinned": "Pinned",
+    "name-placeholder": "What's your name?",
+    "img-placeholder": "Your profile image URL",
+    "urlWebsite-placeholder": "Your website/social media URL",
+    "comment-placeholder": "Leave me your comment",
+    "btn-send": "Send"
+  }
 }
