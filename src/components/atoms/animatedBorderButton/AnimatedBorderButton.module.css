@@ -50,6 +50,12 @@
   z-index: 1;
 }
 
+.innerContent:hover {
+  border: 1px solid var(--text-primary-transparent-3);
+  color: var(--text-muted);
+  transition: var(--dynamic-medium-transition);
+}
+
 .innerSmall {
   padding: 10px 15px;
 }
