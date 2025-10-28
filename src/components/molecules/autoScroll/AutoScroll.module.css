@@ -89,6 +89,7 @@
   transform: translateZ(10px);
   border: 2px solid var(--color-primary-light);
   box-shadow: -4px 5px 3px var(--color-primary-light);
+  border: 1px solid var(--text-primary);
   transition: var(--dynamic-fast-transition);
 }
 
