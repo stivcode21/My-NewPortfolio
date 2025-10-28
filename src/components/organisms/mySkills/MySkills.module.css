@@ -31,27 +31,24 @@
 
 .button {
   height: 20px;
-  font-size: 16px;
-  font-weight: 700;
-  padding-left: 6px;
-  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 6px;
+  padding: 2px 6px;
+  letter-spacing: 2px;
+  background-color: var(--color-primary-light);
+  border: 1px solid var(--color-primary-light);
+  border-radius: 4px;
   color: var(--color-primary);
   position: relative;
+  cursor: pointer;
 }
 
 .button:hover {
-  cursor: pointer;
   color: var(--text-secondary);
-  scale: 1.05;
-  transition: all ease-in 0.2s;
-}
-
-.button svg {
-  position: absolute;
-  top: 1px;
-  right: -16px;
-  width: 18px;
-  height: 18px;
+  border: 1px solid var(--text-secondary);
+  background-color: var(--color-primary-light);
+  transition: all ease-in-out 0.2s;
 }
 
 .icon {
