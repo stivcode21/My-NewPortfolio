@@ -22,21 +22,21 @@
     "skills": {
         "technical": {
             "subtitle": "Habilidades técnicas enfocadas en la construcción de interfaces web.",
-            "li-1": "Diseño y gestión simultánea de productos digitales a medida para diversas empresas.",
-            "li-2": "Participación activa en todo el proceso de diseño, desde la investigación hasta la validación de prototipos con usuarios.",
-            "li-3": "Creación de soluciones centradas en el usuario y alineadas con los objetivos del negocio.",
-            "li-4": "Trabajo conjunto con desarrollo y uso de design systems para mantener consistencia visual y funcional.",
-            "li-5": "Coordinación con equipos de investigación para llevar a cabo estudios cualitativos y cuantitativos.",
-            "li-6": "Colaboración interfuncional para diseñar y ejecutar investigaciones cualitativas y cuantitativas orientadas a la toma de decisiones."
+            "li-1": "Desarrollo de aplicaciones web utilizando frameworks modernos como React, priorizando el rendimiento y la mantenibilidad del código.",
+            "li-2": "Implementación de arquitectura basada en Atomic Design para mantener componentes escalables, reutilizables y bien organizados.",
+            "li-3": "Diseño y maquetación responsiva, garantizando una experiencia óptima en dispositivos móviles y de escritorio.",
+            "li-4": "Uso de frameworks CSS y librerías UI para acelerar el desarrollo y mantener una apariencia visual consistente.",
+            "li-5": "Integración con APIs y manejo de funciones asíncronas para consumir y gestionar datos en tiempo real.",
+            "li-6": "Configuración y despliegue de aplicaciones web con dominio propio, incluyendo conexión a bases de datos mediante Supabase."
         },
         "design": {
             "subtitle": "Habilidades de diseño y experiencia de usuario.",
-            "li-1": "Diseño de experiencias digitales centradas en las necesidades del usuario.",
-            "li-2": "Aplicación de principios de diseño visual y jerarquía para mejorar la usabilidad.",
-            "li-3": "Creación de prototipos interactivos para validar ideas y conceptos.",
-            "li-4": "Uso de herramientas como Figma y Adobe XD para diseñar interfaces intuitivas.",
-            "li-5": "Colaboración con equipos de desarrollo para garantizar la implementación precisa del diseño.",
-            "li-6": "Realización de tests de usabilidad para iterar y mejorar las soluciones propuestas."
+            "li-1": "Diseño de sistemas de diseño completos para aplicaciones y sitios web, garantizando coherencia visual y escalabilidad.",
+            "li-2": "Creación de mockups y prototipos detallados centrados en mejorar la experiencia del usuario.",
+            "li-3": "Aplicación de principios de diseño visual, accesibilidad y jerarquía para lograr interfaces claras e intuitivas.",
+            "li-4": "Uso de herramientas como Figma y Adobe XD para diseñar, documentar y validar interfaces interactivas.",
+            "li-5": "Colaboración directa con equipos de desarrollo para asegurar que el diseño se implemente de forma precisa y funcional.",
+            "li-6": "Pruebas de usabilidad y mejora continua basada en la retroalimentación de los usuarios y métricas de uso."
         },
         "soft": {
             "subtitle": "Habilidades blandas y actitud profesional",

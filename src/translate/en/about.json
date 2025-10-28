@@ -31,12 +31,12 @@
         },
         "design": {
             "subtitle": "Design and user experience skills.",
-            "li-1": "Design of digital experiences focused on user needs.",
-            "li-2": "Application of visual design principles and hierarchy to improve usability.",
-            "li-3": "Creation of interactive prototypes to validate ideas and concepts.",
-            "li-4": "Use of tools like Figma and Adobe XD to design intuitive interfaces.",
-            "li-5": "Collaboration with development teams to ensure accurate design implementation.",
-            "li-6": "Conducting usability tests to iterate and improve proposed solutions."
+            "li-1": "Design of complete design systems for applications and websites, ensuring visual consistency and scalability.",
+            "li-2": "Creation of detailed mockups and prototypes focused on improving the overall user experience.",
+            "li-3": "Application of visual design, accessibility, and hierarchy principles to build clear and intuitive interfaces.",
+            "li-4": "Use of tools like Figma and Adobe XD to design, document, and validate interactive interfaces.",
+            "li-5": "Close collaboration with development teams to ensure accurate and functional design implementation.",
+            "li-6": "Usability testing and continuous improvement based on user feedback and usage metrics."
         },
         "soft": {
             "subtitle": "Soft skills and professional attitude",
