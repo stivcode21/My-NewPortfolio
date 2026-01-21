@@ -70,7 +70,7 @@ export const dataProjects = [
     links: [
       {
         type: "website",
-        url: "https://parkify-eight.vercel.app/",
+        url: "https://parkify-react.vercel.app/",
       },
       {
         type: "code",
