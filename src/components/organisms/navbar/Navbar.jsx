@@ -6,6 +6,8 @@ import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { useThemeStore } from "@/store/ThemeStore";
 import { useTranslation } from "react-i18next";
 import { useLanguageStore } from "@/store/languageStore";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Navbar() {
   const { isDarkMode, toggleDarkMode } = useThemeStore();
@@ -18,7 +20,7 @@ export default function Navbar() {
 
   const updateCollapsedState = () => {
     setIsCollapsed(
-      window.innerWidth <= screenWidthCollapsed || window.scrollY > 0
+      window.innerWidth <= screenWidthCollapsed || window.scrollY > 0,
     );
   };
 
@@ -132,8 +134,13 @@ export default function Navbar() {
           >
             <span>{t("navbar.contact")}</span>
           </button>
+          <Link to="/blog" className={`${styles.navLink} ${styles.blogLink}`}>
+            <span>Blog</span>
+            <ArrowUpRight />
+          </Link>
         </div>
       </div>
+
       <div className={styles.navRight}>
         <HoverTag label={t("navbar.label-language")} position="bottom">
           <button
@@ -164,6 +171,8 @@ export default function Navbar() {
           </button>
         </HoverTag>
       </div>
+
+      {/* Menu para pantallas pequeñas */}
       <div className={styles.navList}>
         <button
           className={`${styles.navLink}`}

@@ -1,9 +1,64 @@
 .container {
   width: 100%;
-  padding-inline: 4vw;
-  max-width: 1440px;
-  margin: 0 auto;
+  padding-inline: 7vw;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: 0px -15px 20px var(--surface-primary);
+}
+
+.containerHeader {
+  width: 100%;
+  padding-inline: 7vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.containerHeader::before,
+.containerHeader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.containerHeader::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: 0.55;
+  mask-image: radial-gradient(
+    ellipse at 20% 20%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 45%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.containerHeader::after {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.25;
+}
+
+@media (width >= 1400px) {
+  .container {
+    padding-inline: 10vw;
+  }
+  .containerHeader {
+    padding-inline: 10vw;
+  }
+}
+
+@media (width >= 2000px) {
+  .container {
+    padding-inline: 18vw;
+  }
+  .containerHeader {
+    padding-inline: 18vw;
+  }
 }

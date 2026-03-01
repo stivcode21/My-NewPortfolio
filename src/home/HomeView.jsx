@@ -12,16 +12,18 @@ import GitHubOverview from "@/components/templates/gitHubOverview/GitHubOverview
 const HomeView = () => {
   return (
     <NotificationProvider>
-      <div id="container" className={styles.container}>
+      <div className={styles.containerHeader}>
         <Navbar />
         <Header />
         <GitHubOverview />
+      </div>
+      <div id="container" className={styles.container}>
         <Projects />
         <About />
         <Education />
         <Contact />
-        <MyFooter />
       </div>
+      <MyFooter />
     </NotificationProvider>
   );
 };

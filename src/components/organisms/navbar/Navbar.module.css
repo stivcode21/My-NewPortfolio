@@ -2,8 +2,8 @@
   position: fixed;
   z-index: 100;
   display: flex;
-  width: calc(100% - 8vw);
-  max-width: calc(1440px - 8vw);
+  width: calc(100% - 13vw);
+  max-width: 1640px;
   margin: 0 auto;
   justify-content: space-between;
   padding-top: 20px;
@@ -63,6 +63,25 @@
   font-size: 15px;
   margin: 0px 15px 3px 15px;
   transition: all ease-in 0.1s;
+}
+
+.blogLink {
+  color: var(--color-primary);
+  padding-right: 4px;
+}
+
+.blogLink svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  right: -16px;
+  transition: var(--dynamic-fast-transition);
+}
+
+.blogLink:hover svg {
+  top: 0;
+  right: -16px;
 }
 
 .navLink::before {
@@ -196,10 +215,12 @@
 
 .links {
   display: flex;
-  width: 440px;
+  width: 510px;
   height: 100%;
-  transition: width var(--dynamic-medium-transition),
-    transform var(--dynamic-medium-transition), opacity 0.1s ease-in;
+  transition:
+    width var(--dynamic-medium-transition),
+    transform var(--dynamic-medium-transition),
+    opacity 0.1s ease-in;
 }
 
 .navLeft.collapsed .links {
@@ -327,6 +348,14 @@
 }
 
 /* MEDIA QUERIES */
+
+@media (width > 1400px) {
+  .nav {
+    width: calc(100% - 19vw);
+    max-width: 1640px;
+  }
+}
+
 @media (width > 1024px) {
   .navList,
   .coverList {
