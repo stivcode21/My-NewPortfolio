@@ -1,19 +1,17 @@
 import styles from "./MySkills.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { dataSkills } from "@/data/dataSkills";
 import { dataCareers2 } from "@/data/dataCareers";
 import FilterCategory from "@/components/templates/filterCategory/FilterCategory";
 import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { useTranslation } from "react-i18next";
-import useAboutModalStore from "@/store/ModalAboutStore";
-import ModalOverlay from "@/components/templates/modalOverlay/ModalOverlay";
-import MyStory from "@/components/molecules/myStory/MyStory";
 
 const MySkills = () => {
-  const [selectedCategory, setSelectedCategory] = useState(1); // Categoría por defecto: UX/UI
+  const [selectedCategory, setSelectedCategory] = useState(1); // Categoria por defecto: UX/UI
   const { t } = useTranslation("about");
-  const { aboutModalState, setAboutModalState } = useAboutModalStore();
+  const navigate = useNavigate();
 
   const filteredSkills = dataSkills.filter(
     (skill) => skill.id === selectedCategory
@@ -41,10 +39,7 @@ const MySkills = () => {
             <strong>{t("aboutMe.strong-3")}</strong>
             <strong className={styles.buttonContainer}>
               <HoverTag label={t("aboutMe.option-readMore")} position="bottom">
-                <button
-                  className={styles.button}
-                  onClick={() => setAboutModalState(true)}
-                >
+                <button className={styles.button} onClick={() => navigate("/blog")}>
                   ...más
                 </button>
               </HoverTag>
@@ -61,7 +56,6 @@ const MySkills = () => {
           viewport={{ once: true, amount: 1 }}
           className={styles.itemDetails}
         >
-          {/* Filtro de categorías */}
           <FilterCategory
             controls={dataCareers2}
             selectedCategory={selectedCategory}
@@ -91,12 +85,6 @@ const MySkills = () => {
             </ul>
           </div>
         ))}
-        <ModalOverlay
-          isOpen={aboutModalState}
-          onClose={() => setAboutModalState(false)}
-        >
-          <MyStory />
-        </ModalOverlay>
       </div>
     </>
   );

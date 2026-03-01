@@ -1,7 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./LazyImage.module.css";
 
-export default function LazyImage({ src, alt, radius = 0, ...props }) {
+export default function LazyImage({
+  src,
+  alt,
+  radius = 0,
+  className = "",
+  style = {},
+  ...props
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const imgRef = useRef(null);
@@ -14,7 +21,7 @@ export default function LazyImage({ src, alt, radius = 0, ...props }) {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 } // 10% visible antes de cargar
+      { threshold: 0.1 }, // 10% visible antes de cargar
     );
 
     if (imgRef.current) {
@@ -42,9 +49,10 @@ export default function LazyImage({ src, alt, radius = 0, ...props }) {
         src={isVisible ? src : "img/placeholder.png"}
         alt={alt}
         {...props}
-        className={styles.image}
+        className={`${styles.image} ${className}`.trim()}
         onLoad={handleLoad}
         style={{
+          ...style,
           opacity: isLoaded ? 1 : 0,
         }}
       />
