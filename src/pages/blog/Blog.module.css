@@ -1,0 +1,342 @@
+.blogPage {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 4vw;
+  animation: fade 0.25s ease forwards;
+  opacity: 0;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.header {
+  margin: 10px auto 22px auto;
+  max-width: 920px;
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid var(--text-primary-transparent-2);
+  background: linear-gradient(
+    165deg,
+    var(--surface-primary-transparent-2),
+    var(--surface-primary)
+  );
+}
+
+.kicker {
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.header h1 {
+  margin-top: 10px;
+  color: var(--text-primary);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  line-height: 110%;
+}
+
+.header p {
+  margin-top: 8px;
+  color: var(--text-secondary);
+}
+
+.story {
+  --story-accent: var(--color-primary);
+  --story-border: var(--text-primary-transparent-2);
+  --story-surface: linear-gradient(
+    165deg,
+    var(--surface-primary-transparent-2),
+    var(--surface-primary)
+  );
+
+  max-width: 920px;
+  margin: 0 auto 50px;
+  padding: 14px;
+  border-radius: 24px;
+  border: 1px solid var(--story-border);
+  background: var(--surface-primary-transparent-2);
+  display: grid;
+  gap: 16px;
+  color: var(--text-primary);
+}
+
+.hero {
+  padding: 20px;
+  border: 1px solid var(--story-border);
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      120% 120% at 100% 0%,
+      var(--text-primary-transparent) 0%,
+      transparent 45%
+    ),
+    var(--story-surface);
+}
+
+.storyKicker {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--story-accent);
+  background: var(--color-primary-light);
+}
+
+.hero h2 {
+  margin-top: 12px;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 120%;
+}
+
+.intro {
+  margin-top: 10px;
+  color: var(--text-secondary);
+}
+
+.badges {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badges span {
+  padding: 7px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  background: var(--text-primary-transparent);
+  border: 1px solid var(--story-border);
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 12px;
+}
+
+.chapter {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--story-border);
+  background: var(--story-surface);
+  box-shadow: var(--smooth-shadow);
+}
+
+.chapterHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.iconWrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--story-accent);
+  background: var(--color-primary-light);
+}
+
+.chapterHead p {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-secondary);
+}
+
+.chapter h3 {
+  font-size: clamp(1.05rem, 1.9vw, 1.3rem);
+  line-height: 130%;
+}
+
+.chapterBody {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.chapterBody p {
+  color: var(--text-secondary);
+}
+
+.lesson {
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid var(--hover-primary-light);
+  background: linear-gradient(
+    160deg,
+    var(--color-primary-light),
+    var(--surface-primary)
+  );
+}
+
+.lessonTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--story-accent);
+}
+
+.lesson h3 {
+  margin-top: 8px;
+  font-size: clamp(1.05rem, 1.9vw, 1.3rem);
+  line-height: 130%;
+}
+
+.lesson > p:last-child {
+  margin-top: 8px;
+  color: var(--text-secondary);
+}
+
+.gallery,
+.resources {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--story-border);
+  background: var(--story-surface);
+}
+
+.gallery h3,
+.resources h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.galleryHint {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.figure {
+  border: 1px solid var(--story-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-primary);
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform var(--dynamic-medium-transition);
+}
+
+.figure:hover img {
+  transform: scale(1.05);
+}
+
+.figure figcaption {
+  padding: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.resources ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.resources a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--story-border);
+  background: var(--text-primary-transparent);
+  transition:
+    background var(--dynamic-fast-transition),
+    border-color var(--dynamic-fast-transition);
+}
+
+.resources a:hover {
+  border-color: var(--color-primary);
+  background: var(--text-primary-transparent-2);
+}
+
+.resources strong {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.resources span {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.footerNote {
+  padding: 14px 16px;
+  border-left: 3px solid var(--color-primary);
+  background: var(--text-primary-transparent);
+  border-radius: 8px;
+}
+
+.footerNote p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+@media (width <= 768px) {
+  .blogPage {
+    padding: 0 4vw 90px 4vw;
+  }
+
+  .header,
+  .story {
+    border-radius: 16px;
+  }
+
+  .story {
+    gap: 12px;
+  }
+
+  .hero,
+  .chapter,
+  .lesson,
+  .gallery,
+  .resources {
+    padding: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}

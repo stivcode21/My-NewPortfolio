@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeView from "../home/HomeView";
 import InfoProjects from "@/pages/infoProjects/InfoProjects";
 import InfoEducation from "@/pages/infoEducation/InfoEducation";
+import Blog from "@/pages/blog/Blog";
 import { useEffect } from "react";
 import { useLanguageStore } from "@/store/languageStore";
 import { I18nextProvider } from "react-i18next";
@@ -19,6 +20,7 @@ export default function AppRouter() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeView />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/education/:id" element={<InfoEducation />} />
           <Route path="/project/:url" element={<InfoProjects />} />
         </Routes>

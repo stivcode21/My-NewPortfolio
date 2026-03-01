@@ -32,7 +32,11 @@ const HoverTag = ({
 
   return (
     <span
-      style={{ position: "relative" }}
+      style={{
+        position: "relative",
+        display: "inline-flex",
+        width: "fit-content",
+      }}
       onMouseEnter={() => setShowTooltip(true)} // Mostrar tooltip en hover
       onMouseLeave={() => setShowTooltip(false)}
     >
