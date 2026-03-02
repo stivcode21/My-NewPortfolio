@@ -1,14 +1,22 @@
 .blogPage {
+  --surface-1: var(--surface-primary);
+  --surface-2: var(--surface-primary-transparent-2);
+  --stroke: var(--text-primary-transparent-2);
+  --chip: var(--color-primary-light);
+  --text-soft: var(--text-secondary);
+
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 4vw;
+  padding: 0 4vw 80px;
+  position: relative;
+  isolation: isolate;
   animation: fade 0.25s ease forwards;
   opacity: 0;
 }
 
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
   padding-top: 20px;
@@ -18,176 +26,187 @@
 }
 
 .header {
-  margin: 10px auto 22px auto;
-  max-width: 920px;
-  padding: 22px;
-  border-radius: 24px;
-  border: 1px solid var(--text-primary-transparent-2);
-  background: linear-gradient(
-    165deg,
-    var(--surface-primary-transparent-2),
-    var(--surface-primary)
-  );
+  margin: 80px auto 20px auto;
+  min-height: 80px;
+  padding: 10px 18px;
+  display: flex;
+  gap: 14px;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 18px;
+  border: 1px solid var(--stroke);
+  background: linear-gradient(165deg, var(--surface-2), var(--surface-1));
 }
 
-.kicker {
-  width: fit-content;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  background: var(--color-primary-light);
+.headerTag {
+  height: 42px;
+  padding: 0 14px;
   border-radius: 999px;
-  padding: 6px 10px;
+  border: 1px solid var(--stroke);
+  background: var(--chip);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
-.header h1 {
-  margin-top: 10px;
-  color: var(--text-primary);
-  font-size: clamp(1.6rem, 4vw, 2.6rem);
-  line-height: 110%;
-}
-
-.header p {
-  margin-top: 8px;
-  color: var(--text-secondary);
-}
-
-.story {
-  --story-accent: var(--color-primary);
-  --story-border: var(--text-primary-transparent-2);
-  --story-surface: linear-gradient(
-    165deg,
-    var(--surface-primary-transparent-2),
-    var(--surface-primary)
-  );
-
-  max-width: 920px;
-  margin: 0 auto 50px;
-  padding: 14px;
-  border-radius: 24px;
-  border: 1px solid var(--story-border);
-  background: var(--surface-primary-transparent-2);
-  display: grid;
-  gap: 16px;
-  color: var(--text-primary);
-}
-
-.hero {
-  padding: 20px;
-  border: 1px solid var(--story-border);
-  border-radius: 20px;
-  background:
-    radial-gradient(
-      120% 120% at 100% 0%,
-      var(--text-primary-transparent) 0%,
-      transparent 45%
-    ),
-    var(--story-surface);
-}
-
-.storyKicker {
-  width: fit-content;
-  padding: 6px 10px;
-  border-radius: 999px;
+.headerTag span {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--story-accent);
-  background: var(--color-primary-light);
+  color: var(--color-primary);
 }
 
-.hero h2 {
-  margin-top: 12px;
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
-  line-height: 120%;
+.headerIntro {
+  min-width: 0;
 }
 
-.intro {
-  margin-top: 10px;
-  color: var(--text-secondary);
+.headerIntro h1 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
 }
 
-.badges {
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.headerIntro p {
+  margin: 4px 0 0;
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.badges span {
-  padding: 7px 10px;
-  font-size: 12px;
-  border-radius: 10px;
-  background: var(--text-primary-transparent);
-  border: 1px solid var(--story-border);
+.story {
+  border-radius: 38px;
+  background: linear-gradient(150deg, var(--surface-2), var(--surface-1));
+  display: grid;
+  color: var(--text-primary);
 }
 
 .timeline {
   position: relative;
   display: grid;
-  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
 }
 
 .chapter {
-  padding: 16px;
-  border-radius: 16px;
-  border: 1px solid var(--story-border);
-  background: var(--story-surface);
-  box-shadow: var(--smooth-shadow);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: start;
+  gap: 12px;
+  border-radius: 28px;
+  border: 1px solid var(--stroke);
+  overflow: clip;
+  position: relative;
+}
+
+.chapterContent {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
 }
 
 .chapterHead {
   display: flex;
+  justify-content: space-between;
+  gap: 12px;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
 }
 
 .iconWrap {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
   display: grid;
   place-items: center;
-  color: var(--story-accent);
-  background: var(--color-primary-light);
+  background: var(--chip);
+  border: 1px solid var(--stroke);
+  color: color-mix(in oklab, var(--color-primary) 78%, white 22%);
+  flex-shrink: 0;
 }
 
 .chapterHead p {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--text-secondary);
-}
-
-.chapter h3 {
-  font-size: clamp(1.05rem, 1.9vw, 1.3rem);
-  line-height: 130%;
-}
-
-.chapterBody {
-  margin-top: 10px;
-  display: grid;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
 }
 
-.chapterBody p {
-  color: var(--text-secondary);
+.chapterHead span {
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+.chapter h3 {
+  font-size: 1.4rem;
+  line-height: 112%;
+  text-wrap: balance;
+}
+
+.summary {
+  color: var(--text-soft);
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.45;
+  max-width: 48ch;
+}
+
+.chapterDescription {
+  display: grid;
+  gap: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.actions span {
+  border: 1px solid rgb(255 255 255 / 14%);
+  background: rgb(255 255 255 / 8%);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: color-mix(in oklab, var(--text-primary) 80%, white 20%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+.chapterMedia {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  max-height: 320px;
+}
+
+.chapterMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .lesson {
-  border-radius: 16px;
-  padding: 16px;
-  border: 1px solid var(--hover-primary-light);
-  background: linear-gradient(
-    160deg,
-    var(--color-primary-light),
-    var(--surface-primary)
-  );
+  border-radius: 24px;
+  padding: 20px;
+  border: 1px solid var(--stroke);
+  background:
+    linear-gradient(145deg, rgb(156 90 255 / 16%), transparent 40%),
+    linear-gradient(165deg, var(--surface-2), var(--surface-1));
 }
 
 .lessonTag {
@@ -197,141 +216,83 @@
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--story-accent);
+  color: color-mix(in oklab, var(--color-primary) 75%, white 25%);
 }
 
 .lesson h3 {
   margin-top: 8px;
-  font-size: clamp(1.05rem, 1.9vw, 1.3rem);
-  line-height: 130%;
+  font-size: clamp(1.18rem, 2.2vw, 1.8rem);
+  line-height: 120%;
 }
 
 .lesson > p:last-child {
   margin-top: 8px;
-  color: var(--text-secondary);
+  color: var(--text-soft);
 }
 
-.gallery,
-.resources {
-  padding: 16px;
-  border-radius: 16px;
-  border: 1px solid var(--story-border);
-  background: var(--story-surface);
-}
+@media (width <= 1024px) {
+  .chapter {
+    grid-template-columns: 1fr;
+  }
 
-.gallery h3,
-.resources h3 {
-  font-size: 1rem;
-  margin-bottom: 6px;
-}
-
-.galleryHint {
-  font-size: 13px;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.figure {
-  border: 1px solid var(--story-border);
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--surface-primary);
-}
-
-.figure img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  transition: transform var(--dynamic-medium-transition);
-}
-
-.figure:hover img {
-  transform: scale(1.05);
-}
-
-.figure figcaption {
-  padding: 8px;
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-.resources ul {
-  list-style: none;
-  display: grid;
-  gap: 8px;
-}
-
-.resources a {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid var(--story-border);
-  background: var(--text-primary-transparent);
-  transition:
-    background var(--dynamic-fast-transition),
-    border-color var(--dynamic-fast-transition);
-}
-
-.resources a:hover {
-  border-color: var(--color-primary);
-  background: var(--text-primary-transparent-2);
-}
-
-.resources strong {
-  font-size: 14px;
-  color: var(--text-primary);
-}
-
-.resources span {
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
-.footerNote {
-  padding: 14px 16px;
-  border-left: 3px solid var(--color-primary);
-  background: var(--text-primary-transparent);
-  border-radius: 8px;
-}
-
-.footerNote p {
-  font-size: 14px;
-  color: var(--text-secondary);
+  .chapterMedia {
+    min-height: 260px;
+  }
 }
 
 @media (width <= 768px) {
   .blogPage {
-    padding: 0 4vw 90px 4vw;
+    padding: 0 4vw 94px 4vw;
   }
 
-  .header,
+  .header {
+    min-height: auto;
+    padding: 12px;
+    border-radius: 14px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .story {
-    border-radius: 16px;
-  }
-
-  .story {
-    gap: 12px;
-  }
-
-  .hero,
-  .chapter,
-  .lesson,
-  .gallery,
-  .resources {
+    border-radius: 24px;
     padding: 14px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .story {
+    gap: 14px;
+  }
+
+  .chapter,
+  .lesson {
+    padding: 14px;
+  }
+
+  .headerIntro h1 {
+    font-size: 1rem;
+  }
+
+  .headerIntro p {
+    font-size: 0.82rem;
+    white-space: normal;
+  }
+
+  .chapter h3 {
+    font-size: clamp(1.35rem, 8vw, 2rem);
+  }
+
+  .chapterHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .chapterMedia {
+    min-height: 230px;
   }
 }
 
