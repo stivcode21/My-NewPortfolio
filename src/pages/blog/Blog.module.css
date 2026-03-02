@@ -83,6 +83,8 @@
   border-radius: 38px;
   background: linear-gradient(150deg, var(--surface-2), var(--surface-1));
   display: grid;
+  gap: 18px;
+  padding: 16px;
   color: var(--text-primary);
 }
 
@@ -96,77 +98,102 @@
 .chapter {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: center;
-  align-items: start;
-  gap: 12px;
-  border-radius: 28px;
+  gap: 0;
+  border-radius: 22px;
   border: 1px solid var(--stroke);
   overflow: clip;
   position: relative;
+  background: linear-gradient(165deg, var(--surface-2), var(--surface-1));
+}
+
+.chapter::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(255 255 255 / 28%), transparent 72%);
+  pointer-events: none;
+}
+
+.chapterOrder {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: rgb(255 255 255 / 7%);
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
 }
 
 .chapterContent {
-  padding: 20px 24px;
+  padding: 16px 18px 18px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  justify-content: center;
+  gap: 8px;
 }
 
 .chapterHead {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
   align-items: center;
+  gap: 26px;
 }
 
-.iconWrap {
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  background: var(--chip);
-  border: 1px solid var(--stroke);
-  color: color-mix(in oklab, var(--color-primary) 78%, white 22%);
-  flex-shrink: 0;
-}
-
-.chapterHead p {
-  font-size: 15px;
+.chapterLabel {
+  font-size: 1.06rem;
   font-weight: 700;
   color: var(--text-primary);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.chapterHead span {
-  font-size: 14px;
+.chapterDate {
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
   color: var(--text-soft);
 }
 
+.iconWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: var(--chip);
+  border: 1px solid var(--stroke);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.iconWrap svg {
+  width: 17px;
+  height: 17px;
+}
+
 .chapter h3 {
-  font-size: 1.4rem;
-  line-height: 112%;
+  font-size: clamp(1.35rem, 2.1vw, 1.7rem);
+  line-height: 1.12;
   text-wrap: balance;
+  max-width: 28ch;
 }
 
 .summary {
   color: var(--text-soft);
-  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
-  line-height: 1.45;
-  max-width: 48ch;
+  font-size: clamp(0.95rem, 1.1vw, 1.03rem);
+  line-height: 1.48;
 }
 
 .chapterDescription {
   display: grid;
-  gap: 6px;
+  gap: 8px;
 }
 
 .actions {
-  display: flex;
-  gap: 8px;
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -176,9 +203,9 @@
   border: 1px solid rgb(255 255 255 / 14%);
   background: rgb(255 255 255 / 8%);
   border-radius: 999px;
-  padding: 8px 12px;
-  font-size: 13px;
-  color: color-mix(in oklab, var(--text-primary) 80%, white 20%);
+  padding: 7px 11px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -188,8 +215,9 @@
 .chapterMedia {
   position: relative;
   width: 100%;
-  min-height: 250px;
-  max-height: 320px;
+  min-height: 220px;
+  max-height: 280px;
+  border-top: 1px solid var(--stroke);
 }
 
 .chapterMedia img {
@@ -231,12 +259,8 @@
 }
 
 @media (width <= 1024px) {
-  .chapter {
-    grid-template-columns: 1fr;
-  }
-
   .chapterMedia {
-    min-height: 260px;
+    min-height: 220px;
   }
 }
 
@@ -282,13 +306,16 @@
   }
 
   .chapterHead {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "date"
+      "actions";
+    gap: 8px;
   }
 
-  .actions {
-    flex-wrap: wrap;
+  .chapterDate {
+    padding-left: 0;
   }
 
   .chapterMedia {
