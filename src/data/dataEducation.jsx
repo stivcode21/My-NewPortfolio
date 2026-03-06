@@ -6,6 +6,7 @@ import fundamentosVideojuegos from "@/assets/education/fundamentos-videojuegos.w
 import dsrVideojuegosN1 from "@/assets/education/videojuegos-N1.webp";
 import devFrontend from "@/assets/education/devFrontend.webp";
 import webDesing from "@/assets/education/webDesing.webp";
+import api_rest from "@/assets/education/plazi-api.webp";
 
 export const row1 = [
   {
@@ -17,8 +18,8 @@ export const row1 = [
     img: habilidadesBlandas2,
   },
   {
-    url: "dsr-videojuegos-n1",
-    img: dsrVideojuegosN1,
+    url: "api-rest",
+    img: api_rest,
   },
   {
     url: "ciencias-videojuegos",
