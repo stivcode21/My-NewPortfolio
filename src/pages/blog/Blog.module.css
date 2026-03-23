@@ -1,330 +1,626 @@
 .blogPage {
-  --surface-1: var(--surface-primary);
-  --surface-2: var(--surface-primary-transparent-2);
-  --stroke: var(--text-primary-transparent-2);
-  --chip: var(--color-primary-light);
-  --text-soft: var(--text-secondary);
-
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 4vw 80px;
+  padding: 60px;
   position: relative;
   isolation: isolate;
-  animation: fade 0.25s ease forwards;
+  color: var(--text-primary);
+  animation: fadeIn 0.4s ease forwards;
   opacity: 0;
+}
+
+.backgroundMedia {
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.backgroundVideo,
+.backgroundDecoration,
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.backgroundVideo {
+  object-fit: cover;
+  object-position: center;
+}
+
+.backgroundDecoration {
+  background: color-mix(
+    in srgb,
+    var(--text-primary) 18%,
+    var(--color-primary) 82%
+  );
+  opacity: 0.32;
+  -webkit-mask: url("/decoration.svg") center / cover no-repeat;
+  mask: url("/decoration.svg") center / cover no-repeat;
+}
+
+.backgroundOverlay {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-primary) 70%, transparent),
+    color-mix(in srgb, var(--surface-primary) 40%, transparent)
+  );
 }
 
 .nav {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 12;
   padding-top: 20px;
-  display: flex;
-  justify-content: flex-start;
   width: fit-content;
 }
 
-.header {
-  margin: 80px auto 20px auto;
-  min-height: 80px;
-  padding: 10px 18px;
-  display: flex;
-  gap: 14px;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 18px;
-  border: 1px solid var(--stroke);
-  background: linear-gradient(165deg, var(--surface-2), var(--surface-1));
+.hero {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 26px;
+  padding: 20px;
+  min-height: 200px;
+  border: 1px solid var(--text-primary-transparent-2);
+  border-radius: 36px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-primary) 14%, transparent),
+    color-mix(in srgb, var(--surface-primary) 72%, transparent)
+  );
+  box-shadow:
+    0 30px 80px color-mix(in srgb, var(--surface-primary) 55%, transparent),
+    inset 0 1px 0 var(--text-primary-transparent);
 }
 
-.headerTag {
-  height: 42px;
-  padding: 0 14px;
-  border-radius: 999px;
-  border: 1px solid var(--stroke);
-  background: var(--chip);
+.heroTop,
+.heroCopy {
+  position: relative;
+  z-index: 1;
+}
+
+.heroTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.heroTag,
+.heroCounter {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  flex-shrink: 0;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--text-primary-transparent-2);
+  background: color-mix(in srgb, var(--color-neutral) 62%, transparent);
+  backdrop-filter: blur(16px);
 }
 
-.headerTag span {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.heroTag {
   color: var(--color-primary);
 }
 
-.headerIntro {
-  min-width: 0;
+.heroTag span,
+.heroCounter span {
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  font-weight: var(--inverse-weight);
+  letter-spacing: 0.04em;
 }
 
-.headerIntro h1 {
+.heroCopy {
+  max-width: 760px;
+  margin-top: 24px;
+}
+
+.heroCopy h1 {
   margin: 0;
-  color: var(--text-primary);
-  font-size: clamp(1rem, 1.8vw, 1.35rem);
-  line-height: 1.2;
-  letter-spacing: 0.01em;
+  font-size: 2rem;
+  line-height: 0.5;
 }
 
-.headerIntro p {
-  margin: 4px 0 0;
-  font-size: 0.88rem;
-  color: var(--text-soft);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.heroCopy p,
+.chapterExcerpt,
+.lesson > p:last-child {
+  color: var(--text-secondary);
+  line-height: 1.45;
 }
 
-.story {
-  border-radius: 38px;
-  background: linear-gradient(150deg, var(--surface-2), var(--surface-1));
-  display: grid;
-  gap: 18px;
-  padding: 16px;
-  color: var(--text-primary);
+.heroCopy p {
+  margin-top: 18px;
+  font-size: 1rem;
 }
 
-.timeline {
+.timelineSection {
   position: relative;
+  max-width: 1100px;
+  margin: 30px auto 0;
+  padding-left: clamp(26px, 5vw, 68px);
+}
+
+.timelineRail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 14px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-primary) 18%, transparent),
+    var(--color-primary) 24%,
+    color-mix(in srgb, var(--color-primary) 18%, transparent) 90%
+  );
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--color-primary) 80%, transparent),
+    0 0 60px color-mix(in srgb, var(--color-primary-dark) 42%, transparent);
+}
+
+.chapterList {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
+  gap: 150px;
 }
 
-.chapter {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 0;
-  border-radius: 22px;
-  border: 1px solid var(--stroke);
-  overflow: clip;
+.chapterCard {
   position: relative;
-  background: linear-gradient(165deg, var(--surface-2), var(--surface-1));
 }
 
-.chapter::before {
+.chapterShell[data-active="true"] {
+  border-color: color-mix(
+    in srgb,
+    var(--color-primary) 34%,
+    var(--text-primary-transparent-2)
+  );
+  box-shadow:
+    0 24px 44px color-mix(in srgb, var(--surface-primary) 35%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--color-primary) 16%, transparent),
+    inset 0 1px 0 var(--text-primary-transparent);
+}
+
+.timelineNode {
+  position: sticky;
+  display: block;
+  top: 350px;
+  margin-left: -66px;
+  width: 28px;
+  height: 28px;
+  z-index: 2;
+  border-radius: 50%;
+  border: 3px solid color-mix(in srgb, var(--text-primary) 86%, transparent);
+  background: radial-gradient(
+    circle,
+    var(--text-primary) 0%,
+    color-mix(in srgb, var(--color-primary) 42%, var(--text-primary)) 45%,
+    var(--color-primary) 100%
+  );
+  box-shadow:
+    0 0 0 6px color-mix(in srgb, var(--color-primary) 14%, transparent),
+    0 0 24px color-mix(in srgb, var(--color-primary) 95%, transparent),
+    0 0 70px color-mix(in srgb, var(--color-primary-dark) 55%, transparent);
+}
+
+.timelineNode::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid color-mix(in srgb, var(--color-primary) 52%, transparent);
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--color-primary) 80%, transparent),
+    0 0 42px color-mix(in srgb, var(--color-primary-dark) 42%, transparent);
+  animation: timelinePulse 1.8s ease-out infinite;
+}
+
+.lineNode {
+  position: absolute;
+  top: 250px;
+  left: -52px;
+  width: 50px;
   height: 2px;
-  background: linear-gradient(90deg, rgb(255 255 255 / 28%), transparent 72%);
+  z-index: 0;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary-dark) 45%, transparent);
+}
+
+.dateBadge {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 10px 24px;
+  margin: 0 0 -8px 18px;
+  color: var(--text-note);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--surface-note) 98%, var(--text-primary) 2%),
+      color-mix(in srgb, var(--surface-note) 82%, var(--surface-primary) 18%)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--text-primary) 6%, transparent) 0,
+      color-mix(in srgb, var(--text-primary) 6%, transparent) 4px,
+      transparent 4px,
+      transparent 9px
+    );
+  clip-path: polygon(0 10%, 92% 0, 100% 22%, 97% 92%, 6% 100%, 0 82%, 2% 36%);
+  box-shadow:
+    0 16px 30px color-mix(in srgb, var(--surface-primary) 25%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--text-primary) 45%, transparent);
+  transform: rotate(-2deg);
+}
+
+.chapterShell,
+.lesson {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--text-primary-transparent-2);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--surface-primary-transparent-2) 92%, transparent),
+    color-mix(in srgb, var(--surface-primary) 96%, transparent)
+  );
+  box-shadow:
+    0 24px 44px color-mix(in srgb, var(--surface-primary) 35%, transparent),
+    inset 0 1px 0 var(--text-primary-transparent);
+}
+
+.chapterShell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: clamp(20px, 3vw, 34px);
+  padding: 34px;
+  border-radius: 30px;
+}
+
+.chapterShell::before,
+.lesson::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 18% 24%,
+      color-mix(in srgb, var(--color-primary) 13%, transparent),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 88% 12%,
+      color-mix(in srgb, var(--surface-outstanding) 8%, transparent),
+      transparent 16%
+    );
   pointer-events: none;
 }
 
-.chapterOrder {
-  position: absolute;
-  top: 8px;
-  right: 14px;
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-  line-height: 1;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: rgb(255 255 255 / 7%);
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
+.chapterContent,
+.chapterVisual {
+  position: relative;
+  z-index: 1;
 }
 
 .chapterContent {
-  padding: 16px 18px 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: center;
+  gap: 20px;
+  min-width: 0;
 }
 
-.chapterHead {
+.chapterEyebrow {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 26px;
+  gap: 10px;
+  color: color-mix(in srgb, var(--text-primary) 40%, var(--color-primary) 78%);
+  font-size: 2.5rem;
+  font-weight: var(--label-weight);
+  line-height: 1.2;
 }
 
-.chapterLabel {
-  font-size: 1.06rem;
-  font-weight: 700;
+.chapterEyebrow strong {
   color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.separator {
+  color: var(--text-primary-transparent-3);
+}
+
+.chapterContent h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 0.96;
+}
+
+.chapterExcerpt {
+  max-width: 27ch;
+  font-size: clamp(1rem, 1.65vw, 1.35rem);
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.badge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-}
-
-.chapterDate {
-  display: flex;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: var(--text-soft);
-}
-
-.iconWrap {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
-  display: grid;
-  place-items: center;
-  background: var(--chip);
-  border: 1px solid var(--stroke);
-  color: var(--color-primary);
-  flex-shrink: 0;
-}
-
-.iconWrap svg {
-  width: 17px;
-  height: 17px;
-}
-
-.chapter h3 {
-  font-size: clamp(1.35rem, 2.1vw, 1.7rem);
-  line-height: 1.12;
-  text-wrap: balance;
-  max-width: 28ch;
-}
-
-.summary {
-  color: var(--text-soft);
-  font-size: clamp(0.95rem, 1.1vw, 1.03rem);
-  line-height: 1.48;
-}
-
-.chapterDescription {
-  display: grid;
-  gap: 8px;
-}
-
-.actions {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.actions span {
-  border: 1px solid rgb(255 255 255 / 14%);
-  background: rgb(255 255 255 / 8%);
-  border-radius: 999px;
-  padding: 7px 11px;
-  font-size: 0.88rem;
-  color: var(--text-primary);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  color: color-mix(in srgb, var(--text-primary) 96%, var(--color-primary) 4%);
+  font-size: clamp(0.98rem, 1.3vw, 1.2rem);
   line-height: 1;
 }
 
-.chapterMedia {
-  position: relative;
-  width: 100%;
-  min-height: 220px;
-  max-height: 280px;
-  border-top: 1px solid var(--stroke);
+.badgeIcon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--text-primary) 8%, transparent);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-outstanding) 72%, var(--surface-note) 28%),
+    color-mix(
+      in srgb,
+      var(--surface-icon-outstanding) 55%,
+      var(--surface-note) 45%
+    )
+  );
+  color: var(--text-note);
+  box-shadow: inset 0 1px 0
+    color-mix(in srgb, var(--text-primary) 42%, transparent);
 }
 
-.chapterMedia img {
+.chapterVisual {
+  margin: 0;
+  min-height: 370px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--text-primary-transparent);
+  background: color-mix(in srgb, var(--surface-primary) 20%, transparent);
+}
+
+.chapterVisual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
   display: block;
 }
 
+.chapterAction {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 68px;
+  padding: 0 24px;
+  color: var(--text-primary);
+  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 50%, transparent);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-primary) 48%, transparent),
+    color-mix(in srgb, var(--color-primary-dark) 72%, transparent)
+  );
+  box-shadow:
+    0 12px 24px color-mix(in srgb, var(--surface-primary) 28%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--text-primary) 12%, transparent);
+  backdrop-filter: blur(10px);
+}
+
 .lesson {
-  border-radius: 24px;
-  padding: 20px;
-  border: 1px solid var(--stroke);
-  background:
-    linear-gradient(145deg, rgb(156 90 255 / 16%), transparent 40%),
-    linear-gradient(165deg, var(--surface-2), var(--surface-1));
+  margin: 38px 0 0 clamp(26px, 4vw, 54px);
+  padding: 28px 30px;
+  border-radius: 28px;
 }
 
 .lessonTag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 12px;
+  gap: 10px;
+  color: color-mix(in srgb, var(--text-primary) 78%, var(--color-primary) 22%);
+  font-size: 0.92rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: color-mix(in oklab, var(--color-primary) 75%, white 25%);
 }
 
 .lesson h3 {
-  margin-top: 8px;
-  font-size: clamp(1.18rem, 2.2vw, 1.8rem);
-  line-height: 120%;
+  margin-top: 14px;
+  max-width: 18ch;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.02;
 }
 
 .lesson > p:last-child {
-  margin-top: 8px;
-  color: var(--text-soft);
+  margin-top: 12px;
+  max-width: 70ch;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
 }
 
-@media (width <= 1024px) {
-  .chapterMedia {
-    min-height: 220px;
+@media (width <= 980px) {
+  .hero {
+    min-height: 320px;
+  }
+
+  .chapterShell {
+    grid-template-columns: 1fr;
+  }
+
+  .chapterVisual {
+    min-height: 280px;
   }
 }
 
 @media (width <= 768px) {
   .blogPage {
-    padding: 0 4vw 94px 4vw;
+    padding: 0 16px 88px;
   }
 
-  .header {
-    min-height: auto;
-    padding: 12px;
-    border-radius: 14px;
-    align-items: flex-start;
+  .hero {
+    margin-top: 72px;
+    padding: 22px 18px 28px;
+    border-radius: 28px;
+  }
+
+  .heroTop {
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
   }
 
-  .story {
+  .heroCopy {
+    margin-top: 24px;
+  }
+
+  .heroCopy h1 {
+    max-width: 8ch;
+    font-size: clamp(2.7rem, 14vw, 4.5rem);
+  }
+
+  .heroCopy p {
+    max-width: 19ch;
+  }
+
+  .timelineSection {
+    padding-left: 24px;
+  }
+
+  .timelineRail {
+    left: 9px;
+  }
+
+  .chapterList {
+    gap: 28px;
+  }
+
+  .timelineNode {
+    top: 24px;
+    left: -24px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .dateBadge {
+    min-height: 48px;
+    padding: 8px 18px;
+    margin-left: 10px;
+    font-size: 0.95rem;
+  }
+
+  .chapterShell {
+    gap: 18px;
+    padding: 22px 18px 18px;
     border-radius: 24px;
-    padding: 14px;
   }
 
-  .story {
-    gap: 14px;
+  .chapterEyebrow {
+    font-size: 1.1rem;
   }
 
-  .chapter,
-  .lesson {
-    padding: 14px;
+  .chapterContent h2 {
+    max-width: 10ch;
+    font-size: clamp(2rem, 10vw, 3.1rem);
   }
 
-  .headerIntro h1 {
+  .chapterExcerpt {
+    max-width: none;
     font-size: 1rem;
   }
 
-  .headerIntro p {
-    font-size: 0.82rem;
-    white-space: normal;
+  .badge {
+    font-size: 0.95rem;
   }
 
-  .chapter h3 {
-    font-size: clamp(1.35rem, 8vw, 2rem);
+  .badgeIcon {
+    width: 32px;
+    height: 32px;
   }
 
-  .chapterHead {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "label"
-      "date"
-      "actions";
-    gap: 8px;
-  }
-
-  .chapterDate {
-    padding-left: 0;
-  }
-
-  .chapterMedia {
+  .chapterVisual {
     min-height: 230px;
+    border-radius: 20px;
+  }
+
+  .chapterAction {
+    right: 12px;
+    bottom: 12px;
+    min-height: 48px;
+    padding: 0 16px;
+    font-size: 0.95rem;
+  }
+
+  .lesson {
+    margin-left: 24px;
+    padding: 22px 18px;
+    border-radius: 22px;
   }
 }
 
-@keyframes fade {
+@media (width <= 480px) {
+  .heroTag,
+  .heroCounter {
+    min-height: 40px;
+    padding: 0 14px;
+  }
+
+  .timelineSection {
+    padding-left: 22px;
+  }
+
+  .chapterEyebrow {
+    gap: 8px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .chapterContent h2 {
+    max-width: 9ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backgroundVideo {
+    display: none;
+  }
+
+  .backgroundOverlay {
+    background: color-mix(in srgb, var(--surface-primary) 82%, transparent);
+  }
+}
+
+@keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+@keyframes timelinePulse {
+  to {
+    transform: scale(2);
+    opacity: 0;
   }
 }
