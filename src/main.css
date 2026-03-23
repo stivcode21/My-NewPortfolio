@@ -1,7 +1,4 @@
 :root {
-  --transition: 0.15s ease;
-  --transition-low: 0.3s ease;
-  --transition-very-low: 0.5s ease;
   --dynamic-transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   --dynamic-medium-transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   --dynamic-fast-transition: 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -17,7 +14,6 @@ body.light-mode {
   --surface-primary-transparent: #f6f6fb8d;
   --surface-primary-transparent-2: rgba(255, 255, 255, 0.8);
   --surface-image: var(--surface-primary);
-  --hover-background: #0000001a;
   --surface-skeleton: #d8daec;
   --accent-skeleton: #8d8ead;
   /* TEXT */
@@ -40,17 +36,13 @@ body.light-mode {
   --hover-primary-light: #c1aeff;
   --color-primary-dark: #4a11a1;
   --transparent-primary-light: #dad2ff;
+  --surface-note: #e7d2b5;
+  --text-note: #322717;
   /* OUTSTANDING */
   --surface-outstanding: #faff00;
   --surface-icon-outstanding: #d9dd04;
-  --border-outstanding: #868902;
-  --text-outstanding: var(--text-primary);
   /* CAREERS */
-  --diamond-blue: #4270b3;
-  --emerald-green: #187b77;
-  --ruby-red: #cc495c;
   /* SHADOWS */
-  --smooth-shadow: 0 4px 30px 10px #a1a5ce47;
   --strong-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
   /* SCROLLBAR */
   --thumb: #c2c2c2;
@@ -66,7 +58,6 @@ body.dark-mode {
   --surface-primary-transparent: #0a0b15ee;
   --surface-primary-transparent-2: hsla(235, 35%, 6%, 0.8);
   --surface-image: var(--surface-primary-transparent);
-  --hover-background: #ffffff0d;
   --surface-skeleton: #272a48;
   --accent-skeleton: #3c4286;
   /* TEXT */
@@ -84,6 +75,8 @@ body.dark-mode {
   --hover-primary-light: #252845;
   --color-primary-dark: #4a11a1;
   --transparent-primary-light: #1d1f3480;
+  --surface-note: #e7d2b5;
+  --text-note: #322717;
   --title-weight: 600;
   --label-weight: 500;
   --active-label-weight: 800;
@@ -92,14 +85,8 @@ body.dark-mode {
   /* OUTSTANDING */
   --surface-outstanding: var(--surface-primary);
   --surface-icon-outstanding: #2f330d;
-  --border-outstanding: #faff00;
-  --text-outstanding: #faff00;
   /* CAREERS */
-  --diamond-blue: #3d8ed4;
-  --emerald-green: #3aac8c;
-  --ruby-red: #d26859;
   /* SHADOWS */
-  --smooth-shadow: 0 4px 30px 10px #272a4872;
   --strong-shadow: none;
   /* SCROLLBAR */
   --thumb: #1f213d;
