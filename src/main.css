@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Excalifont";
+  src: url("/fonts/Excalifont.woff2") format("woff2");
+  font-display: swap;
+}
+
 :root {
   --dynamic-transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   --dynamic-medium-transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
