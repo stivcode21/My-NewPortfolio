@@ -2,12 +2,11 @@ import { useState } from "react";
 import styles from "./Blog.module.css";
 import ButtonBack from "@/components/molecules/buttonBack/ButtonBack";
 import MyFooter from "@/home/sections/myFooter/MyFooter";
-import { BookOpenText, Camera, MoveRight } from "lucide-react";
-import { blogHighlight, dataBlogChapters } from "@/data/dataBlogChapters";
+import { BookOpenText, MoveRight } from "lucide-react";
+import { dataBlogChapters } from "@/data/dataBlogChapters";
 import ParallaxCard from "@/components/templates/parallaxCard/ParallaxCard";
 
 const Blog = () => {
-  const HighlightIcon = blogHighlight.icon;
   const [activeChapterId, setActiveChapterId] = useState(
     dataBlogChapters[0]?.id ?? null,
   );
@@ -40,19 +39,19 @@ const Blog = () => {
               <BookOpenText size={15} aria-hidden="true" />
               <span>Blog</span>
             </div>
-            <div className={styles.heroCounter}>
-              <Camera size={15} aria-hidden="true" />
-              <span>{dataBlogChapters[0].number}</span>
-              <span>/</span>
-              <span>{String(dataBlogChapters.length).padStart(2, "0")}</span>
-            </div>
+          </div>
+
+          <div className={styles.heroEmoji} aria-hidden="true">
+            <img src="/myEmoji.svg" alt="Mi rostro" />
           </div>
 
           <div className={styles.heroCopy}>
             <h1>Mi Camino hacia el Codigo</h1>
             <p>
-              Fragmentos de mi viaje para convertirme en desarrollador. Errores,
-              lecciones y momentos clave.
+              Este blog es una bitacora personal de mi proceso aprendiendo
+              desarrollo desde cero. Aqui comparto los momentos que marcaron mi
+              camino, las dudas que tuve, los errores que me frenaron y las
+              pequenas victorias que me hicieron seguir adelante.
             </p>
           </div>
         </header>
@@ -114,25 +113,16 @@ const Blog = () => {
                         alt={chapter.title}
                         loading="lazy"
                       />
-                      <figcaption className={styles.chapterAction}>
-                        <span>Leer capitulo</span>
-                        <MoveRight size={16} aria-hidden="true" />
-                      </figcaption>
                     </figure>
+                    <button className={styles.chapterAction}>
+                      <span>Leer capitulo</span>
+                      <MoveRight size={16} aria-hidden="true" />
+                    </button>
                   </div>
                 </ParallaxCard>
               );
             })}
           </div>
-        </section>
-
-        <section className={styles.lesson}>
-          <p className={styles.lessonTag}>
-            <HighlightIcon size={16} aria-hidden="true" />
-            <span>{blogHighlight.label}</span>
-          </p>
-          <h3>{blogHighlight.title}</h3>
-          <p>{blogHighlight.text}</p>
         </section>
       </section>
       <MyFooter />

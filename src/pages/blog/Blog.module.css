@@ -29,6 +29,7 @@
 .backgroundVideo {
   object-fit: cover;
   object-position: center;
+  opacity: 0.3;
 }
 
 .backgroundDecoration {
@@ -45,8 +46,9 @@
 .backgroundOverlay {
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--surface-primary) 70%, transparent),
-    color-mix(in srgb, var(--surface-primary) 40%, transparent)
+    color-mix(in srgb, var(--surface-primary) 90%, transparent),
+    transparent,
+    color-mix(in srgb, var(--surface-primary) 90%, transparent)
   );
 }
 
@@ -64,14 +66,19 @@
   margin: 0 auto;
   overflow: hidden;
   margin-top: 26px;
-  padding: 20px;
-  min-height: 200px;
-  border: 1px solid var(--text-primary-transparent-2);
-  border-radius: 36px;
+  padding: 40px;
+  padding-left: 210px;
+  min-height: 140px;
+  border-color: color-mix(
+    in srgb,
+    var(--color-primary) 34%,
+    var(--text-primary-transparent-2)
+  );
+  border-radius: 14px;
   background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--surface-primary) 14%, transparent),
-    color-mix(in srgb, var(--surface-primary) 72%, transparent)
+    135deg,
+    color-mix(in srgb, var(--surface-primary-transparent-2) 92%, transparent),
+    color-mix(in srgb, var(--surface-primary) 96%, transparent)
   );
   box-shadow:
     0 30px 80px color-mix(in srgb, var(--surface-primary) 55%, transparent),
@@ -85,14 +92,19 @@
 }
 
 .heroTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  position: absolute;
+  right: 20px;
+  top: 20px;
   gap: 16px;
 }
 
-.heroTag,
-.heroCounter {
+.heroEmoji {
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.heroTag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -108,8 +120,7 @@
   color: var(--color-primary);
 }
 
-.heroTag span,
-.heroCounter span {
+.heroTag span {
   color: var(--text-primary);
   font-size: 0.92rem;
   font-weight: var(--inverse-weight);
@@ -128,8 +139,7 @@
 }
 
 .heroCopy p,
-.chapterExcerpt,
-.lesson > p:last-child {
+.chapterExcerpt {
   color: var(--text-secondary);
   line-height: 1.45;
 }
@@ -166,7 +176,7 @@
 
 .chapterList {
   display: grid;
-  gap: 150px;
+  gap: 130px;
 }
 
 .chapterCard {
@@ -188,7 +198,7 @@
 .timelineNode {
   position: sticky;
   display: block;
-  top: 350px;
+  top: 330px;
   margin-left: -66px;
   width: 28px;
   height: 28px;
@@ -226,9 +236,11 @@
   width: 50px;
   height: 2px;
   z-index: 0;
-  background: var(--color-primary);
-  box-shadow: 0 0 0 3px
-    color-mix(in srgb, var(--color-primary-dark) 45%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--color-primary) 34%,
+    var(--text-primary-transparent-2)
+  );
 }
 
 .dateBadge {
@@ -236,36 +248,22 @@
   z-index: 2;
   display: inline-flex;
   align-items: center;
-  min-height: 56px;
+  min-height: 80px;
   padding: 10px 24px;
-  margin: 0 0 -8px 18px;
+  margin: 0 0 -28px 18px;
   color: var(--text-note);
-  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-family: "Excalifont", sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-weight: 700;
   letter-spacing: 0.02em;
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--surface-note) 98%, var(--text-primary) 2%),
-      color-mix(in srgb, var(--surface-note) 82%, var(--surface-primary) 18%)
-    ),
-    repeating-linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--text-primary) 6%, transparent) 0,
-      color-mix(in srgb, var(--text-primary) 6%, transparent) 4px,
-      transparent 4px,
-      transparent 9px
-    );
-  clip-path: polygon(0 10%, 92% 0, 100% 22%, 97% 92%, 6% 100%, 0 82%, 2% 36%);
-  box-shadow:
-    0 16px 30px color-mix(in srgb, var(--surface-primary) 25%, transparent),
-    inset 0 1px 0 color-mix(in srgb, var(--text-primary) 45%, transparent);
-  transform: rotate(-2deg);
+  background-image: url(/paper.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(-6deg);
 }
 
-.chapterShell,
-.lesson {
+.chapterShell {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--text-primary-transparent-2);
@@ -287,8 +285,7 @@
   border-radius: 30px;
 }
 
-.chapterShell::before,
-.lesson::before {
+.chapterShell::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -348,22 +345,21 @@
 }
 
 .chapterExcerpt {
-  max-width: 27ch;
-  font-size: clamp(1rem, 1.65vw, 1.35rem);
+  font-size: 1.2rem;
 }
 
 .badgeRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 20px;
 }
 
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: color-mix(in srgb, var(--text-primary) 96%, var(--color-primary) 4%);
-  font-size: clamp(0.98rem, 1.3vw, 1.2rem);
+  color: color-mix(in srgb, var(--text-primary) 96%, var(--color-primary) 2%);
+  font-size: clamp(0.98rem, 1.2vw, 1rem);
   line-height: 1;
 }
 
@@ -374,18 +370,15 @@
   height: 38px;
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--text-primary) 8%, transparent);
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--surface-outstanding) 72%, var(--surface-note) 28%),
-    color-mix(
-      in srgb,
-      var(--surface-icon-outstanding) 55%,
-      var(--surface-note) 45%
-    )
-  );
+  background: var(--color-primary);
   color: var(--text-note);
   box-shadow: inset 0 1px 0
     color-mix(in srgb, var(--text-primary) 42%, transparent);
+}
+
+.badgeIcon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .chapterVisual {
@@ -406,58 +399,27 @@
 
 .chapterAction {
   position: absolute;
-  right: 22px;
+  right: 30px;
   bottom: 22px;
   z-index: 1;
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  min-height: 68px;
-  padding: 0 24px;
+  min-height: 54px;
+  padding: 0 20px;
   color: var(--text-primary);
-  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+  font-size: 0.9rem;
   font-weight: 700;
-  border-radius: 999px;
+  border-radius: 30px;
   border: 1px solid color-mix(in srgb, var(--color-primary) 50%, transparent);
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--color-primary) 48%, transparent),
-    color-mix(in srgb, var(--color-primary-dark) 72%, transparent)
+    color-mix(in srgb, var(--color-primary) 18%, transparent)
   );
   box-shadow:
     0 12px 24px color-mix(in srgb, var(--surface-primary) 28%, transparent),
     inset 0 1px 0 color-mix(in srgb, var(--text-primary) 12%, transparent);
   backdrop-filter: blur(10px);
-}
-
-.lesson {
-  margin: 38px 0 0 clamp(26px, 4vw, 54px);
-  padding: 28px 30px;
-  border-radius: 28px;
-}
-
-.lessonTag {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: color-mix(in srgb, var(--text-primary) 78%, var(--color-primary) 22%);
-  font-size: 0.92rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.lesson h3 {
-  margin-top: 14px;
-  max-width: 18ch;
-  font-size: clamp(1.8rem, 3vw, 3rem);
-  line-height: 1.02;
-}
-
-.lesson > p:last-child {
-  margin-top: 12px;
-  max-width: 70ch;
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
 }
 
 @media (width <= 980px) {
@@ -570,17 +532,10 @@
     padding: 0 16px;
     font-size: 0.95rem;
   }
-
-  .lesson {
-    margin-left: 24px;
-    padding: 22px 18px;
-    border-radius: 22px;
-  }
 }
 
 @media (width <= 480px) {
-  .heroTag,
-  .heroCounter {
+  .heroTag {
     min-height: 40px;
     padding: 0 14px;
   }
