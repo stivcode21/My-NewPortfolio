@@ -77,6 +77,13 @@
         "notion": "Gestión y documentación de proyectos",
         "python": "Lenguaje de programación versátil",
         "supabase": "Base de datos y backend como servicio",
+        "postgresql": "Base de datos relacional avanzada",
+        "mysql": "Base de datos relacional popular",
+        "nodejs": "Entorno de ejecución para JavaScript",
+        "express": "Framework minimalista para APIs y servidores",
+        "render": "Plataforma para despliegue y hosting web",
+        "csharp": "Lenguaje moderno para aplicaciones y backend",
+        "visualstudio": "Entorno de desarrollo integrado",
         "astro": "Framework para crear sitios web rápidos"
     }
 }

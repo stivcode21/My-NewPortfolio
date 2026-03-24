@@ -1,12 +1,13 @@
 import styles from "./MySkills.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { dataSkills } from "@/data/dataSkills";
 import { dataCareers2 } from "@/data/dataCareers";
 import FilterCategory from "@/components/templates/filterCategory/FilterCategory";
 import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { useTranslation } from "react-i18next";
+import { ArrowUpRight } from "lucide-react";
 
 const MySkills = () => {
   const [selectedCategory, setSelectedCategory] = useState(1); // Categoria por defecto: UX/UI
@@ -14,7 +15,7 @@ const MySkills = () => {
   const navigate = useNavigate();
 
   const filteredSkills = dataSkills.filter(
-    (skill) => skill.id === selectedCategory
+    (skill) => skill.id === selectedCategory,
   );
 
   return (
@@ -36,13 +37,16 @@ const MySkills = () => {
             {t("aboutMe.text-2")}
             <strong>{t("aboutMe.strong-2")}</strong>
             {t("aboutMe.text-3")}
-            <strong>{t("aboutMe.strong-3")}</strong>
             <strong className={styles.buttonContainer}>
-              <HoverTag label={t("aboutMe.option-readMore")} position="bottom">
-                <button className={styles.button} onClick={() => navigate("/blog")}>
-                  ...más
-                </button>
-              </HoverTag>
+              <strong>{t("aboutMe.strong-3") + ":"}</strong>
+
+              <Link
+                to="/blog"
+                className={`${styles.navLink} ${styles.blogLink}`}
+              >
+                <span>Blog</span>
+                <ArrowUpRight />
+              </Link>
             </strong>
           </p>
         </motion.div>

@@ -77,6 +77,13 @@
             "notion": "Project management and documentation",
             "python": "Versatile programming language",
             "supabase": "Database and backend as a service",
+            "postgresql": "Advanced relational database",
+            "mysql": "Popular relational database",
+            "nodejs": "JavaScript runtime environment",
+            "express": "Minimal framework for APIs and servers",
+            "render": "Platform for web hosting and deployment",
+            "csharp": "Modern language for apps and backend",
+            "visualstudio": "Integrated development environment",
             "astro": "Framework for building fast websites"
     }
 }
