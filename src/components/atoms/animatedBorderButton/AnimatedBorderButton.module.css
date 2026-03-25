@@ -34,7 +34,7 @@
   position: relative;
   background: linear-gradient(
     to bottom,
-    var(--transparent-primary-light),
+    var(--transparent-primary-light) 20%,
     var(--hover-primary-light)
   );
   backdrop-filter: blur(10px);
@@ -51,9 +51,18 @@
 }
 
 .innerContent:hover {
-  border: 1px solid var(--text-primary-transparent-3);
-  color: var(--text-muted);
+  border: 1px solid var(--hover-primary-light);
+  background: linear-gradient(
+    to bottom,
+    var(--transparent-primary-light) 0%,
+    var(--hover-primary-light) 90%
+  );
+  color: var(--color-primary);
   transition: var(--dynamic-medium-transition);
+}
+
+.innerContent:hover svg {
+  color: var(--color-primary);
 }
 
 .innerSmall {
