@@ -10,6 +10,7 @@ const tools = [
   "notion",
   "trello",
   "vsCode",
+  "visualstudio",
   "html",
   "css",
   "sass",
@@ -22,15 +23,20 @@ const tools = [
   "reactjs",
   "nextjs",
   "sqlLite",
-  "firebase",
+  "mysql",
   "zustand",
   "redux",
   "vite",
   "npm",
   "vercel",
+  "render",
+  "python",
+  "astro",
+  "nodejs",
+  "express",
 ];
 
-const learn = ["python", "supabase", "astro"];
+const learn = ["supabase", "postgresql", "csharp"];
 
 const ToolsBox = () => {
   const { t } = useTranslation("about");
