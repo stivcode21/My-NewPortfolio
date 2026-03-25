@@ -1,7 +1,23 @@
 .header {
-  font-size: 16px;
-  text-align: center;
   margin-bottom: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.requirements {
+  display: grid;
+  gap: 6px;
+  padding-left: 18px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.requirements li strong {
+  color: var(--color-primary);
+  margin-right: 6px;
 }
 
 .form {
@@ -19,7 +35,11 @@
 }
 
 @media (width <= 768px) {
-  .header {
+  .intro {
     font-size: 14px;
+  }
+
+  .requirements {
+    font-size: 13px;
   }
 }

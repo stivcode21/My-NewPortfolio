@@ -15,86 +15,96 @@ const FormComment = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
-  const { setModalState, setBtnModalState } = useModalFormStore();
+  const { commentDraft, setCommentDraft, setModalState, setBtnModalState } =
+    useModalFormStore();
 
-  // Estado para los errores de los inputs
   const [errors, setErrors] = useState({
     name: false,
-    image: false,
-    comment: false,
-    url: false,
   });
 
-  //data del formulario
   const [formData, setFormData] = useState({
     name: "",
     image: "",
-    comment: "",
     url: "",
     date: localTime,
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validación de los campos usando el estado correcto
     const newErrors = {
-      name: formData.name === "",
-      image: formData.image === "",
-      comment: formData.comment === "",
-      url: formData.url === " ",
+      name: formData.name.trim() === "",
     };
     setErrors(newErrors);
 
-    // Si hay errores, no continúes
-    if (Object.values(newErrors).some((error) => error)) {
-      return; // Detén la ejecución si hay errores
+    if (Object.values(newErrors).some(Boolean)) {
+      return;
     }
-    setIsLoading(true); // Mostrar loader
 
-    const { name, image, comment, url, date } = formData;
+    if (commentDraft.trim() === "") {
+      notify("Info", "Escribe tu comentario antes de enviarlo.");
+      return;
+    }
+
+    setIsLoading(true);
+
+    const { name, image, url, date } = formData;
+
     try {
-      const { error } = await supabase
-        .from("comments")
-        .insert([{ name, image, comment, url, date, confirmed: false }]);
-      if (error) throw error;
-      setIsDisabled(true);
+      const { error } = await supabase.from("comments").insert([
+        {
+          name,
+          image,
+          comment: commentDraft,
+          url,
+          date,
+          confirmed: false,
+        },
+      ]);
 
-      // Notificaciones de éxito
+      if (error) throw error;
+
+      setIsDisabled(true);
       setModalState(false);
       setBtnModalState(true);
       notify("Success", "Comentario enviado con éxito!");
       notify("Info", "Debes esperar la aprobación!");
 
-      // Reinicia el formulario correctamente
       setFormData({
         name: "",
         image: "",
-        comment: "",
         url: "",
-        date: "",
+        date: localTime,
       });
+      setCommentDraft("");
     } catch (error) {
       console.error("Error al insertar el comentario:", error.message);
       notify("Error", "Hubo un error al enviar tu comentario.");
     } finally {
-      setIsLoading(false); // Ocultar loader siempre
+      setIsLoading(false);
     }
   };
 
   return (
     <>
-      <p className={styles.header}>
-        {t("guestbook.text-1")}
-        <strong>{t("guestbook.strong-1")}</strong>
-        {t("guestbook.text-2")}
-        <strong>{t("guestbook.strong-2")}</strong>
-      </p>
+      <div className={styles.header}>
+        <p className={styles.intro}>{t("guestbook.form-intro")}</p>
+        <ul className={styles.requirements}>
+          <li>
+            <strong>{t("guestbook.required-label")}</strong>
+            {t("guestbook.required-value")}
+          </li>
+          <li>
+            <strong>{t("guestbook.optional-label")}</strong>
+            {t("guestbook.optional-value")}
+          </li>
+        </ul>
+      </div>
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <InputBox
@@ -103,6 +113,7 @@ const FormComment = () => {
           placeholder={t("guestbook.name-placeholder")}
           maxLength={30}
           onChange={handleChange}
+          value={formData.name}
           isValid={errors.name}
           disabled={isDisabled}
           errorMessage="Completá con tu nombre"
@@ -113,7 +124,9 @@ const FormComment = () => {
           name="image"
           placeholder={t("guestbook.img-placeholder")}
           onChange={handleChange}
-          isValid={errors.image}
+          value={formData.image}
+          isRequired={false}
+          isValid={false}
           disabled={isDisabled}
           errorMessage="Agrega una URL valida"
         />
@@ -123,30 +136,19 @@ const FormComment = () => {
           name="url"
           placeholder={t("guestbook.urlWebsite-placeholder")}
           onChange={handleChange}
-          isValid={errors.url}
+          value={formData.url}
+          isRequired={false}
+          isValid={false}
           disabled={isDisabled}
           errorMessage="Agrega una URL valida"
         />
-
-        <InputBox
-          type="textarea"
-          name="comment"
-          placeholder={t("guestbook.comment-placeholder")}
-          maxLength={3000}
-          onChange={handleChange}
-          isValid={errors.comment}
-          disabled={isDisabled}
-          errorMessage="Agrega un comentario porfavor!"
-        />
-
-        {/* Boton de envio */}
 
         <AnimatedBorderButton
           type="submit"
           disabled={isDisabled}
           className={styles.btn}
         >
-          {isLoading ? ( // Mostrar loader mientras se envía el correo
+          {isLoading ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
