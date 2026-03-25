@@ -1,12 +1,18 @@
+.guestbookShell {
+  width: 100%;
+  max-height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
 .guestbook {
   width: 100%;
-  height: fit-content;
-  max-height: 400px;
+  height: 420px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: start;
-  padding-right: 8px;
+  padding: 0 14px 116px 0;
   gap: 10px;
   overflow-y: scroll;
 }
@@ -15,9 +21,115 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 
 .subtitle {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
+}
+
+.composer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  background: var(--surface-primary);
+  align-items: center;
+  gap: 12px;
+}
+
+.composerFade {
+  position: absolute;
+  right: -16px;
+  bottom: 100%;
+  left: -16px;
+  height: 42px;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 11, 21, 0) 10%,
+    var(--surface-primary) 72%
+  );
+  pointer-events: none;
+}
+
+.composerField {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 44px;
+  padding: 0 24px;
+  border: 1px solid var(--hover-primary-light);
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    var(--surface-primary-transparent-2) 0%,
+    var(--surface-primary) 100%
+  );
+  text-align: left;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.composerField:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.composerField::placeholder {
+  color: var(--text-secondary);
+}
+
+@media (width <= 768px) {
+  .guestbookShell {
+    max-height: 380px;
+    border-radius: 22px;
+  }
+
+  .guestbook {
+    height: 380px;
+    padding-right: 10px;
+    padding-bottom: 108px;
+  }
+
+  .head {
+    margin-bottom: 14px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .composer {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    gap: 10px;
+  }
+
+  .composerFade {
+    right: -12px;
+    left: -12px;
+    height: 80px;
+  }
+
+  .composerField {
+    min-height: 58px;
+    padding: 0 18px;
+  }
+
+  .composerButton {
+    width: 58px;
+    min-width: 58px;
+    height: 58px;
+    border-radius: 18px;
+  }
 }
