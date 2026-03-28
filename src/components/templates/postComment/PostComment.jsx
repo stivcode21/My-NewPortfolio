@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import styles from "./PostComment.module.css";
-import { LinkIcon, Pin } from "lucide-react";
+import { Pin } from "lucide-react";
 
 const PostComment = ({
   avatar,
@@ -23,7 +23,7 @@ const PostComment = ({
         <div>
           <img src={avatar} alt={username} className={styles.avatar} />
         </div>
-        <div>
+        <div className={styles.body}>
           <div className={styles.header}>
             <a
               className={styles.userName}
@@ -39,14 +39,6 @@ const PostComment = ({
           <p className={styles.comment}>{comment}</p>
         </div>
       </div>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.linkIcon}
-      >
-        <LinkIcon size={18} />
-      </a>
     </div>
   );
 };

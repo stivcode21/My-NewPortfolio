@@ -4,18 +4,20 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 12px 24px 12px 5px;
+  padding: 12px 14px 12px 14px;
   border-radius: 10px;
   background: transparent;
   position: relative;
   border: 1px solid transparent;
-}
-
-.guestbook:hover {
-  background: var(--transparent-primary-light);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--hover-primary-light);
+  background: linear-gradient(
+    180deg,
+    var(--surface-primary) 4%,
+    var(--transparent-primary-light) 96%
+  );
+  border-left: 1px solid var(--hover-primary-light);
+  border-top: 1px solid var(--hover-primary-light);
   transition: var(--dynamic-fast-transition);
+  backdrop-filter: blur(10px);
 }
 
 .pin {
@@ -31,6 +33,12 @@
   align-items: flex-start;
   gap: 12px;
   position: relative;
+  min-width: 0;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
 }
 
 .avatar {
@@ -42,18 +50,23 @@
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   color: var(--text-muted);
   font-weight: 400;
+  min-width: 0;
 }
 
 .userName {
   width: fit-content;
+  max-width: 100%;
   font-size: 17px;
   font-weight: 600;
   color: var(--text-primary);
   border-bottom: 2px solid transparent;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .userName:hover {
@@ -63,6 +76,7 @@
 
 .date {
   font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
 .comment {
@@ -70,6 +84,10 @@
   line-height: normal;
   font-size: 15px;
   font-weight: 500;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 .linkIcon {
