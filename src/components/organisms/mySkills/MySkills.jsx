@@ -37,7 +37,7 @@ const MySkills = () => {
             {t("aboutMe.text-2")}
             <strong>{t("aboutMe.strong-2")}</strong>
             {t("aboutMe.text-3")}
-            <strong className={styles.buttonContainer}>
+            {/* <strong className={styles.buttonContainer}>
               <strong>{t("aboutMe.strong-3") + ":"}</strong>
 
               <Link
@@ -47,7 +47,7 @@ const MySkills = () => {
                 <span>Blog</span>
                 <ArrowUpRight />
               </Link>
-            </strong>
+            </strong> */}
           </p>
         </motion.div>
         <motion.div
