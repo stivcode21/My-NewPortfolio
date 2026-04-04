@@ -4,9 +4,16 @@ import LazyImage from "@/components/atoms/lazyImage/LazyImage";
 import Slider from "@/components/templates/slider/Slider";
 import Tag from "@/components/atoms/tag/Tag";
 import { useTranslation } from "react-i18next";
+import premioImg from "@/assets/premio.png";
 
 const ProjectCard = ({ project }) => {
   const { t } = useTranslation("projects");
+  console.log(project);
+
+  //lista de projectos principales
+  const list = [{ id: 1 }, { id: 2 }];
+
+  const ifExists = list.some((item) => item.id === project.id);
 
   return (
     <Link
@@ -23,6 +30,11 @@ const ProjectCard = ({ project }) => {
           />
         </div>
         <div className={styles.content}>
+          {ifExists && (
+            <div className={styles.premio}>
+              <img src={premioImg} alt="Premio" />
+            </div>
+          )}
           <Slider
             carouselImages={project.images}
             showControls={true}
@@ -41,6 +53,11 @@ const ProjectCard = ({ project }) => {
               </span>
               <p>{t(project.shortDescription)}</p>
             </span>
+            <img
+              src={project.images[0].props.src}
+              alt={project.images[0].props.alt}
+              className={styles.shadowImage}
+            />
           </div>
         </div>
       </article>
