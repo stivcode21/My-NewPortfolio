@@ -34,6 +34,10 @@ import Parkify1 from "../assets/projects/PARKIFY-1.webp";
 import Parkify2 from "../assets/projects/PARKIFY-2.webp";
 import Parkify3 from "../assets/projects/PARKIFY-3.webp";
 
+import Ekou1 from "../assets/projects/EKOU-1.webp";
+import Ekou2 from "../assets/projects/EKOU-2.webp";
+import Ekou3 from "../assets/projects/EKOU-3.webp";
+
 import OldPortfolio1 from "../assets/projects/OLD-PORTFOLIO-1.webp";
 import OldPortfolio2 from "../assets/projects/OLD-PORTFOLIO-2.webp";
 import OldPortfolio3 from "../assets/projects/OLD-PORTFOLIO-3.webp";
@@ -55,7 +59,7 @@ export const dataProjects = [
       <img src={Parkify2} alt="Mockup del proyecto de Parkify" />,
       <img src={Parkify3} alt="Mockup del proyecto de Parkify" />,
     ],
-    tags: ["MAIN-PROJECT", "FullStack", "React", "Responsive"],
+    tags: ["Full Stack", "React", "Responsive"],
     tools: [
       "reactjs",
       "supabase",
@@ -82,6 +86,41 @@ export const dataProjects = [
 
   {
     id: 2,
+    title: "Ekou",
+    url: "ekou",
+    categoryId: 1,
+    images: [
+      <img src={Ekou1} alt="Mockup del proyecto de Ekou" />,
+      <img src={Ekou2} alt="Mockup del proyecto de Ekou" />,
+      <img src={Ekou3} alt="Mockup del proyecto de Ekou" />,
+    ],
+    tags: ["Landing Page", "Astro", "Responsive", "Bilingual"],
+    tools: [
+      "figma",
+      "astro",
+      "reactjs",
+      "tailwindcss",
+      "zustand",
+      "i18next",
+      "nodejs",
+    ],
+    description: "ekou.description",
+    shortDescription: "ekou.shortDescription",
+    links: [
+      {
+        type: "website",
+        url: "https://www.ekou.lat/",
+      },
+      {
+        type: "code",
+        url: "https://github.com/EKOU-Solutions/ekou-landing",
+      },
+    ],
+    details: ["ekou.objective", "ekou.development", "ekou.conclusion"],
+  },
+
+  {
+    id: 3,
     title: "ViFlow",
     url: "ViFlow",
     categoryId: 1,
@@ -90,7 +129,7 @@ export const dataProjects = [
       <img src={Viflow2} alt="Mockup del proyecto de Viflow" />,
       <img src={Viflow3} alt="Mockup del proyecto de Viflow" />,
     ],
-    tags: ["Social", "App", "Typescript", "Responsive"],
+    tags: ["Social", "Typescript", "App", "Responsive"],
     tools: [
       "reactjs",
       "typescript",
@@ -120,7 +159,7 @@ export const dataProjects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "UrbanShop",
     url: "UrbanShop",
     categoryId: 1,
@@ -129,7 +168,7 @@ export const dataProjects = [
       <img src={UrbanShop2} alt="Mockup del proyecto de UrbanShop" />,
       <img src={UrbanShop3} alt="Mockup del proyecto de UrbanShop" />,
     ],
-    tags: ["E-commerce", "Redux", "Responsive", "Carrito"],
+    tags: ["E-commerce", "React", "Redux", "Responsive", "Carrito"],
     tools: ["reactjs", "redux", "tailwindcss", "vercel", "vite"],
     description: "urbanShop.description",
     shortDescription: "urbanShop.shortDescription",
@@ -151,7 +190,7 @@ export const dataProjects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "FrameOnix",
     url: "frameonix",
     categoryId: 1,
@@ -182,13 +221,13 @@ export const dataProjects = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "Cineverse",
     url: "cineverse",
     categoryId: 1,
     images: [
-      <img src={Cineverse3} alt="Mockup del proyecto de Cineverse" />,
       <img src={Cineverse1} alt="Mockup del proyecto de Cineverse" />,
+      <img src={Cineverse3} alt="Mockup del proyecto de Cineverse" />,
       <img src={Cineverse2} alt="Mockup del proyecto de Cineverse" />,
     ],
     tags: ["React", "TMDB", "Dynamic Filters", "Responsive"],
@@ -213,7 +252,7 @@ export const dataProjects = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Old Portfolio",
     url: "old-portfolio",
     categoryId: 1,
@@ -244,7 +283,7 @@ export const dataProjects = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Money Tracking",
     url: "money-tracking",
     categoryId: 1,
@@ -275,7 +314,7 @@ export const dataProjects = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: "Form Design",
     url: "form-design",
     categoryId: 1,
@@ -306,7 +345,7 @@ export const dataProjects = [
   },
 
   {
-    id: 9,
+    id: 10,
     title: "StivSound",
     url: "stivsound",
     categoryId: 1,
@@ -337,7 +376,7 @@ export const dataProjects = [
   },
 
   {
-    id: 10,
+    id: 11,
     title: "WhatsApp Clone",
     url: "whatsapp-clone",
     categoryId: 1,
@@ -368,7 +407,7 @@ export const dataProjects = [
   },
 
   {
-    id: 11,
+    id: 12,
     title: "YouTube Design",
     url: "youtube-design",
     categoryId: 2,
@@ -398,7 +437,7 @@ export const dataProjects = [
   },
 
   {
-    id: 12,
+    id: 13,
     title: "Facebook Design",
     url: "facebook-design",
     categoryId: 2,
