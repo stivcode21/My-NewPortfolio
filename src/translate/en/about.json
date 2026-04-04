@@ -12,31 +12,31 @@
         "option-readMore": "Read more",
         "skills": "Skills",
         "learning": "In Learning",
-        "text-1": "My experience spans a variety of ",
-        "strong-1": "technical and design skills. ",
-        "text-2": "I've worked on projects ",
-        "strong-2": "ranging from front-end development ",
-        "text-3": "to creating intuitive and attractive user interfaces. ",
+        "text-1": "My experience spans ",
+        "strong-1": "frontend development, backend development, and interface design. ",
+        "text-2": "I've worked on projects where I combine ",
+        "strong-2": "application logic, user experience, and scalable architecture ",
+        "text-3": "to build complete, intuitive, and performance-focused web products.",
         "strong-3": "Here's a summary of my skills"
     },
     "skills": {
         "technical": {
-            "subtitle": "Technical skills focused on building web interfaces.",
-            "li-1": "Design and simultaneous management of custom digital products for various companies.",
-            "li-2": "Active participation in the entire design process, from research to prototype validation with users.",
-            "li-3": "Creation of user-centered solutions aligned with business objectives.",
-            "li-4": "Joint work with development teams and use of design systems to maintain visual and functional consistency.",
-            "li-5": "Coordination with research teams to conduct qualitative and quantitative studies.",
-            "li-6": "Cross-functional collaboration to design and execute qualitative and quantitative research for decision making."
+            "subtitle": "Technical skills focused on building modern web interfaces.",
+            "li-1": "Application development with React, prioritizing performance, maintainability, and best practices.",
+            "li-2": "Interface design in Figma using UI/UX principles to create clear and intuitive experiences.",
+            "li-3": "Responsive and accessible layout work for an optimal experience across devices and user types.",
+            "li-4": "API integration, async data handling, and SEO optimization to improve visibility and performance.",
+            "li-5": "Application setup and deployment with a custom domain, integrating services such as Supabase.",
+            "li-6": "Work with modular architecture to build solid, scalable interfaces that are easy to maintain."
         },
         "design": {
-            "subtitle": "Design and user experience skills.",
-            "li-1": "Design of complete design systems for applications and websites, ensuring visual consistency and scalability.",
-            "li-2": "Creation of detailed mockups and prototypes focused on improving the overall user experience.",
-            "li-3": "Application of visual design, accessibility, and hierarchy principles to build clear and intuitive interfaces.",
-            "li-4": "Use of tools like Figma and Adobe XD to design, document, and validate interactive interfaces.",
-            "li-5": "Close collaboration with development teams to ensure accurate and functional design implementation.",
-            "li-6": "Usability testing and continuous improvement based on user feedback and usage metrics."
+            "subtitle": "Skills focused on server-side logic and data management.",
+            "li-1": "Development of APIs and servers using Node.js and Express, structuring applications in a modular and scalable way.",
+            "li-2": "Implementation of architectures based on routes, controllers, and models to keep code organized and maintainable.",
+            "li-3": "Database modeling and normalization, defining relationships, data types, and efficient structures.",
+            "li-4": "Integration and management of databases such as MySQL and PostgreSQL, understanding data structure and relationships.",
+            "li-5": "Use of middleware for validation, request handling, and security configuration such as CORS.",
+            "li-6": "File storage handling through bucket-based services, allowing resources to be managed and served within applications."
         },
         "soft": {
             "subtitle": "Soft skills and professional attitude",
