@@ -2,11 +2,11 @@
     "main": {
         "title": "¡Hello! How are you? I'm",
         "state": "¡Looking for new challenges!",
-        "text-1": "I'm passionate about turning ",
-        "strong-1": "creative ideas into immersive digital experiences, ",
-        "text-2": "focusing on enhancing usability and accessibility while designing impactful interfaces. I'm ",
-        "strong-2": "looking to advance my professional career, ",
-        "text-3": "contributing to innovative teams while continuing to learn and adapt to new technologies. ",
+        "text-1": "I focus on ",
+        "strong-1": "building complete web applications combining design, frontend, and backend, ",
+        "text-2": "to create functional and well-structured solutions. I have developed full stack projects in a self-taught manner, ",
+        "strong-2": "strengthening my technical skills while seeking to keep growing, ",
+        "text-3": "contributing value in real environments.",
         "download": "Download CV"
     }
 }
