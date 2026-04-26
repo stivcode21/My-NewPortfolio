@@ -84,7 +84,7 @@ export default function Header() {
         <h3>{t("main.title")}</h3>
         <h1>Stiven Tapasco</h1>
         <span className={styles.profession}>
-          <h2>Frontend Designer</h2>
+          <h2>Full Stack Developer</h2>
           <span>
             <svg
               width="402"
