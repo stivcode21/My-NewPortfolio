@@ -52,10 +52,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  line-height: 50%;
   gap: 10px;
   color: var(--text-muted);
   font-weight: 400;
   min-width: 0;
+  margin-bottom: 10px;
 }
 
 .userName {
