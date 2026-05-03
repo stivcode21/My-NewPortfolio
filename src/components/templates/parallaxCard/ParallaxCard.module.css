@@ -1,8 +1,0 @@
-.root {
-  will-change: transform, opacity;
-}
-
-.layer {
-  will-change: transform;
-  transform: translateZ(0);
-}
