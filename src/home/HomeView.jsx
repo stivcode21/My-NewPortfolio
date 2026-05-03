@@ -22,8 +22,8 @@ const HomeView = () => {
         <About />
         <Education />
         <Contact />
-      </div>
       <MyFooter />
+      </div>
     </NotificationProvider>
   );
 };

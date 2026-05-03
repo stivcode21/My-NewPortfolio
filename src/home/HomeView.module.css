@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding-inline: 7vw;
+  padding-inline: 4vw;
   display: flex;
   flex-direction: column;
   overflow: hidden;
