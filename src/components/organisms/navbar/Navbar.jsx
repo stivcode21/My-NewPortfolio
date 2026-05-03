@@ -219,6 +219,9 @@ export default function Navbar() {
         >
           <span>{t("navbar.contact")}</span>
         </button>
+        <Link to="/blog" className={`${styles.navLink} ${styles.blogLink}`}>
+          <span>Blog</span>
+        </Link>
         <div
           className={styles.settingList}
           style={{
