@@ -1,80 +1,75 @@
 import History1 from "../assets/HU-1.png";
 import History2 from "../assets/HU-2.png";
-import {
-  CalendarDays,
-  Code2,
-  Cpu,
-  LaptopMinimal,
-  Sparkles,
-  Wrench,
-} from "lucide-react";
 
 export const dataBlogChapters = [
   {
     id: "start",
-    number: "01",
-    label: "Punto de partida",
+    number: 1,
     date: "26 Mar 2024",
-    icon: CalendarDays,
+    category: "Capítulo destacado",
+    featured: true,
     image: History1,
-    title: "Todo comenzo al ver un video en TikTok.",
+    readTime: 6,
+    title: "Todo comenzó al ver un video en TikTok",
     excerpt:
-      "Una recomendacion me mostro el mundo de la programacion y me pregunte si tambien podia cambiar mi rumbo. No sabia por donde empezar ni que herramientas necesitaba para aprender. Aun asi, esa curiosidad fue suficiente para dejar una idea sembrada en mi cabeza. Fue el primer momento en el que senti que mi vida podia tomar otra direccion.",
-    badges: ["Descubrimiento", "Ganas sin recursos"],
+      "Una recomendación me mostró el mundo de la programación y me pregunté si también podía cambiar mi rumbo.",
+    description:
+      "Una recomendación me mostró el mundo de la programación y me pregunté si también podía cambiar mi rumbo. No sabía por dónde empezar ni qué herramientas necesitaba para aprender. Aun así, esa curiosidad fue suficiente para dejar una idea sembrada en mi cabeza. Una recomendación me mostró el mundo de la programación y me pregunté si también podía cambiar mi rumbo. No sabía por dónde empezar ni qué herramientas necesitaba para aprender. Aun así, esa curiosidad fue suficiente para dejar una idea sembrada en mi cabeza.",
   },
   {
     id: "routine",
-    number: "02",
-    label: "La rutina me apagaba",
+    number: 2,
     date: "15 Abr 2024",
-    icon: Wrench,
+    category: "Capítulo 02",
+    featured: false,
     image: History2,
-    title: "La vida en el taller me estaba apagando.",
+    readTime: 5,
+    title: "La vida en el taller me estaba apagando",
     excerpt:
-      "Llegaba a casa agotado del taller de motos y comence a sentir que me estaba quedando estancado. Cada semana se parecia demasiado a la anterior y eso comenzo a pesarme. Aunque cumplia con mi trabajo, por dentro sentia que estaba dejando pasar el tiempo. Esa incomodidad fue la que me empujo a buscar algo distinto para mi futuro.",
-    badges: ["Cansancio", "Taller de motos"],
+      "Cada semana se parecía demasiado a la anterior y empecé a sentir que necesitaba algo distinto para mi futuro.",
+    description:
+      "Llegaba a casa agotado del taller de motos y comencé a sentir que me estaba quedando estancado. Cada semana se parecía demasiado a la anterior y eso comenzó a pesarme. Aunque cumplía con mi trabajo, por dentro sentía que estaba dejando pasar el tiempo.",
   },
   {
     id: "turning-point",
-    number: "03",
-    label: "Cuando aparecio una oportunidad",
+    number: 3,
     date: "26 May 2024",
-    icon: LaptopMinimal,
+    category: "Capítulo 03",
+    featured: false,
     image: History1,
-    title: "Una laptop vieja me abrio la puerta al codigo.",
+    readTime: 7,
+    title: "Una laptop vieja me abrió la puerta al código",
     excerpt:
-      "Mi hermana me presto un equipo viejo y maltratado, pero con el pude empezar a practicar mis primeras lineas de codigo. No era rapida ni bonita, pero me dio la posibilidad real de sentarme a practicar. Por primera vez deje de imaginar el cambio y empece a vivirlo con acciones pequeñas. Ese computador viejo se convirtio en una herramienta decisiva para dar el primer paso.",
-    badges: ["Comienzos humildes", "Laptop prestada"],
+      "No era rápida ni bonita, pero me dio la posibilidad real de sentarme a practicar mis primeras líneas de código.",
+    description:
+      "Mi hermana me prestó un equipo viejo y maltratado, pero con él pude empezar a practicar mis primeras líneas de código. Por primera vez dejé de imaginar el cambio y empecé a vivirlo con acciones pequeñas. Ese computador viejo se convirtió en una herramienta decisiva.",
   },
   {
     id: "reality",
-    number: "04",
-    label: "Golpe de realidad",
+    number: 4,
     date: "18 Jun 2024",
-    icon: Cpu,
+    category: "Capítulo 04",
+    featured: false,
     image: History2,
-    title: "Queria correr antes de aprender a caminar.",
+    readTime: 4,
+    title: "Quería correr antes de aprender a caminar",
     excerpt:
-      "Empece con JavaScript muy rapido y me di cuenta de que necesitaba volver a la base para entender de verdad. Me estaba dejando llevar por la emocion sin construir una base lo suficientemente solida. Cuando baje el ritmo, empece a notar que aprender tambien exige paciencia y orden. Entender eso me ayudo a cambiar mi forma de estudiar y a frustrarme mucho menos.",
-    badges: ["Frustracion", "Volver a la base"],
+      "Empecé con JavaScript muy rápido y entendí que necesitaba volver a la base para aprender de verdad.",
+    description:
+      "Empecé con JavaScript muy rápido y me di cuenta de que necesitaba volver a la base para entender de verdad. Cuando bajé el ritmo, empecé a notar que aprender también exige paciencia y orden. Entender eso me ayudó a frustrarme mucho menos.",
   },
   {
     id: "frontend",
-    number: "05",
-    label: "El punto donde todo conecto",
+    number: 5,
     date: "29 Jul 2024",
-    icon: Code2,
+    category: "Capítulo 05",
+    featured: false,
     image: History1,
-    title: "Frontend fue el lugar donde recupere energia.",
+    readTime: 8,
+    title: "Frontend fue donde recuperé la energía",
     excerpt:
-      "Construir interfaces visuales me devolvio motivacion y transformo las noches pesadas en horas reales de estudio. Ver cambios en pantalla hizo que cada practica se sintiera mucho mas viva y cercana. Empece a disfrutar el proceso, a repetir ejercicios y a cuidar mas cada detalle. Fue ahi donde por primera vez senti que podia construir un perfil real en tecnologia.",
-    badges: ["Claridad", "Frontend"],
+      "Construir interfaces visuales devolvió mi motivación y transformó las noches pesadas en horas reales de estudio.",
+    description:
+      "Construir interfaces visuales me devolvió motivación y transformó las noches pesadas en horas reales de estudio. Empecé a disfrutar el proceso, a repetir ejercicios y a cuidar más cada detalle. Fue ahí donde por primera vez sentí que podía construir un perfil real en tecnología.",
   },
 ];
-
-export const blogHighlight = {
-  icon: Sparkles,
-  label: "La leccion mas importante",
-  title: "Aprender a programar es una maraton, no un sprint.",
-  text: "No te apresures. En la velocidad mal entendida solo queda frustracion. Permitete no entender a la primera, repetir, descansar y volver con calma.",
-};
