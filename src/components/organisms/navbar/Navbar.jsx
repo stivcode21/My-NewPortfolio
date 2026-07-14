@@ -6,8 +6,6 @@ import HoverTag from "@/components/atoms/hoverTag/HoverTag";
 import { useThemeStore } from "@/store/ThemeStore";
 import { useTranslation } from "react-i18next";
 import { useLanguageStore } from "@/store/languageStore";
-import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
 
 export default function Navbar() {
   const { isDarkMode, toggleDarkMode } = useThemeStore();
@@ -134,10 +132,6 @@ export default function Navbar() {
           >
             <span>{t("navbar.contact")}</span>
           </button>
-          <Link to="/blog" className={`${styles.navLink} ${styles.blogLink}`}>
-            <span>Blog</span>
-            <ArrowUpRight />
-          </Link>
         </div>
       </div>
 
@@ -219,9 +213,6 @@ export default function Navbar() {
         >
           <span>{t("navbar.contact")}</span>
         </button>
-        <Link to="/blog" className={`${styles.navLink} ${styles.blogLink}`}>
-          <span>Blog</span>
-        </Link>
         <div
           className={styles.settingList}
           style={{
