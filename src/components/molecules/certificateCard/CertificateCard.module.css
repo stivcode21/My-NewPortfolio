@@ -1,0 +1,299 @@
+/* =========================================================
+   CertificateCard — tweak these vars freely
+   Parent can also override via style={{ "--card-accent": "..." }}
+   ========================================================= */
+.card {
+  --card-width: 260px;
+  --card-height: 340px;
+  --card-radius: 18px;
+  --card-accent: #864cff;
+  --card-front-bg: #12131f;
+  --card-front-border: color-mix(in srgb, var(--card-accent) 45%, transparent);
+  --card-glow: color-mix(in srgb, var(--card-accent) 35%, transparent);
+  --card-text: #ffffff;
+  --card-muted: #9c9caf;
+  --flip-duration: 0.55s;
+
+  width: var(--card-width);
+  height: var(--card-height);
+  perspective: 1200px;
+  cursor: pointer;
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.card:focus-visible {
+  outline: 3px solid var(--card-accent);
+  outline-offset: 4px;
+  border-radius: calc(var(--card-radius) + 4px);
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform var(--flip-duration) cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card:hover .inner,
+.card:focus-visible .inner {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+
+.front {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(
+      120% 80% at 100% 100%,
+      color-mix(in srgb, var(--card-accent) 10%, transparent),
+      transparent 100%
+    ),
+    var(--card-front-bg);
+  border: 1px solid var(--card-front-border);
+  border-radius: var(--card-radius);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.35),
+    0 0 0 1px color-mix(in srgb, var(--card-accent) 10%, transparent),
+    0 0 24px var(--card-glow);
+  color: var(--card-text);
+  overflow: hidden;
+}
+
+/*
+  GFX background tinted by accent.
+  Why not <GFX /> + fill CSS?
+  - import "...svg?react" needs vite-plugin-svgr (not installed)
+  - gfx1.svg has hundreds of hardcoded fill="#..." so parent fill won't recolor it
+  Mask + background-color reuses the shape and paints it with --card-accent.
+*/
+.bgGfx {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+    opacity: var(--bg-opacity);
+  background-color: var(--card-accent);
+  -webkit-mask-image: var(--bg-gfx);
+  mask-image: var(--bg-gfx);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  padding: 22px 20px 18px;
+  box-sizing: border-box;
+}
+
+.platform {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.platformName {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--card-text);
+}
+
+.platformLogo {
+  width: 100%;
+  height: 100%;
+  max-height: 40px;
+  object-fit: contain;
+  object-position: top;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.category {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--card-accent);
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--card-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--card-muted);
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--card-muted);
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  --tag-bg: color-mix(in srgb, var(--card-accent) 22%, #1b1c2b);
+  --tag-color: color-mix(in srgb, var(--card-accent) 80%, #fff);
+
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--tag-bg);
+  color: var(--tag-color);
+  border: 1px solid color-mix(in srgb, var(--tag-bg) 70%, #fff);
+}
+
+.tagMore {
+  --tag-bg: transparent;
+  --tag-color: var(--card-muted);
+  border-color: color-mix(in srgb, var(--card-muted) 35%, transparent);
+}
+
+/* BACK */
+.backFace {
+  transform: rotateY(180deg);
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  background: #f7f7fb;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 30%, #d7d7e5);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.certificateImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.backFallback {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #1d1d1d;
+  position: relative;
+}
+
+.backPlatform {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--card-accent);
+  margin-bottom: 18px;
+}
+
+.backLabel {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b6b7a;
+}
+
+.backTitle {
+  margin: 12px 0 0;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.backStudent {
+  margin: 18px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.backMeta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b6b7a;
+}
+
+.backSeal {
+  margin-top: auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff, var(--card-accent));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--card-accent) 35%, #fff);
+}
+
+@media (width <= 768px) {
+  .card {
+    --card-width: 230px;
+    --card-height: 310px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}
