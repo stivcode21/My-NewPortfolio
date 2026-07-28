@@ -51,5 +51,9 @@
     "certification-11": {
         "title": "Teoría de Videojuegos Aplicada",
         "description": "Curso teórico-práctico sobre los fundamentos conceptuales del diseño de videojuegos. Exploré **diferentes géneros, estructuras de juego y metodologías de análisis**, desarrollando mi capacidad para criticar y mejorar diseños existentes y crear conceptos originales."
+    },
+    "certification-12": {
+        "title": "API REST con JavaScript",
+        "description": "Certificación de Platzi enfocada en el diseño y consumo de **APIs REST**. Aprendí a trabajar con **HTTP, endpoints, JSON y autenticación básica**, además de integrar servicios externos en aplicaciones frontend con JavaScript siguiendo buenas prácticas."
     }
 }

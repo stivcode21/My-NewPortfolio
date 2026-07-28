@@ -51,5 +51,9 @@
     "certification-11": {
       "title": "Applied Game Theory",
       "description": "Theoretical-practical course on the conceptual foundations of game design. I explored **different genres, game structures, and analysis methodologies**, developing my ability to critique and improve existing designs and create original concepts."
+    },
+    "certification-12": {
+      "title": "REST API with JavaScript",
+      "description": "Platzi certification focused on designing and consuming **REST APIs**. I learned to work with **HTTP, endpoints, JSON, and basic authentication**, as well as integrating external services into frontend apps with JavaScript following best practices."
     }
 }
