@@ -1,8 +1,67 @@
 .contactContainer {
-  width: 100%;
-  padding: 50px 0;
+  position: relative;
+  isolation: isolate;
+  width: calc(100% + 8vw);
+  padding: 50px 4vw;
+  margin-inline: -4vw;
   margin-top: 30px;
   margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.contactContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      ellipse 46% 62% at 78% 76%,
+      rgba(134, 76, 255, 0.14) 0%,
+      rgba(134, 76, 255, 0.08) 34%,
+      rgba(10, 11, 21, 0.16) 68%,
+      rgba(10, 11, 21, 0) 100%
+    ),
+    linear-gradient(
+      90deg,
+      var(--surface-primary) 0%,
+      rgba(10, 11, 21, 0.86) 32%,
+      rgba(10, 11, 21, 0.42) 64%,
+      rgba(10, 11, 21, 0.72) 90%,
+      var(--surface-primary) 100%
+    ),
+    linear-gradient(
+      180deg,
+      var(--surface-primary) 0%,
+      rgba(10, 11, 21, 0.08) 20%,
+      rgba(10, 11, 21, 0.22) 78%,
+      var(--surface-primary) 100%
+    );
+  pointer-events: none;
+}
+
+.contactContainer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse 34% 48% at 79% 78%,
+    rgba(134, 76, 255, 0.1) 0%,
+    rgba(134, 76, 255, 0.04) 40%,
+    rgba(10, 11, 21, 0) 76%
+  );
+  box-shadow:
+    inset 210px 0 150px var(--surface-primary),
+    inset -170px 0 140px var(--surface-primary),
+    inset 0 120px 110px var(--surface-primary),
+    inset 0 -170px 140px var(--surface-primary);
+  pointer-events: none;
+}
+
+.contactContainer > :not(.videoBackdrop) {
+  position: relative;
+  z-index: 1;
 }
 
 .contact {
@@ -13,6 +72,8 @@
 
 /* CONTACT SOCIAL */
 .contactLeft {
+  position: relative;
+  z-index: 1;
   width: 40%;
   min-width: 380px;
   max-width: 400px;
@@ -23,12 +84,42 @@
 
 /* CONTACT FORM */
 .contactRight {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
   flex-grow: 1;
   padding-left: 40px;
   border-left: 1px solid var(--color-primary-light);
+}
+
+.videoBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.backdropVideo {
+  position: absolute;
+  right: -34%;
+  bottom: -34%;
+  width: 128%;
+  height: 128%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.68;
+  filter: saturate(1.02) contrast(0.98) blur(0.4px);
+}
+
+.contactRightContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form {
@@ -81,8 +172,40 @@
   }
 }
 
+@media (width >= 1400px) {
+  .contactContainer {
+    width: calc(100% + 20vw);
+    padding-inline: 10vw;
+    margin-inline: -10vw;
+  }
+}
+
+@media (width >= 2000px) {
+  .contactContainer {
+    width: calc(100% + 36vw);
+    padding-inline: 18vw;
+    margin-inline: -18vw;
+  }
+}
+
 @media (width <= 500px) {
   .text {
     font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdropVideo {
+    display: none;
+  }
+
+  .videoBackdrop {
+    background:
+      radial-gradient(
+        ellipse 46% 74% at 66% 78%,
+        rgba(134, 76, 255, 0.24) 0%,
+        rgba(134, 76, 255, 0.1) 45%,
+        rgba(10, 11, 21, 0) 100%
+      );
   }
 }

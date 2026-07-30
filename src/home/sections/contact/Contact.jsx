@@ -110,6 +110,18 @@ export default function Contact() {
 
   return (
     <section id="contact" className={styles.contactContainer}>
+      <div className={styles.videoBackdrop} aria-hidden="true">
+        <video
+          className={styles.backdropVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source src="/blackhole.webm" type="video/webm" />
+        </video>
+      </div>
       <BlockHeader title={t("head.title")} ifExist={true}>
         <span>
           {t("head.text-1")}
@@ -124,82 +136,86 @@ export default function Contact() {
         </div>
         {/* Content right */}
         <div className={styles.contactRight}>
-          <h3 className={styles.subtitle}>
-            {isDisabled ? t("contact.title-state2") : t("contact.title-state1")}
-          </h3>
-          <form className={styles.form}>
-            <span>
-              <InputBox
-                type="text"
-                name="fullname"
-                placeholder={t("contact.name-placeholder")}
-                maxLength={30}
-                onChange={handleChange}
-                value={contactData.fullname}
-                isValid={errors.fullname}
-                errorMessage={t("contact.name-error")}
-                disabled={isDisabled}
-              />
-              <InputBox
-                type="email"
-                name="email"
-                placeholder={t("contact.email-placeholder")}
-                maxLength={50}
-                onChange={handleChange}
-                value={contactData.email}
-                isValid={errors.email}
-                errorMessage={t("contact.email-error")}
-                disabled={isDisabled}
-              />
-            </span>
-            <InputBox
-              type="textarea"
-              name="message"
-              placeholder={t("contact.textarea-placeholder")}
-              maxLength={2000}
-              onChange={handleChange}
-              value={contactData.message}
-              isValid={errors.message}
-              errorMessage={t("contact.textarea-error")}
-              disabled={isDisabled}
-            />
-            <div className={styles.btnContainer}>
-              {isDisabled ? (
-                ""
-              ) : (
-                <AnimatedBorderButton
-                  onClick={(e) => handleSubmit(e)}
-                  type="submit"
-                  className={styles.btn}
+          <div className={styles.contactRightContent}>
+            <h3 className={styles.subtitle}>
+              {isDisabled
+                ? t("contact.title-state2")
+                : t("contact.title-state1")}
+            </h3>
+            <form className={styles.form}>
+              <span>
+                <InputBox
+                  type="text"
+                  name="fullname"
+                  placeholder={t("contact.name-placeholder")}
+                  maxLength={30}
+                  onChange={handleChange}
+                  value={contactData.fullname}
+                  isValid={errors.fullname}
+                  errorMessage={t("contact.name-error")}
                   disabled={isDisabled}
-                >
-                  {isLoading ? ( // Mostrar loader mientras se envía el correo
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M2,12A11.2,11.2,0,0,1,13,1.05C12.67,1,12.34,1,12,1a11,11,0,0,0,0,22c.34,0,.67,0,1-.05C6,23,2,17.74,2,12Z"
+                />
+                <InputBox
+                  type="email"
+                  name="email"
+                  placeholder={t("contact.email-placeholder")}
+                  maxLength={50}
+                  onChange={handleChange}
+                  value={contactData.email}
+                  isValid={errors.email}
+                  errorMessage={t("contact.email-error")}
+                  disabled={isDisabled}
+                />
+              </span>
+              <InputBox
+                type="textarea"
+                name="message"
+                placeholder={t("contact.textarea-placeholder")}
+                maxLength={2000}
+                onChange={handleChange}
+                value={contactData.message}
+                isValid={errors.message}
+                errorMessage={t("contact.textarea-error")}
+                disabled={isDisabled}
+              />
+              <div className={styles.btnContainer}>
+                {isDisabled ? (
+                  ""
+                ) : (
+                  <AnimatedBorderButton
+                    onClick={(e) => handleSubmit(e)}
+                    type="submit"
+                    className={styles.btn}
+                    disabled={isDisabled}
+                  >
+                    {isLoading ? ( // Mostrar loader mientras se envía el correo
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
                       >
-                        <animateTransform
-                          attributeName="transform"
-                          dur="0.6s"
-                          repeatCount="indefinite"
-                          type="rotate"
-                          values="0 12 12;360 12 12"
-                        />
-                      </path>
-                    </svg>
-                  ) : (
-                    t("contact.btn-send")
-                  )}
-                </AnimatedBorderButton>
-              )}
-            </div>
-          </form>
+                        <path
+                          fill="currentColor"
+                          d="M2,12A11.2,11.2,0,0,1,13,1.05C12.67,1,12.34,1,12,1a11,11,0,0,0,0,22c.34,0,.67,0,1-.05C6,23,2,17.74,2,12Z"
+                        >
+                          <animateTransform
+                            attributeName="transform"
+                            dur="0.6s"
+                            repeatCount="indefinite"
+                            type="rotate"
+                            values="0 12 12;360 12 12"
+                          />
+                        </path>
+                      </svg>
+                    ) : (
+                      t("contact.btn-send")
+                    )}
+                  </AnimatedBorderButton>
+                )}
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <ModalOverlay isOpen={modalState} onClose={() => setModalState(false)}>
