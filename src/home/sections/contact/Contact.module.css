@@ -17,19 +17,17 @@
   background:
     radial-gradient(ellipse 46% 62% at 78% 76%,
       rgba(134, 76, 255, 0.14) 0%,
-      rgba(134, 76, 255, 0.08) 34%,
-      rgba(10, 11, 21, 0.16) 68%,
+      rgba(0, 0, 0, 0.16) 68%,
       rgba(10, 11, 21, 0) 100%),
     linear-gradient(90deg,
       var(--surface-primary) 0%,
-      rgba(10, 11, 21, 0.86) 32%,
-      rgba(10, 11, 21, 0.42) 64%,
-      rgba(10, 11, 21, 0.72) 90%,
+      rgba(0, 0, 0, 0.66) 22%,
+      rgba(0, 0, 0, 0.12) 90%,
       var(--surface-primary) 100%),
     linear-gradient(180deg,
       var(--surface-primary) 0%,
-      rgba(10, 11, 21, 0.08) 20%,
-      rgba(10, 11, 21, 0.22) 78%,
+      rgba(0, 0, 0, 0.08) 20%,
+      rgba(0, 0, 0, 0.12) 78%,
       var(--surface-primary) 100%);
   pointer-events: none;
 }
@@ -96,7 +94,7 @@
   position: absolute;
   right: -32%;
   bottom: -40%;
-  rotate: -6deg;
+  rotate: -8deg;
   width: 128%;
   height: 128%;
   object-fit: cover;

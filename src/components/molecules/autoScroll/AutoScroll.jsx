@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import CertificateCard from "@/components/molecules/certificateCard/CertificateCard";
 
 const LOOP_COPIES = 3;
-const AUTO_SPEED = 1.0; // px per frame (~27px/s at 60fps)
+const AUTO_SPEED = 1.0; // px per frame
 const DRAG_CLICK_THRESHOLD = 8;
 
 const AutoScroll = () => {
@@ -21,12 +21,13 @@ const AutoScroll = () => {
   const startYRef = useRef(0);
   const originOffsetRef = useRef(0);
   const axisLockedRef = useRef(null); // "x" | "y" | null
+  const captureActiveRef = useRef(false);
+  const pendingUrlRef = useRef(null);
   const reduceMotionRef = useRef(false);
 
   const measureSetWidth = () => {
     const track = trackRef.current;
     if (!track) return;
-    // One logical set = total width / copies (includes gaps via scrollWidth)
     setWidthRef.current = track.scrollWidth / LOOP_COPIES;
   };
 
@@ -93,6 +94,7 @@ const AutoScroll = () => {
   }, []);
 
   const handleCardClick = (url) => {
+    // Ignore the synthetic click that follows a real drag
     if (dragMovedRef.current) return;
     navigate(`/education/${url}`);
   };
@@ -106,20 +108,24 @@ const AutoScroll = () => {
   };
 
   const onPointerDown = (event) => {
-    // Only primary button / touch
     if (event.pointerType === "mouse" && event.button !== 0) return;
 
     measureSetWidth();
     draggingRef.current = true;
     dragMovedRef.current = false;
     axisLockedRef.current = null;
+    captureActiveRef.current = false;
     pointerIdRef.current = event.pointerId;
     startXRef.current = event.clientX;
     startYRef.current = event.clientY;
     originOffsetRef.current = offsetRef.current;
+    pendingUrlRef.current =
+      event.target.closest?.("[data-cert-url]")?.getAttribute("data-cert-url") ||
+      null;
     pause();
 
-    event.currentTarget.setPointerCapture?.(event.pointerId);
+    // Do NOT capture yet — capturing on every mousedown blocks desktop clicks.
+    // Capture only after we confirm a horizontal drag.
   };
 
   const onPointerMove = (event) => {
@@ -130,15 +136,14 @@ const AutoScroll = () => {
     const dx = event.clientX - startXRef.current;
     const dy = event.clientY - startYRef.current;
 
-    // Let vertical page scroll win on mobile until axis is clear
     if (!axisLockedRef.current) {
       if (Math.abs(dx) < 4 && Math.abs(dy) < 4) return;
       axisLockedRef.current = Math.abs(dx) >= Math.abs(dy) ? "x" : "y";
+
       if (axisLockedRef.current === "y") {
-        // Abort horizontal drag; allow native scroll
         draggingRef.current = false;
         pointerIdRef.current = null;
-        event.currentTarget.releasePointerCapture?.(event.pointerId);
+        pendingUrlRef.current = null;
         resume();
         return;
       }
@@ -146,9 +151,15 @@ const AutoScroll = () => {
 
     if (axisLockedRef.current !== "x") return;
 
+    if (!captureActiveRef.current) {
+      event.currentTarget.setPointerCapture?.(event.pointerId);
+      captureActiveRef.current = true;
+    }
+
     event.preventDefault();
     if (Math.abs(dx) > DRAG_CLICK_THRESHOLD) {
       dragMovedRef.current = true;
+      pendingUrlRef.current = null;
     }
 
     offsetRef.current = normalizeOffset(originOffsetRef.current + dx);
@@ -158,21 +169,36 @@ const AutoScroll = () => {
   const endDrag = (event) => {
     if (pointerIdRef.current !== event.pointerId) return;
 
+    const didDrag = dragMovedRef.current;
+    const url = pendingUrlRef.current;
+
     draggingRef.current = false;
     pointerIdRef.current = null;
     axisLockedRef.current = null;
+    pendingUrlRef.current = null;
 
-    try {
-      event.currentTarget.releasePointerCapture?.(event.pointerId);
-    } catch {
-      // ignore if already released
+    if (captureActiveRef.current) {
+      try {
+        event.currentTarget.releasePointerCapture?.(event.pointerId);
+      } catch {
+        // already released
+      }
+      captureActiveRef.current = false;
     }
 
-    // Keep click suppressed briefly so the synthetic click after drag is ignored
-    if (dragMovedRef.current) {
+    // Fallback navigate if click was swallowed (rare); skip after real drag
+    if (!didDrag && url && event.type === "pointerup") {
+      // Prefer native click on the card; only navigate here for touch
+      // where click can be flaky after slight movement under threshold.
+      if (event.pointerType === "touch") {
+        navigate(`/education/${url}`);
+      }
+    }
+
+    if (didDrag) {
       window.setTimeout(() => {
         dragMovedRef.current = false;
-      }, 50);
+      }, 80);
     }
 
     resume();
@@ -195,7 +221,11 @@ const AutoScroll = () => {
       >
         <div className={styles.slideTrack} ref={trackRef}>
           {loopItems.map((cert, index) => (
-            <div className={styles.slide} key={`${cert.url}-${index}`}>
+            <div
+              className={styles.slide}
+              key={`${cert.url}-${index}`}
+              data-cert-url={cert.url}
+            >
               <CertificateCard
                 url={cert.url}
                 img={cert.img}
