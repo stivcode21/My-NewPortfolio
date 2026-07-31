@@ -8,8 +8,13 @@ import MyFooter from "./sections/myFooter/MyFooter";
 import Contact from "./sections/contact/Contact";
 import { NotificationProvider } from "@/components/templates/notificationProvider/notificationProvider";
 import GitHubOverview from "@/components/templates/gitHubOverview/GitHubOverview";
+import useModalFormStore from "@/store/ModalFormStore";
+import ModalOverlay from "@/components/templates/modalOverlay/ModalOverlay";
+import FormComment from "@/components/organisms/formComment/FormComment";
 
 const HomeView = () => {
+  const { modalState, setModalState } = useModalFormStore();
+  
   return (
     <NotificationProvider>
       <div className={styles.containerHeader}>
@@ -22,8 +27,11 @@ const HomeView = () => {
         <About />
         <Education />
         <Contact />
-      <MyFooter />
+        <MyFooter />
       </div>
+      <ModalOverlay isOpen={modalState} onClose={() => setModalState(false)}>
+        <FormComment />
+      </ModalOverlay>
     </NotificationProvider>
   );
 };
