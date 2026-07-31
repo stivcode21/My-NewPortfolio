@@ -27,7 +27,7 @@
   outline: 2px solid transparent;
   border-radius: 12px;
   background: var(--surface-primary);
-  opacity: 0.4;
+  opacity: 0.5;
   color: var(--text-primary);
   transition: var(--dynamic-fast-transition);
 }

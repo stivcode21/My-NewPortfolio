@@ -21,7 +21,7 @@ const InputBox = ({
             type={type}
             placeholder={name}
             maxLength={maxLength}
-            autoComplete="on"
+            autocomplete="off"
             required={isRequired ? true : null}
             onChange={(e) => onChange(e)}
             value={value}
