@@ -25,7 +25,9 @@
   line-height: 1.4;
   border: 1px solid var(--color-primary-light);
   outline: 2px solid transparent;
-  border-radius: 20px;
+  border-radius: 12px;
+  background: var(--surface-primary);
+  opacity: 0.4;
   color: var(--text-primary);
   transition: var(--dynamic-fast-transition);
 }
