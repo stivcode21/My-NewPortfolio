@@ -2,14 +2,11 @@ import { useState } from "react";
 import styles from "./Contact.module.css";
 import emailjs from "emailjs-com";
 import { formatDateToSubmit } from "@/hooks/formatDate";
-import useModalFormStore from "@/store/ModalFormStore";
 import { useNotification } from "@/components/templates/notificationProvider/notificationProvider";
 import BlockHeader from "@/components/molecules/blockHeader/BlockHeader";
 import InputBox from "@/components/templates/inputBox/InputBox";
 import AnimatedBorderButton from "@/components/atoms/animatedBorderButton/AnimatedBorderButton";
 import Comments from "@/components/organisms/comments/Comments";
-import ModalOverlay from "@/components/templates/modalOverlay/ModalOverlay";
-import FormComment from "@/components/organisms/formComment/FormComment";
 import { useTranslation } from "react-i18next";
 
 export default function Contact() {
@@ -34,7 +31,6 @@ export default function Contact() {
   // Estado para el loader, modal y la deshabilitación del formulario
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
-  const { modalState, setModalState } = useModalFormStore();
 
   // Estado para controlar el límite de correos enviados
   const [sentEmails, setSentEmails] = useState(0);
@@ -218,9 +214,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <ModalOverlay isOpen={modalState} onClose={() => setModalState(false)}>
-        <FormComment />
-      </ModalOverlay>
     </section>
   );
 }
