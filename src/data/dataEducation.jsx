@@ -1,18 +1,19 @@
 import habilidadesBlandas1 from "@/assets/education/habilidades-blandas.webp";
-import habilidadesBlandas2 from "@/assets/education/habilidades-blandas2.webp";
 import cienciasVideojuegos from "@/assets/education/ciencias-videojuegos.webp";
-import diseñoVideojuegos from "@/assets/education/diseño-videojuegos.webp";
 import fundamentosVideojuegos from "@/assets/education/fundamentos-videojuegos.webp";
 import dsrVideojuegosN1 from "@/assets/education/videojuegos-N1.webp";
 import devFrontend from "@/assets/education/devFrontend.webp";
 import webDesing from "@/assets/education/webDesing.webp";
 import api_rest from "@/assets/education/plazi-api.webp";
+/* Drop your certificate image here, then keep this import name */
+//import tecnicoProgramacionSena from "@/assets/education/tecnico-programacion-sena.webp";
 
 import platzi from "@/assets/logos/platzi.png";
 import eafit from "@/assets/logos/EAFIT.png";
 import polygonus from "@/assets/logos/polygonus.webp";
 import udemy from "@/assets/logos/udemy.webp";
 import freecodecamp from "@/assets/logos/freecodecamp.png";
+import sena from "@/assets/logos/sena.png";
 
 import GFX1 from "@/assets/gfx1.png";
 import GFX2 from "@/assets/gfx2.png";
@@ -24,9 +25,10 @@ const BRAND = {
   eafit: "#1e3a8a",
   polygonus: "#7c3aed",
   platzi: "#98ca3f",
-  unity: "#4a4a4a",
+  unity: "#f59e0b",
   udemy: "#a435f0",
   freecodecamp: "#6e49ff",
+  sena: "#39a900",
 };
 
 export const AllCertifications = [
@@ -56,33 +58,6 @@ export const AllCertifications = [
       { label: "Tipografía", color: "#8b5cf6" },
     ],
     description: "certification-1.description",
-  },
-  {
-    title: "certification-2.title",
-    url: "habilidades-blandas-polygonus",
-    img: habilidadesBlandas2,
-    bg_img: GFX2,
-    bg_opacity: 0.5,
-    logo: eafit,
-    platform: "Polygonus",
-    accent: BRAND.polygonus,
-    category: "Habilidades blandas",
-    subtitle: "Tech Soft Skills",
-    date: "2024",
-    duration: null,
-    skills: [
-      "Teamwork",
-      "Effective communication",
-      "Time management",
-      "Conflict resolution",
-      "Adaptability",
-    ],
-    tags: [
-      { label: "Teamwork", color: "#7c3aed" },
-      { label: "Comunicación", color: "#a78bfa" },
-      { label: "Gestión", color: "#c4b5fd" },
-    ],
-    description: "certification-2.description",
   },
   {
     title: "certification-12.title",
@@ -132,6 +107,27 @@ export const AllCertifications = [
     ],
     description: "certification-3.description",
   },
+    {
+    title: "certification-8.title",
+    url: "webDesing-iudemy",
+    img: devFrontend,
+    bg_img: GFX1,
+    bg_opacity: 0.25,
+    logo: udemy,
+    platform: "Udemy",
+    accent: BRAND.udemy,
+    category: "Desarrollo Web",
+    subtitle: "Web Developer",
+    date: "2024",
+    duration: null,
+    skills: ["HTML5", "CSS3", "JavaScript", "React", "REST API"],
+    tags: [
+      { label: "HTML", color: "#e34f26" },
+      { label: "CSS", color: "#1572b6" },
+      { label: "JavaScript", color: "#f7df1e", textColor: "#111" },
+    ],
+    description: "certification-8.description",
+  },
   {
     title: "certification-4.title",
     url: "ciencias-videojuegos",
@@ -160,39 +156,12 @@ export const AllCertifications = [
     description: "certification-4.description",
   },
   {
-    title: "certification-5.title",
-    url: "diseño-videojuegos",
-    img: diseñoVideojuegos,
-    bg_img: GFX1,
-    bg_opacity: 0.2,
-    logo: eafit,
-    platform: "Game Design",
-    accent: "#f59e0b",
-    category: "Diseño de juegos",
-    subtitle: "Advanced Design",
-    date: "2024",
-    duration: null,
-    skills: [
-      "Level design",
-      "Environmental storytelling",
-      "Reward systems",
-      "Game UX",
-      "Playtesting",
-    ],
-    tags: [
-      { label: "Levels", color: "#d97706" },
-      { label: "UX", color: "#f59e0b" },
-      { label: "Playtest", color: "#fbbf24" },
-    ],
-    description: "certification-5.description",
-  },
-  {
     title: "certification-6.title",
     url: "fundamentos-videojuegos",
     img: fundamentosVideojuegos,
     bg_img: GFX2,
     logo: eafit,
-    bg_opacity: 0.5,
+    bg_opacity: 0.4,
     platform: "Unity",
     accent: BRAND.unity,
     category: "Desarrollo",
@@ -207,11 +176,39 @@ export const AllCertifications = [
       "Debugging",
     ],
     tags: [
-      { label: "Unity", color: "#111111" },
-      { label: "C#", color: "#68217a" },
-      { label: "Physics", color: "#525252" },
+      { label: "Unity", color: "#d97706" },
+      { label: "C#", color: "#525252" },
+      { label: "Physics", color: "#fbbf24" },
     ],
     description: "certification-6.description",
+  },
+  {
+    title: "certification-13.title",
+    url: "tecnico-programacion-sena",
+    img: "PROXIMO",
+    bg_img: GFX1,
+    bg_opacity: 0.3,
+    logo: sena,
+    platform: "SENA",
+    accent: BRAND.sena,
+    category: "Formación técnica",
+    subtitle: "Software Programming",
+    date: "2022–2024",
+    duration: "1 año",
+    skills: [
+      "Programming fundamentals",
+      "Object-oriented programming",
+      "Databases & SQL",
+      "Web development",
+      "Software requirements",
+      "Version control",
+    ],
+    tags: [
+      { label: "Software", color: "#39a900" },
+      { label: "OOP", color: "#2d8a00" },
+      { label: "SQL", color: "#58cc02" },
+    ],
+    description: "certification-13.description",
   },
   {
     title: "certification-7.title",
@@ -238,27 +235,6 @@ export const AllCertifications = [
       { label: "Figma", color: "#f24e1e" },
     ],
     description: "certification-7.description",
-  },
-  {
-    title: "certification-8.title",
-    url: "webDesing-iudemy",
-    img: devFrontend,
-    bg_img: GFX1,
-    bg_opacity: 0.25,
-    logo: udemy,
-    platform: "Udemy",
-    accent: BRAND.udemy,
-    category: "Desarrollo Web",
-    subtitle: "Web Developer",
-    date: "2024",
-    duration: null,
-    skills: ["HTML5", "CSS3", "JavaScript", "React", "REST API"],
-    tags: [
-      { label: "HTML", color: "#e34f26" },
-      { label: "CSS", color: "#1572b6" },
-      { label: "JavaScript", color: "#f7df1e", textColor: "#111" },
-    ],
-    description: "certification-8.description",
   },
 ];
 
