@@ -4,7 +4,6 @@
   width: calc(100% + 8vw);
   padding: 50px 4vw;
   margin-inline: -4vw;
-  margin-top: 30px;
   margin-bottom: 0px;
   overflow: hidden;
 }
@@ -15,6 +14,16 @@
   inset: 0;
   z-index: -1;
   background:
+    /*
+      Top veil matches Education's surface so the section seam
+      disappears; contact atmosphere only fades in below.
+    */
+    linear-gradient(
+      180deg,
+      var(--surface-primary) 0%,
+      var(--surface-primary) 6%,
+      transparent 28%
+    ),
     radial-gradient(ellipse 46% 62% at 78% 76%,
       rgba(134, 76, 255, 0.14) 0%,
       rgba(0, 0, 0, 0.16) 68%,
